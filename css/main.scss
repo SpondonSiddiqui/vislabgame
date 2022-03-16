@@ -13,7 +13,23 @@ body {
 
 #main-container {
     background-image: url(../assets/images/background.svg);
+    background-repeat: no-repeat;
     background-size: contain;
     aspect-ratio: 20/9;
     width: 100%;
+    position: relative;
+}
+
+#wall-green {
+    width: 37%;
+    position: absolute;
+    bottom: 0;
+    left: 25%;
+}
+
+#wall-blue {
+    width: 28.6%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
 }
