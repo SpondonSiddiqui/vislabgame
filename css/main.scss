@@ -25,6 +25,13 @@ body {
     position: absolute;
     bottom: 0;
     left: 25%;
+
+    &-overlay {
+        display: none;
+        width: 300px;
+        height: 200px;
+        background-color: black;
+    }
 }
 
 #wall-blue {
