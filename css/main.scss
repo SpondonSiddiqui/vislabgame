@@ -20,6 +20,21 @@ body {
     position: relative;
 }
 
+.overlay {
+    &-info {
+        background-color: #fff;
+        margin-top: 20px;
+        padding: 20px;
+        width: 30%;
+        height: fit-content;
+        border-radius: 8px;
+    }
+}
+
+.left {
+    margin-left: 20px;
+}
+
 .wall-green {
     width: 37%;
     position: absolute;
@@ -32,7 +47,7 @@ body {
         width: 100%;
         height: 100%;
         background-color: rgba($color: #000000, $alpha: 0.5);
-        z-index: 1000;
+        z-index: 1;
     }
 }
 
