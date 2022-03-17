@@ -1,6 +1,6 @@
 
 // Constants
-const wallGreen = document.getElementById('wall-green');
+const wallGreen = document.getElementsByClassName('wall-green');
 const wallGreenOverlay = document.getElementById('wall-green-overlay');
 
 // Functions
