@@ -11,11 +11,14 @@
 
 <body>
     <main id="main-container">
-        <img id="wall-green" src="assets\images\wall_green.svg" onclick="showWallGreenOverlay()"> </img>
-            <div id="wall-green-overlay"></div>
-        <img id="wall-blue" src="assets\images\wall_blue.svg"> </img>
+        <img class="wall-green" src="assets\images\wall_green.svg" onclick="showWallGreenOverlay()"> </img>
+        <div id="wall-green-overlay" class="wall-green-overlay">
+            <img class="wall-green" src="assets\images\wall_green.svg"> </img>
+        </div>
+        <img class="wall-blue" src="assets\images\wall_blue.svg"> </img>
         <img class="wall-orange" src="assets\images\wall_orange.svg"> </img>
         <img class="wall-black" src="assets\images\wall_black.svg"> </img>
+
     </main>
 
     <script src="/js/overlay.js"></script>
