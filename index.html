@@ -11,19 +11,16 @@
 
 <body>
     <main id="main-container">
+
+        <img class="wall-yellow" src="assets\images\wall_yellow.svg" onclick="showWallYellowOverlay()">
+        <img class="wall-black" src="assets\images\wall_black.svg" onclick="showWallBlackOverlay()">
+        <img class="wall-red" src="assets\images\wall_red.svg" onclick="showWallRedOverlay()">
+        <img class="wall-blue" src="assets\images\wall_blue.svg" onclick="showWallBlueOverlay()">
+
         <img class="wall-green" src="assets\images\wall_green.svg" onclick="showWallGreenOverlay()"> </img>
         <div id="wall-green-overlay" class="wall-green-overlay">
             <img class="wall-green" src="assets\images\wall_green.svg"> </img>
-            <div class="overlay-info left">
-                <h1>Göteborg i 3D</h1>
-                <p>Här kan du utforska vilka områden i Göteborg som har högst bullernivå, vilka stadsdelar som ligger
-                    under vatten år 2070, och mera!</p>
-            </div>
         </div>
-        <img class="wall-blue" src="assets\images\wall_blue.svg"> </img>
-        <img class="wall-orange" src="assets\images\wall_orange.svg"> </img>
-        <img class="wall-black" src="assets\images\wall_black.svg"> </img>
-
     </main>
 
     <script src="/js/overlay.js"></script>
