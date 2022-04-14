@@ -32,3 +32,11 @@ function showBlueOverlay() {
 function showGreenOverlay() {
     greenOverlay.style.display = 'flex';
 }
+
+function hideOverlays() {
+    yellowOverlay.style.display = 'none';
+    redOverlay.style.display = 'none';
+    blackOverlay.style.display = 'none';
+    blueOverlay.style.display = 'none';
+    greenOverlay.style.display = 'none';
+}

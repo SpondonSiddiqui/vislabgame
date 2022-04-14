@@ -38,7 +38,7 @@ body {
 .exit-overlay-button {
   width: 8.25%;
   position: absolute;
-  top: 5.55%;
+  top: 5.56%;
   right: 2.5%;
 }
 
@@ -58,7 +58,7 @@ body {
   height: 100%;
   background-image: url(../assets/images/society-background.png);
   background-size: cover;
-  z-index: 2;
+  z-index: 10;
 }
 
 .wall-black {
@@ -77,7 +77,7 @@ body {
   height: 100%;
   background-image: url(../assets/images/space-background.png);
   background-size: cover;
-  z-index: 2;
+  z-index: 10;
 }
 
 .wall-red {
@@ -96,7 +96,7 @@ body {
   height: 100%;
   background-image: url(../assets/images/human-background.png);
   background-size: cover;
-  z-index: 2;
+  z-index: 10;
 }
 
 .wall-blue {
@@ -116,7 +116,7 @@ body {
   height: 100%;
   background-image: url(../assets/images/sea-background.png);
   background-size: cover;
-  z-index: 2;
+  z-index: 10;
 }
 
 .wall-green {
@@ -135,7 +135,7 @@ body {
   height: 100%;
   background-image: url(../assets/images/land-background.png);
   background-size: cover;
-  z-index: 2;
+  z-index: 10;
 }
 
 .society-background-partial {
@@ -148,8 +148,9 @@ body {
 .space-background-partial {
   width: 15%;
   position: absolute;
-  top: 8.33%;
+  top: 8.34%;
   left: 42.5%;
+  z-index: 2;
 }
 
 .human-background-partial {
