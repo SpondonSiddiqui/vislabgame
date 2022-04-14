@@ -12,14 +12,31 @@
 <body>
     <main id="main-container">
 
-        <img class="wall-yellow" src="assets\images\wall_yellow.svg" onclick="showWallYellowOverlay()">
-        <img class="wall-black" src="assets\images\wall_black.svg" onclick="showWallBlackOverlay()">
-        <img class="wall-red" src="assets\images\wall_red.svg" onclick="showWallRedOverlay()">
-        <img class="wall-blue" src="assets\images\wall_blue.svg" onclick="showWallBlueOverlay()">
+        <!--Society section-->
+        <img class="wall-yellow" src="assets/images/wall_yellow.svg" onclick="showYellowOverlay()">
+        <img class="society-background-partial" src="assets/images/society-background-partial.png"
+            onclick="showYellowOverlay()">
 
-        <img class="wall-green" src="assets\images\wall_green.svg" onclick="showWallGreenOverlay()"> </img>
+        <!--Space section-->
+        <img class="wall-black" src="assets/images/wall_black.svg" onclick="showBlackOverlay()">
+        <img class="space-background-partial" src="assets/images/space-background-partial.png"
+            onclick="showYellowOverlay()">
+
+        <!--Human section-->
+        <img class="wall-red" src="assets/images/wall_red.svg" onclick="showRedOverlay()">
+        <img class="human-background-partial" src="assets/images/human-background-partial.png"
+            onclick="showYellowOverlay()">
+
+        <!--Sea section-->
+        <img class="wall-blue" src="assets/images/wall_blue.svg" onclick="showBlueOverlay()">
+        <img class="sea-background-partial" src="assets/images/sea-background-partial.png" onclick="showGreenOverlay()">
+
+        <!--Land section-->
+        <img class="wall-green" src="assets/images/wall_green.svg" onclick="showGreenOverlay()">
+        <img class="land-background-partial" src="assets/images/land-background-partial.png"
+            onclick="showGreenOverlay()">
         <div id="wall-green-overlay" class="wall-green-overlay">
-            <img class="wall-green" src="assets\images\wall_green.svg"> </img>
+            <img class="wall-green" src="assets/images/wall_green.svg">
         </div>
     </main>
 
