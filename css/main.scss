@@ -47,8 +47,9 @@ body {
         display: none;
         width: 100%;
         height: 100%;
-        //background-image: (insert url to pic here);
-        z-index: 1;
+        background-image: url(../assets/images/society-background.png);
+        background-size: cover;
+        z-index: 2;
     }
 }
 
@@ -65,8 +66,9 @@ body {
         display: none;
         width: 100%;
         height: 100%;
-        //background-image: (insert url to pic here);
-        z-index: 1;
+        background-image: url(../assets/images/space-background.png);
+        background-size: cover;
+        z-index: 2;
     }
 }
 
@@ -83,8 +85,9 @@ body {
         display: none;
         width: 100%;
         height: 100%;
-        //background-image: (insert url to pic here);
-        z-index: 1;
+        background-image: url(../assets/images/human-background.png);
+        background-size: cover;
+        z-index: 2;
     }
 }
 
@@ -102,8 +105,9 @@ body {
         display: none;
         width: 100%;
         height: 100%;
-        //background-image: (insert url to pic here);
-        z-index: 1;
+        background-image: url(../assets/images/sea-background.png);
+        background-size: cover;
+        z-index: 2;
     }
 }
 
@@ -120,8 +124,9 @@ body {
         display: none;
         width: 100%;
         height: 100%;
-        //background-image: (insert url to pic here);
-        z-index: 1;
+        background-image: url(../assets/images/land-background.png);
+        background-size: cover;
+        z-index: 2;
     }
 }
 

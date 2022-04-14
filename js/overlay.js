@@ -1,6 +1,6 @@
 
 // Constants
-const wallYellow = document.getElementsByClassName('wall-green');
+const wallYellow = document.getElementsByClassName('wall-yellow');
 const wallBlack = document.getElementsByClassName('wall-black');
 const wallRed = document.getElementsByClassName('wall-red');
 const wallBlue = document.getElementsByClassName('wall-blue');
@@ -30,5 +30,5 @@ function showBlueOverlay() {
 }
 
 function showGreenOverlay() {
-    greeOverlay.style.display = 'flex';
+    greenOverlay.style.display = 'flex';
 }
