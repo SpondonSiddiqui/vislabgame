@@ -138,6 +138,13 @@ body {
   z-index: 10;
 }
 
+.wall-green-beam-a {
+  width: 50%;
+  position: absolute;
+  left: 0;
+  bottom: 8.34%;
+}
+
 .society-background-partial {
   width: 46.25%;
   position: absolute;

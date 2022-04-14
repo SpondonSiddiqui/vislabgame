@@ -136,6 +136,14 @@ body {
         background-size: cover;
         z-index: 10;
     }
+
+    &-beam-a {
+        width: 50%;
+        position: absolute;
+        left: 0;
+        bottom: 8.34%;
+    }
+
 }
 
 //Background images
