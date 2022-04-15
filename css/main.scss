@@ -397,6 +397,7 @@ body {
     position: absolute;
     top: 8.33%;
     left: 3.75%;
+    filter: grayscale(100%);
 }
 
 .space-background-partial {
@@ -405,6 +406,7 @@ body {
     top: 8.34%;
     left: 42.5%;
     z-index: 2;
+    filter: grayscale(100%);
 }
 
 .human-background-partial {
@@ -412,6 +414,7 @@ body {
     position: absolute;
     top: 8.33%;
     right: 3.75%;
+    filter: grayscale(100%);
 }
 
 .sea-background-partial {
@@ -419,6 +422,7 @@ body {
     position: absolute;
     bottom: 8.33%;
     right: 3.75%;
+    filter: grayscale(100%);
 }
 
 .land-background-partial {
@@ -426,4 +430,5 @@ body {
     position: absolute;
     bottom: 8.33%;
     left: 3.75%;
+    filter: grayscale(100%);
 }
