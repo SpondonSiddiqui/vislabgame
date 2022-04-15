@@ -167,6 +167,36 @@ body {
 
 }
 
+// Circles
+.circle {
+    width: 3%;
+    border-radius: 50%;
+    outline: .4vw solid white;
+    position: absolute;
+}
+
+#yellow-circle {
+    &-1 {
+        top: 26.1%;
+        left: 1.375%;
+    }
+
+    &-2 {
+        top: 32%;
+        left: 14.625%;
+    }
+
+    &-3 {
+        top: 39%;
+        left: 30.25%;
+    }
+
+    &-4 {
+        top: 5%;
+        left: 21.375%;
+    }
+}
+
 // Background images
 .society-background-partial {
     width: 46.25%;
