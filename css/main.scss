@@ -1,3 +1,24 @@
+// Variables and arrays
+$colors: (text-main: #141414,
+    text-secondary: #595959,
+    yellow: #f2ba49,
+    gray: #555555,
+    red: #ff4d4d,
+    blue: #0ebde5,
+    green: #4cbf4c,
+    yellow-beam: #f6cf80,
+    gray-beam: #808080,
+    red-beam: #ff7373,
+    blue-beam: #40ddff,
+    green-beam: #82d282,
+);
+
+// Functions
+@function color($color-name) {
+    @return map-get($colors, $color-name);
+}
+
+// HTML elements
 * {
     margin: 0;
     padding: 0;
@@ -33,7 +54,7 @@ body {
     margin-left: 20px;
 }
 
-//Buttons
+// Buttons
 .exit-overlay-button {
     width: 8.25%;
     position: absolute;
@@ -41,7 +62,7 @@ body {
     right: 2.5%;
 }
 
-//Walls
+// Walls
 .wall-yellow {
     width: 33.25%;
     position: absolute;
@@ -146,7 +167,7 @@ body {
 
 }
 
-//Background images
+// Background images
 .society-background-partial {
     width: 46.25%;
     position: absolute;
