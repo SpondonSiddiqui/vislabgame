@@ -385,7 +385,6 @@ body {
   position: absolute;
   top: 8.34%;
   left: 42.5%;
-  z-index: 2;
   -webkit-filter: grayscale(100%);
           filter: grayscale(100%);
 }
