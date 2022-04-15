@@ -35,6 +35,13 @@ body {
   margin-left: 20px;
 }
 
+.info-button {
+  width: 6.25%;
+  position: absolute;
+  bottom: 2.8%;
+  left: 46.8%;
+}
+
 .exit-overlay-button {
   width: 8.25%;
   position: absolute;
@@ -292,6 +299,13 @@ body {
   left: 32.75%;
 }
 
+.globe {
+  width: 8.8%;
+  position: absolute;
+  top: 41.7%;
+  left: 45.5%;
+}
+
 .society-background-partial {
   width: 46.25%;
   position: absolute;
@@ -304,7 +318,6 @@ body {
   position: absolute;
   top: 8.34%;
   left: 42.5%;
-  z-index: 2;
 }
 
 .human-background-partial {
@@ -326,5 +339,18 @@ body {
   position: absolute;
   bottom: 8.33%;
   left: 3.75%;
+}
+
+.score-board {
+  background-color: #fff;
+  position: absolute;
+  margin-top: 5%;
+  margin-left: 18%;
+  padding: 20px;
+  width: 64%;
+  height: 71.4%;
+  border-radius: 8px;
+  z-index: 15;
+  display: none;
 }
 /*# sourceMappingURL=main.css.map */
