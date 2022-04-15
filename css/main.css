@@ -280,23 +280,88 @@ body {
 }
 
 #yellow-circle-2 {
-  top: 32%;
+  top: 32.5%;
   left: 14.625%;
 }
 
 #yellow-circle-3 {
   top: 39%;
-  left: 30.25%;
+  left: 30%;
 }
 
 #yellow-circle-4 {
-  top: 5%;
+  top: 5.5%;
   left: 21.375%;
 }
 
 #yellow-circle-5 {
   top: 23%;
   left: 32.75%;
+}
+
+#black-circle-1 {
+  top: 23%;
+  left: 43.5%;
+}
+
+#black-circle-2 {
+  top: 5.5%;
+  left: 49%;
+}
+
+#black-circle-3 {
+  top: 23%;
+  right: 43.5%;
+}
+
+#red-circle-1 {
+  top: 23%;
+  left: 65%;
+}
+
+#red-circle-2 {
+  top: 5.5%;
+  left: 76.5%;
+}
+
+#red-circle-3 {
+  top: 39%;
+  left: 68%;
+}
+
+#red-circle-4 {
+  top: 32.5%;
+  right: 14.625%;
+}
+
+#blue-circle-1 {
+  top: 72%;
+  left: 58%;
+}
+
+#blue-circle-2 {
+  top: 62%;
+  left: 68%;
+}
+
+#blue-circle-3 {
+  top: 72%;
+  right: 17.5%;
+}
+
+#green-circle-1 {
+  top: 72%;
+  left: 17.5%;
+}
+
+#green-circle-2 {
+  top: 62%;
+  left: 30.5%;
+}
+
+#green-circle-3 {
+  top: 72%;
+  left: 39.8%;
 }
 
 .globe {
@@ -311,6 +376,8 @@ body {
   position: absolute;
   top: 8.33%;
   left: 3.75%;
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
 }
 
 .space-background-partial {
@@ -318,6 +385,9 @@ body {
   position: absolute;
   top: 8.34%;
   left: 42.5%;
+  z-index: 2;
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
 }
 
 .human-background-partial {
@@ -325,6 +395,8 @@ body {
   position: absolute;
   top: 8.33%;
   right: 3.75%;
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
 }
 
 .sea-background-partial {
@@ -332,6 +404,8 @@ body {
   position: absolute;
   bottom: 8.33%;
   right: 3.75%;
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
 }
 
 .land-background-partial {
@@ -339,6 +413,8 @@ body {
   position: absolute;
   bottom: 8.33%;
   left: 3.75%;
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
 }
 
 .score-board {
