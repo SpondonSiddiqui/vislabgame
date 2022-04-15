@@ -364,6 +364,11 @@ body {
   left: 39.8%;
 }
 
+#globe-circle {
+  top: 40%;
+  left: 48.9%;
+}
+
 .globe {
   width: 8.8%;
   position: absolute;
