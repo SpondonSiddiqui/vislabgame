@@ -357,6 +357,23 @@ body {
     }
 }
 
+#blue-circle {
+    &-1 {
+        top: 72%;
+        left: 58%;
+    }
+
+    &-2 {
+        top: 62%;
+        left: 68%;
+    }
+
+    &-3 {
+        top: 72%;
+        right: 17.5%;
+    }
+}
+
 // Background images
 .society-background-partial {
     width: 46.25%;

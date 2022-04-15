@@ -327,6 +327,21 @@ body {
   right: 14.625%;
 }
 
+#blue-circle-1 {
+  top: 72%;
+  left: 58%;
+}
+
+#blue-circle-2 {
+  top: 62%;
+  left: 68%;
+}
+
+#blue-circle-3 {
+  top: 72%;
+  right: 17.5%;
+}
+
 .society-background-partial {
   width: 46.25%;
   position: absolute;
