@@ -47,6 +47,7 @@ body {
   position: absolute;
   top: 0;
   left: 0;
+  z-index: 1;
 }
 
 .wall-yellow-overlay {
@@ -59,6 +60,41 @@ body {
   background-image: url(../assets/images/society-background.png);
   background-size: cover;
   z-index: 10;
+}
+
+.wall-yellow-beam-a {
+  width: 50%;
+  position: absolute;
+  left: 0;
+  bottom: 50.1%;
+}
+
+.wall-yellow-beam-a-partial-1 {
+  width: 18.4%;
+  position: absolute;
+  right: 50%;
+  bottom: 50.2%;
+}
+
+.wall-yellow-beam-a-partial-2 {
+  width: 34.1%;
+  position: absolute;
+  right: 50%;
+  bottom: 50.2%;
+}
+
+.wall-yellow-beam-b {
+  width: 30%;
+  position: absolute;
+  right: 50.1%;
+  bottom: 50%;
+}
+
+.wall-yellow-beam-b-partial {
+  width: 16%;
+  position: absolute;
+  right: 50%;
+  bottom: 50%;
 }
 
 .wall-black {
@@ -80,11 +116,26 @@ body {
   z-index: 10;
 }
 
+.wall-black-beam-a {
+  width: 11.25%;
+  position: absolute;
+  right: 50%;
+  top: 8.34%;
+}
+
+.wall-black-beam-b {
+  width: 11.25%;
+  position: absolute;
+  left: 50%;
+  top: 8.34%;
+}
+
 .wall-red {
   width: 33.25%;
   position: absolute;
   top: 0;
   right: 0;
+  z-index: 1;
 }
 
 .wall-red-overlay {
@@ -97,6 +148,34 @@ body {
   background-image: url(../assets/images/human-background.png);
   background-size: cover;
   z-index: 10;
+}
+
+.wall-red-beam-a {
+  width: 30%;
+  position: absolute;
+  left: 50%;
+  top: 8.34%;
+}
+
+.wall-red-beam-a-partial {
+  width: 16%;
+  position: absolute;
+  left: 50%;
+  bottom: 50.1%;
+}
+
+.wall-red-beam-b {
+  width: 50%;
+  position: absolute;
+  left: 50%;
+  bottom: 50.2%;
+}
+
+.wall-red-beam-b-partial {
+  width: 27.2%;
+  position: absolute;
+  left: 50%;
+  bottom: 50%;
 }
 
 .wall-blue {
@@ -117,6 +196,27 @@ body {
   background-image: url(../assets/images/sea-background.png);
   background-size: cover;
   z-index: 10;
+}
+
+.wall-blue-beam-a {
+  width: 46.25%;
+  position: absolute;
+  right: 3.75%;
+  bottom: 8.34%;
+}
+
+.wall-blue-beam-a-partial {
+  width: 26.25%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+}
+
+.wall-blue-beam-b {
+  width: 18.75%;
+  position: absolute;
+  left: 50%;
+  bottom: 8.34%;
 }
 
 .wall-green {
@@ -141,7 +241,21 @@ body {
 .wall-green-beam-a {
   width: 50%;
   position: absolute;
-  left: 0;
+  right: 50%;
+  top: 50%;
+}
+
+.wall-green-beam-a-partial {
+  width: 26%;
+  position: absolute;
+  right: 50%;
+  top: 50.1%;
+}
+
+.wall-green-beam-b {
+  width: 18.75%;
+  position: absolute;
+  left: 31.25%;
   bottom: 8.34%;
 }
 

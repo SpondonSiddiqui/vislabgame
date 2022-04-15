@@ -68,6 +68,7 @@ body {
     position: absolute;
     top: 0;
     left: 0;
+    z-index: 1;
 
     &-overlay {
         position: absolute;
@@ -79,6 +80,41 @@ body {
         background-image: url(../assets/images/society-background.png);
         background-size: cover;
         z-index: 10;
+    }
+
+    &-beam-a {
+        width: 50%;
+        position: absolute;
+        left: 0;
+        bottom: 50.1%;
+    }
+
+    &-beam-a-partial-1 {
+        width: 18.4%;
+        position: absolute;
+        right: 50%;
+        bottom: 50.2%;
+    }
+
+    &-beam-a-partial-2 {
+        width: 34.1%;
+        position: absolute;
+        right: 50%;
+        bottom: 50.2%;
+    }
+
+    &-beam-b {
+        width: 30%;
+        position: absolute;
+        right: 50.1%;
+        bottom: 50%;
+    }
+
+    &-beam-b-partial {
+        width: 16%;
+        position: absolute;
+        right: 50%;
+        bottom: 50%;
     }
 }
 
@@ -99,6 +135,20 @@ body {
         background-size: cover;
         z-index: 10;
     }
+
+    &-beam-a {
+        width: 11.25%;
+        position: absolute;
+        right: 50%;
+        top: 8.34%;
+    }
+
+    &-beam-b {
+        width: 11.25%;
+        position: absolute;
+        left: 50%;
+        top: 8.34%;
+    }
 }
 
 .wall-red {
@@ -106,6 +156,7 @@ body {
     position: absolute;
     top: 0;
     right: 0;
+    z-index: 1;
 
     &-overlay {
         position: absolute;
@@ -118,6 +169,35 @@ body {
         background-size: cover;
         z-index: 10;
     }
+
+    &-beam-a {
+        width: 30%;
+        position: absolute;
+        left: 50%;
+        top: 8.34%;
+    }
+
+    &-beam-a-partial {
+        width: 16%;
+        position: absolute;
+        left: 50%;
+        bottom: 50.1%;
+    }
+
+    &-beam-b {
+        width: 50%;
+        position: absolute;
+        left: 50%;
+        bottom: 50.2%;
+    }
+
+    &-beam-b-partial {
+        width: 27.2%;
+        position: absolute;
+        left: 50%;
+        bottom: 50%;
+    }
+
 }
 
 .wall-blue {
@@ -137,6 +217,27 @@ body {
         background-image: url(../assets/images/sea-background.png);
         background-size: cover;
         z-index: 10;
+    }
+
+    &-beam-a {
+        width: 46.25%;
+        position: absolute;
+        right: 3.75%;
+        bottom: 8.34%;
+    }
+
+    &-beam-a-partial {
+        width: 26.25%;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+    }
+
+    &-beam-b {
+        width: 18.75%;
+        position: absolute;
+        left: 50%;
+        bottom: 8.34%;
     }
 }
 
@@ -161,7 +262,21 @@ body {
     &-beam-a {
         width: 50%;
         position: absolute;
-        left: 0;
+        right: 50%;
+        top: 50%;
+    }
+
+    &-beam-a-partial {
+        width: 26%;
+        position: absolute;
+        right: 50%;
+        top: 50.1%;
+    }
+
+    &-beam-b {
+        width: 18.75%;
+        position: absolute;
+        left: 31.25%;
         bottom: 8.34%;
     }
 
