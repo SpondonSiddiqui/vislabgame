@@ -292,6 +292,21 @@ body {
   left: 32.75%;
 }
 
+#black-circle-1 {
+  top: 23%;
+  left: 43.5%;
+}
+
+#black-circle-2 {
+  top: 5%;
+  left: 49%;
+}
+
+#black-circle-3 {
+  top: 23%;
+  right: 43.5%;
+}
+
 .society-background-partial {
   width: 46.25%;
   position: absolute;

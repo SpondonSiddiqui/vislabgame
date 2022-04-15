@@ -318,6 +318,23 @@ body {
     }
 }
 
+#black-circle {
+    &-1 {
+        top: 23%;
+        left: 43.5%;
+    }
+
+    &-2 {
+        top: 5%;
+        left: 49%;
+    }
+
+    &-3 {
+        top: 23%;
+        right: 43.5%;
+    }
+}
+
 // Background images
 .society-background-partial {
     width: 46.25%;
