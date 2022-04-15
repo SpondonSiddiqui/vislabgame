@@ -284,10 +284,11 @@ body {
 
 // Circles
 .circle {
-    width: 3%;
+    width: 2.2%;
     border-radius: 50%;
     outline: .4vw solid white;
     position: absolute;
+    z-index: 5;
 }
 
 #yellow-circle {
@@ -309,6 +310,11 @@ body {
     &-4 {
         top: 5%;
         left: 21.375%;
+    }
+
+    &-5 {
+        top: 23%;
+        left: 32.75%;
     }
 }
 

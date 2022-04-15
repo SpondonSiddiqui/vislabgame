@@ -260,10 +260,11 @@ body {
 }
 
 .circle {
-  width: 3%;
+  width: 2.2%;
   border-radius: 50%;
   outline: .4vw solid white;
   position: absolute;
+  z-index: 5;
 }
 
 #yellow-circle-1 {
@@ -284,6 +285,11 @@ body {
 #yellow-circle-4 {
   top: 5%;
   left: 21.375%;
+}
+
+#yellow-circle-5 {
+  top: 23%;
+  left: 32.75%;
 }
 
 .society-background-partial {
