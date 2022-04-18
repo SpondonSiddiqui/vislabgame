@@ -53,6 +53,10 @@ body {
           box-shadow: 0 0 1.5vw rgba(0, 0, 0, 0.1);
 }
 
+.info-overlay-button-blue {
+  left: 2.5%;
+}
+
 .exit-overlay-button {
   width: 6.25%;
   position: absolute;
