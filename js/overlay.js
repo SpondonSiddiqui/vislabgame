@@ -6,6 +6,8 @@ const wallRed = document.getElementsByClassName('wall-red');
 const wallBlue = document.getElementsByClassName('wall-blue');
 const wallGreen = document.getElementsByClassName('wall-green');
 
+const greenBeamA = document.getElementById('green-beam-a');
+const greenBeamAPartial = document.getElementById('green-beam-a-partial');
 const greenBeamB = document.getElementById('green-beam-b');
 
 const yellowOverlay = document.getElementById('wall-yellow-overlay');
@@ -33,6 +35,8 @@ function showBlueOverlay() {
 
 function showGreenOverlay() {
     greenOverlay.style.display = 'flex';
+    greenBeamA.style.zIndex = 11;
+    greenBeamAPartial.style.zIndex = 11;
     greenBeamB.style.zIndex = 11;
 }
 
@@ -42,4 +46,8 @@ function hideOverlays() {
     blackOverlay.style.display = 'none';
     blueOverlay.style.display = 'none';
     greenOverlay.style.display = 'none';
+
+    greenBeamA.style.zIndex = 0;
+    greenBeamAPartial.style.zIndex = 0;
+    greenBeamB.style.zIndex = 0;
 }
