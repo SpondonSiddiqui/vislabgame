@@ -49,6 +49,9 @@ const blueBeamAPartial = document.getElementById('blue-beam-a-partial');
 const blueBeamB = document.getElementById('blue-beam-b');
 
 // Blue circles
+const blueCircle1 = document.getElementById('blue-circle-1');
+const blueCircle2 = document.getElementById('blue-circle-2');
+const blueCircle3 = document.getElementById('blue-circle-3');
 
 // Green beams
 const greenBeamA = document.getElementById('green-beam-a');
@@ -112,6 +115,10 @@ function showBlueOverlay() {
     blueBeamA.style.zIndex = 11;
     blueBeamAPartial.style.zIndex = 11;
     blueBeamB.style.zIndex = 11;
+
+    blueCircle1.style.zIndex = 12;
+    blueCircle2.style.zIndex = 12;
+    blueCircle3.style.zIndex = 12;
 }
 
 function showGreenOverlay() {
@@ -165,4 +172,8 @@ function hideOverlays() {
     redCircle2.style.zIndex = 5;
     redCircle3.style.zIndex = 5;
     redCircle4.style.zIndex = 5;
+
+    blueCircle1.style.zIndex = 5;
+    blueCircle2.style.zIndex = 5;
+    blueCircle3.style.zIndex = 5;
 }
