@@ -25,6 +25,11 @@ const redBeamAPartial = document.getElementById('red-beam-a-partial');
 const redBeamB = document.getElementById('red-beam-b');
 const redBeamBPartial = document.getElementById('red-beam-b-partial');
 
+// Blue beams
+const blueBeamA = document.getElementById('blue-beam-a');
+const blueBeamAPartial = document.getElementById('blue-beam-a-partial');
+const blueBeamB = document.getElementById('blue-beam-b');
+
 // Green beams
 const greenBeamA = document.getElementById('green-beam-a');
 const greenBeamAPartial = document.getElementById('green-beam-a-partial');
@@ -66,6 +71,10 @@ function showRedOverlay() {
 
 function showBlueOverlay() {
     blueOverlay.style.display = 'flex';
+
+    blueBeamA.style.zIndex = 11;
+    blueBeamAPartial.style.zIndex = 11;
+    blueBeamB.style.zIndex = 11;
 }
 
 function showGreenOverlay() {
@@ -96,6 +105,10 @@ function hideOverlays() {
     redBeamAPartial.style.zIndex = 0;
     redBeamB.style.zIndex = 0;
     redBeamBPartial.style.zIndex = 0;
+
+    blueBeamA.style.zIndex = 0;
+    blueBeamAPartial.style.zIndex = 0;
+    blueBeamB.style.zIndex = 0;
 
     greenBeamA.style.zIndex = 0;
     greenBeamAPartial.style.zIndex = 0;
