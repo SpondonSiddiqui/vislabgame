@@ -38,6 +38,10 @@ const redBeamB = document.getElementById('red-beam-b');
 const redBeamBPartial = document.getElementById('red-beam-b-partial');
 
 // Red circles
+const redCircle1 = document.getElementById('red-circle-1');
+const redCircle2 = document.getElementById('red-circle-2');
+const redCircle3 = document.getElementById('red-circle-3');
+const redCircle4 = document.getElementById('red-circle-4');
 
 // Blue beams
 const blueBeamA = document.getElementById('blue-beam-a');
@@ -95,6 +99,11 @@ function showRedOverlay() {
     redBeamAPartial.style.zIndex = 11;
     redBeamB.style.zIndex = 11;
     redBeamBPartial.style.zIndex = 11;
+
+    redCircle1.style.zIndex = 12;
+    redCircle2.style.zIndex = 12;
+    redCircle3.style.zIndex = 12;
+    redCircle4.style.zIndex = 12;
 }
 
 function showBlueOverlay() {
@@ -151,4 +160,9 @@ function hideOverlays() {
     blackCircle1.style.zIndex = 5;
     blackCircle2.style.zIndex = 5;
     blackCircle3.style.zIndex = 5;
+
+    redCircle1.style.zIndex = 5;
+    redCircle2.style.zIndex = 5;
+    redCircle3.style.zIndex = 5;
+    redCircle4.style.zIndex = 5;
 }
