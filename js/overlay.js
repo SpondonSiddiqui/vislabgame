@@ -74,6 +74,8 @@ const greenOverlay = document.getElementById('wall-green-overlay');
 function showYellowOverlay() {
     yellowOverlay.style.display = 'flex';
 
+    wallYellow.style.zIndex = 12;
+
     yellowBeamA.style.zIndex = 11;
     yellowBeamAPartial1.style.zIndex = 11;
     yellowBeamAPartial2.style.zIndex = 11;
@@ -90,6 +92,8 @@ function showYellowOverlay() {
 function showBlackOverlay() {
     blackOverlay.style.display = 'flex';
 
+    wallBlack.style.zIndex = 12;
+
     blackBeamA.style.zIndex = 11;
     blackBeamB.style.zIndex = 11;
 
@@ -100,6 +104,8 @@ function showBlackOverlay() {
 
 function showRedOverlay() {
     redOverlay.style.display = 'flex';
+
+    wallRed.style.zIndex = 12;
 
     redBeamA.style.zIndex = 11;
     redBeamAPartial.style.zIndex = 11;
@@ -115,6 +121,8 @@ function showRedOverlay() {
 function showBlueOverlay() {
     blueOverlay.style.display = 'flex';
 
+    wallBlue.style.zIndex = 12;
+
     blueBeamA.style.zIndex = 11;
     blueBeamAPartial.style.zIndex = 11;
     blueBeamB.style.zIndex = 11;
@@ -126,6 +134,8 @@ function showBlueOverlay() {
 
 function showGreenOverlay() {
     greenOverlay.style.display = 'flex';
+
+    wallGreen.style.zIndex = 12;
 
     greenBeamA.style.zIndex = 11;
     greenBeamAPartial.style.zIndex = 11;
@@ -142,6 +152,12 @@ function hideOverlays() {
     blackOverlay.style.display = 'none';
     blueOverlay.style.display = 'none';
     greenOverlay.style.display = 'none';
+
+    wallYellow.style.zIndex = 1;
+    wallBlack.style.zIndex = 1;
+    wallRed.style.zIndex = 1;
+    wallBlue.style.zIndex = 1;
+    wallGreen.style.zIndex = 1;
 
     yellowBeamA.style.zIndex = 0;
     yellowBeamAPartial1.style.zIndex = 0;

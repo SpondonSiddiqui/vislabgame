@@ -68,6 +68,10 @@ body {
           box-shadow: 0 0 1.5vw rgba(0, 0, 0, 0.1);
 }
 
+.exit-overlay-button-red {
+  left: 2.5%;
+}
+
 .wall-yellow {
   width: 33.25%;
   position: absolute;
