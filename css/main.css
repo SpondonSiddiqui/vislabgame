@@ -47,6 +47,7 @@ body {
   position: absolute;
   top: 5.56%;
   right: 2.5%;
+  z-index: 12;
 }
 
 .wall-yellow {
