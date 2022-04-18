@@ -15,9 +15,21 @@ const yellowBeamAPartial2 = document.getElementById('yellow-beam-a-partial-2');
 const yellowBeamB = document.getElementById('yellow-beam-b');
 const yellowBeamBPartial = document.getElementById('yellow-beam-b-partial');
 
+// Yellow circles
+const yellowCircle1 = document.getElementById('yellow-circle-1');
+const yellowCircle2 = document.getElementById('yellow-circle-2');
+const yellowCircle3 = document.getElementById('yellow-circle-3');
+const yellowCircle4 = document.getElementById('yellow-circle-4');
+const yellowCircle5 = document.getElementById('yellow-circle-5');
+
 // Black beams
 const blackBeamA = document.getElementById('black-beam-a');
 const blackBeamB = document.getElementById('black-beam-b');
+
+// Black circles
+const blackCircle1 = document.getElementById('black-circle-1');
+const blackCircle2 = document.getElementById('black-circle-2');
+const blackCircle3 = document.getElementById('black-circle-3');
 
 // Red beams
 const redBeamA = document.getElementById('red-beam-a');
@@ -25,15 +37,21 @@ const redBeamAPartial = document.getElementById('red-beam-a-partial');
 const redBeamB = document.getElementById('red-beam-b');
 const redBeamBPartial = document.getElementById('red-beam-b-partial');
 
+// Red circles
+
 // Blue beams
 const blueBeamA = document.getElementById('blue-beam-a');
 const blueBeamAPartial = document.getElementById('blue-beam-a-partial');
 const blueBeamB = document.getElementById('blue-beam-b');
 
+// Blue circles
+
 // Green beams
 const greenBeamA = document.getElementById('green-beam-a');
 const greenBeamAPartial = document.getElementById('green-beam-a-partial');
 const greenBeamB = document.getElementById('green-beam-b');
+
+// Green circles
 
 // Overlays
 const yellowOverlay = document.getElementById('wall-yellow-overlay');
@@ -51,6 +69,12 @@ function showYellowOverlay() {
     yellowBeamAPartial2.style.zIndex = 11;
     yellowBeamB.style.zIndex = 11;
     yellowBeamBPartial.style.zIndex = 11;
+
+    yellowCircle1.style.zIndex = 12;
+    yellowCircle2.style.zIndex = 12;
+    yellowCircle3.style.zIndex = 12;
+    yellowCircle4.style.zIndex = 12;
+    yellowCircle5.style.zIndex = 12;
 }
 
 function showBlackOverlay() {
@@ -58,6 +82,10 @@ function showBlackOverlay() {
 
     blackBeamA.style.zIndex = 11;
     blackBeamB.style.zIndex = 11;
+
+    blackCircle1.style.zIndex = 12;
+    blackCircle2.style.zIndex = 12;
+    blackCircle3.style.zIndex = 12;
 }
 
 function showRedOverlay() {
@@ -113,4 +141,14 @@ function hideOverlays() {
     greenBeamA.style.zIndex = 0;
     greenBeamAPartial.style.zIndex = 0;
     greenBeamB.style.zIndex = 0;
+
+    yellowCircle1.style.zIndex = 5;
+    yellowCircle2.style.zIndex = 5;
+    yellowCircle3.style.zIndex = 5;
+    yellowCircle4.style.zIndex = 5;
+    yellowCircle5.style.zIndex = 5;
+
+    blackCircle1.style.zIndex = 5;
+    blackCircle2.style.zIndex = 5;
+    blackCircle3.style.zIndex = 5;
 }
