@@ -59,6 +59,9 @@ const greenBeamAPartial = document.getElementById('green-beam-a-partial');
 const greenBeamB = document.getElementById('green-beam-b');
 
 // Green circles
+const greenCircle1 = document.getElementById('green-circle-1');
+const greenCircle2 = document.getElementById('green-circle-2');
+const greenCircle3 = document.getElementById('green-circle-3');
 
 // Overlays
 const yellowOverlay = document.getElementById('wall-yellow-overlay');
@@ -127,6 +130,10 @@ function showGreenOverlay() {
     greenBeamA.style.zIndex = 11;
     greenBeamAPartial.style.zIndex = 11;
     greenBeamB.style.zIndex = 11;
+
+    greenCircle1.style.zIndex = 12;
+    greenCircle2.style.zIndex = 12;
+    greenCircle3.style.zIndex = 12;
 }
 
 function hideOverlays() {
@@ -176,4 +183,8 @@ function hideOverlays() {
     blueCircle1.style.zIndex = 5;
     blueCircle2.style.zIndex = 5;
     blueCircle3.style.zIndex = 5;
+
+    greenCircle1.style.zIndex = 5;
+    greenCircle2.style.zIndex = 5;
+    greenCircle3.style.zIndex = 5;
 }
