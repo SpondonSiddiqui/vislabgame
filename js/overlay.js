@@ -1,10 +1,10 @@
 
 // Constants
-const wallYellow = document.getElementsByClassName('wall-yellow');
-const wallBlack = document.getElementsByClassName('wall-black');
-const wallRed = document.getElementsByClassName('wall-red');
-const wallBlue = document.getElementsByClassName('wall-blue');
-const wallGreen = document.getElementsByClassName('wall-green');
+const wallYellow = document.getElementById('wall-yellow');
+const wallBlack = document.getElementById('wall-black');
+const wallRed = document.getElementById('wall-red');
+const wallBlue = document.getElementById('wall-blue');
+const wallGreen = document.getElementById('wall-green');
 
 const yellowBeamA = document.getElementById('yellow-beam-a');
 const yellowBeamAPartial1 = document.getElementById('yellow-beam-a-partial-1');
