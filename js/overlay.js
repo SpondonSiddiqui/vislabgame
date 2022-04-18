@@ -6,6 +6,8 @@ const wallRed = document.getElementsByClassName('wall-red');
 const wallBlue = document.getElementsByClassName('wall-blue');
 const wallGreen = document.getElementsByClassName('wall-green');
 
+const greenBeamB = document.getElementById('green-beam-b');
+
 const yellowOverlay = document.getElementById('wall-yellow-overlay');
 const blackOverlay = document.getElementById('wall-black-overlay');
 const redOverlay = document.getElementById('wall-red-overlay');
@@ -31,6 +33,7 @@ function showBlueOverlay() {
 
 function showGreenOverlay() {
     greenOverlay.style.display = 'flex';
+    greenBeamB.style.zIndex = 11;
 }
 
 function hideOverlays() {
