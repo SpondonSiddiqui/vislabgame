@@ -47,6 +47,7 @@ body {
   position: absolute;
   bottom: 5.56%;
   right: 2.5%;
+  z-index: 12;
   border-radius: 50%;
   -webkit-box-shadow: 0 0 1.5vw rgba(0, 0, 0, 0.1);
           box-shadow: 0 0 1.5vw rgba(0, 0, 0, 0.1);
