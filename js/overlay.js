@@ -34,6 +34,9 @@ const blackCircle1 = document.getElementById('black-circle-1');
 const blackCircle2 = document.getElementById('black-circle-2');
 const blackCircle3 = document.getElementById('black-circle-3');
 
+// Black info box
+const blackInfoBox = document.getElementById('info-box-black');
+
 // Red beams
 const redBeamA = document.getElementById('red-beam-a');
 const redBeamAPartial = document.getElementById('red-beam-a-partial');
@@ -46,6 +49,9 @@ const redCircle2 = document.getElementById('red-circle-2');
 const redCircle3 = document.getElementById('red-circle-3');
 const redCircle4 = document.getElementById('red-circle-4');
 
+// Red info box
+const redInfoBox = document.getElementById('info-box-red');
+
 // Blue beams
 const blueBeamA = document.getElementById('blue-beam-a');
 const blueBeamAPartial = document.getElementById('blue-beam-a-partial');
@@ -55,6 +61,9 @@ const blueBeamB = document.getElementById('blue-beam-b');
 const blueCircle1 = document.getElementById('blue-circle-1');
 const blueCircle2 = document.getElementById('blue-circle-2');
 const blueCircle3 = document.getElementById('blue-circle-3');
+
+// Blue info box
+const blueInfoBox = document.getElementById('info-box-blue');
 
 // Green beams
 const greenBeamA = document.getElementById('green-beam-a');
@@ -66,6 +75,9 @@ const greenCircle1 = document.getElementById('green-circle-1');
 const greenCircle2 = document.getElementById('green-circle-2');
 const greenCircle3 = document.getElementById('green-circle-3');
 
+// Green info box
+const greenInfoBox = document.getElementById('info-box-green');
+
 // Overlays
 const yellowOverlay = document.getElementById('wall-yellow-overlay');
 const blackOverlay = document.getElementById('wall-black-overlay');
@@ -73,8 +85,19 @@ const redOverlay = document.getElementById('wall-red-overlay');
 const blueOverlay = document.getElementById('wall-blue-overlay');
 const greenOverlay = document.getElementById('wall-green-overlay');
 
-// Quests
-const greenQuest2 = document.getElementById('quest-green-2');
+/* Get the documentElement (<html>) to display the page in fullscreen */
+var elem = document.documentElement;
+
+/* View in fullscreen */
+function openFullscreen() {
+    if (elem.requestFullscreen) {
+        elem.requestFullscreen();
+    } else if (elem.webkitRequestFullscreen) { /* Safari */
+        elem.webkitRequestFullscreen();
+    } else if (elem.msRequestFullscreen) { /* IE11 */
+        elem.msRequestFullscreen();
+    }
+}
 
 // Functions
 function showYellowOverlay() {
@@ -128,6 +151,9 @@ function showBlackOverlay() {
     blackCircle1.style.zIndex = 12;
     blackCircle2.style.zIndex = 12;
     blackCircle3.style.zIndex = 12;
+
+    // Display info box
+    blackInfoBox.style.display = 'inline';
 }
 
 function showRedOverlay() {
@@ -154,6 +180,9 @@ function showRedOverlay() {
     redCircle2.style.zIndex = 12;
     redCircle3.style.zIndex = 12;
     redCircle4.style.zIndex = 12;
+
+    // Display info box
+    redInfoBox.style.display = 'inline';
 }
 
 function showBlueOverlay() {
@@ -176,6 +205,9 @@ function showBlueOverlay() {
     blueCircle1.style.zIndex = 12;
     blueCircle2.style.zIndex = 12;
     blueCircle3.style.zIndex = 12;
+
+    // Display info box
+    blueInfoBox.style.display = 'inline';
 }
 
 function showGreenOverlay() {
@@ -198,6 +230,9 @@ function showGreenOverlay() {
     greenCircle1.style.zIndex = 12;
     greenCircle2.style.zIndex = 12;
     greenCircle3.style.zIndex = 12;
+
+    // Display info box
+    greenInfoBox.style.display = 'inline';
 }
 
 function hideOverlays() {
@@ -206,8 +241,6 @@ function hideOverlays() {
     blackOverlay.style.display = 'none';
     blueOverlay.style.display = 'none';
     greenOverlay.style.display = 'none';
-
-    yellowInfoBox.style.display = 'none';
 
     // The walls
     wallYellow.style.zIndex = 1;
@@ -295,4 +328,10 @@ function hideOverlays() {
     greenCircle1.style.zIndex = 5;
     greenCircle2.style.zIndex = 5;
     greenCircle3.style.zIndex = 5;
+
+    yellowInfoBox.style.display = 'none';
+    blackInfoBox.style.display = 'none';
+    redInfoBox.style.display = 'none';
+    blueInfoBox.style.display = 'none';
+    greenInfoBox.style.display = 'none';
 }

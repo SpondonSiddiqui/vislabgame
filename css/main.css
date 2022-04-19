@@ -210,6 +210,38 @@ p {
   color: #f2ba49;
 }
 
+.info-box-black {
+  left: 2.5%;
+  bottom: 5.5%;
+}
+
+.info-box-red {
+  left: 11.5%;
+  bottom: 7%;
+}
+
+.info-box-red h1 {
+  color: #ff4d4d;
+}
+
+.info-box-blue {
+  left: 2.5%;
+  top: 5.5%;
+}
+
+.info-box-blue h1 {
+  color: #0ebde5;
+}
+
+.info-box-green {
+  right: 10%;
+  bottom: 5.5%;
+}
+
+.info-box-green h1 {
+  color: #4cbf4c;
+}
+
 .wall-yellow {
   width: 33.25%;
   position: absolute;
