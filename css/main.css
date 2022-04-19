@@ -100,10 +100,8 @@ p {
 }
 
 .quest-overlay {
+  display: none;
   position: absolute;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   width: 100%;
   top: 5.56%;
   z-index: 12;

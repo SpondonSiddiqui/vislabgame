@@ -1,5 +1,7 @@
 
 // Constants
+const infoBoxes = document.getElementsByClassName('info-box');
+const quests = document.getElementsByClassName('quests');
 
 // Walls
 const wallYellow = document.getElementById('wall-yellow');
@@ -77,6 +79,9 @@ const greenCircle3 = document.getElementById('green-circle-3');
 
 // Green info box
 const greenInfoBox = document.getElementById('info-box-green');
+
+// Green quests
+const greenQuest2 = document.getElementById('quest-green-2');
 
 // Overlays
 const yellowOverlay = document.getElementById('wall-yellow-overlay');
@@ -329,9 +334,26 @@ function hideOverlays() {
     greenCircle2.style.zIndex = 5;
     greenCircle3.style.zIndex = 5;
 
+    hideAllInfoBoxes();
+    hideQuests();
+}
+
+function showGreenQuest2() {
+    showGreenOverlay();
+    hideAllInfoBoxes();
+    hideQuests();
+    greenQuest2.style.display = 'flex';
+}
+
+function hideQuests() {
+    greenQuest2.style.display = 'none';
+}
+
+
+function hideAllInfoBoxes() {        
+    greenInfoBox.style.display = 'none';
     yellowInfoBox.style.display = 'none';
     blackInfoBox.style.display = 'none';
     redInfoBox.style.display = 'none';
     blueInfoBox.style.display = 'none';
-    greenInfoBox.style.display = 'none';
 }
