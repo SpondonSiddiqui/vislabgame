@@ -147,6 +147,42 @@ p {
             color: color(yellow);
         }
     }
+
+    &-black {
+        left: 2.5%;
+        bottom: 5.5%;
+
+        h1 {
+            color: color(black);
+        }
+    }
+
+    &-red {
+        left: 11.5%;
+        bottom: 7%;
+
+        h1 {
+            color: color(red);
+        }
+    }
+
+    &-blue {
+        left: 2.5%;
+        top: 5.5%;
+
+        h1 {
+            color: color(blue);
+        }
+    }
+
+    &-green {
+        right: 10%;
+        bottom: 5.5%;
+
+        h1 {
+            color: color(green);
+        }
+    }
 }
 
 // Walls
