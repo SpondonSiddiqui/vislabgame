@@ -73,6 +73,9 @@ const redOverlay = document.getElementById('wall-red-overlay');
 const blueOverlay = document.getElementById('wall-blue-overlay');
 const greenOverlay = document.getElementById('wall-green-overlay');
 
+// Quests
+const greenQuest2 = document.getElementById('quest-green-2');
+
 // Functions
 function showYellowOverlay() {
     yellowOverlay.style.display = 'flex';
@@ -85,17 +88,17 @@ function showYellowOverlay() {
     yellowBeamA.style.zIndex = 11;
     yellowBeamA.style.filter = "opacity(0.5)";
 
-//    yellowBeamAPartial1.style.zIndex = 11;
-//    yellowBeamAPartial1.style.filter = "opacity(0.5)";
+    //    yellowBeamAPartial1.style.zIndex = 11;
+    //    yellowBeamAPartial1.style.filter = "opacity(0.5)";
 
-//    yellowBeamAPartial2.style.zIndex = 11;
-//    yellowBeamAPartial2.style.filter = "opacity(0.5)";
+    //    yellowBeamAPartial2.style.zIndex = 11;
+    //    yellowBeamAPartial2.style.filter = "opacity(0.5)";
 
     yellowBeamB.style.zIndex = 11;
     yellowBeamB.style.filter = "opacity(0.5)";
 
-//    yellowBeamBPartial.style.zIndex = 11;
-//    yellowBeamBPartial.style.filter = "opacity(0.5)";
+    //    yellowBeamBPartial.style.zIndex = 11;
+    //    yellowBeamBPartial.style.filter = "opacity(0.5)";
 
     // Circles
     yellowCircle1.style.zIndex = 12;
@@ -137,14 +140,14 @@ function showRedOverlay() {
     redBeamA.style.zIndex = 11;
     redBeamA.style.filter = "opacity(0.5)";
 
-//    redBeamAPartial.style.zIndex = 11;
-//    redBeamAPartial.style.filter = "opacity(0.5)";
+    //    redBeamAPartial.style.zIndex = 11;
+    //    redBeamAPartial.style.filter = "opacity(0.5)";
 
     redBeamB.style.zIndex = 11;
     redBeamB.style.filter = "opacity(0.5)";
 
-//    redBeamBPartial.style.zIndex = 11;
-//    redBeamBPartial.style.filter = "opacity(0.5)";
+    //    redBeamBPartial.style.zIndex = 11;
+    //    redBeamBPartial.style.filter = "opacity(0.5)";
 
     // Circles
     redCircle1.style.zIndex = 12;
@@ -163,8 +166,8 @@ function showBlueOverlay() {
     blueBeamA.style.zIndex = 11;
     blueBeamA.style.filter = "opacity(0.5)";
 
-//    blueBeamAPartial.style.zIndex = 11;
-//    blueBeamAPartial.style.filter = "opacity(0.5)";
+    //    blueBeamAPartial.style.zIndex = 11;
+    //    blueBeamAPartial.style.filter = "opacity(0.5)";
 
     blueBeamB.style.zIndex = 11;
     blueBeamB.style.filter = "opacity(0.5)";
@@ -185,8 +188,8 @@ function showGreenOverlay() {
     greenBeamA.style.zIndex = 11;
     greenBeamA.style.filter = "opacity(0.5)";
 
-//    greenBeamAPartial.style.zIndex = 11;
-//    greenBeamAPartial.style.filter = "opacity(0.5)";
+    //    greenBeamAPartial.style.zIndex = 11;
+    //    greenBeamAPartial.style.filter = "opacity(0.5)";
 
     greenBeamB.style.zIndex = 11;
     greenBeamB.style.filter = "opacity(0.5)";
@@ -217,17 +220,17 @@ function hideOverlays() {
     yellowBeamA.style.zIndex = 0;
     yellowBeamA.style.filter = "opacity(1)";
 
-//    yellowBeamAPartial1.style.zIndex = 0;
-//    yellowBeamAPartial1.style.filter = "opacity(1)";
+    //    yellowBeamAPartial1.style.zIndex = 0;
+    //    yellowBeamAPartial1.style.filter = "opacity(1)";
 
-//    yellowBeamAPartial2.style.zIndex = 0;
-//    yellowBeamAPartial2.style.filter = "opacity(1)";
+    //    yellowBeamAPartial2.style.zIndex = 0;
+    //    yellowBeamAPartial2.style.filter = "opacity(1)";
 
     yellowBeamB.style.zIndex = 0;
     yellowBeamB.style.filter = "opacity(1)";
 
-//    yellowBeamBPartial.style.zIndex = 0;
-//    yellowBeamBPartial.style.filter = "opacity(1)";
+    //    yellowBeamBPartial.style.zIndex = 0;
+    //    yellowBeamBPartial.style.filter = "opacity(1)";
 
     // Black beams
     blackBeamA.style.zIndex = 0;
@@ -240,21 +243,21 @@ function hideOverlays() {
     redBeamA.style.zIndex = 0;
     redBeamA.style.filter = "opacity(1)";
 
-//    redBeamAPartial.style.zIndex = 0;
-//    redBeamAPartial.style.filter = "opacity(1)";
+    //    redBeamAPartial.style.zIndex = 0;
+    //    redBeamAPartial.style.filter = "opacity(1)";
 
     redBeamB.style.zIndex = 0;
     redBeamB.style.filter = "opacity(1)";
 
-//    redBeamBPartial.style.zIndex = 0;
-//    redBeamBPartial.style.filter = "opacity(1)";
+    //    redBeamBPartial.style.zIndex = 0;
+    //    redBeamBPartial.style.filter = "opacity(1)";
 
     // Blue beams
     blueBeamA.style.zIndex = 0;
     blueBeamA.style.filter = "opacity(1)";
 
-//    blueBeamAPartial.style.zIndex = 0;
-//    blueBeamAPartial.style.filter = "opacity(1)";
+    //    blueBeamAPartial.style.zIndex = 0;
+    //    blueBeamAPartial.style.filter = "opacity(1)";
 
     blueBeamB.style.zIndex = 0;
     blueBeamB.style.filter = "opacity(1)";
@@ -263,8 +266,8 @@ function hideOverlays() {
     greenBeamA.style.zIndex = 0;
     greenBeamA.style.filter = "opacity(1)";
 
- //   greenBeamAPartial.style.zIndex = 0;
-//    greenBeamAPartial.style.filter = "opacity(1)";
+    //   greenBeamAPartial.style.zIndex = 0;
+    //    greenBeamAPartial.style.filter = "opacity(1)";
 
     greenBeamB.style.zIndex = 0;
     greenBeamB.style.filter = "opacity(1)";

@@ -101,8 +101,92 @@ p {
 
 .quest-overlay {
   position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  top: 5.56%;
+  z-index: 12;
+}
+
+.quest-info {
+  position: absolute;
   background-color: #fff;
   border-radius: 16px;
+  padding: 2vw;
+  width: 45%;
+  top: 5.56%;
+  left: 2.5%;
+}
+
+.quest-info h2 {
+  color: #4cbf4c;
+}
+
+.quest-info p {
+  margin-top: 1vw;
+}
+
+.quest-info input {
+  width: 75%;
+  border: none;
+  border-bottom: 2px solid #e3e5e9;
+}
+
+.quest-info button {
+  border: none;
+  padding: 1vw 1.5vw;
+  font-family: Gotham Rounded;
+  color: #fff;
+  border-radius: .3vw;
+}
+
+.quest-info #send-button-green {
+  background-color: #4cbf4c;
+}
+
+.quest-tips {
+  position: absolute;
+  background-color: #fff;
+  border-radius: 16px;
+  padding: 2vw;
+  width: 26%;
+  top: 5.56%;
+  left: 50%;
+}
+
+.quest-tips :first-child {
+  margin-top: 0;
+}
+
+.quest-tips details {
+  font-family: Gotham Rounded;
+  font-size: 1.5vw;
+}
+
+.quest-tips details p {
+  margin-top: 0;
+}
+
+.quest-tips summary {
+  font-family: Gotham Rounded;
+}
+
+.quest-text-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.quest-text-wrapper p {
+  width: 90%;
+}
+
+.quest-input-wrapper {
+  margin-top: 1.5vw;
 }
 
 .info-box {

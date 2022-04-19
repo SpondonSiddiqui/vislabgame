@@ -13,6 +13,7 @@
 // Variables and arrays
 $colors: (text-main: #141414,
     text-secondary: #595959,
+    text-tertiary: #e3e5e9,
     yellow: #f2ba49,
     gray: #555555,
     red: #ff4d4d,
@@ -122,10 +123,93 @@ p {
 .quest {
     &-overlay {
         position: absolute;
+        display: flex;
+        width: 100%;
+        top: 5.56%;
+        z-index: 12;
+    }
+
+    &-info {
+        position: absolute;
         background-color: #fff;
         border-radius: 16px;
+        padding: 2vw;
+        width: 45%;
+        top: 5.56%;
+        left: 2.5%;
+
+        h2 {
+            color: color(green);
+        }
+
+        p {
+            margin-top: 1vw;
+        }
+
+        input {
+            width: 75%;
+            border: none;
+            border-bottom: 2px solid color(text-tertiary);
+        }
+
+        button {
+            border: none;
+            padding: 1vw 1.5vw;
+            font-family: Gotham Rounded;
+            color: #fff;
+            border-radius: .3vw;
+        }
+
+        #send-button {
+            &-green {
+                background-color: color(green);
+            }
+        }
+    }
+
+    &-tips {
+        position: absolute;
+        background-color: #fff;
+        border-radius: 16px;
+        padding: 2vw;
+        width: 26%;
+        top: 5.56%;
+        left: 50%;
+
+        :first-child {
+            margin-top: 0;
+            //font-weight: bold;
+        }
+
+        details {
+            font-family: Gotham Rounded;
+            font-size: 1.5vw;
+
+            p {
+                margin-top: 0;
+            }
+        }
+
+        summary {
+            font-family: Gotham Rounded;
+        }
+    }
+
+    &-text-wrapper {
+        display: flex;
+        justify-content: space-between;
+
+        p {
+            width: 90%;
+        }
+    }
+
+    &-input-wrapper {
+        margin-top: 1.5vw;
     }
 }
+
+#quest {}
 
 // Info box
 .info-box {
