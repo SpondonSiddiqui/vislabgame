@@ -74,14 +74,27 @@ const greenOverlay = document.getElementById('wall-green-overlay');
 function showYellowOverlay() {
     yellowOverlay.style.display = 'flex';
 
+    // The wall
     wallYellow.style.zIndex = 12;
 
-    yellowBeamA.style.zIndex = 11;
-    yellowBeamAPartial1.style.zIndex = 11;
-    yellowBeamAPartial2.style.zIndex = 11;
-    yellowBeamB.style.zIndex = 11;
-    yellowBeamBPartial.style.zIndex = 11;
 
+    // Beams
+    yellowBeamA.style.zIndex = 11;
+    yellowBeamA.style.filter = "opacity(0.5)";
+
+//    yellowBeamAPartial1.style.zIndex = 11;
+//    yellowBeamAPartial1.style.filter = "opacity(0.5)";
+
+//    yellowBeamAPartial2.style.zIndex = 11;
+//    yellowBeamAPartial2.style.filter = "opacity(0.5)";
+
+    yellowBeamB.style.zIndex = 11;
+    yellowBeamB.style.filter = "opacity(0.5)";
+
+//    yellowBeamBPartial.style.zIndex = 11;
+//    yellowBeamBPartial.style.filter = "opacity(0.5)";
+
+    // Circles
     yellowCircle1.style.zIndex = 12;
     yellowCircle2.style.zIndex = 12;
     yellowCircle3.style.zIndex = 12;
@@ -92,11 +105,17 @@ function showYellowOverlay() {
 function showBlackOverlay() {
     blackOverlay.style.display = 'flex';
 
+    // The wall
     wallBlack.style.zIndex = 12;
 
+    // Beams
     blackBeamA.style.zIndex = 11;
-    blackBeamB.style.zIndex = 11;
+    blackBeamA.style.filter = "opacity(0.5)";
 
+    blackBeamB.style.zIndex = 11;
+    blackBeamB.style.filter = "opacity(0.5)";
+
+    // Circles
     blackCircle1.style.zIndex = 12;
     blackCircle2.style.zIndex = 12;
     blackCircle3.style.zIndex = 12;
@@ -105,13 +124,23 @@ function showBlackOverlay() {
 function showRedOverlay() {
     redOverlay.style.display = 'flex';
 
+    // The wall
     wallRed.style.zIndex = 12;
 
+    // Beams
     redBeamA.style.zIndex = 11;
-    redBeamAPartial.style.zIndex = 11;
-    redBeamB.style.zIndex = 11;
-    redBeamBPartial.style.zIndex = 11;
+    redBeamA.style.filter = "opacity(0.5)";
 
+//    redBeamAPartial.style.zIndex = 11;
+//    redBeamAPartial.style.filter = "opacity(0.5)";
+
+    redBeamB.style.zIndex = 11;
+    redBeamB.style.filter = "opacity(0.5)";
+
+//    redBeamBPartial.style.zIndex = 11;
+//    redBeamBPartial.style.filter = "opacity(0.5)";
+
+    // Circles
     redCircle1.style.zIndex = 12;
     redCircle2.style.zIndex = 12;
     redCircle3.style.zIndex = 12;
@@ -121,12 +150,20 @@ function showRedOverlay() {
 function showBlueOverlay() {
     blueOverlay.style.display = 'flex';
 
+    // The wall
     wallBlue.style.zIndex = 12;
 
+    // Beams
     blueBeamA.style.zIndex = 11;
-    blueBeamAPartial.style.zIndex = 11;
-    blueBeamB.style.zIndex = 11;
+    blueBeamA.style.filter = "opacity(0.5)";
 
+//    blueBeamAPartial.style.zIndex = 11;
+//    blueBeamAPartial.style.filter = "opacity(0.5)";
+
+    blueBeamB.style.zIndex = 11;
+    blueBeamB.style.filter = "opacity(0.5)";
+
+    // Circles
     blueCircle1.style.zIndex = 12;
     blueCircle2.style.zIndex = 12;
     blueCircle3.style.zIndex = 12;
@@ -135,12 +172,20 @@ function showBlueOverlay() {
 function showGreenOverlay() {
     greenOverlay.style.display = 'flex';
 
+    // The wall
     wallGreen.style.zIndex = 12;
 
+    // Beams
     greenBeamA.style.zIndex = 11;
-    greenBeamAPartial.style.zIndex = 11;
-    greenBeamB.style.zIndex = 11;
+    greenBeamA.style.filter = "opacity(0.5)";
 
+//    greenBeamAPartial.style.zIndex = 11;
+//    greenBeamAPartial.style.filter = "opacity(0.5)";
+
+    greenBeamB.style.zIndex = 11;
+    greenBeamB.style.filter = "opacity(0.5)";
+
+    // Circles
     greenCircle1.style.zIndex = 12;
     greenCircle2.style.zIndex = 12;
     greenCircle3.style.zIndex = 12;
@@ -153,34 +198,70 @@ function hideOverlays() {
     blueOverlay.style.display = 'none';
     greenOverlay.style.display = 'none';
 
+    // The walls
     wallYellow.style.zIndex = 1;
     wallBlack.style.zIndex = 1;
     wallRed.style.zIndex = 1;
     wallBlue.style.zIndex = 1;
     wallGreen.style.zIndex = 1;
 
+    // Yellow beams
     yellowBeamA.style.zIndex = 0;
-    yellowBeamAPartial1.style.zIndex = 0;
-    yellowBeamAPartial2.style.zIndex = 0;
+    yellowBeamA.style.filter = "opacity(1)";
+
+//    yellowBeamAPartial1.style.zIndex = 0;
+//    yellowBeamAPartial1.style.filter = "opacity(1)";
+
+//    yellowBeamAPartial2.style.zIndex = 0;
+//    yellowBeamAPartial2.style.filter = "opacity(1)";
+
     yellowBeamB.style.zIndex = 0;
-    yellowBeamBPartial.style.zIndex = 0;
+    yellowBeamB.style.filter = "opacity(1)";
 
+//    yellowBeamBPartial.style.zIndex = 0;
+//    yellowBeamBPartial.style.filter = "opacity(1)";
+
+    // Black beams
     blackBeamA.style.zIndex = 0;
+    blackBeamA.style.filter = "opacity(1)";
+
     blackBeamB.style.zIndex = 0;
+    blackBeamB.style.filter = "opacity(1)";
 
+    // Red beams
     redBeamA.style.zIndex = 0;
-    redBeamAPartial.style.zIndex = 0;
+    redBeamA.style.filter = "opacity(1)";
+
+//    redBeamAPartial.style.zIndex = 0;
+//    redBeamAPartial.style.filter = "opacity(1)";
+
     redBeamB.style.zIndex = 0;
-    redBeamBPartial.style.zIndex = 0;
+    redBeamB.style.filter = "opacity(1)";
 
+//    redBeamBPartial.style.zIndex = 0;
+//    redBeamBPartial.style.filter = "opacity(1)";
+
+    // Blue beams
     blueBeamA.style.zIndex = 0;
-    blueBeamAPartial.style.zIndex = 0;
+    blueBeamA.style.filter = "opacity(1)";
+
+//    blueBeamAPartial.style.zIndex = 0;
+//    blueBeamAPartial.style.filter = "opacity(1)";
+
     blueBeamB.style.zIndex = 0;
+    blueBeamB.style.filter = "opacity(1)";
 
+    // Green beams
     greenBeamA.style.zIndex = 0;
-    greenBeamAPartial.style.zIndex = 0;
-    greenBeamB.style.zIndex = 0;
+    greenBeamA.style.filter = "opacity(1)";
 
+ //   greenBeamAPartial.style.zIndex = 0;
+//    greenBeamAPartial.style.filter = "opacity(1)";
+
+    greenBeamB.style.zIndex = 0;
+    greenBeamB.style.filter = "opacity(1)";
+
+    // The circles
     yellowCircle1.style.zIndex = 5;
     yellowCircle2.style.zIndex = 5;
     yellowCircle3.style.zIndex = 5;
