@@ -85,6 +85,20 @@ const redOverlay = document.getElementById('wall-red-overlay');
 const blueOverlay = document.getElementById('wall-blue-overlay');
 const greenOverlay = document.getElementById('wall-green-overlay');
 
+/* Get the documentElement (<html>) to display the page in fullscreen */
+var elem = document.documentElement;
+
+/* View in fullscreen */
+function openFullscreen() {
+  if (elem.requestFullscreen) {
+    elem.requestFullscreen();
+  } else if (elem.webkitRequestFullscreen) { /* Safari */
+    elem.webkitRequestFullscreen();
+  } else if (elem.msRequestFullscreen) { /* IE11 */
+    elem.msRequestFullscreen();
+  }
+}
+
 // Functions
 function showYellowOverlay() {
     yellowOverlay.style.display = 'flex';
