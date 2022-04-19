@@ -22,6 +22,9 @@ const yellowCircle3 = document.getElementById('yellow-circle-3');
 const yellowCircle4 = document.getElementById('yellow-circle-4');
 const yellowCircle5 = document.getElementById('yellow-circle-5');
 
+// Yellow info box
+const yellowInfoBox = document.getElementById('info-box-yellow');
+
 // Black beams
 const blackBeamA = document.getElementById('black-beam-a');
 const blackBeamB = document.getElementById('black-beam-b');
@@ -100,6 +103,9 @@ function showYellowOverlay() {
     yellowCircle3.style.zIndex = 12;
     yellowCircle4.style.zIndex = 12;
     yellowCircle5.style.zIndex = 12;
+
+    // Display info box
+    yellowInfoBox.style.display = 'inline';
 }
 
 function showBlackOverlay() {
@@ -197,6 +203,8 @@ function hideOverlays() {
     blackOverlay.style.display = 'none';
     blueOverlay.style.display = 'none';
     greenOverlay.style.display = 'none';
+
+    yellowInfoBox.style.display = 'none';
 
     // The walls
     wallYellow.style.zIndex = 1;

@@ -25,6 +25,21 @@ body {
   background-color: #333;
 }
 
+h1 {
+  font-size: 4.5vw;
+}
+
+p {
+  color: #141414;
+  margin-top: 2vw;
+  font-size: 1.5vw;
+  line-height: 2vw;
+}
+
+.bold {
+  font-weight: bold;
+}
+
 #main-container {
   background-color: #1b1b1b;
   aspect-ratio: 20/9;
@@ -90,6 +105,27 @@ body {
   border-radius: 16px;
 }
 
+.info-box {
+  display: none;
+  width: 36.2%;
+  position: absolute;
+  padding: 2.5vw;
+  border-radius: 16px;
+  background-color: #fff;
+  z-index: 20;
+  -webkit-box-shadow: 0 0 1.5vw rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0 1.5vw rgba(0, 0, 0, 0.1);
+}
+
+.info-box-yellow {
+  right: 10%;
+  top: 10%;
+}
+
+.info-box-yellow h1 {
+  color: #f2ba49;
+}
+
 .wall-yellow {
   width: 33.25%;
   position: absolute;
@@ -118,6 +154,7 @@ body {
 }
 
 .wall-yellow-beam-a-partial-1 {
+  display: none;
   width: 18.4%;
   position: absolute;
   right: 50%;
@@ -125,6 +162,7 @@ body {
 }
 
 .wall-yellow-beam-a-partial-2 {
+  display: none;
   width: 34.1%;
   position: absolute;
   right: 50%;
@@ -139,6 +177,7 @@ body {
 }
 
 .wall-yellow-beam-b-partial {
+  display: none;
   width: 16%;
   position: absolute;
   right: 50%;
@@ -206,6 +245,7 @@ body {
 }
 
 .wall-red-beam-a-partial {
+  display: none;
   width: 16%;
   position: absolute;
   left: 50%;
@@ -220,6 +260,7 @@ body {
 }
 
 .wall-red-beam-b-partial {
+  display: none;
   width: 27.2%;
   position: absolute;
   left: 50%;
@@ -254,6 +295,7 @@ body {
 }
 
 .wall-blue-beam-a-partial {
+  display: none;
   width: 26.25%;
   position: absolute;
   left: 50%;
@@ -294,6 +336,7 @@ body {
 }
 
 .wall-green-beam-a-partial {
+  display: none;
   width: 26%;
   position: absolute;
   right: 50%;
