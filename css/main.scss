@@ -103,6 +103,15 @@ body {
     }
 }
 
+// Quests
+.quest {
+    &-overlay {
+        position: absolute;
+        background-color: #fff;
+        border-radius: 16px;
+    }
+}
+
 // Walls
 .wall-yellow {
     width: 33.25%;

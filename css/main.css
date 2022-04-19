@@ -84,6 +84,12 @@ body {
   left: 2.5%;
 }
 
+.quest-overlay {
+  position: absolute;
+  background-color: #fff;
+  border-radius: 16px;
+}
+
 .wall-yellow {
   width: 33.25%;
   position: absolute;
