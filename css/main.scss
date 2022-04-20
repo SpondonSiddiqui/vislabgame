@@ -163,6 +163,7 @@ p {
         #send-button {
             &-green {
                 background-color: color(green);
+                font-size: 1.5vw;
             }
         }
     }
@@ -184,9 +185,14 @@ p {
         details {
             font-family: Gotham Rounded;
             font-size: 1.5vw;
+            margin-top: 1vw;
+            background-color: color(text-tertiary);
+            border-radius: .4vw;
+            padding: 1vw;
 
             p {
-                margin-top: 0;
+                margin-top: 1vw;
+                margin-left: 1em;
             }
         }
 

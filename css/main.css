@@ -141,6 +141,7 @@ p {
 
 .quest-info #send-button-green {
   background-color: #4cbf4c;
+  font-size: 1.5vw;
 }
 
 .quest-tips {
@@ -160,10 +161,15 @@ p {
 .quest-tips details {
   font-family: Gotham Rounded;
   font-size: 1.5vw;
+  margin-top: 1vw;
+  background-color: #e3e5e9;
+  border-radius: .4vw;
+  padding: 1vw;
 }
 
 .quest-tips details p {
-  margin-top: 0;
+  margin-top: 1vw;
+  margin-left: 1em;
 }
 
 .quest-tips summary {
