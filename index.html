@@ -24,7 +24,8 @@
         <img id="yellow-beam-b-partial" class="wall-yellow-beam-b-partial"
             src="assets/images/beams/beam-yellow-b-partial.svg">
         <!--Circles-->
-        <img id="yellow-circle-1" class="circle" src="assets/images/circles/circle-yellow.svg" onclick="showYellowQuest1()">
+        <img id="yellow-circle-1" class="circle" src="assets/images/circles/circle-yellow.svg"
+            onclick="showYellowQuest1()">
         <img id="yellow-circle-2" class="circle" src="assets/images/circles/circle-yellow.svg">
         <img id="yellow-circle-3" class="circle" src="assets/images/circles/circle-yellow.svg">
         <img id="yellow-circle-4" class="circle" src="assets/images/circles/circle-yellow.svg">
@@ -50,9 +51,11 @@
         <div id="quest-yellow-1" class="quest-overlay quest">
             <div class="quest-info quest-info-yellow">
                 <h2>Fönstret</h2>
-                <p>I fönstret kan du titta ut över Göteborg på 1600-talet, lära dig mer om stadsbuller, framtidens skyfall, kolla in Hisingsbron, och följa Korsvägenbygget live.</p>
+                <p>I fönstret kan du titta ut över Göteborg på 1600-talet, lära dig mer om stadsbuller, framtidens
+                    skyfall, kolla in Hisingsbron, och följa Korsvägenbygget live.</p>
                 <div class="quest-text-wrapper">
-                    <p><span class="bold">Uppdrag:</span> Vilket område i 1600-talets Göteborg hade du velat uppleva, och varför?</p>
+                    <p><span class="bold">Uppdrag:</span> Vilket område i 1600-talets Göteborg hade du velat uppleva,
+                        och varför?</p>
                     <img src="assets/images/tips-button.svg" onclick="showYellowQuest1Tips()">
                 </div>
                 <div class="quest-text-wrapper quest-input-wrapper">
@@ -68,7 +71,8 @@
                 <p>Kolla in ledtråden nedan om du behöver hjälp.</p>
                 <details>
                     <summary>Ledtråd 1</summary>
-                    <p>Tryck på knapparna på fönsterbrädan. Finns det någon av dem som verkar handla om Göteborg på 1600-talet?</p>
+                    <p>Tryck på knapparna på fönsterbrädan. Finns det någon av dem som verkar handla om Göteborg på
+                        1600-talet?</p>
                 </details>
             </div>
             <div id="quest-result-yellow-1" class="quest-result quest-result-yellow">
@@ -142,9 +146,9 @@
             src="assets/images/beams/beam-blue-a-partial.svg">
         <img id="blue-beam-b" class="wall-blue-beam-b" src="assets/images/beams/beam-blue-b.svg">
         <!--Circles-->
-        <img id="blue-circle-1" class="circle" src="assets/images/circles/circle-blue.svg">
-        <img id="blue-circle-2" class="circle" src="assets/images/circles/circle-blue.svg">
-        <img id="blue-circle-3" class="circle" src="assets/images/circles/circle-blue.svg">
+        <img id="blue-circle-1" class="circle" src="assets/images/circles/circle-blue.svg" onclick="showBlueQuest1()">
+        <img id="blue-circle-2" class="circle" src="assets/images/circles/circle-blue.svg" onclick="showBlueQuest2()">
+        <img id="blue-circle-3" class="circle" src="assets/images/circles/circle-blue.svg" onclick="showBlueQuest3()">
         <!--Overlay-->
         <div id="wall-blue-overlay" class="wall-blue-overlay">
             <img class="wall-blue" src="assets/images/wall_blue.svg">
@@ -157,6 +161,37 @@
             <p>Det mänskliga livet startade i havet. Här kan du utforska ditt släktskap med maneter,
                 titta på hjärtat hos en hammarhaj, eller varför inte dyka ner under ytan i Kosterhavet
                 och undersöka Sveriges enda nationalpark under vatten.</p>
+        </div>
+        <!--Quest 1-->
+        <div id="quest-blue-1" class="quest-overlay quest">
+            <div class="quest-info quest-info-blue">
+                <h2>Livets ursprung</h2>
+                <p>Vid livets ursprung får du lära dig om havslevande djur och orgamismer.</p>
+                <div class="quest-text-wrapper">
+                    <p><span class="bold">Uppdrag:</span> Ett av djuren har två stycken pelvisklaffar, kan du hitta
+                        vilket?</p>
+                    <img src="assets/images/tips-button.svg" onclick="showBlueQuest1Tips()">
+                </div>
+                <div class="quest-text-wrapper quest-input-wrapper">
+                    <input id="quest-blue-1-input" type="text">
+                    <button id="send-button-blue" class="quest-send-button" onclick="showBlueQuest1Result()">
+                        Skicka
+                    </button>
+                </div>
+                <img id="quest-triangle-blue-1" class="quest-triangle" src="assets/images/white-triangle.svg">
+            </div>
+            <div id="quest-tips-blue-1" class="quest-tips">
+                <p><span class="bold">Tips!</span></p>
+                <p>För att börja från början, gå till hemskärmen längst till vänster</p>
+                <details>
+                    <summary>Ledtråd 1</summary>
+                    <p>Tryck på "utforska"-knappen för att få mer info om ett djur</p>
+                </details>
+                <details>
+                    <summary>Ledtråd 2</summary>
+                    <p>Tryck på knapparna med en "i"-symbol för att få upp specifik info om djuret</p>
+                </details>
+            </div>
         </div>
 
         <!--Land section-->
