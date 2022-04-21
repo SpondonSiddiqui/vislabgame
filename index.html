@@ -24,7 +24,7 @@
         <img id="yellow-beam-b-partial" class="wall-yellow-beam-b-partial"
             src="assets/images/beams/beam-yellow-b-partial.svg">
         <!--Circles-->
-        <img id="yellow-circle-1" class="circle" src="assets/images/circles/circle-yellow.svg">
+        <img id="yellow-circle-1" class="circle" src="assets/images/circles/circle-yellow.svg" onclick="showYellowQuest1()">
         <img id="yellow-circle-2" class="circle" src="assets/images/circles/circle-yellow.svg">
         <img id="yellow-circle-3" class="circle" src="assets/images/circles/circle-yellow.svg">
         <img id="yellow-circle-4" class="circle" src="assets/images/circles/circle-yellow.svg">
@@ -45,6 +45,32 @@
                 utforska hur Göteborg ändrats genom åren, exempelvis uppleva
                 Göteborg 1920, följa dagens stadsbygge live, och ta reda på
                 vilka delar av Göteborg som kommer ligga under vatten om 100 år. </p>
+        </div>
+        <!--Quest 1-->
+        <div id="quest-yellow-1" class="quest-overlay quest">
+            <div class="quest-info quest-info-yellow">
+                <h2>Fönstret</h2>
+                <p>I fönstret kan du titta ut över Göteborg på 1600-talet, lära dig mer om stadsbuller, framtidens skyfall, kolla in Hisingsbron, och följa Korsvägenbygget live.</p>
+                <div class="quest-text-wrapper">
+                    <p><span class="bold">Uppdrag:</span> Vilket område i 1600-talets Göteborg hade du velat uppleva, och varför?</p>
+                    <img src="assets/images/tips-button.svg" onclick="showYellowQuest1Tips()">
+                </div>
+                <div class="quest-text-wrapper quest-input-wrapper">
+                    <input id="quest-yellow-1-input" type="text">
+                    <button id="send-button-yellow" class="quest-send-button">
+                        Skicka
+                    </button>
+                </div>
+                <img id="quest-triangle-yellow-1" class="quest-triangle" src="assets/images/white-triangle.svg">
+            </div>
+            <div id="quest-tips-yellow-1" class="quest-tips">
+                <p><span class="bold">Tips!</span></p>
+                <p>Kolla in ledtråden nedan om du behöver hjälp.</p>
+                <details>
+                    <summary>Ledtråd 1</summary>
+                    <p>Tryck på knapparna på fönsterbrädan. Finns det någon av dem som verkar handla om Göteborg på 1600-talet?</p>
+                </details>
+            </div>
         </div>
 
         <!--Space section-->
@@ -155,7 +181,7 @@
         <!--Quest 1-->
         <!--Quest 2-->
         <div id="quest-green-2" class="quest-overlay quest">
-            <div class="quest-info">
+            <div class="quest-info quest-info-green">
                 <h2>Näringsväven</h2>
                 <p>I näringsväven kan du se relationer mellan olika arter i Serengeti.</p>
                 <div class="quest-text-wrapper">

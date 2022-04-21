@@ -28,6 +28,11 @@ const yellowCircle5 = document.getElementById('yellow-circle-5');
 // Yellow info box
 const yellowInfoBox = document.getElementById('info-box-yellow');
 
+// Yellow quests
+const yellowQuest1 = document.getElementById('quest-yellow-1');
+
+const yellowQuest1Tips = document.getElementById('quest-tips-yellow-1');
+
 // Black beams
 const blackBeamA = document.getElementById('black-beam-a');
 const blackBeamB = document.getElementById('black-beam-b');
@@ -346,6 +351,19 @@ function hideOverlays() {
     hideQuests();
 }
 
+function showYellowQuest1() {
+    showYellowOverlay();
+    hideAllInfoBoxes();
+    hideQuests();
+    hideQuestTips();
+    yellowQuest1.style.display = 'flex';
+}
+
+function showYellowQuest1Tips() {
+    yellowQuest1Tips.style.display = 'inline';
+}
+
+
 function showGreenQuest2() {
     showGreenOverlay();
     hideAllInfoBoxes();
@@ -354,6 +372,7 @@ function showGreenQuest2() {
     greenQuest2.style.display = 'flex';
 }
 
+
 function showGreenQuest2Tips() {
     greenQuest2Tips.style.display = 'inline';
 }
@@ -361,11 +380,13 @@ function showGreenQuest2Tips() {
 function hideQuests() {
     // Add the same line of code for all quests here
     greenQuest2.style.display = 'none';
+    yellowQuest1.style.display = 'none';
 }
 
 function hideQuestTips() {
     // Add the same line of code for all quests here
     greenQuest2Tips.style.display = 'none';
+    yellowQuest1Tips.style.display = 'none';
 }
 
 
