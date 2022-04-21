@@ -210,21 +210,41 @@ p {
   width: 2.5%;
 }
 
+#quest-tips-green-1 {
+  width: 26%;
+  top: 5.56%;
+  left: 50%;
+}
+
 #quest-tips-green-2 {
   width: 26%;
   top: 5.56%;
   left: 50%;
 }
 
-#quest-tips-yellow-1 {
-  width: 26%;
+#quest-tips-green-3 {
+  width: 40%;
   top: 5.56%;
   left: 50%;
+}
+
+#quest-tips-yellow-1 {
+  width: 26%;
 }
 
 #quest-triangle-green-2 {
   bottom: -2.5%;
   right: 34%;
+}
+
+#quest-triangle-green-1 {
+  bottom: -2.5%;
+  left: 34.5%;
+}
+
+#quest-triangle-green-3 {
+  bottom: -2.5%;
+  right: 13.5%;
 }
 
 #quest-triangle-yellow-1 {

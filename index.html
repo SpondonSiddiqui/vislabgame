@@ -161,10 +161,12 @@
             src="assets/images/beams/beam-green-a-partial.svg">
         <img id="green-beam-b" class="wall-green-beam-b" src="assets/images/beams/beam-green-b.svg">
         <!--Circles-->
-        <img id="green-circle-1" class="circle" src="assets/images/circles/circle-green.svg">
+        <img id="green-circle-1" class="circle" src="assets/images/circles/circle-green.svg"
+            onclick="showGreenQuest1()">
         <img id="green-circle-2" class="circle" src="assets/images/circles/circle-green.svg"
             onclick="showGreenQuest2()">
-        <img id="green-circle-3" class="circle" src="assets/images/circles/circle-green.svg">
+        <img id="green-circle-3" class="circle" src="assets/images/circles/circle-green.svg"
+            onclick="showGreenQuest3()">
         <!--Overlay Info box-->
         <div id="info-box-green" class="info-box-green info-box">
             <h1>Land</h1>
@@ -179,6 +181,36 @@
             <img class="info-overlay-button" src="assets/images/info-button.svg">
         </div>
         <!--Quest 1-->
+        <div id="quest-green-1" class="quest-overlay quest">
+            <div class="quest-info quest-info-green">
+                <h2>Matbordet</h2>
+                <p>Vid matbordet ser du hur olika livsmedel har olika klimatpåverkan.</p>
+                <div class="quest-text-wrapper">
+                    <p><span class="bold">Uppdrag:</span> Skapa din ultimata födelsedags-måltid. Vilket födoämne är den
+                        största miljöboven i din måltid?</p>
+                    <img src="assets/images/tips-button.svg" onclick="showGreenQuest1Tips()">
+                </div>
+                <div class="quest-text-wrapper quest-input-wrapper">
+                    <input id="quest-green-1-input" type="text">
+                    <button id="send-button-green" class="quest-send-button" onclick="showGreenQuest1Result()">
+                        Skicka
+                    </button>
+                </div>
+                <img id="quest-triangle-green-1" class="quest-triangle" src="assets/images/white-triangle.svg">
+            </div>
+            <div id="quest-tips-green-1" class="quest-tips">
+                <p><span class="bold">Tips!</span></p>
+                <p>Tryck på hem ikonen eller reset ikonen för att återställa skärmen</p>
+                <details>
+                    <summary>Ledtråd 1</summary>
+                    <p>Testa att dra ut matvaror och lägg dem på en av tallrikarna</p>
+                </details>
+                <details>
+                    <summary>Ledtråd 2</summary>
+                    <p>De ämnena med högst klimatpåverkan har ett rött streck</p>
+                </details>
+            </div>
+        </div>
         <!--Quest 2-->
         <div id="quest-green-2" class="quest-overlay quest">
             <div class="quest-info quest-info-green">
@@ -192,7 +224,7 @@
                 </div>
                 <div class="quest-text-wrapper quest-input-wrapper">
                     <input id="quest-green-2-input" type="text">
-                    <button id="send-button-green" class="quest-send-button">
+                    <button id="send-button-green" class="quest-send-button" onclick="showGreenQuest2Result()">
                         Skicka
                     </button>
                 </div>
@@ -212,6 +244,38 @@
             </div>
         </div>
         <!--Quest 3-->
+        <div id="quest-green-3" class="quest-overlay quest">
+            <div class="quest-info quest-info-green">
+                <h2>Livets träd</h2>
+                <p>Vid livets träd får du lära dig om och olika djur genom tiderna.</p>
+                <div class="quest-text-wrapper">
+                    <p><span class="bold">Uppdrag:</span> För hur länge sedan uppkom ditt favoritdjurs evolutionära
+                        grupp?</p>
+                    <img src="assets/images/tips-button.svg" onclick="showGreenQuest3Tips()">
+                </div>
+                <div class="quest-text-wrapper quest-input-wrapper">
+                    <input id="quest-green-3-input" type="text">
+                    <button id="send-button-green" class="quest-send-button" onclick="showGreenQuest3Result()">
+                        Skicka
+                    </button>
+                </div>
+                <img id="quest-triangle-green-3" class="quest-triangle" src="assets/images/white-triangle.svg">
+            </div>
+            <div id="quest-tips-green-3" class="quest-tips">
+                <p><span class="bold">Tips!</span></p>
+                <p>För att börja från början, gå till hemskärmen längst till vänster</p>
+                <details>
+                    <summary>Ledtråd 1</summary>
+                    <p>På hemskärmenfinns det ett cirkulärt diagram som visar olika evolutionära
+                        grupper. Kan du hitta den gruppen ditt favoritdjur tillhör?</p>
+                </details>
+                <details>
+                    <summary>Ledtråd 2</summary>
+                    <p>Till vänster om diagrammet ser du ett antal tidsintervall. Prova att följa ditt favoritdjurs
+                        evolutionära grupp från diagrammet till intervallen. </p>
+                </details>
+            </div>
+        </div>
 
         <!--Globe-->
         <img class="globe" src="assets/images/globe.svg">
