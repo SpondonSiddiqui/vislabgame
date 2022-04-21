@@ -152,6 +152,24 @@ p {
             }
         }
 
+        &-black {
+            h2 {
+                color: color(black);
+            }
+        }
+
+        &-red {
+            h2 {
+                color: color(red);
+            }
+        }
+
+        &-blue {
+            h2 {
+                color: color(blue);
+            }
+        }
+
         p {
             margin-top: 1vw;
         }
@@ -257,17 +275,73 @@ p {
         &-yellow-1 {
             width: 26%;
         }
+
+        &-yellow-2 {
+            width: 26%;
+        }
+
+        &-yellow-3 {
+            width: 26%;
+        }
+
+        &-yellow-4 {
+            width: 26%;
+        }
+
+        &-yellow-5 {
+            width: 26%;
+        }
+
+        &-black-1 {
+            width: 26%;
+        }
+
+        &-black-2 {
+            width: 26%;
+        }
+
+        &-red-1 {
+            width: 26%;
+        }
+
+        &-red-1 {
+            width: 26%;
+        }
+
+        &-red-2 {
+            width: 26%;
+        }
+
+        &-red-3 {
+            width: 26%;
+        }
+
+        &-red-4 {
+            width: 26%;
+        }
+
+        &-blue-1 {
+            width: 26%;
+        }
+
+        &-blue-2 {
+            width: 26%;
+        }
+
+        &-blue-3 {
+            width: 26%;
+        }
     }
 
     &-triangle {
-        &-green-2 {
-            bottom: -2.5%;
-            right: 34%;
-        }
-
         &-green-1 {
             bottom: -2.5%;
             left: 34.5%;
+        }
+
+        &-green-2 {
+            bottom: -2.5%;
+            right: 34%;
         }
 
         &-green-3 {
@@ -279,6 +353,72 @@ p {
             bottom: -2.5%;
             right: 34%;
         }
+
+        &-yellow-2 {
+            bottom: -2.5%;
+            right: 34%;
+        }
+
+        &-yellow-3 {
+            bottom: -2.5%;
+            right: 34%;
+        }
+
+        &-yellow-4 {
+            bottom: -2.5%;
+            right: 34%;
+        }
+
+        &-yellow-5 {
+            bottom: -2.5%;
+            right: 34%;
+        }
+
+        &-black-1 {
+            bottom: -2.5%;
+            right: 34%;
+        }
+
+        &-black-2 {
+            bottom: -2.5%;
+            right: 34%;
+        }
+
+        &-red-1 {
+            bottom: -2.5%;
+            right: 34%;
+        }
+
+        &-red-2 {
+            bottom: -2.5%;
+            right: 34%;
+        }
+
+        &-red-3 {
+            bottom: -2.5%;
+            right: 34%;
+        }
+
+        &-red-4 {
+            bottom: -2.5%;
+            right: 34%;
+        }
+
+        &-blue-1 {
+            bottom: -2.5%;
+            right: 34%;
+        }
+        
+        &-blue-2 {
+            bottom: -2.5%;
+            right: 34%;
+        }
+
+        &-blue-3 {
+            bottom: -2.5%;
+            right: 34%;
+        }
+
     }
 }
 

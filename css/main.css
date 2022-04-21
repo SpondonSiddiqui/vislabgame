@@ -129,6 +129,14 @@ p {
   color: #4cbf4c;
 }
 
+.quest-info-red h2 {
+  color: #ff4d4d;
+}
+
+.quest-info-blue h2 {
+  color: #0ebde5;
+}
+
 .quest-info p {
   margin-top: 1vw;
 }
@@ -232,14 +240,70 @@ p {
   width: 26%;
 }
 
-#quest-triangle-green-2 {
-  bottom: -2.5%;
-  right: 34%;
+#quest-tips-yellow-2 {
+  width: 26%;
+}
+
+#quest-tips-yellow-3 {
+  width: 26%;
+}
+
+#quest-tips-yellow-4 {
+  width: 26%;
+}
+
+#quest-tips-yellow-5 {
+  width: 26%;
+}
+
+#quest-tips-black-1 {
+  width: 26%;
+}
+
+#quest-tips-black-2 {
+  width: 26%;
+}
+
+#quest-tips-red-1 {
+  width: 26%;
+}
+
+#quest-tips-red-1 {
+  width: 26%;
+}
+
+#quest-tips-red-2 {
+  width: 26%;
+}
+
+#quest-tips-red-3 {
+  width: 26%;
+}
+
+#quest-tips-red-4 {
+  width: 26%;
+}
+
+#quest-tips-blue-1 {
+  width: 26%;
+}
+
+#quest-tips-blue-2 {
+  width: 26%;
+}
+
+#quest-tips-blue-3 {
+  width: 26%;
 }
 
 #quest-triangle-green-1 {
   bottom: -2.5%;
   left: 34.5%;
+}
+
+#quest-triangle-green-2 {
+  bottom: -2.5%;
+  right: 34%;
 }
 
 #quest-triangle-green-3 {
@@ -248,6 +312,71 @@ p {
 }
 
 #quest-triangle-yellow-1 {
+  bottom: -2.5%;
+  right: 34%;
+}
+
+#quest-triangle-yellow-2 {
+  bottom: -2.5%;
+  right: 34%;
+}
+
+#quest-triangle-yellow-3 {
+  bottom: -2.5%;
+  right: 34%;
+}
+
+#quest-triangle-yellow-4 {
+  bottom: -2.5%;
+  right: 34%;
+}
+
+#quest-triangle-yellow-5 {
+  bottom: -2.5%;
+  right: 34%;
+}
+
+#quest-triangle-black-1 {
+  bottom: -2.5%;
+  right: 34%;
+}
+
+#quest-triangle-black-2 {
+  bottom: -2.5%;
+  right: 34%;
+}
+
+#quest-triangle-red-1 {
+  bottom: -2.5%;
+  right: 34%;
+}
+
+#quest-triangle-red-2 {
+  bottom: -2.5%;
+  right: 34%;
+}
+
+#quest-triangle-red-3 {
+  bottom: -2.5%;
+  right: 34%;
+}
+
+#quest-triangle-red-4 {
+  bottom: -2.5%;
+  right: 34%;
+}
+
+#quest-triangle-blue-1 {
+  bottom: -2.5%;
+  right: 34%;
+}
+
+#quest-triangle-blue-2 {
+  bottom: -2.5%;
+  right: 34%;
+}
+
+#quest-triangle-blue-3 {
   bottom: -2.5%;
   right: 34%;
 }
