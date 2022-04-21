@@ -141,6 +141,7 @@ p {
 }
 
 .quest-info-blue {
+  width: 50%;
   top: 5.56%;
   right: 10%;
 }
@@ -341,13 +342,15 @@ p {
 }
 
 #quest-tips-blue-1 {
-  width: 40%;
+  width: 36%;
   top: 5.56%;
   left: 2.5%;
 }
 
 #quest-tips-blue-2 {
-  width: 26%;
+  width: 36%;
+  top: 5.56%;
+  left: 2.5%;
 }
 
 #quest-tips-blue-3 {
@@ -426,17 +429,17 @@ p {
 
 #quest-triangle-blue-1 {
   bottom: -2.5%;
-  left: 30%;
+  left: 36.5%;
 }
 
 #quest-triangle-blue-2 {
   bottom: -2.5%;
-  right: 24%;
+  right: 40.5%;
 }
 
 #quest-triangle-blue-3 {
   bottom: -2.5%;
-  right: 34%;
+  right: 32%;
 }
 
 .info-box {

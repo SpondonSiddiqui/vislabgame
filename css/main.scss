@@ -145,7 +145,7 @@ p {
         &-yellow {
             h2 {
                 color: color(yellow);
-            }            
+            }
         }
 
         &-green {
@@ -170,6 +170,7 @@ p {
         }
 
         &-blue {
+            width: 50%;
             top: 5.56%;
             right: 10%;
 
@@ -370,13 +371,15 @@ p {
         }
 
         &-blue-1 {
-            width: 40%;
+            width: 36%;
             top: 5.56%;
             left: 2.5%;
         }
 
         &-blue-2 {
-            width: 26%;
+            width: 36%;
+            top: 5.56%;
+            left: 2.5%;
         }
 
         &-blue-3 {
@@ -457,17 +460,17 @@ p {
 
         &-blue-1 {
             bottom: -2.5%;
-            left: 30%;
+            left: 36.5%;
         }
 
         &-blue-2 {
             bottom: -2.5%;
-            right: 24%;
+            right: 40.5%;
         }
 
         &-blue-3 {
             bottom: -2.5%;
-            right: 34%;
+            right: 32%;
         }
 
     }
