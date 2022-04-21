@@ -416,12 +416,24 @@ function showBlueQuest2() {
     blueQuest2.style.display = 'flex';
 }
 
+function showBlueQuest3() {
+    showBlueOverlay();
+    hideAllInfoBoxes();
+    hideQuests();
+    hideQuestTips();
+    blueQuest3.style.display = 'flex';
+}
+
 function showBlueQuest1Tips() {
     blueQuest1Tips.style.display = 'inline';
 }
 
 function showBlueQuest2Tips() {
     blueQuest2Tips.style.display = 'inline';
+}
+
+function showBlueQuest3Tips() {
+    blueQuest3Tips.style.display = 'inline';
 }
 
 // Green quest functions
@@ -469,6 +481,7 @@ function hideQuests() {
     yellowQuest1.style.display = 'none';
     blueQuest1.style.display = 'none';
     blueQuest2.style.display = 'none';
+    blueQuest3.style.display = 'none';
 }
 
 function hideQuestTips() {
@@ -479,6 +492,7 @@ function hideQuestTips() {
     yellowQuest1Tips.style.display = 'none';
     blueQuest1Tips.style.display = 'none';
     blueQuest2Tips.style.display = 'none';
+    blueQuest3Tips.style.display = 'none';
 }
 
 
