@@ -160,12 +160,47 @@ p {
   border-radius: .3vw;
 }
 
-.quest-info #send-button-green {
+.quest-result {
+  background-color: #fff;
+  position: absolute;
+  border-radius: 16px;
+  padding: 2vw;
+  width: 40%;
+  display: none;
+  -webkit-box-shadow: 0 0 1.5vw rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0 1.5vw rgba(0, 0, 0, 0.1);
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.quest-result p {
+  margin-top: 1vw;
+  padding-bottom: 1vw;
+  border-bottom: 1px solid #e3e5e9;
+}
+
+.quest-result :first-child {
+  margin-top: 0;
+  border-bottom: none;
+}
+
+.quest-result :last-child {
+  border-bottom: none;
+}
+
+.quest-result-yellow {
+  top: 5.56%;
+  left: 50%;
+}
+
+.quest-send-button-green {
   background-color: #4cbf4c;
   font-size: 1.5vw;
 }
 
-.quest-info #send-button-yellow {
+.quest-send-button-yellow {
   background-color: #f2ba49;
   font-size: 1.5vw;
 }

@@ -367,6 +367,28 @@ function showYellowQuest1Tips() {
     yellowQuest1Tips.style.display = 'inline';
 }
 
+function showYellowQuest1Result() {
+    // Save user input
+    var userInput = document.getElementById('quest-yellow-1-input');
+
+    // Make user input read only
+    document.getElementById('quest-yellow-1-input').readOnly = true;
+
+    // Change look of send button
+    const sendButtonYellow = document.getElementById('send-button-yellow');
+    sendButtonYellow.style.backgroundColor = 'white';
+    sendButtonYellow.style.color = '#f2ba49';
+    sendButtonYellow.innerHTML = "Skickat!";
+
+    // Display result box
+    const yellowQuest1ResultBox = document.getElementById('quest-result-yellow-1');
+    yellowQuest1ResultBox.style.display = 'flex';
+
+    // Display user input in the result box
+    var displayInput = document.getElementById('user-input');
+    displayInput.innerHTML = userInput.value;
+}
+
 
 function showGreenQuest1() {
     showGreenOverlay();

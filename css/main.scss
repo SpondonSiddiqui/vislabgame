@@ -147,7 +147,7 @@ p {
         &-yellow {
             h2 {
                 color: color(yellow);
-            }
+            }            
         }
 
         &-green {
@@ -192,17 +192,49 @@ p {
             color: #fff;
             border-radius: .3vw;
         }
+    }
 
-        #send-button {
-            &-green {
-                background-color: color(green);
-                font-size: 1.5vw;
-            }
+    &-result {
+        background-color: #fff;
+        position: absolute;
+        border-radius: 16px;
+        padding: 2vw;
+        width: 40%;
+        display: none;
+        box-shadow: 0 0 1.5vw rgba($color: #000000, $alpha: 0.1);
+        flex-direction: column;
 
-            &-yellow {
-                background-color: color(yellow);
-                font-size: 1.5vw;
-            }
+        p {
+            margin-top: 1vw;
+            padding-bottom: 1vw;
+            border-bottom: 1px solid color(text-tertiary);
+        }
+
+        :first-child {
+            margin-top: 0;
+            border-bottom: none;
+        }
+
+        :last-child {
+            border-bottom: none;
+        }
+
+        &-yellow {
+            top: 5.56%;
+            left: 50%;
+        }
+
+    }
+
+    &-send-button {
+        &-green {
+            background-color: color(green);
+            font-size: 1.5vw;
+        }
+
+        &-yellow {
+            background-color: color(yellow);
+            font-size: 1.5vw;
         }
     }
 
