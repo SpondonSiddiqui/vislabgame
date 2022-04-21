@@ -219,6 +219,10 @@ p {
   font-size: 1.5vw;
 }
 
+.quest-redo-button {
+  display: none;
+}
+
 .quest-tips {
   display: none;
   position: absolute;

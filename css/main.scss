@@ -248,6 +248,10 @@ p {
         }
     }
 
+    &-redo-button {
+        display: none;
+    }
+
     &-tips {
         display: none;
         position: absolute;
