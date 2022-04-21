@@ -170,6 +170,11 @@ p {
   font-size: 1.5vw;
 }
 
+.quest-info #send-button-blue {
+  background-color: #0ebde5;
+  font-size: 1.5vw;
+}
+
 .quest-tips {
   display: none;
   position: absolute;
@@ -293,7 +298,9 @@ p {
 }
 
 #quest-tips-blue-1 {
-  width: 26%;
+  width: 36%;
+  top: 5.56%;
+  left: 50%;
 }
 
 #quest-tips-blue-2 {

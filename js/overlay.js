@@ -73,6 +73,15 @@ const blueCircle3 = document.getElementById('blue-circle-3');
 // Blue info box
 const blueInfoBox = document.getElementById('info-box-blue');
 
+// Blue quests
+const blueQuest1 = document.getElementById('quest-blue-1');
+const blueQuest2 = document.getElementById('quest-blue-2');
+const blueQuest3 = document.getElementById('quest-blue-3');
+
+const blueQuest1Tips = document.getElementById('quest-tips-blue-1');
+const blueQuest2Tips = document.getElementById('quest-tips-blue-2');
+const blueQuest3Tips = document.getElementById('quest-tips-blue-3');
+
 // Green beams
 const greenBeamA = document.getElementById('green-beam-a');
 const greenBeamAPartial = document.getElementById('green-beam-a-partial');
@@ -355,6 +364,7 @@ function hideOverlays() {
     hideQuests();
 }
 
+// Yellow quest functions
 function showYellowQuest1() {
     showYellowOverlay();
     hideAllInfoBoxes();
@@ -367,7 +377,20 @@ function showYellowQuest1Tips() {
     yellowQuest1Tips.style.display = 'inline';
 }
 
+// Blue quest functions
+function showBlueQuest1() {
+    showBlueOverlay();
+    hideAllInfoBoxes();
+    hideQuests();
+    hideQuestTips();
+    blueQuest1.style.display = 'flex';
+}
 
+function showBlueQuest1Tips() {
+    blueQuest1Tips.style.display = 'inline';
+}
+
+// Green quest functions
 function showGreenQuest1() {
     showGreenOverlay();
     hideAllInfoBoxes();
@@ -410,6 +433,7 @@ function hideQuests() {
     greenQuest2.style.display = 'none';
     greenQuest3.style.display = 'none';
     yellowQuest1.style.display = 'none';
+    blueQuest1.style.display = 'none';
 }
 
 function hideQuestTips() {
@@ -418,7 +442,7 @@ function hideQuestTips() {
     greenQuest2Tips.style.display = 'none';
     greenQuest3Tips.style.display = 'none';
     yellowQuest1Tips.style.display = 'none';
-
+    blueQuest1Tips.style.display = 'none';
 }
 
 
