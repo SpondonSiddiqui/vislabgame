@@ -204,6 +204,21 @@ p {
   left: 50%;
 }
 
+.quest-result-yellow-4 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  color: #f2ba49;
+}
+
+.quest-result-yellow-4 h2 {
+  margin-right: 0.5vw;
+}
+
 .quest-send-button-green {
   background-color: #4cbf4c;
   font-size: 1.5vw;

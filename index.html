@@ -28,7 +28,8 @@
             onclick="showYellowQuest1()">
         <img id="yellow-circle-2" class="circle" src="assets/images/circles/circle-yellow.svg">
         <img id="yellow-circle-3" class="circle" src="assets/images/circles/circle-yellow.svg">
-        <img id="yellow-circle-4" class="circle" src="assets/images/circles/circle-yellow.svg">
+        <img id="yellow-circle-4" class="circle" src="assets/images/circles/circle-yellow.svg"
+            onclick="showYellowQuest4()">
         <img id="yellow-circle-5" class="circle" src="assets/images/circles/circle-yellow.svg">
         <!--Overlay-->
         <div id="wall-yellow-overlay" class="wall-yellow-overlay">
@@ -80,10 +81,46 @@
             </div>
             <div id="quest-result-yellow-1" class="quest-result quest-result-yellow">
                 <p><span class="bold">Vad har andra svarat?</span></p>
-                <p id="user-input"></p>
+                <p id="user-input-yellow-1"></p>
                 <p>Nordstan såg väldigt mycket mysigare ut med trängre gator och så. Påminner om gamla stan i Stockholm.
                 </p>
                 <p>Hugo was here xd</p>
+            </div>
+        </div>
+        <!--Quest 4-->
+        <div id="quest-yellow-4" class="quest-overlay quest">
+            <div class="quest-info quest-info-yellow">
+                <h2>Life Stats</h2>
+                <p>Här kan du fylla i ditt födelsedatum för att se statistik om dig själv.</p>
+                <div class="quest-text-wrapper">
+                    <p><span class="bold">Uppdrag:</span> Hur många år av ditt liv har du sovit?</p>
+                    <img src="assets/images/tips-button.svg" onclick="showYellowQuest4Tips()">
+                </div>
+                <div class="quest-text-wrapper quest-input-wrapper">
+                    <input id="quest-yellow-4-input" type="number">
+                    <img id="redo-button-yellow-4" class="quest-redo-button" src="assets/images/redo-button.svg" onclick="redoYellowQuest4()">
+                    <button id="send-button-yellow" class="quest-send-button quest-send-button-yellow" onclick="showYellowQuest4Result()">
+                        Skicka
+                    </button>
+                </div>
+                <img id="quest-triangle-yellow-4" class="quest-triangle" src="assets/images/white-triangle.svg">
+            </div>
+            <div id="quest-tips-yellow-4" class="quest-tips">
+                <p><span class="bold">Tips!</span></p>
+                <p>Kolla in ledtråden nedan om du behöver hjälp.</p>
+                <details>
+                    <summary>Ledtråd 1</summary>
+                    <p>För att omvandla antalet sovande dagar till år så kan du ta hjälp av mobilens miniräknar genom att dela antalet dagar med 365.</p>
+                </details>
+            </div>
+            <div id="quest-result-yellow-4" class="quest-result quest-result-yellow">
+                <p><span class="bold">Kan det vara så att du är...</span></p>
+                <div id="quest-result-yellow-4" class="quest-result-yellow-4">
+                    <h2 id="user-input-yellow-4" class=""></h2>
+                    <h2 id="yellow-4-year"> år?</h2>
+                </div>
+                <p>Andra som gjort detta uppdrag är...</p>
+                <p>13 år</p> <p>44 år</p>
             </div>
         </div>
 
