@@ -136,7 +136,8 @@
         <img id="green-beam-b" class="wall-green-beam-b" src="assets/images/beams/beam-green-b.svg">
         <!--Circles-->
         <img id="green-circle-1" class="circle" src="assets/images/circles/circle-green.svg">
-        <img id="green-circle-2" class="circle" src="assets/images/circles/circle-green.svg" onclick="showGreenQuest2()">
+        <img id="green-circle-2" class="circle" src="assets/images/circles/circle-green.svg"
+            onclick="showGreenQuest2()">
         <img id="green-circle-3" class="circle" src="assets/images/circles/circle-green.svg">
         <!--Overlay Info box-->
         <div id="info-box-green" class="info-box-green info-box">
@@ -161,16 +162,17 @@
                     <p><span class="bold">Uppdrag:</span> Hitta ditt favoritdjur och se vilka näringsrelationer det
                         har. Vad är under ditt
                         djur i näringskedjan?</p>
-                    <img src="assets/images/tips-button.svg">
+                    <img src="assets/images/tips-button.svg" onclick="showGreenQuest2Tips()">
                 </div>
                 <div class="quest-text-wrapper quest-input-wrapper">
-                    <input type="text" name="quest-1-answer">
+                    <input id="quest-green-2-input" type="text">
                     <button id="send-button-green" class="quest-send-button">
                         Skicka
                     </button>
                 </div>
+                <img id="quest-triangle-green-2" class="quest-triangle" src="assets/images/white-triangle.svg">
             </div>
-            <div class="quest-tips">
+            <div id="quest-tips-green-2" class="quest-tips">
                 <p><span class="bold">Tips!</span></p>
                 <p>Tryck på hem ikonen eller reset ikonen för att återställa skärmen</p>
                 <details>

@@ -99,6 +99,10 @@ p {
   left: 2.5%;
 }
 
+.quest {
+  position: relative;
+}
+
 .quest-overlay {
   display: none;
   position: absolute;
@@ -129,6 +133,7 @@ p {
   width: 75%;
   border: none;
   border-bottom: 2px solid #e3e5e9;
+  padding-left: 1em;
 }
 
 .quest-info button {
@@ -141,16 +146,15 @@ p {
 
 .quest-info #send-button-green {
   background-color: #4cbf4c;
+  font-size: 1.5vw;
 }
 
 .quest-tips {
+  display: none;
   position: absolute;
   background-color: #fff;
   border-radius: 16px;
   padding: 2vw;
-  width: 26%;
-  top: 5.56%;
-  left: 50%;
 }
 
 .quest-tips :first-child {
@@ -160,10 +164,15 @@ p {
 .quest-tips details {
   font-family: Gotham Rounded;
   font-size: 1.5vw;
+  margin-top: 1vw;
+  background-color: #e3e5e9;
+  border-radius: .4vw;
+  padding: 1vw;
 }
 
 .quest-tips details p {
-  margin-top: 0;
+  margin-top: 1vw;
+  margin-left: 1em;
 }
 
 .quest-tips summary {
@@ -185,6 +194,22 @@ p {
 
 .quest-input-wrapper {
   margin-top: 1.5vw;
+}
+
+.quest-triangle {
+  position: absolute;
+  width: 2.5%;
+}
+
+#quest-tips-green-2 {
+  width: 26%;
+  top: 5.56%;
+  left: 50%;
+}
+
+#quest-triangle-green-2 {
+  bottom: -2.5%;
+  right: 34%;
 }
 
 .info-box {

@@ -121,6 +121,8 @@ p {
 
 // Quests
 .quest {
+    position: relative;
+
     &-overlay {
         display: none;
         position: absolute;
@@ -150,6 +152,7 @@ p {
             width: 75%;
             border: none;
             border-bottom: 2px solid color(text-tertiary);
+            padding-left: 1em;
         }
 
         button {
@@ -163,18 +166,17 @@ p {
         #send-button {
             &-green {
                 background-color: color(green);
+                font-size: 1.5vw;
             }
         }
     }
 
     &-tips {
+        display: none;
         position: absolute;
         background-color: #fff;
         border-radius: 16px;
         padding: 2vw;
-        width: 26%;
-        top: 5.56%;
-        left: 50%;
 
         :first-child {
             margin-top: 0;
@@ -184,9 +186,14 @@ p {
         details {
             font-family: Gotham Rounded;
             font-size: 1.5vw;
+            margin-top: 1vw;
+            background-color: color(text-tertiary);
+            border-radius: .4vw;
+            padding: 1vw;
 
             p {
-                margin-top: 0;
+                margin-top: 1vw;
+                margin-left: 1em;
             }
         }
 
@@ -207,9 +214,29 @@ p {
     &-input-wrapper {
         margin-top: 1.5vw;
     }
+
+    &-triangle {
+        position: absolute;
+        width: 2.5%;
+    }
 }
 
-#quest {}
+#quest {
+    &-tips {
+        &-green-2 {
+            width: 26%;
+            top: 5.56%;
+            left: 50%;
+        }
+    }
+
+    &-triangle {
+        &-green-2 {
+            bottom: -2.5%;
+            right: 34%;
+        }
+    }
+}
 
 // Info box
 .info-box {

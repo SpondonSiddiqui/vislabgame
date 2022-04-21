@@ -84,6 +84,8 @@ const greenInfoBox = document.getElementById('info-box-green');
 // Green quests
 const greenQuest2 = document.getElementById('quest-green-2');
 
+const greenQuest2Tips = document.getElementById('quest-tips-green-2');
+
 // Overlays
 const yellowOverlay = document.getElementById('wall-yellow-overlay');
 const blackOverlay = document.getElementById('wall-black-overlay');
@@ -348,15 +350,26 @@ function showGreenQuest2() {
     showGreenOverlay();
     hideAllInfoBoxes();
     hideQuests();
+    hideQuestTips();
     greenQuest2.style.display = 'flex';
 }
 
+function showGreenQuest2Tips() {
+    greenQuest2Tips.style.display = 'inline';
+}
+
 function hideQuests() {
+    // Add the same line of code for all quests here
     greenQuest2.style.display = 'none';
 }
 
+function hideQuestTips() {
+    // Add the same line of code for all quests here
+    greenQuest2Tips.style.display = 'none';
+}
 
-function hideAllInfoBoxes() {        
+
+function hideAllInfoBoxes() {
     greenInfoBox.style.display = 'none';
     yellowInfoBox.style.display = 'none';
     blackInfoBox.style.display = 'none';
