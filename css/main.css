@@ -117,8 +117,6 @@ p {
   border-radius: 16px;
   padding: 2vw;
   width: 45%;
-  top: 5.56%;
-  left: 2.5%;
 }
 
 .quest-info h2 {
@@ -129,12 +127,22 @@ p {
   color: #f2ba49;
 }
 
+.quest-info-green {
+  top: 5.56%;
+  left: 2.5%;
+}
+
 .quest-info-green h2 {
   color: #4cbf4c;
 }
 
 .quest-info-red h2 {
   color: #ff4d4d;
+}
+
+.quest-info-blue {
+  top: 5.56%;
+  right: 10%;
 }
 
 .quest-info-blue h2 {
@@ -298,9 +306,9 @@ p {
 }
 
 #quest-tips-blue-1 {
-  width: 36%;
+  width: 40%;
   top: 5.56%;
-  left: 50%;
+  left: 2.5%;
 }
 
 #quest-tips-blue-2 {
@@ -383,12 +391,12 @@ p {
 
 #quest-triangle-blue-1 {
   bottom: -2.5%;
-  right: 34%;
+  left: 30%;
 }
 
 #quest-triangle-blue-2 {
   bottom: -2.5%;
-  right: 34%;
+  right: 24%;
 }
 
 #quest-triangle-blue-3 {

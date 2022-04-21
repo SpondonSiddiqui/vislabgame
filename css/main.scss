@@ -137,8 +137,6 @@ p {
         border-radius: 16px;
         padding: 2vw;
         width: 45%;
-        top: 5.56%;
-        left: 2.5%;
 
         h2 {
             font-size: 2.3vw;
@@ -151,6 +149,9 @@ p {
         }
 
         &-green {
+            top: 5.56%;
+            left: 2.5%;
+
             h2 {
                 color: color(green);
             }
@@ -169,6 +170,9 @@ p {
         }
 
         &-blue {
+            top: 5.56%;
+            right: 10%;
+
             h2 {
                 color: color(blue);
             }
@@ -334,9 +338,9 @@ p {
         }
 
         &-blue-1 {
-            width: 36%;
+            width: 40%;
             top: 5.56%;
-            left: 50%;
+            left: 2.5%;
         }
 
         &-blue-2 {
@@ -421,12 +425,12 @@ p {
 
         &-blue-1 {
             bottom: -2.5%;
-            right: 34%;
+            left: 30%;
         }
 
         &-blue-2 {
             bottom: -2.5%;
-            right: 34%;
+            right: 24%;
         }
 
         &-blue-3 {
