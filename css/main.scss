@@ -223,6 +223,12 @@ p {
 
 #quest {
     &-tips {
+        &-green-1 {
+            width: 26%;
+            top: 5.56%;
+            left: 50%;
+        }
+
         &-green-2 {
             width: 26%;
             top: 5.56%;
@@ -234,6 +240,11 @@ p {
         &-green-2 {
             bottom: -2.5%;
             right: 34%;
+        }
+
+        &-green-1 {
+            bottom: -2.5%;
+            left: 34.5%;
         }
     }
 }

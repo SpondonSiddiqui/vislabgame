@@ -81,9 +81,13 @@ const greenCircle3 = document.getElementById('green-circle-3');
 const greenInfoBox = document.getElementById('info-box-green');
 
 // Green quests
+const greenQuest1 = document.getElementById('quest-green-1');
 const greenQuest2 = document.getElementById('quest-green-2');
+const greenQuest3 = document.getElementById('quest-green-3');
 
+const greenQuest1Tips = document.getElementById('quest-tips-green-1');
 const greenQuest2Tips = document.getElementById('quest-tips-green-2');
+const greenQuest3Tips = document.getElementById('quest-tips-green-3');
 
 // Overlays
 const yellowOverlay = document.getElementById('wall-yellow-overlay');
@@ -340,6 +344,14 @@ function hideOverlays() {
     hideQuests();
 }
 
+function showGreenQuest1() {
+    showGreenOverlay();
+    hideAllInfoBoxes();
+    hideQuests();
+    hideQuestTips();
+    greenQuest1.style.display = 'flex';
+}
+
 function showGreenQuest2() {
     showGreenOverlay();
     hideAllInfoBoxes();
@@ -348,17 +360,24 @@ function showGreenQuest2() {
     greenQuest2.style.display = 'flex';
 }
 
+function showGreenQuest1Tips() {
+    greenQuest1Tips.style.display = 'inline';
+}
+
 function showGreenQuest2Tips() {
     greenQuest2Tips.style.display = 'inline';
 }
 
 function hideQuests() {
     // Add the same line of code for all quests here
+    greenQuest1.style.display = 'none';
     greenQuest2.style.display = 'none';
+    //greenQuest3.style.display = 'none';
 }
 
 function hideQuestTips() {
     // Add the same line of code for all quests here
+    greenQuest1Tips.style.display = 'none';
     greenQuest2Tips.style.display = 'none';
 }
 

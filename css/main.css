@@ -201,6 +201,12 @@ p {
   width: 2.5%;
 }
 
+#quest-tips-green-1 {
+  width: 26%;
+  top: 5.56%;
+  left: 50%;
+}
+
 #quest-tips-green-2 {
   width: 26%;
   top: 5.56%;
@@ -210,6 +216,11 @@ p {
 #quest-triangle-green-2 {
   bottom: -2.5%;
   right: 34%;
+}
+
+#quest-triangle-green-1 {
+  bottom: -2.5%;
+  left: 34.5%;
 }
 
 .info-box {
