@@ -80,7 +80,7 @@
             </div>
             <div id="quest-result-yellow-1" class="quest-result quest-result-yellow">
                 <p><span class="bold">Vad har andra svarat?</span></p>
-                <p id="user-input"></p>
+                <p id="user-input-yellow-1"></p>
                 <p>Nordstan såg väldigt mycket mysigare ut med trängre gator och så. Påminner om gamla stan i Stockholm.
                 </p>
                 <p>Hugo was here xd</p>
@@ -119,10 +119,10 @@
         <img id="red-beam-b" class="wall-red-beam-b" src="assets/images/beams/beam-red-b.svg">
         <img id="red-beam-b-partial" class="wall-red-beam-b-partial" src="assets/images/beams/beam-red-b-partial.svg">
         <!--Circles-->
-        <img id="red-circle-1" class="circle" src="assets/images/circles/circle-red.svg">
-        <img id="red-circle-2" class="circle" src="assets/images/circles/circle-red.svg">
-        <img id="red-circle-3" class="circle" src="assets/images/circles/circle-red.svg">
-        <img id="red-circle-4" class="circle" src="assets/images/circles/circle-red.svg">
+        <img id="red-circle-1" class="circle" src="assets/images/circles/circle-red.svg" onclick="showRedQuest1()">
+        <img id="red-circle-2" class="circle" src="assets/images/circles/circle-red.svg" onclick="showRedQuest2()">
+        <img id="red-circle-3" class="circle" src="assets/images/circles/circle-red.svg" onclick="showRedQuest3()">
+        <img id="red-circle-4" class="circle" src="assets/images/circles/circle-red.svg" onclick="showRedQuest4()">
         <!--Overlay-->
         <div id="wall-red-overlay" class="wall-red-overlay">
             <img class="wall-red" src="assets/images/wall_red.svg">
@@ -140,6 +140,45 @@
                 anatomiska modeller i 3D som ger en detaljerad upplevelse av en helt
                 frisk kropp. Utforska vårt lymfsystem, ett komplett nerv- och kärlsystem
                 eller kolla in ett riktig hjärta och organen som pumpar runt vårt blod.</p>
+        </div>
+        <!--Quest 1-->
+        <div id="quest-red-1" class="quest-overlay quest">
+            <div class="quest-info quest-info-red">
+                <h2>Fönstret</h2>
+                <p>I fönstret kan du titta ut över Göteborg på 1600-talet, lära dig mer om stadsbuller, framtidens
+                    skyfall, kolla in Hisingsbron, och följa Korsvägenbygget live.</p>
+                <div class="quest-text-wrapper">
+                    <p><span class="bold">Uppdrag:</span> Vilket område i 1600-talets Göteborg hade du velat uppleva,
+                        och varför?</p>
+                    <img src="assets/images/tips-button.svg" onclick="showRedQuest1Tips()">
+                </div>
+                <div class="quest-text-wrapper quest-input-wrapper">
+                    <input id="quest-red-1-input" type="text">
+                    <img id="redo-button-red-1" class="quest-redo-button" src="assets/images/redo-button.svg"
+                        onclick="redoRedQuest1()">
+                    <button id="send-button-red" class="quest-send-button quest-send-button-red"
+                        onclick="showRedQuest1Result()">
+                        Skicka
+                    </button>
+                </div>
+                <img id="quest-triangle-red-1" class="quest-triangle" src="assets/images/white-triangle.svg">
+            </div>
+            <div id="quest-tips-red-1" class="quest-tips">
+                <p><span class="bold">Tips!</span></p>
+                <p>Kolla in ledtråden nedan om du behöver hjälp.</p>
+                <details>
+                    <summary>Ledtråd 1</summary>
+                    <p>Tryck på knapparna på fönsterbrädan. Finns det någon av dem som verkar handla om Göteborg på
+                        1600-talet?</p>
+                </details>
+            </div>
+            <div id="quest-result-red-1" class="quest-result quest-result-red">
+                <p><span class="bold">Vad har andra svarat?</span></p>
+                <p id="user-input-red-1"></p>
+                <p>Nordstan såg väldigt mycket mysigare ut med trängre gator och så. Påminner om gamla stan i Stockholm.
+                </p>
+                <p>Hugo was here xd</p>
+            </div>
         </div>
 
         <!--Sea section-->

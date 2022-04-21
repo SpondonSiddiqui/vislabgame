@@ -214,6 +214,11 @@ p {
   font-size: 1.5vw;
 }
 
+.quest-send-button-red {
+  background-color: #ff4d4d;
+  font-size: 1.5vw;
+}
+
 .quest-send-button-blue {
   background-color: #0ebde5;
   font-size: 1.5vw;

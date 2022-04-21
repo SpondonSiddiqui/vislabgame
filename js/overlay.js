@@ -60,6 +60,17 @@ const redCircle4 = document.getElementById('red-circle-4');
 // Red info box
 const redInfoBox = document.getElementById('info-box-red');
 
+// Red quests
+const redQuest1 = document.getElementById('quest-red-1');
+const redQuest2 = document.getElementById('quest-red-2');
+const redQuest3 = document.getElementById('quest-red-3');
+const redQuest4 = document.getElementById('quest-red-4');
+
+const redQuest1Tips = document.getElementById('quest-tips-red-1');
+const redQuest2Tips = document.getElementById('quest-tips-red-2');
+const redQuest3Tips = document.getElementById('quest-tips-red-3');
+const redQuest4Tips = document.getElementById('quest-tips-red-4');
+
 // Blue beams
 const blueBeamA = document.getElementById('blue-beam-a');
 const blueBeamAPartial = document.getElementById('blue-beam-a-partial');
@@ -113,9 +124,17 @@ const greenOverlay = document.getElementById('wall-green-overlay');
 
 // Send buttons
 const sendButtonYellow = document.getElementById('send-button-yellow');
+const sendButtonBlack = document.getElementById('send-button-black');
+const sendButtonRed = document.getElementById('send-button-red');
+const sendButtonBlue = document.getElementById('send-button-blue');
+const sendButtonGreen = document.getElementById('send-button-green');
 
 // Result boxes
 const yellowQuest1ResultBox = document.getElementById('quest-result-yellow-1');
+const redQuest1ResultBox = document.getElementById('quest-result-red-1');
+const blackQuest1ResultBox = document.getElementById('quest-result-black-1');
+const blueQuest1ResultBox = document.getElementById('quest-result-blue-1');
+const greenQuest1ResultBox = document.getElementById('quest-result-green-1');
 
 /* Get the documentElement (<html>) to display the page in fullscreen */
 var elem = document.documentElement;
@@ -387,7 +406,7 @@ function showYellowQuest1Result() {
     // Save user input
     var userInput = document.getElementById('quest-yellow-1-input').value;
     if (userInput.length != 0) {
-        
+
         // Make user input read only
         document.getElementById('quest-yellow-1-input').readOnly = true;
 
@@ -400,7 +419,7 @@ function showYellowQuest1Result() {
         yellowQuest1ResultBox.style.display = 'flex';
 
         // Display user input in the result box
-        var displayInput = document.getElementById('user-input');
+        var displayInput = document.getElementById('user-input-yellow-1');
         displayInput.innerHTML = userInput;
 
         // Display redo button
@@ -414,7 +433,7 @@ function redoYellowQuest1() {
     document.getElementById('redo-button-yellow-1').style.display = 'none';
 
     // Remove user input from result box
-    document.getElementById('user-input').innerHTML = "";
+    document.getElementById('user-input-yellow-1').innerHTML = "";
 
     // Make input writeable
     document.getElementById('quest-yellow-1-input').readOnly = false;
@@ -423,6 +442,97 @@ function redoYellowQuest1() {
     sendButtonYellow.style.backgroundColor = '#f2ba49';
     sendButtonYellow.style.color = 'white';
     sendButtonYellow.innerHTML = "Skicka";
+}
+
+// Red quest functions
+function showRedQuest1() {
+    showRedOverlay();
+    hideAllInfoBoxes();
+    hideQuests();
+    hideQuestTips();
+    redQuest1.style.display = 'flex';
+}
+
+function showRedQuest1Result() {
+    // Save user input
+    var userInput = document.getElementById('quest-red-1-input').value;
+    if (userInput.length != 0) {
+
+        // Make user input read only
+        document.getElementById('quest-red-1-input').readOnly = true;
+
+        // Change look of send button
+        sendButtonRed.style.backgroundColor = 'white';
+        sendButtonRed.style.color = '#ff4d4d';
+        sendButtonRed.innerHTML = "Skickat!";
+
+        // Display result box
+        redQuest1ResultBox.style.display = 'flex';
+
+        // Display user input in the result box
+        var displayInput = document.getElementById('user-input-red-1');
+        displayInput.innerHTML = userInput;
+
+        // Display redo button
+        var redoButton = document.getElementById('redo-button-red-1');
+        redoButton.style.display = 'flex';
+    }
+}
+
+function redoRedQuest1() {
+    // Hide redo button
+    document.getElementById('redo-button-red-1').style.display = 'none';
+
+    // Remove user input from result box
+    document.getElementById('user-input-red-1').innerHTML = "";
+
+    // Make input writeable
+    document.getElementById('quest-red-1-input').readOnly = false;
+
+    // Restore send button
+    sendButtonRed.style.backgroundColor = '#ff4d4d';
+    sendButtonRed.style.color = 'white';
+    sendButtonRed.innerHTML = "Skicka";
+}
+
+function showRedQuest2() {
+    showRedOverlay();
+    hideAllInfoBoxes();
+    hideQuests();
+    hideQuestTips();
+    redQuest2.style.display = 'flex';
+}
+
+function showRedQuest3() {
+    showRedOverlay();
+    hideAllInfoBoxes();
+    hideQuests();
+    hideQuestTips();
+    redQuest3.style.display = 'flex';
+}
+
+function showRedQuest4() {
+    showRedOverlay();
+    hideAllInfoBoxes();
+    hideQuests();
+    hideQuestTips();
+    redQuest4.style.display = 'flex';
+}
+
+function showRedQuest1Tips() {
+    redQuest1Tips.style.display = 'inline';
+}
+
+function showRedQuest2Tips() {
+    redQuest2Tips.style.display = 'inline';
+}
+
+function showRedQuest3Tips() {
+    redQuest3Tips.style.display = 'inline';
+}
+
+function showRedQuest4Tips() {
+    redQuest4Tips.style.display = 'inline';
 }
 
 // Blue quest functions
