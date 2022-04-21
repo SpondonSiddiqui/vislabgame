@@ -121,6 +121,10 @@ p {
   left: 2.5%;
 }
 
+.quest-info h2 {
+  font-size: 2.3vw;
+}
+
 .quest-info-yellow h2 {
   color: #f2ba49;
 }
@@ -207,6 +211,10 @@ p {
 
 .quest-text-wrapper p {
   width: 90%;
+}
+
+.quest-text-wrapper img {
+  width: 7%;
 }
 
 .quest-input-wrapper {
