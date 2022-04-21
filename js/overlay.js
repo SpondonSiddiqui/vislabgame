@@ -2,6 +2,7 @@
 // Constants
 const infoBoxes = document.getElementsByClassName('info-box');
 const quests = document.getElementsByClassName('quests');
+const scoreBoardOverlay = document.getElementById('scoreboard-overlay');
 
 // Walls
 const wallYellow = document.getElementById('wall-yellow');
@@ -111,6 +112,11 @@ function openFullscreen() {
 }
 
 // Functions
+function showScoreBoard() {
+    scoreBoardOverlay.style.display = 'grid';
+}
+
+
 function showYellowOverlay() {
     yellowOverlay.style.display = 'flex';
 
