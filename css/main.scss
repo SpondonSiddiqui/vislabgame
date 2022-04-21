@@ -234,6 +234,12 @@ p {
             top: 5.56%;
             left: 50%;
         }
+
+        &-green-3 {
+            width: 40%;
+            top: 5.56%;
+            left: 50%;
+        }
     }
 
     &-triangle {
@@ -245,6 +251,11 @@ p {
         &-green-1 {
             bottom: -2.5%;
             left: 34.5%;
+        }
+
+        &-green-3 {
+            bottom: -2.5%;
+            right: 13.5%;
         }
     }
 }

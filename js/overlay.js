@@ -360,6 +360,14 @@ function showGreenQuest2() {
     greenQuest2.style.display = 'flex';
 }
 
+function showGreenQuest3() {
+    showGreenOverlay();
+    hideAllInfoBoxes();
+    hideQuests();
+    hideQuestTips();
+    greenQuest3.style.display = 'flex';
+}
+
 function showGreenQuest1Tips() {
     greenQuest1Tips.style.display = 'inline';
 }
@@ -368,17 +376,22 @@ function showGreenQuest2Tips() {
     greenQuest2Tips.style.display = 'inline';
 }
 
+function showGreenQuest3Tips() {
+    greenQuest3Tips.style.display = 'inline';
+}
+
 function hideQuests() {
     // Add the same line of code for all quests here
     greenQuest1.style.display = 'none';
     greenQuest2.style.display = 'none';
-    //greenQuest3.style.display = 'none';
+    greenQuest3.style.display = 'none';
 }
 
 function hideQuestTips() {
     // Add the same line of code for all quests here
     greenQuest1Tips.style.display = 'none';
     greenQuest2Tips.style.display = 'none';
+    greenQuest3Tips.style.display = 'none';
 }
 
 
