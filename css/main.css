@@ -153,9 +153,6 @@ p {
   background-color: #fff;
   border-radius: 16px;
   padding: 2vw;
-  width: 26%;
-  top: 5.56%;
-  left: 50%;
 }
 
 .quest-tips :first-child {
@@ -200,6 +197,12 @@ p {
 .quest-triangle {
   position: absolute;
   width: 2.5%;
+}
+
+#quest-tips-green-2 {
+  width: 26%;
+  top: 5.56%;
+  left: 50%;
 }
 
 #quest-triangle-green-2 {
