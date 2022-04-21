@@ -149,6 +149,7 @@ p {
 }
 
 .quest-tips {
+  display: none;
   position: absolute;
   background-color: #fff;
   border-radius: 16px;
