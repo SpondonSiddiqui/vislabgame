@@ -111,6 +111,12 @@ const redOverlay = document.getElementById('wall-red-overlay');
 const blueOverlay = document.getElementById('wall-blue-overlay');
 const greenOverlay = document.getElementById('wall-green-overlay');
 
+// Send buttons
+const sendButtonYellow = document.getElementById('send-button-yellow');
+
+// Result boxes
+const yellowQuest1ResultBox = document.getElementById('quest-result-yellow-1');
+
 /* Get the documentElement (<html>) to display the page in fullscreen */
 var elem = document.documentElement;
 
@@ -379,24 +385,44 @@ function showYellowQuest1Tips() {
 
 function showYellowQuest1Result() {
     // Save user input
-    var userInput = document.getElementById('quest-yellow-1-input');
+    var userInput = document.getElementById('quest-yellow-1-input').value;
+    if (userInput.length != 0) {
+        
+        // Make user input read only
+        document.getElementById('quest-yellow-1-input').readOnly = true;
 
-    // Make user input read only
-    document.getElementById('quest-yellow-1-input').readOnly = true;
+        // Change look of send button
+        sendButtonYellow.style.backgroundColor = 'white';
+        sendButtonYellow.style.color = '#f2ba49';
+        sendButtonYellow.innerHTML = "Skickat!";
 
-    // Change look of send button
-    const sendButtonYellow = document.getElementById('send-button-yellow');
-    sendButtonYellow.style.backgroundColor = 'white';
-    sendButtonYellow.style.color = '#f2ba49';
-    sendButtonYellow.innerHTML = "Skickat!";
+        // Display result box
+        yellowQuest1ResultBox.style.display = 'flex';
 
-    // Display result box
-    const yellowQuest1ResultBox = document.getElementById('quest-result-yellow-1');
-    yellowQuest1ResultBox.style.display = 'flex';
+        // Display user input in the result box
+        var displayInput = document.getElementById('user-input');
+        displayInput.innerHTML = userInput;
 
-    // Display user input in the result box
-    var displayInput = document.getElementById('user-input');
-    displayInput.innerHTML = userInput.value;
+        // Display redo button
+        var redoButton = document.getElementById('redo-button-yellow-1');
+        redoButton.style.display = 'flex';
+    }
+}
+
+function redoYellowQuest1() {
+    // Hide redo button
+    document.getElementById('redo-button-yellow-1').style.display = 'none';
+
+    // Remove user input from result box
+    document.getElementById('user-input').innerHTML = "";
+
+    // Make input writeable
+    document.getElementById('quest-yellow-1-input').readOnly = false;
+
+    // Restore send button
+    sendButtonYellow.style.backgroundColor = '#f2ba49';
+    sendButtonYellow.style.color = 'white';
+    sendButtonYellow.innerHTML = "Skicka";
 }
 
 // Blue quest functions
