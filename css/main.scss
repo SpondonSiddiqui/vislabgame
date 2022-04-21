@@ -121,6 +121,8 @@ p {
 
 // Quests
 .quest {
+    position: relative;
+
     &-overlay {
         display: none;
         position: absolute;
@@ -216,6 +218,18 @@ p {
 }
 
 #quest {}
+
+.quest-triangle {
+    position: absolute;
+    width: 2.5%;
+}
+
+#quest-triangle {
+    &-green-2 {
+        bottom: -2.5%;
+        right: 34%;
+    }
+}
 
 // Info box
 .info-box {

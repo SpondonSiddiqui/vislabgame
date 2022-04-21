@@ -99,6 +99,10 @@ p {
   left: 2.5%;
 }
 
+.quest {
+  position: relative;
+}
+
 .quest-overlay {
   display: none;
   position: absolute;
@@ -191,6 +195,16 @@ p {
 
 .quest-input-wrapper {
   margin-top: 1.5vw;
+}
+
+.quest-triangle {
+  position: absolute;
+  width: 2.5%;
+}
+
+#quest-triangle-green-2 {
+  bottom: -2.5%;
+  right: 34%;
 }
 
 .info-box {
