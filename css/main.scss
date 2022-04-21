@@ -140,6 +140,10 @@ p {
         top: 5.56%;
         left: 2.5%;
 
+        h2 {
+            font-size: 2.3vw;
+        }
+
         &-yellow {
             h2 {
                 color: color(yellow);
@@ -221,6 +225,10 @@ p {
 
         p {
             width: 90%;
+        }
+
+        img {
+            width: 7%;
         }
     }
 
@@ -750,5 +758,5 @@ p {
     width: 64%;
     height: 71.4%;
     border-radius: 8px;
-    
+
 }
