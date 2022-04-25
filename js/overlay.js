@@ -842,6 +842,9 @@ function hideQuests() {
     blueQuest2.style.display = 'none';
     blueQuest3.style.display = 'none';
     redQuest1.style.display = 'none';
+    redQuest2.style.display = 'none';
+    redQuest3.style.display = 'none';
+    redQuest4.style.display = 'none';
 }
 
 function hideQuestTips() {
@@ -855,6 +858,10 @@ function hideQuestTips() {
     blueQuest1Tips.style.display = 'none';
     blueQuest2Tips.style.display = 'none';
     blueQuest3Tips.style.display = 'none';
+    redQuest1Tips.style.display = 'none';
+    redQuest2Tips.style.display = 'none';
+    redQuest3Tips.style.display = 'none';
+    redQuest4Tips.style.display = 'none';
 }
 
 

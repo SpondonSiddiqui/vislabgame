@@ -170,8 +170,20 @@ p {
         }
 
         &-red {
-            top: 45.5%;
+            top: auto;
+            bottom: 5.56%;
             right: 10%;
+
+            &-3 {
+                top: auto;
+                bottom: 5.56%;
+                right: 10%;
+                width: 49%;
+
+                h2 {
+                    color: color(red);
+                }
+            }
 
             h2 {
                 color: color(red);
@@ -397,20 +409,26 @@ p {
 
         &-red-1 {
             width: 32%;
-            top: 5.56%;
-            left: 11%;
+            bottom: 5.5%;
+            left: 10%;
         }
 
         &-red-2 {
             width: 26%;
+            bottom: 5.5%;
+            left: 16%;
         }
 
         &-red-3 {
             width: 26%;
+            bottom: 5.5%;
+            left: 12%;
         }
 
         &-red-4 {
             width: 26%;
+            bottom: 5.5%;
+            left: 16%;
         }
 
         &-blue-1 {
@@ -484,23 +502,31 @@ p {
         }
 
         &-red-1 {
-            bottom: -2.5%;
-            right: 34%;
+            top: -5%;
+            right: 51%;
+            transform: rotate(180deg);
+            width: 5%;
         }
 
         &-red-2 {
-            bottom: -2.5%;
-            right: 34%;
+            top: -5%;
+            right: 26%;
+            transform: rotate(180deg);
+            width: 5%;
         }
 
         &-red-3 {
-            bottom: -2.5%;
-            right: 34%;
+            top: -5%;
+            right: 40.3%;
+            transform: rotate(180deg);
+            width: 5%;
         }
 
         &-red-4 {
-            bottom: -2.5%;
-            right: 34%;
+            top: -5%;
+            right: 10.3%;
+            transform: rotate(180deg);
+            width: 5%;
         }
 
         &-blue-1 {
