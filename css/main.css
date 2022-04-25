@@ -125,6 +125,12 @@ p {
   font-size: 2.3vw;
 }
 
+.quest-info-yellow {
+  bottom: 2.56%;
+  left: 1.5%;
+  width: 50%;
+}
+
 .quest-info-yellow h2 {
   color: #f2ba49;
 }
@@ -238,6 +244,12 @@ p {
   margin-right: 0.5vw;
 }
 
+.quest-result-yellow-2 {
+  width: 36%;
+  bottom: 2.56%;
+  left: 53%;
+}
+
 .quest-send-button-green {
   background-color: #4cbf4c;
   font-size: 1.5vw;
@@ -274,6 +286,10 @@ p {
   margin-top: 0;
 }
 
+.quest-tips p {
+  margin-top: 0;
+}
+
 .quest-tips details {
   font-family: Gotham Rounded;
   font-size: 1.5vw;
@@ -306,7 +322,7 @@ p {
 }
 
 .quest-text-wrapper img {
-  width: 7%;
+  width: 3vw;
 }
 
 .quest-input-wrapper {
@@ -337,11 +353,19 @@ p {
 }
 
 #quest-tips-yellow-1 {
-  width: 26%;
+  left: 53%;
+  bottom: 2.56%;
+  width: 33%;
+  -webkit-box-shadow: 0 0 1.5vw rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0 1.5vw rgba(0, 0, 0, 0.1);
 }
 
 #quest-tips-yellow-2 {
-  width: 26%;
+  left: 53%;
+  bottom: 2.56%;
+  width: 33%;
+  -webkit-box-shadow: 0 0 1.5vw rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0 1.5vw rgba(0, 0, 0, 0.1);
 }
 
 #quest-tips-yellow-3 {
@@ -349,11 +373,11 @@ p {
 }
 
 #quest-tips-yellow-4 {
-  width: 26%;
-}
-
-#quest-tips-yellow-5 {
-  width: 26%;
+  left: 53%;
+  bottom: 2.56%;
+  width: 33%;
+  -webkit-box-shadow: 0 0 1.5vw rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0 1.5vw rgba(0, 0, 0, 0.1);
 }
 
 #quest-tips-black-1 {

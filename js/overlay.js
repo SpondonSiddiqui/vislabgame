@@ -34,9 +34,13 @@ const yellowInfoButton = document.getElementById('info-overlay-button-yellow');
 
 // Yellow quests
 const yellowQuest1 = document.getElementById('quest-yellow-1');
+const yellowQuest2 = document.getElementById('quest-yellow-2');
+const yellowQuest3 = document.getElementById('quest-yellow-3');
 const yellowQuest4 = document.getElementById('quest-yellow-4');
 
 const yellowQuest1Tips = document.getElementById('quest-tips-yellow-1');
+const yellowQuest2Tips = document.getElementById('quest-tips-yellow-2');
+const yellowQuest3Tips = document.getElementById('quest-tips-yellow-3');
 const yellowQuest4Tips = document.getElementById('quest-tips-yellow-4');
 
 // Black beams
@@ -84,6 +88,11 @@ const redQuest1Tips = document.getElementById('quest-tips-red-1');
 const redQuest2Tips = document.getElementById('quest-tips-red-2');
 const redQuest3Tips = document.getElementById('quest-tips-red-3');
 const redQuest4Tips = document.getElementById('quest-tips-red-4');
+
+const yellowQuest1ResultBox = document.getElementById('quest-result-yellow-1');
+const yellowQuest2ResultBox = document.getElementById('quest-result-yellow-2');
+const yellowQuest3ResultBox = document.getElementById('quest-result-yellow-3');
+const yellowQuest4ResultBox = document.getElementById('quest-result-yellow-4');
 
 // Blue beams
 const blueBeamA = document.getElementById('blue-beam-a');
@@ -152,8 +161,7 @@ const sendButtonBlue = document.getElementById('send-button-blue');
 const sendButtonGreen = document.getElementById('send-button-green');
 
 // Result boxes
-const yellowQuest1ResultBox = document.getElementById('quest-result-yellow-1');
-const yellowQuest4ResultBox = document.getElementById('quest-result-yellow-4');
+
 const redQuest1ResultBox = document.getElementById('quest-result-red-1');
 const blackQuest1ResultBox = document.getElementById('quest-result-black-1');
 const blueQuest1ResultBox = document.getElementById('quest-result-blue-1');
@@ -442,6 +450,22 @@ function showYellowQuest1() {
     yellowQuest1.style.display = 'flex';
 }
 
+function showYellowQuest2() {
+    showYellowOverlay();
+    hideAllInfoBoxes();
+    hideQuests();
+    hideQuestTips();
+    yellowQuest2.style.display = 'flex';
+}
+
+function showYellowQuest3() {
+    showYellowOverlay();
+    hideAllInfoBoxes();
+    hideQuests();
+    hideQuestTips();
+    yellowQuest3.style.display = 'flex';
+}
+
 function showYellowQuest4() {
     showYellowOverlay();
     hideAllInfoBoxes();
@@ -452,6 +476,14 @@ function showYellowQuest4() {
 
 function showYellowQuest1Tips() {
     yellowQuest1Tips.style.display = 'inline';
+}
+
+function showYellowQuest2Tips() {
+    yellowQuest2Tips.style.display = 'inline';
+}
+
+function showYellowQuest3Tips() {
+    yellowQuest3Tips.style.display = 'inline';
 }
 
 function showYellowQuest4Tips() {
@@ -481,6 +513,32 @@ function showYellowQuest1Result() {
         // Display redo button
         var redoButton = document.getElementById('redo-button-yellow-1');
         redoButton.style.display = 'flex';
+
+        hideQuestTips();
+    }
+}
+
+function showYellowQuest2Result() {
+    // Save user input
+    var userInput = document.getElementById('quest-yellow-2-input').value;
+    if (userInput.length != 0) {
+
+        // Make user input read only
+        document.getElementById('quest-yellow-2-input').readOnly = true;
+
+        // Change look of send button
+        sendButtonYellow.style.backgroundColor = 'white';
+        sendButtonYellow.style.color = '#f2ba49';
+        sendButtonYellow.innerHTML = "Skickat!";
+
+        // Display result box
+        yellowQuest2ResultBox.style.display = 'flex';
+
+        // Display redo button
+        var redoButton = document.getElementById('redo-button-yellow-2');
+        redoButton.style.display = 'flex';
+
+        hideQuestTips();
     }
 }
 
@@ -508,6 +566,8 @@ function showYellowQuest4Result() {
         // Display redo button
         var redoButton = document.getElementById('redo-button-yellow-4');
         redoButton.style.display = 'flex';
+
+        hideQuestTips();
     }
 }
 
@@ -525,6 +585,22 @@ function redoYellowQuest1() {
     sendButtonYellow.style.backgroundColor = '#f2ba49';
     sendButtonYellow.style.color = 'white';
     sendButtonYellow.innerHTML = "Skicka";
+}
+
+function redoYellowQuest2() {
+    // Hide redo button
+    document.getElementById('redo-button-yellow-2').style.display = 'none';
+
+    // Make input writeable
+    document.getElementById('quest-yellow-2-input').readOnly = false;
+
+    // Restore send button
+    sendButtonYellow.style.backgroundColor = '#f2ba49';
+    sendButtonYellow.style.color = 'white';
+    sendButtonYellow.innerHTML = "Skicka";
+
+    // Hide result window
+    yellowQuest2ResultBox.style.display = 'none';
 }
 
 function redoYellowQuest4() {
@@ -760,6 +836,7 @@ function hideQuests() {
     greenQuest2.style.display = 'none';
     greenQuest3.style.display = 'none';
     yellowQuest1.style.display = 'none';
+    yellowQuest2.style.display = 'none';
     yellowQuest4.style.display = 'none';
     blueQuest1.style.display = 'none';
     blueQuest2.style.display = 'none';
@@ -776,6 +853,7 @@ function hideQuestTips() {
     greenQuest2Tips.style.display = 'none';
     greenQuest3Tips.style.display = 'none';
     yellowQuest1Tips.style.display = 'none';
+    yellowQuest2Tips.style.display = 'none';
     yellowQuest4Tips.style.display = 'none';
     blueQuest1Tips.style.display = 'none';
     blueQuest2Tips.style.display = 'none';

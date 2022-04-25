@@ -145,6 +145,10 @@ p {
         }
 
         &-yellow {
+            bottom: 2.56%;
+            left: 1.5%;
+            width: 50%;
+
             h2 {
                 color: color(yellow);
             }
@@ -254,6 +258,12 @@ p {
                     margin-right: 0.5vw;
                 }
             }
+
+            &-2 {
+                width: 36%;
+                bottom: 2.56%;
+                left: 53%;
+            }
         }
 
 
@@ -298,6 +308,10 @@ p {
             //font-weight: bold;
         }
 
+        p {
+            margin-top: 0;
+        }
+
         details {
             font-family: Gotham Rounded;
             font-size: 1.5vw;
@@ -326,7 +340,7 @@ p {
         }
 
         img {
-            width: 7%;
+            width: 3vw;
         }
     }
 
@@ -361,11 +375,17 @@ p {
         }
 
         &-yellow-1 {
-            width: 26%;
+            left: 53%;
+            bottom: 2.56%;
+            width: 33%;
+            box-shadow: 0 0 1.5vw rgba($color: #000000, $alpha: 0.1);
         }
 
         &-yellow-2 {
-            width: 26%;
+            left: 53%;
+            bottom: 2.56%;
+            width: 33%;
+            box-shadow: 0 0 1.5vw rgba($color: #000000, $alpha: 0.1);
         }
 
         &-yellow-3 {
@@ -373,11 +393,10 @@ p {
         }
 
         &-yellow-4 {
-            width: 26%;
-        }
-
-        &-yellow-5 {
-            width: 26%;
+            left: 53%;
+            bottom: 2.56%;
+            width: 33%;
+            box-shadow: 0 0 1.5vw rgba($color: #000000, $alpha: 0.1);
         }
 
         &-black-1 {
