@@ -34,8 +34,10 @@ const yellowInfoButton = document.getElementById('info-overlay-button-yellow');
 
 // Yellow quests
 const yellowQuest1 = document.getElementById('quest-yellow-1');
+const yellowQuest4 = document.getElementById('quest-yellow-4');
 
 const yellowQuest1Tips = document.getElementById('quest-tips-yellow-1');
+const yellowQuest4Tips = document.getElementById('quest-tips-yellow-4');
 
 // Black beams
 const blackBeamA = document.getElementById('black-beam-a');
@@ -151,6 +153,7 @@ const sendButtonGreen = document.getElementById('send-button-green');
 
 // Result boxes
 const yellowQuest1ResultBox = document.getElementById('quest-result-yellow-1');
+const yellowQuest4ResultBox = document.getElementById('quest-result-yellow-4');
 const redQuest1ResultBox = document.getElementById('quest-result-red-1');
 const blackQuest1ResultBox = document.getElementById('quest-result-black-1');
 const blueQuest1ResultBox = document.getElementById('quest-result-blue-1');
@@ -439,8 +442,20 @@ function showYellowQuest1() {
     yellowQuest1.style.display = 'flex';
 }
 
+function showYellowQuest4() {
+    showYellowOverlay();
+    hideAllInfoBoxes();
+    hideQuests();
+    hideQuestTips();
+    yellowQuest4.style.display = 'flex';
+}
+
 function showYellowQuest1Tips() {
     yellowQuest1Tips.style.display = 'inline';
+}
+
+function showYellowQuest4Tips() {
+    yellowQuest4Tips.style.display = 'inline';
 }
 
 function showYellowQuest1Result() {
@@ -469,12 +484,39 @@ function showYellowQuest1Result() {
     }
 }
 
+function showYellowQuest4Result() {
+    // Save user input
+    let userInput = document.getElementById('quest-yellow-4-input').value;
+    let years = Math.round(userInput / 0.3125);
+
+    if (userInput.length != 0) {
+        // Make user input read only
+        document.getElementById('quest-yellow-4-input').readOnly = true;
+
+        // Change look of send button
+        sendButtonYellow.style.backgroundColor = 'white';
+        sendButtonYellow.style.color = '#f2ba49';
+        sendButtonYellow.innerHTML = "Skickat!";
+
+        // Display result box
+        yellowQuest4ResultBox.style.display = 'flex';
+
+        // Display user input in the result box
+        var displayInput = document.getElementById('user-input-yellow-4');
+        displayInput.innerHTML = years;
+
+        // Display redo button
+        var redoButton = document.getElementById('redo-button-yellow-4');
+        redoButton.style.display = 'flex';
+    }
+}
+
 function redoYellowQuest1() {
     // Hide redo button
     document.getElementById('redo-button-yellow-1').style.display = 'none';
 
     // Remove user input from result box
-    document.getElementById('user-input-yellow-1').innerHTML = "";
+    document.getElementById('user-input-yellow-1').innerHTML = "Du har ångrat ditt svar";
 
     // Make input writeable
     document.getElementById('quest-yellow-1-input').readOnly = false;
@@ -483,6 +525,26 @@ function redoYellowQuest1() {
     sendButtonYellow.style.backgroundColor = '#f2ba49';
     sendButtonYellow.style.color = 'white';
     sendButtonYellow.innerHTML = "Skicka";
+}
+
+function redoYellowQuest4() {
+    // Hide redo button
+    document.getElementById('redo-button-yellow-4').style.display = 'none';
+
+    // Remove user input from result box
+    document.getElementById('user-input-yellow-4').innerHTML = "";
+
+    // Make input writeable
+    document.getElementById('quest-yellow-4-input').readOnly = false;
+
+    // Restore send button
+    sendButtonYellow.style.backgroundColor = '#f2ba49';
+    sendButtonYellow.style.color = 'white';
+    sendButtonYellow.innerHTML = "Skicka";
+
+
+    // remove År?
+    document.getElementById('yellow-4-year').innerHTML = '';
 }
 
 // Red quest functions
@@ -698,6 +760,7 @@ function hideQuests() {
     greenQuest2.style.display = 'none';
     greenQuest3.style.display = 'none';
     yellowQuest1.style.display = 'none';
+    yellowQuest4.style.display = 'none';
     blueQuest1.style.display = 'none';
     blueQuest2.style.display = 'none';
     blueQuest3.style.display = 'none';
@@ -710,6 +773,7 @@ function hideQuestTips() {
     greenQuest2Tips.style.display = 'none';
     greenQuest3Tips.style.display = 'none';
     yellowQuest1Tips.style.display = 'none';
+    yellowQuest4Tips.style.display = 'none';
     blueQuest1Tips.style.display = 'none';
     blueQuest2Tips.style.display = 'none';
     blueQuest3Tips.style.display = 'none';
