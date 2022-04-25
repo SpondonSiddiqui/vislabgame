@@ -105,10 +105,10 @@ p {
 
 .quest-overlay {
   display: none;
-  position: absolute;
+  position: relative;
   width: 100%;
-  top: 5.56%;
-  z-index: 12;
+  height: 100%;
+  z-index: 11;
 }
 
 .quest-info {
@@ -134,6 +134,11 @@ p {
 
 .quest-info-green h2 {
   color: #4cbf4c;
+}
+
+.quest-info-red {
+  top: 45.5%;
+  right: 10%;
 }
 
 .quest-info-red h2 {
@@ -331,11 +336,9 @@ p {
 }
 
 #quest-tips-red-1 {
-  width: 26%;
-}
-
-#quest-tips-red-1 {
-  width: 26%;
+  width: 32%;
+  top: 5.56%;
+  left: 10%;
 }
 
 #quest-tips-red-2 {

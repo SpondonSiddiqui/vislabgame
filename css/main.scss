@@ -125,10 +125,10 @@ p {
 
     &-overlay {
         display: none;
-        position: absolute;
+        position: relative;
         width: 100%;
-        top: 5.56%;
-        z-index: 12;
+        height: 100%;
+        z-index: 11;
     }
 
     &-info {
@@ -164,6 +164,9 @@ p {
         }
 
         &-red {
+            top: 45.5%;
+            right: 10%;
+
             h2 {
                 color: color(red);
             }
@@ -360,11 +363,9 @@ p {
         }
 
         &-red-1 {
-            width: 26%;
-        }
-
-        &-red-1 {
-            width: 26%;
+            width: 32%;
+            top: 5.56%;
+            left: 10%;
         }
 
         &-red-2 {

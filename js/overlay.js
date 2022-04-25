@@ -503,6 +503,48 @@ function showRedQuest2() {
     redQuest2.style.display = 'flex';
 }
 
+function showRedQuest2Result() {
+    // Save user input
+    var userInput = document.getElementById('quest-red-2-input').value;
+    if (userInput.length != 0) {
+
+        // Make user input read only
+        document.getElementById('quest-red-2-input').readOnly = true;
+
+        // Change look of send button
+        sendButtonRed.style.backgroundColor = 'white';
+        sendButtonRed.style.color = '#ff4d4d';
+        sendButtonRed.innerHTML = "Skickat!";
+
+        // Display result box
+        redQuest1ResultBox.style.display = 'flex';
+
+        // Display user input in the result box
+        var displayInput = document.getElementById('user-input-red-2');
+        displayInput.innerHTML = userInput;
+
+        // Display redo button
+        var redoButton = document.getElementById('redo-button-red-2');
+        redoButton.style.display = 'flex';
+    }
+}
+
+function redoRedQuest2() {
+    // Hide redo button
+    document.getElementById('redo-button-red-2').style.display = 'none';
+
+    // Remove user input from result box
+    document.getElementById('user-input-red-2').innerHTML = "";
+
+    // Make input writeable
+    document.getElementById('quest-red-2-input').readOnly = false;
+
+    // Restore send button
+    sendButtonRed.style.backgroundColor = '#ff4d4d';
+    sendButtonRed.style.color = 'white';
+    sendButtonRed.innerHTML = "Skicka";
+}
+
 function showRedQuest3() {
     showRedOverlay();
     hideAllInfoBoxes();
