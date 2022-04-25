@@ -177,8 +177,10 @@
         <!--Circles-->
         <img id="black-circle-1" class="circle" src="assets/images/circles/circle-black.svg"
             onclick="showBlackQuest1()">
-        <img id="black-circle-2" class="circle" src="assets/images/circles/circle-black.svg">
-        <img id="black-circle-3" class="circle" src="assets/images/circles/circle-black.svg">
+        <img id="black-circle-2" class="circle" src="assets/images/circles/circle-black.svg"
+            onclick="showBlackQuest2()">
+        <img id="black-circle-3" class="circle" src="assets/images/circles/circle-black.svg"
+            onclick="showBlackQuest3()">
         <!--Overlay-->
         <div id="wall-black-overlay" class="wall-black-overlay">
             <img class="wall-black" src="assets/images/wall_black.svg">
@@ -222,6 +224,33 @@
                 <details>
                     <summary>Ledtråd 2</summary>
                     <p>Rymdskrot visualiseras som gröna strålar som färdas runt jorden. </p>
+                </details>
+            </div>
+        </div>
+        <!--Quest 2-->
+        <div id="quest-black-2" class="quest-overlay quest">
+            <div class="quest-info quest-info-black-2">
+                <h2>The size of space</h2>
+                <p>Här kan du se hur storleken av olika himlakroppar förhåller sig till varandra</p>
+                <div class="quest-text-wrapper">
+                    <p><span class="bold">Uppdrag:</span> Kika in skärmen The Size of Space. Vilka hemligheter tror du
+                        gömmer sig i den himlakropp som ligger nio steg till höger från Jorden?</p>
+                    <img src="assets/images/tips-button.svg" onclick="showBlackQuest2Tips()">
+                </div>
+                <div class="quest-text-wrapper quest-input-wrapper">
+                    <input id="quest-black-2-input" type="text">
+                    <button id="send-button-black-2" class="quest-send-button quest-send-button-black"
+                        onclick="showBlackQuest2Result()">
+                        Skicka
+                    </button>
+                </div>
+                <img id="quest-triangle-black-2" class="quest-triangle" src="assets/images/white-triangle.svg">
+            </div>
+            <div id="quest-tips-black-2" class="quest-tips">
+                <p><span class="bold">Tips!</span></p>
+                <details>
+                    <summary>Ledtråd 1</summary>
+                    <p>Himlakropparna blir större och större desto längre åt höger du scrollar</p>
                 </details>
             </div>
         </div>

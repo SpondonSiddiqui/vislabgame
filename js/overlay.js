@@ -649,7 +649,7 @@ function showBlackQuest2() {
     hideAllInfoBoxes();
     hideQuests();
     hideQuestTips();
-    blackQuest3.style.display = 'flex';
+    blackQuest2.style.display = 'flex';
 }
 
 function showBlackQuest3() {
@@ -916,7 +916,7 @@ function hideQuests() {
     redQuest3.style.display = 'none';
     redQuest4.style.display = 'none';
     blackQuest1.style.display = 'none';
-    // blackQuest2.style.display = 'none';
+    blackQuest2.style.display = 'none';
     // blackQuest3.style.display = 'none';
 }
 
@@ -936,7 +936,7 @@ function hideQuestTips() {
     redQuest3Tips.style.display = 'none';
     redQuest4Tips.style.display = 'none';
     blackQuest1Tips.style.display = 'none';
-    // blackQuest2Tips.style.display = 'none';
+    blackQuest2Tips.style.display = 'none';
     // blackQuest3Tips.style.display = 'none';
 }
 
