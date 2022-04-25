@@ -175,7 +175,8 @@
         <img id="black-beam-a" class="wall-black-beam-a" src="assets/images/beams/beam-black-a.svg">
         <img id="black-beam-b" class="wall-black-beam-b" src="assets/images/beams/beam-black-b.svg">
         <!--Circles-->
-        <img id="black-circle-1" class="circle" src="assets/images/circles/circle-black.svg">
+        <img id="black-circle-1" class="circle" src="assets/images/circles/circle-black.svg"
+            onclick="showBlackQuest1()">
         <img id="black-circle-2" class="circle" src="assets/images/circles/circle-black.svg">
         <img id="black-circle-3" class="circle" src="assets/images/circles/circle-black.svg">
         <!--Overlay-->
@@ -192,6 +193,37 @@
                 Tack vare visualiseringstekniken kan du svara på frågor som
                 tidigare kändes omöjliga och nå platser som förr var oåtkomliga.
                 Utforska planeter, stjärnor och se in i kärnan av meteoriter.</p>
+        </div>
+        <!--Quest 1-->
+        <div id="quest-black-1" class="quest-overlay quest">
+            <div class="quest-info quest-info-black-1">
+                <h2>Rymdresan</h2>
+                <p>Här kan du navigera runt i rymden och utforska jorden, månen och till och med hela Universum.</p>
+                <div class="quest-text-wrapper">
+                    <p><span class="bold">Uppdrag:</span> Över vilka delar av Jorden finns det minst rymdskrot?
+                        Varför tror du att det är så?</p>
+                    <img src="assets/images/tips-button.svg" onclick="showBlackQuest1Tips()">
+                </div>
+                <div class="quest-text-wrapper quest-input-wrapper">
+                    <input id="quest-black-1-input" type="text">
+                    <button id="send-button-black-1" class="quest-send-button quest-send-button-black"
+                        onclick="showBlackQuest1Result()">
+                        Skicka
+                    </button>
+                </div>
+                <img id="quest-triangle-black-1" class="quest-triangle" src="assets/images/white-triangle.svg">
+            </div>
+            <div id="quest-tips-black-1" class="quest-tips">
+                <p><span class="bold">Tips!</span></p>
+                <details>
+                    <summary>Ledtråd 1</summary>
+                    <p>På höger sida ser du ett antal flikar. Du kanske kan hitta nåt om rymdskrot där?</p>
+                </details>
+                <details>
+                    <summary>Ledtråd 2</summary>
+                    <p>Rymdskrot visualiseras som gröna strålar som färdas runt jorden. </p>
+                </details>
+            </div>
         </div>
 
         <!--Human section-->

@@ -19,6 +19,7 @@ $colors: (text-main: #141414,
     red: #ff4d4d,
     blue: #0ebde5,
     green: #4cbf4c,
+    purple: #9900ff,
     yellow-beam: #f6cf80,
     gray-beam: #808080,
     red-beam: #ff7373,
@@ -168,8 +169,19 @@ p {
         }
 
         &-black {
+
+            &-1 {
+                width: 50%;
+                top: 32%;
+                left: 2.5%;
+
+                h2 {
+                    color: color(purple);
+                }
+            }
+
             h2 {
-                color: color(black);
+                color: color(purple);
             }
         }
 
@@ -298,6 +310,10 @@ p {
             background-color: color(blue);
             font-size: 1.5vw;
         }
+
+        &-black {
+            background-color: color(purple);
+        }
     }
 
     &-redo-button {
@@ -408,7 +424,9 @@ p {
         }
 
         &-black-1 {
-            width: 26%;
+            width: 32%;
+            bottom: 20%;
+            left: 58%;
         }
 
         &-black-2 {
@@ -500,8 +518,10 @@ p {
         }
 
         &-black-1 {
-            bottom: -2.5%;
-            right: 34%;
+            top: -5%;
+            right: 13.5%;
+            transform: rotate(180deg);
+            width: 5%;
         }
 
         &-black-2 {

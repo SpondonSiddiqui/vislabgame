@@ -148,6 +148,20 @@ p {
   color: #4cbf4c;
 }
 
+.quest-info-black-1 {
+  width: 50%;
+  top: 32%;
+  left: 2.5%;
+}
+
+.quest-info-black-1 h2 {
+  color: #9900ff;
+}
+
+.quest-info-black h2 {
+  color: #9900ff;
+}
+
 .quest-info-red {
   top: auto;
   bottom: 5.56%;
@@ -280,6 +294,10 @@ p {
   font-size: 1.5vw;
 }
 
+.quest-send-button-black {
+  background-color: #9900ff;
+}
+
 .quest-redo-button {
   display: none;
 }
@@ -391,7 +409,9 @@ p {
 }
 
 #quest-tips-black-1 {
-  width: 26%;
+  width: 32%;
+  bottom: 20%;
+  left: 58%;
 }
 
 #quest-tips-black-2 {
@@ -481,8 +501,11 @@ p {
 }
 
 #quest-triangle-black-1 {
-  bottom: -2.5%;
-  right: 34%;
+  top: -5%;
+  right: 13.5%;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  width: 5%;
 }
 
 #quest-triangle-black-2 {
