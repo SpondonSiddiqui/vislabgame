@@ -701,6 +701,7 @@ function hideQuests() {
     blueQuest1.style.display = 'none';
     blueQuest2.style.display = 'none';
     blueQuest3.style.display = 'none';
+    redQuest1.style.display = 'none';
 }
 
 function hideQuestTips() {
