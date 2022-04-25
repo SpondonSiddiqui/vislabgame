@@ -170,6 +170,17 @@ p {
             bottom: 5.56%;
             right: 10%;
 
+            &-3 {
+                top: auto;
+                bottom: 5.56%;
+                right: 10%;
+                width: 49%;
+
+                h2 {
+                    color: color(red);
+                }
+            }
+
             h2 {
                 color: color(red);
             }
@@ -391,6 +402,8 @@ p {
 
         &-red-3 {
             width: 26%;
+            top: 45.5%;
+            left: 11%;
         }
 
         &-red-4 {
@@ -469,21 +482,23 @@ p {
 
         &-red-1 {
             top: -5%;
-            right: 48.5%;
+            right: 51%;
             transform: rotate(180deg);
-            width: 10%;
+            width: 5%;
         }
 
         &-red-2 {
             top: -5%;
-            right: 23%;
+            right: 26%;
             transform: rotate(180deg);
-            width: 10%;
+            width: 5%;
         }
 
         &-red-3 {
-            bottom: -2.5%;
-            right: 34%;
+            top: -5%;
+            right: 40.3%;
+            transform: rotate(180deg);
+            width: 5%;
         }
 
         &-red-4 {

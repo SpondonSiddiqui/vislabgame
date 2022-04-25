@@ -249,6 +249,43 @@
                 </details>
             </div>
         </div>
+        <!--Quest 3-->
+        <div id="quest-red-3" class="quest-overlay quest">
+            <div class="quest-info quest-info-red-3">
+                <h2>Snabba bilbeslut</h2>
+                <p>Här får du prova på ett klassiskt moraliskt dilemma och se hur du hade agerat</p>
+                <div class="quest-text-wrapper">
+                    <p><span class="bold">Uppdrag:</span> Utför bildilemmat. Vilket av alternativen tog du instinktivt,
+                        och varför kändes det beslutet rätt?</p>
+                    <img src="assets/images/tips-button.svg" onclick="showRedQuest3Tips()">
+                </div>
+                <div class="quest-text-wrapper quest-input-wrapper">
+                    <input id="quest-red-3-input" type="text">
+                    <img id="redo-button-red-3" class="quest-redo-button" src="assets/images/redo-button.svg"
+                        onclick="redoRedQuest3()">
+                    <button id="send-button-red" class="quest-send-button quest-send-button-red"
+                        onclick="showRedQuest3Result()">
+                        Skicka
+                    </button>
+                </div>
+                <img id="quest-triangle-red-3" class="quest-triangle" src="assets/images/white-triangle.svg">
+            </div>
+            <div id="quest-tips-red-3" class="quest-tips">
+                <p><span class="bold">Tips!</span></p>
+                <details>
+                    <summary>Ledtråd 1</summary>
+                    <p>Använd de röda knapparna för att välja om du vill köra höger, vänster, eller fortsätta rakt fram
+                    </p>
+                </details>
+            </div>
+            <div id="quest-result-red-3" class="quest-result quest-result-red">
+                <p><span class="bold">Vad har andra svarat?</span></p>
+                <p id="user-input-red-3"></p>
+                <p>Nordstan såg väldigt mycket mysigare ut med trängre gator och så. Påminner om gamla stan i Stockholm.
+                </p>
+                <p>Hugo was here xd</p>
+            </div>
+        </div>
 
         <!--Sea section-->
         <img id="wall-blue" class="wall-blue" src="assets/images/wall_blue.svg" onclick="showBlueOverlay()">

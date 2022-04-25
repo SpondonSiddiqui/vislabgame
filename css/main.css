@@ -144,6 +144,17 @@ p {
   right: 10%;
 }
 
+.quest-info-red-3 {
+  top: auto;
+  bottom: 5.56%;
+  right: 10%;
+  width: 49%;
+}
+
+.quest-info-red-3 h2 {
+  color: #ff4d4d;
+}
+
 .quest-info-red h2 {
   color: #ff4d4d;
 }
@@ -367,6 +378,8 @@ p {
 
 #quest-tips-red-3 {
   width: 26%;
+  top: 45.5%;
+  left: 11%;
 }
 
 #quest-tips-red-4 {
@@ -443,23 +456,26 @@ p {
 
 #quest-triangle-red-1 {
   top: -5%;
-  right: 48.5%;
+  right: 51%;
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
-  width: 10%;
+  width: 5%;
 }
 
 #quest-triangle-red-2 {
   top: -5%;
-  right: 23%;
+  right: 26%;
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
-  width: 10%;
+  width: 5%;
 }
 
 #quest-triangle-red-3 {
-  bottom: -2.5%;
-  right: 34%;
+  top: -5%;
+  right: 40.3%;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  width: 5%;
 }
 
 #quest-triangle-red-4 {
