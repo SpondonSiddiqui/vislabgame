@@ -40,6 +40,10 @@ p {
   font-weight: bold;
 }
 
+.width-75 {
+  width: 75%;
+}
+
 #main-container {
   background-color: #1b1b1b;
   aspect-ratio: 20/9;
@@ -248,6 +252,12 @@ p {
   width: 36%;
   bottom: 2.56%;
   left: 53%;
+}
+
+.quest-result-red {
+  width: 36%;
+  top: 22%;
+  left: 2.5%;
 }
 
 .quest-send-button-green {

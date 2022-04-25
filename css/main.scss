@@ -61,6 +61,10 @@ p {
     font-weight: bold;
 }
 
+.width-75 {
+    width: 75%;
+}
+
 #main-container {
     background-color: #1b1b1b;
     aspect-ratio: 20/9;
@@ -266,7 +270,11 @@ p {
             }
         }
 
-
+        &-red {
+            width: 36%;
+            top: 22%;
+            left: 2.5%;
+        }
 
     }
 
