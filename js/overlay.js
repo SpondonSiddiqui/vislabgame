@@ -58,6 +58,15 @@ const blackInfoBox = document.getElementById('info-box-black');
 const blackExitButton = document.getElementById('exit-overlay-button-black');
 const blackInfoButton = document.getElementById('info-overlay-button-black');
 
+// Black quests
+const blackQuest1 = document.getElementById('quest-black-1');
+const blackQuest2 = document.getElementById('quest-black-2');
+const blackQuest3 = document.getElementById('quest-black-3');
+
+const blackQuest1Tips = document.getElementById('quest-tips-black-1');
+const blackQuest2Tips = document.getElementById('quest-tips-black-2');
+const blackQuest3Tips = document.getElementById('quest-tips-black-3');
+
 // Red beams
 const redBeamA = document.getElementById('red-beam-a');
 const redBeamAPartial = document.getElementById('red-beam-a-partial');
@@ -626,6 +635,43 @@ function redoYellowQuest4() {
     document.getElementById('yellow-4-year').innerHTML = '';
 }
 
+// Blue quest functions
+function showBlackQuest1() {
+    showBlackOverlay();
+    hideAllInfoBoxes();
+    hideQuests();
+    hideQuestTips();
+    blackQuest1.style.display = 'flex';
+}
+
+function showBlackQuest2() {
+    showBlackOverlay();
+    hideAllInfoBoxes();
+    hideQuests();
+    hideQuestTips();
+    blackQuest3.style.display = 'flex';
+}
+
+function showBlackQuest3() {
+    showBlackOverlay();
+    hideAllInfoBoxes();
+    hideQuests();
+    hideQuestTips();
+    blackQuest3.style.display = 'flex';
+}
+
+function showBlackQuest1Tips() {
+    blackQuest1Tips.style.display = 'inline';
+}
+
+function showBlackQuest2Tips() {
+    blackQuest2Tips.style.display = 'inline';
+}
+
+function showBlackQuest3Tips() {
+    blackQuest3Tips.style.display = 'inline';
+}
+
 // Red quest functions
 function showRedQuest1() {
     showRedOverlay();
@@ -869,6 +915,9 @@ function hideQuests() {
     redQuest2.style.display = 'none';
     redQuest3.style.display = 'none';
     redQuest4.style.display = 'none';
+    blackQuest1.style.display = 'none';
+    blackQuest2.style.display = 'none';
+    blackQuest3.style.display = 'none';
 }
 
 function hideQuestTips() {
@@ -886,6 +935,9 @@ function hideQuestTips() {
     redQuest2Tips.style.display = 'none';
     redQuest3Tips.style.display = 'none';
     redQuest4Tips.style.display = 'none';
+    blackQuest1Tips.style.display = 'none';
+    blackQuest2Tips.style.display = 'none';
+    blackQuest3Tips.style.display = 'none';
 }
 
 
