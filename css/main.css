@@ -139,7 +139,8 @@ p {
 }
 
 .quest-info-red {
-  top: 45.5%;
+  top: auto;
+  bottom: 5.56%;
   right: 10%;
 }
 
@@ -360,6 +361,8 @@ p {
 
 #quest-tips-red-2 {
   width: 26%;
+  top: 5.56%;
+  left: 11%;
 }
 
 #quest-tips-red-3 {
@@ -439,13 +442,19 @@ p {
 }
 
 #quest-triangle-red-1 {
-  bottom: -2.5%;
-  right: 34%;
+  top: -5%;
+  right: 48.5%;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  width: 10%;
 }
 
 #quest-triangle-red-2 {
-  bottom: -2.5%;
-  right: 34%;
+  top: -5%;
+  right: 23%;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  width: 10%;
 }
 
 #quest-triangle-red-3 {
