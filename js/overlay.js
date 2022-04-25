@@ -767,6 +767,7 @@ function hideQuests() {
     redQuest1.style.display = 'none';
     redQuest2.style.display = 'none';
     redQuest3.style.display = 'none';
+    redQuest4.style.display = 'none';
 }
 
 function hideQuestTips() {
@@ -782,6 +783,7 @@ function hideQuestTips() {
     redQuest1Tips.style.display = 'none';
     redQuest2Tips.style.display = 'none';
     redQuest3Tips.style.display = 'none';
+    redQuest4Tips.style.display = 'none';
 }
 
 

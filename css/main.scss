@@ -390,24 +390,26 @@ p {
 
         &-red-1 {
             width: 32%;
-            top: 5.56%;
-            left: 11%;
+            bottom: 5.5%;
+            left: 10%;
         }
 
         &-red-2 {
             width: 26%;
-            top: 5.56%;
-            left: 11%;
+            bottom: 5.5%;
+            left: 16%;
         }
 
         &-red-3 {
             width: 26%;
-            top: 45.5%;
-            left: 11%;
+            bottom: 5.5%;
+            left: 12%;
         }
 
         &-red-4 {
             width: 26%;
+            bottom: 5.5%;
+            left: 16%;
         }
 
         &-blue-1 {
@@ -502,8 +504,10 @@ p {
         }
 
         &-red-4 {
-            bottom: -2.5%;
-            right: 34%;
+            top: -5%;
+            right: 10.3%;
+            transform: rotate(180deg);
+            width: 5%;
         }
 
         &-blue-1 {
