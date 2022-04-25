@@ -28,6 +28,10 @@ const yellowCircle5 = document.getElementById('yellow-circle-5');
 // Yellow info box
 const yellowInfoBox = document.getElementById('info-box-yellow');
 
+// Yellow overlay buttons
+const yellowExitButton = document.getElementById('exit-overlay-button-yellow');
+const yellowInfoButton = document.getElementById('info-overlay-button-yellow');
+
 // Yellow quests
 const yellowQuest1 = document.getElementById('quest-yellow-1');
 
@@ -45,6 +49,10 @@ const blackCircle3 = document.getElementById('black-circle-3');
 // Black info box
 const blackInfoBox = document.getElementById('info-box-black');
 
+// Black overlay buttons
+const blackExitButton = document.getElementById('exit-overlay-button-black');
+const blackInfoButton = document.getElementById('info-overlay-button-black');
+
 // Red beams
 const redBeamA = document.getElementById('red-beam-a');
 const redBeamAPartial = document.getElementById('red-beam-a-partial');
@@ -59,6 +67,10 @@ const redCircle4 = document.getElementById('red-circle-4');
 
 // Red info box
 const redInfoBox = document.getElementById('info-box-red');
+
+// Red overlay buttons
+const redExitButton = document.getElementById('exit-overlay-button-red');
+const redInfoButton = document.getElementById('info-overlay-button-red');
 
 // Red quests
 const redQuest1 = document.getElementById('quest-red-1');
@@ -84,6 +96,10 @@ const blueCircle3 = document.getElementById('blue-circle-3');
 // Blue info box
 const blueInfoBox = document.getElementById('info-box-blue');
 
+// Blue overlay buttons
+const blueExitButton = document.getElementById('exit-overlay-button-blue');
+const blueInfoButton = document.getElementById('info-overlay-button-blue');
+
 // Blue quests
 const blueQuest1 = document.getElementById('quest-blue-1');
 const blueQuest2 = document.getElementById('quest-blue-2');
@@ -105,6 +121,10 @@ const greenCircle3 = document.getElementById('green-circle-3');
 
 // Green info box
 const greenInfoBox = document.getElementById('info-box-green');
+
+// Green overlay buttons
+const greenExitButton = document.getElementById('exit-overlay-button-green');
+const greenInfoButton = document.getElementById('info-overlay-button-green');
 
 // Green quests
 const greenQuest1 = document.getElementById('quest-green-1');
@@ -188,6 +208,10 @@ function showYellowOverlay() {
 
     // Display info box
     yellowInfoBox.style.display = 'inline';
+
+    // Display buttons
+    yellowExitButton.style.display = 'inline';
+    yellowInfoButton.style.display = 'inline';
 }
 
 function showBlackOverlay() {
@@ -210,6 +234,10 @@ function showBlackOverlay() {
 
     // Display info box
     blackInfoBox.style.display = 'inline';
+
+    // Display buttons
+    blackExitButton.style.display = 'inline';
+    blackInfoButton.style.display = 'inline';
 }
 
 function showRedOverlay() {
@@ -239,6 +267,10 @@ function showRedOverlay() {
 
     // Display info box
     redInfoBox.style.display = 'inline';
+
+    // Display buttons
+    redExitButton.style.display = 'inline';
+    redInfoButton.style.display = 'inline';
 }
 
 function showBlueOverlay() {
@@ -264,6 +296,10 @@ function showBlueOverlay() {
 
     // Display info box
     blueInfoBox.style.display = 'inline';
+
+    // Display buttons
+    blueExitButton.style.display = 'inline';
+    blueInfoButton.style.display = 'inline';
 }
 
 function showGreenOverlay() {
@@ -289,6 +325,10 @@ function showGreenOverlay() {
 
     // Display info box
     greenInfoBox.style.display = 'inline';
+
+    // Display buttons
+    greenExitButton.style.display = 'inline';
+    greenInfoButton.style.display = 'inline';
 }
 
 function hideOverlays() {
@@ -386,6 +426,7 @@ function hideOverlays() {
     greenCircle3.style.zIndex = 5;
 
     hideAllInfoBoxes();
+    hideAllOverlayButtons();
     hideQuests();
 }
 
@@ -680,4 +721,17 @@ function hideAllInfoBoxes() {
     blackInfoBox.style.display = 'none';
     redInfoBox.style.display = 'none';
     blueInfoBox.style.display = 'none';
+}
+
+function hideAllOverlayButtons() {
+    yellowExitButton.style.display = 'none';
+    yellowInfoButton.style.display = 'none';
+    blackExitButton.style.display = 'none';
+    blackInfoButton.style.display = 'none';
+    redExitButton.style.display = 'none';
+    redInfoButton.style.display = 'none';
+    blueExitButton.style.display = 'none';
+    blueInfoButton.style.display = 'none';
+    greenExitButton.style.display = 'none';
+    greenInfoButton.style.display = 'none';
 }
