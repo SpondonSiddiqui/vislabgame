@@ -199,6 +199,9 @@ let nrOfRedBComplete = 0;
 let nrOfBlueAComplete = 0;
 let nrOfGreenAComplete = 0;
 
+// Strings
+const yellowFilterString = 'brightness(0) saturate(100%) invert(75%) sepia(3%) saturate(6601%) hue-rotate(345deg) brightness(117%) contrast(93%)';
+const redFilterString = 'brightness(0) saturate(100%) invert(64%) sepia(28%) saturate(3019%) hue-rotate(314deg) brightness(99%) contrast(115%)';
 /* Get the documentElement (<html>) to display the page in fullscreen */
 var elem = document.documentElement;
 
@@ -302,10 +305,10 @@ function showRedOverlay() {
     //    redBeamBPartial.style.filter = "opacity(0.5)";
 
     if (nrOfRedAComplete == 2) {
-        redBeamA.style.filter = 'brightness(0) saturate(100%) invert(64%) sepia(28%) saturate(3019%) hue-rotate(314deg) brightness(99%) contrast(115%) opacity(1)';
+        redBeamA.style.filter = redFilterString + 'opacity(1)';
     } else if (nrOfRedAComplete == 1) {
         redBeamA.style.filter = 'opacity(0.5)';
-        redBeamAPartial.style.filter = 'brightness(0) saturate(100%) invert(64%) sepia(28%) saturate(3019%) hue-rotate(314deg) brightness(99%) contrast(115%) opacity(0.5)';
+        redBeamAPartial.style.filter = redFilterString + 'opacity(0.5)';
         redBeamAPartial.style.display = 'inline';
         redBeamAPartial.style.zIndex = 11;
     } else {
@@ -559,7 +562,6 @@ function showYellowQuest1Result() {
         hideQuestTips();
     }
 }
-
 
 function showYellowQuest2Result() {
     // Save user input
@@ -883,11 +885,11 @@ function showRedQuest2Result() {
 
     // Change beam color
     if (nrOfRedAComplete == 1) {
-        redBeamAPartial.style.filter = 'brightness(0) saturate(100%) invert(64%) sepia(28%) saturate(3019%) hue-rotate(314deg) brightness(99%) contrast(115%) opacity(0.5)';
+        redBeamAPartial.style.filter = redFilterString + 'opacity(0.5)';
         redBeamAPartial.style.display = 'inline';
         redBeamAPartial.style.zIndex = 11;
     } else if (nrOfRedAComplete == 2) {
-        redBeamA.style.filter = 'brightness(0) saturate(100%) invert(64%) sepia(28%) saturate(3019%) hue-rotate(314deg) brightness(99%) contrast(115%) opacity(0.5)';
+        redBeamA.style.filter = redFilterString + 'opacity(0.5)';
         redBeamAPartial.style.display = 'none';
     }
 }
@@ -911,7 +913,8 @@ function redoRedQuest2() {
         redBeamAPartial.style.display = 'none';
     } else if (nrOfRedAComplete == 1) {
         redBeamA.style.filter = 'opacity(0.5)';
-        redBeamAPartial.style.filter = 'brightness(0) saturate(100%) invert(64%) sepia(28%) saturate(3019%) hue-rotate(314deg) brightness(99%) contrast(115%) opacity(0.5)';
+        redBeamAPartial.style.filter = redFilterString + 'opacity(0.5)';
+        redBeamAPartial.style.display = 'inline';
     }
 }
 
@@ -1128,12 +1131,24 @@ function hideAllOverlayButtons() {
 }
 
 function setBeamColorsOnExit() {
+
+    // Yellow beams
+    if (nrOfYellowAComplete == 3) {
+        yellowBeamA.style.filter = yellowFilterString + 'opacity(1)';
+        yellowBeamAPartial1.style.display = 'none';
+        yellowBeamAPartial2.style.display = 'none';
+    } else if (nrOfYellowAComplete == 2) {
+
+    }
+
+
+    // Red beams
     if (nrOfRedAComplete == 2) {
-        redBeamA.style.filter = 'brightness(0) saturate(100%) invert(64%) sepia(28%) saturate(3019%) hue-rotate(314deg) brightness(99%) contrast(115%) opacity(1)';
+        redBeamA.style.filter = redFilterString + 'opacity(1)';
         redBeamAPartial.style.display = 'none';
     } else if (nrOfRedAComplete == 1) {
         redBeamA.style.filter = 'opacity(1)';
-        redBeamAPartial.style.filter = 'brightness(0) saturate(100%) invert(64%) sepia(28%) saturate(3019%) hue-rotate(314deg) brightness(99%) contrast(115%) opacity(1)';
+        redBeamAPartial.style.filter = redFilterString + 'opacity(1)';
         redBeamAPartial.style.display = 'inline';
         redBeamAPartial.style.zIndex = null;
     } else {
