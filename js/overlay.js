@@ -202,6 +202,7 @@ let nrOfGreenAComplete = 0;
 // Strings
 const yellowFilterString = 'brightness(0) saturate(100%) invert(75%) sepia(3%) saturate(6601%) hue-rotate(345deg) brightness(117%) contrast(93%)';
 const redFilterString = 'brightness(0) saturate(100%) invert(64%) sepia(28%) saturate(3019%) hue-rotate(314deg) brightness(99%) contrast(115%)';
+
 /* Get the documentElement (<html>) to display the page in fullscreen */
 var elem = document.documentElement;
 
@@ -561,6 +562,27 @@ function showYellowQuest1Result() {
 
         hideQuestTips();
     }
+
+    // Increase counter
+    nrOfYellowAComplete++;
+    nrOfYellowTotalComplete++;
+
+    // Change beam color
+    if (nrOfYellowAComplete == 1) {
+        yellowBeamAPartial1.style.filter = yellowFilterString + 'opacity(0.5)';
+        yellowBeamAPartial1.style.display = 'inline';
+        yellowBeamAPartial1.style.zIndex = 11;
+    } else if (nrOfYellowAComplete == 2) {
+        yellowBeamAPartial2.style.filter = yellowFilterString + 'opacity(0.5)';
+        yellowBeamAPartial2.style.display = 'inline';
+        yellowBeamAPartial2.style.zIndex = 11;
+
+        yellowBeamAPartial1.style.display = 'none';
+    } else if (nrOfYellowAComplete == 3) {
+        yellowBeamA.style.filter = yellowFilterString + 'opacity(0.5)';
+        yellowBeamAPartial1.style.display = 'none';
+        yellowBeamAPartial2.style.display = 'none';
+    }
 }
 
 function showYellowQuest2Result() {
@@ -585,6 +607,10 @@ function showYellowQuest2Result() {
 
         hideQuestTips();
     }
+
+    // Increase counter
+    nrOfYellowAComplete++;
+    nrOfYellowTotalComplete++;
 }
 
 function showYellowQuest3Result() {
@@ -642,6 +668,10 @@ function showYellowQuest3Result() {
 
         hideQuestTips();
     }
+
+    // Increase counter
+    nrOfYellowAComplete++;
+    nrOfYellowTotalComplete++;
 }
 
 function showYellowQuest4Result() {
@@ -1138,7 +1168,17 @@ function setBeamColorsOnExit() {
         yellowBeamAPartial1.style.display = 'none';
         yellowBeamAPartial2.style.display = 'none';
     } else if (nrOfYellowAComplete == 2) {
+        yellowBeamA.style.filter = 'opacity(1)';
 
+        yellowBeamAPartial2.style.filter = yellowFilterString + 'opacity(1)';
+        yellowBeamAPartial2.style.display = 'inline';
+        yellowBeamAPartial2.style.zIndex = null;
+    } else if (nrOfYellowAComplete == 1) {
+        yellowBeamAPartial1.style.filter = yellowFilterString + 'opacity(1)';
+        yellowBeamAPartial1.style.display = 'inline';
+        yellowBeamAPartial1.style.zIndex = null;
+    } else {
+        yellowBeamA.style.filter = 'opacity(1)';
     }
 
 
@@ -1148,6 +1188,7 @@ function setBeamColorsOnExit() {
         redBeamAPartial.style.display = 'none';
     } else if (nrOfRedAComplete == 1) {
         redBeamA.style.filter = 'opacity(1)';
+
         redBeamAPartial.style.filter = redFilterString + 'opacity(1)';
         redBeamAPartial.style.display = 'inline';
         redBeamAPartial.style.zIndex = null;
