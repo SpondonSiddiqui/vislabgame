@@ -615,6 +615,9 @@ function showYellowQuest2Result() {
     // Increase counter
     nrOfYellowAComplete++;
     nrOfYellowTotalComplete++;
+
+    // Change beam color
+    setYellowBeamColors();
 }
 
 function showYellowQuest3Result() {
@@ -676,6 +679,9 @@ function showYellowQuest3Result() {
     // Increase counter
     nrOfYellowAComplete++;
     nrOfYellowTotalComplete++;
+
+    // Change beam color
+    setYellowBeamColors();
 }
 
 function showYellowQuest4Result() {
@@ -745,6 +751,13 @@ function redoYellowQuest2() {
 
     // Hide result window
     yellowQuest2ResultBox.style.display = 'none';
+
+    // Decrease counter
+    nrOfYellowAComplete--;
+    nrOfYellowTotalComplete--;
+
+    // Change beam color
+    setYellowBeamColors();
 }
 
 function redoYellowQuest3() {
@@ -763,6 +776,12 @@ function redoYellowQuest3() {
     sendButtonYellow3.style.color = 'white';
     sendButtonYellow3.innerHTML = "Skicka";
 
+    // Decrease counter
+    nrOfYellowAComplete--;
+    nrOfYellowTotalComplete--;
+
+    // Change beam color
+    setYellowBeamColors();
 }
 
 function redoYellowQuest4() {
