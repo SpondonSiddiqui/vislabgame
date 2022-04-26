@@ -509,43 +509,53 @@ p {
 }
 
 #quest-triangle-green-1 {
-  bottom: -2.5%;
-  left: 34.5%;
+  bottom: -4.5%;
+  left: 33.5%;
+  width: 5%;
 }
 
 #quest-triangle-green-2 {
-  bottom: -2.5%;
-  right: 34%;
+  bottom: -4.5%;
+  right: 33%;
+  width: 5%;
 }
 
 #quest-triangle-green-3 {
-  bottom: -2.5%;
-  right: 13.5%;
+  bottom: -4.5%;
+  right: 12%;
+  width: 5%;
 }
 
 #quest-triangle-yellow-1 {
-  bottom: -2.5%;
-  right: 34%;
+  top: -5%;
+  left: 2.5%;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  width: 5%;
 }
 
 #quest-triangle-yellow-2 {
-  bottom: -2.5%;
-  right: 34%;
+  top: -5%;
+  left: 26%;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  width: 5%;
 }
 
 #quest-triangle-yellow-3 {
-  bottom: -2.5%;
-  right: 34%;
+  top: -5%;
+  left: 57%;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  width: 5%;
 }
 
 #quest-triangle-yellow-4 {
-  bottom: -2.5%;
-  right: 34%;
-}
-
-#quest-triangle-yellow-5 {
-  bottom: -2.5%;
-  right: 34%;
+  top: -5%;
+  left: 39%;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  width: 5%;
 }
 
 #quest-triangle-black-1 {
@@ -605,18 +615,21 @@ p {
 }
 
 #quest-triangle-blue-1 {
-  bottom: -2.5%;
-  left: 36.5%;
+  bottom: -5%;
+  left: 36%;
+  width: 5%;
 }
 
 #quest-triangle-blue-2 {
-  bottom: -2.5%;
-  right: 40.5%;
+  bottom: -3.5%;
+  right: 39.2%;
+  width: 5%;
 }
 
 #quest-triangle-blue-3 {
-  bottom: -2.5%;
-  right: 15.5%;
+  bottom: -5%;
+  right: 15%;
+  width: 5%;
 }
 
 .info-box {
