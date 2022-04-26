@@ -190,6 +190,16 @@ p {
                 }
             }
 
+            &-3 {
+                width: 45%;
+                top: 32%;
+                right: 10%;
+
+                h2 {
+                    color: color(purple);
+                }
+            }
+
             h2 {
                 color: color(purple);
             }
@@ -445,6 +455,12 @@ p {
             left: 58%;
         }
 
+        &-black-3 {
+            width: 32%;
+            bottom: 15%;
+            left: 10%;
+        }
+
         &-red-1 {
             width: 32%;
             bottom: 5.5%;
@@ -539,6 +555,13 @@ p {
         &-black-2 {
             top: -4%;
             right: 2.5%;
+            transform: rotate(180deg);
+            width: 5%;
+        }
+
+        &-black-3 {
+            top: -4%;
+            left: 20.5%;
             transform: rotate(180deg);
             width: 5%;
         }

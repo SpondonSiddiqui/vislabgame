@@ -168,6 +168,16 @@ p {
   color: #9900ff;
 }
 
+.quest-info-black-3 {
+  width: 45%;
+  top: 32%;
+  right: 10%;
+}
+
+.quest-info-black-3 h2 {
+  color: #9900ff;
+}
+
 .quest-info-black h2 {
   color: #9900ff;
 }
@@ -430,6 +440,12 @@ p {
   left: 58%;
 }
 
+#quest-tips-black-3 {
+  width: 32%;
+  bottom: 15%;
+  left: 10%;
+}
+
 #quest-tips-red-1 {
   width: 32%;
   bottom: 5.5%;
@@ -523,6 +539,14 @@ p {
 #quest-triangle-black-2 {
   top: -4%;
   right: 2.5%;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  width: 5%;
+}
+
+#quest-triangle-black-3 {
+  top: -4%;
+  left: 20.5%;
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
   width: 5%;
