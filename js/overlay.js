@@ -23,7 +23,6 @@ const yellowCircle1 = document.getElementById('yellow-circle-1');
 const yellowCircle2 = document.getElementById('yellow-circle-2');
 const yellowCircle3 = document.getElementById('yellow-circle-3');
 const yellowCircle4 = document.getElementById('yellow-circle-4');
-const yellowCircle5 = document.getElementById('yellow-circle-5');
 
 // Yellow info box
 const yellowInfoBox = document.getElementById('info-box-yellow');
@@ -215,7 +214,7 @@ function showYellowOverlay() {
     yellowCircle2.style.zIndex = 12;
     yellowCircle3.style.zIndex = 12;
     yellowCircle4.style.zIndex = 12;
-    yellowCircle5.style.zIndex = 12;
+
 
     // Display info box
     yellowInfoBox.style.display = 'inline';
@@ -417,7 +416,6 @@ function hideOverlays() {
     yellowCircle2.style.zIndex = 5;
     yellowCircle3.style.zIndex = 5;
     yellowCircle4.style.zIndex = 5;
-    yellowCircle5.style.zIndex = 5;
 
     blackCircle1.style.zIndex = 5;
     blackCircle2.style.zIndex = 5;
@@ -518,6 +516,7 @@ function showYellowQuest1Result() {
     }
 }
 
+
 function showYellowQuest2Result() {
     // Save user input
     var userInput = document.getElementById('quest-yellow-2-input').value;
@@ -536,6 +535,63 @@ function showYellowQuest2Result() {
 
         // Display redo button
         var redoButton = document.getElementById('redo-button-yellow-2');
+        redoButton.style.display = 'flex';
+
+        hideQuestTips();
+    }
+}
+
+function showYellowQuest3Result() {
+    // Save user input
+    var userInput = document.getElementById('quest-yellow-3-input').value;
+    if (userInput.length != 0) {
+
+        // Make user input read only
+        document.getElementById('quest-yellow-3-input').readOnly = true;
+
+        // Change look of send button
+        sendButtonYellow.style.backgroundColor = 'white';
+        sendButtonYellow.style.color = '#f2ba49';
+        sendButtonYellow.innerHTML = "Skickat!";
+
+        // Display result box
+        document.getElementById('yellow-3-result-intro').innerHTML = "Baserat på ditt svar tror vi att du kommer ifrån en av dessa:";
+        yellowQuest3ResultBox.style.display = 'flex';
+
+
+        // Display user input in the result box
+        var displayInputA = document.getElementById('user-input-yellow-3');
+
+        if (userInput > 0) {
+            displayInputA.innerHTML = "Halland Stockholm";
+        }
+
+        else if (userInput < 7) {
+            displayInputA.innerHTML = 'Västra Götaland Uppsala Gotland';
+        }
+
+        else if (userInput < 18) {
+            displayInputA.innerHTML = 'Östergötland Västmanland Skåne Jönköping';
+        }
+
+        else if (userInput < 24.9) {
+            displayInputA.innerHTML = 'Norrbotten Kronoberg Södermanland';
+        }
+
+        else if (userInput < 29.3) {
+            displayInputA.innerHTML = 'Västernorrland Kalmar Örebro Västerbotten';
+        }
+
+        else if (userInput < 32) {
+            displayInputA.innerHTML = 'Gävleborg Dalarna Jämtland';
+        }
+
+        else {
+            displayInputA.innerHTML = 'Värmland Blekinge';
+        }
+
+        // Display redo button
+        var redoButton = document.getElementById('redo-button-yellow-3');
         redoButton.style.display = 'flex';
 
         hideQuestTips();
@@ -601,6 +657,24 @@ function redoYellowQuest2() {
 
     // Hide result window
     yellowQuest2ResultBox.style.display = 'none';
+}
+
+function redoYellowQuest3() {
+    // Hide redo button
+    document.getElementById('redo-button-yellow-3').style.display = 'none';
+
+    // Remove user input from result box
+    document.getElementById('yellow-3-result-intro').innerHTML = "(Du har ångrat ditt svar)"
+    document.getElementById('user-input-yellow-3').innerHTML = "";
+
+    // Make input writeable
+    document.getElementById('quest-yellow-3-input').readOnly = false;
+
+    // Restore send button
+    sendButtonYellow.style.backgroundColor = '#f2ba49';
+    sendButtonYellow.style.color = 'white';
+    sendButtonYellow.innerHTML = "Skicka";
+
 }
 
 function redoYellowQuest4() {
@@ -837,6 +911,7 @@ function hideQuests() {
     greenQuest3.style.display = 'none';
     yellowQuest1.style.display = 'none';
     yellowQuest2.style.display = 'none';
+    yellowQuest3.style.display = 'none';
     yellowQuest4.style.display = 'none';
     blueQuest1.style.display = 'none';
     blueQuest2.style.display = 'none';
@@ -854,6 +929,7 @@ function hideQuestTips() {
     greenQuest3Tips.style.display = 'none';
     yellowQuest1Tips.style.display = 'none';
     yellowQuest2Tips.style.display = 'none';
+    yellowQuest3Tips.style.display = 'none';
     yellowQuest4Tips.style.display = 'none';
     blueQuest1Tips.style.display = 'none';
     blueQuest2Tips.style.display = 'none';

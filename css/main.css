@@ -225,8 +225,9 @@ p {
 }
 
 .quest-result-yellow {
-  top: 5.56%;
-  left: 50%;
+  bottom: 2.56%;
+  left: 53.5%;
+  width: 35.5%;
 }
 
 .quest-result-yellow-4 {
@@ -248,6 +249,21 @@ p {
   width: 36%;
   bottom: 2.56%;
   left: 53%;
+}
+
+.quest-result-yellow-3 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  color: #f2ba49;
+}
+
+.quest-result-yellow-3 h2 {
+  margin-right: 0.5vw;
 }
 
 .quest-send-button-green {
@@ -369,7 +385,11 @@ p {
 }
 
 #quest-tips-yellow-3 {
-  width: 26%;
+  left: 53%;
+  bottom: 2.56%;
+  width: 33%;
+  -webkit-box-shadow: 0 0 1.5vw rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0 1.5vw rgba(0, 0, 0, 0.1);
 }
 
 #quest-tips-yellow-4 {
@@ -830,11 +850,6 @@ p {
 #yellow-circle-4 {
   top: 5.5%;
   left: 21.375%;
-}
-
-#yellow-circle-5 {
-  top: 23%;
-  left: 32.75%;
 }
 
 #black-circle-1 {

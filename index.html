@@ -28,7 +28,8 @@
             onclick="showYellowQuest1()">
         <img id="yellow-circle-2" class="circle" src="assets/images/circles/circle-yellow.svg"  
             onclick="showYellowQuest2()">
-        <img id="yellow-circle-3" class="circle" src="assets/images/circles/circle-yellow.svg">
+        <img id="yellow-circle-3" class="circle" src="assets/images/circles/circle-yellow.svg"
+            onclick="showYellowQuest3()">
         <img id="yellow-circle-4" class="circle" src="assets/images/circles/circle-yellow.svg"
             onclick="showYellowQuest4()">
         <!--Overlay-->
@@ -122,6 +123,50 @@
                 <p><span class="bold">Vad har andra svarat?</span></p>
             </div>
         </div>
+          <!--Quest 3-->
+          <div id="quest-yellow-3" class="quest-overlay quest">
+            <div class="quest-info quest-info-yellow">
+                <h2>Sveriges siffror</h2>
+                <p>Här kan du jämföra data mellan olika kommuner och län i Sverige, och se skillnader mellan kön, samt se data på hur många som är födda i Sverige eller utomlands.</p>
+                <div class="quest-text-wrapper">
+                    <p><span class="bold">Uppdrag:</span> Hur mycket mer/mindre är det i årlig inkomst mellan länet du bor i jämfört med medel i Sverige?</p>
+                    <img src="assets/images/tips-button.svg" onclick="showYellowQuest3Tips()">
+                </div>
+                <div class="quest-text-wrapper quest-input-wrapper">
+                    <input id="quest-yellow-3-input" type="number" placeholder="Exempel: -20.1">
+                    <img id="redo-button-yellow-3" class="quest-redo-button" src="assets/images/redo-button.svg"
+                        onclick="redoYellowQuest3()">
+                    <button id="send-button-yellow" class="quest-send-button quest-send-button-yellow"
+                        onclick="showYellowQuest3Result()">
+                        Skicka
+                    </button>
+                </div>
+                <img id="quest-triangle-yellow-3" class="quest-triangle" src="assets/images/white-triangle.svg">
+            </div>
+            <div id="quest-tips-yellow-3" class="quest-tips">
+                <p><span class="bold">Tips!</span></p>
+                <p>För att nå startskärmen, tryck på återställ-symbolen i vänstra nedre hörnet.</p>
+                <details>
+                    <summary>Ledtråd 1</summary>
+                    <p>Se till att ha fokus instället på Inkomst bland mittenflikarna, och att det är län som visas i nedre högra hörnet.</p>
+                </details>
+                <details>
+                    <summary>Ledtråd 2</summary>
+                    <p>Du har väl kollat vad som händer om du trycker på ditt län i högra listan?</p>
+                </details>
+            </div>
+            <div id="quest-result-yellow-3" class="quest-result quest-result-yellow">
+                <p><span class="bold" id="yellow-3-result-intro">Baserat på ditt svar tror vi att du kommer ifrån en av dessa:</span></p>
+                <div id="quest-result-yellow-3" class="quest-result-yellow-3">
+                    <h2 id="user-input-yellow-3" class=""></h2>
+                </div>
+                <p>Andra som gjort detta uppdrag kommer ifrån:</p>
+                <p>Halland</p>
+                <p>Örebro</p>
+                <p>Västra Götaland</p>
+            </div>
+        </div>
+
         <!--Quest 4-->
         <div id="quest-yellow-4" class="quest-overlay quest">
             <div class="quest-info quest-info-yellow">

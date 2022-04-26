@@ -246,8 +246,9 @@ p {
         }
 
         &-yellow {
-            top: 5.56%;
-            left: 50%;
+            bottom: 2.56%;
+            left: 53.5%;
+            width: 35.5%;
 
             &-4 {
                 display: flex;
@@ -263,6 +264,16 @@ p {
                 width: 36%;
                 bottom: 2.56%;
                 left: 53%;
+            }
+
+            &-3 {
+                display: flex;
+                flex-direction: row;
+                color: color(yellow);
+
+                h2 {
+                    margin-right: 0.5vw;
+                }
             }
         }
 
@@ -389,7 +400,10 @@ p {
         }
 
         &-yellow-3 {
-            width: 26%;
+            left: 53%;
+            bottom: 2.56%;
+            width: 33%;
+            box-shadow: 0 0 1.5vw rgba($color: #000000, $alpha: 0.1);
         }
 
         &-yellow-4 {
@@ -860,11 +874,6 @@ p {
     &-4 {
         top: 5.5%;
         left: 21.375%;
-    }
-
-    &-5 {
-        top: 23%;
-        left: 32.75%;
     }
 }
 
