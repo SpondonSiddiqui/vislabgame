@@ -58,6 +58,15 @@ const blackInfoBox = document.getElementById('info-box-black');
 const blackExitButton = document.getElementById('exit-overlay-button-black');
 const blackInfoButton = document.getElementById('info-overlay-button-black');
 
+// Black quests
+const blackQuest1 = document.getElementById('quest-black-1');
+const blackQuest2 = document.getElementById('quest-black-2');
+const blackQuest3 = document.getElementById('quest-black-3');
+
+const blackQuest1Tips = document.getElementById('quest-tips-black-1');
+const blackQuest2Tips = document.getElementById('quest-tips-black-2');
+const blackQuest3Tips = document.getElementById('quest-tips-black-3');
+
 // Red beams
 const redBeamA = document.getElementById('red-beam-a');
 const redBeamAPartial = document.getElementById('red-beam-a-partial');
@@ -153,15 +162,24 @@ const blueOverlay = document.getElementById('wall-blue-overlay');
 const greenOverlay = document.getElementById('wall-green-overlay');
 
 // Send buttons
-const sendButtonYellow = document.getElementById('send-button-yellow');
+const sendButtonYellow1 = document.getElementById('send-button-yellow-1');
+const sendButtonYellow2 = document.getElementById('send-button-yellow-2');
+const sendButtonYellow3 = document.getElementById('send-button-yellow-3');
+const sendButtonYellow4 = document.getElementById('send-button-yellow-4');
 const sendButtonBlack = document.getElementById('send-button-black');
-const sendButtonRed = document.getElementById('send-button-red');
+const sendButtonRed1 = document.getElementById('send-button-red-1');
+const sendButtonRed2 = document.getElementById('send-button-red-2');
+const sendButtonRed3 = document.getElementById('send-button-red-3');
+const sendButtonRed4 = document.getElementById('send-button-red-4');
 const sendButtonBlue = document.getElementById('send-button-blue');
 const sendButtonGreen = document.getElementById('send-button-green');
 
 // Result boxes
 
 const redQuest1ResultBox = document.getElementById('quest-result-red-1');
+const redQuest2ResultBox = document.getElementById('quest-result-red-2');
+const redQuest3ResultBox = document.getElementById('quest-result-red-3');
+const redQuest4ResultBox = document.getElementById('quest-result-red-4');
 const blackQuest1ResultBox = document.getElementById('quest-result-black-1');
 const blueQuest1ResultBox = document.getElementById('quest-result-blue-1');
 const greenQuest1ResultBox = document.getElementById('quest-result-green-1');
@@ -214,7 +232,6 @@ function showYellowOverlay() {
     yellowCircle2.style.zIndex = 12;
     yellowCircle3.style.zIndex = 12;
     yellowCircle4.style.zIndex = 12;
-
 
     // Display info box
     yellowInfoBox.style.display = 'inline';
@@ -497,9 +514,9 @@ function showYellowQuest1Result() {
         document.getElementById('quest-yellow-1-input').readOnly = true;
 
         // Change look of send button
-        sendButtonYellow.style.backgroundColor = 'white';
-        sendButtonYellow.style.color = '#f2ba49';
-        sendButtonYellow.innerHTML = "Skickat!";
+        sendButtonYellow1.style.backgroundColor = 'white';
+        sendButtonYellow1.style.color = '#f2ba49';
+        sendButtonYellow1.innerHTML = "Skickat!";
 
         // Display result box
         yellowQuest1ResultBox.style.display = 'flex';
@@ -526,9 +543,9 @@ function showYellowQuest2Result() {
         document.getElementById('quest-yellow-2-input').readOnly = true;
 
         // Change look of send button
-        sendButtonYellow.style.backgroundColor = 'white';
-        sendButtonYellow.style.color = '#f2ba49';
-        sendButtonYellow.innerHTML = "Skickat!";
+        sendButtonYellow2.style.backgroundColor = 'white';
+        sendButtonYellow2.style.color = '#f2ba49';
+        sendButtonYellow2.innerHTML = "Skickat!";
 
         // Display result box
         yellowQuest2ResultBox.style.display = 'flex';
@@ -550,9 +567,9 @@ function showYellowQuest3Result() {
         document.getElementById('quest-yellow-3-input').readOnly = true;
 
         // Change look of send button
-        sendButtonYellow.style.backgroundColor = 'white';
-        sendButtonYellow.style.color = '#f2ba49';
-        sendButtonYellow.innerHTML = "Skickat!";
+        sendButtonYellow3.style.backgroundColor = 'white';
+        sendButtonYellow3.style.color = '#f2ba49';
+        sendButtonYellow3.innerHTML = "Skickat!";
 
         // Display result box
         document.getElementById('yellow-3-result-intro').innerHTML = "Baserat på ditt svar tror vi att du kommer ifrån en av dessa:";
@@ -608,11 +625,12 @@ function showYellowQuest4Result() {
         document.getElementById('quest-yellow-4-input').readOnly = true;
 
         // Change look of send button
-        sendButtonYellow.style.backgroundColor = 'white';
-        sendButtonYellow.style.color = '#f2ba49';
-        sendButtonYellow.innerHTML = "Skickat!";
+        sendButtonYellow4.style.backgroundColor = 'white';
+        sendButtonYellow4.style.color = '#f2ba49';
+        sendButtonYellow4.innerHTML = "Skickat!";
 
         // Display result box
+        document.getElementById('yellow-4-result-intro').innerHTML = "Kan det vara så att du är...";
         yellowQuest4ResultBox.style.display = 'flex';
 
         // Display user input in the result box
@@ -638,9 +656,9 @@ function redoYellowQuest1() {
     document.getElementById('quest-yellow-1-input').readOnly = false;
 
     // Restore send button
-    sendButtonYellow.style.backgroundColor = '#f2ba49';
-    sendButtonYellow.style.color = 'white';
-    sendButtonYellow.innerHTML = "Skicka";
+    sendButtonYellow1.style.backgroundColor = '#f2ba49';
+    sendButtonYellow1.style.color = 'white';
+    sendButtonYellow1.innerHTML = "Skicka";
 }
 
 function redoYellowQuest2() {
@@ -651,9 +669,9 @@ function redoYellowQuest2() {
     document.getElementById('quest-yellow-2-input').readOnly = false;
 
     // Restore send button
-    sendButtonYellow.style.backgroundColor = '#f2ba49';
-    sendButtonYellow.style.color = 'white';
-    sendButtonYellow.innerHTML = "Skicka";
+    sendButtonYellow2.style.backgroundColor = '#f2ba49';
+    sendButtonYellow2.style.color = 'white';
+    sendButtonYellow2.innerHTML = "Skicka";
 
     // Hide result window
     yellowQuest2ResultBox.style.display = 'none';
@@ -671,9 +689,9 @@ function redoYellowQuest3() {
     document.getElementById('quest-yellow-3-input').readOnly = false;
 
     // Restore send button
-    sendButtonYellow.style.backgroundColor = '#f2ba49';
-    sendButtonYellow.style.color = 'white';
-    sendButtonYellow.innerHTML = "Skicka";
+    sendButtonYellow3.style.backgroundColor = '#f2ba49';
+    sendButtonYellow3.style.color = 'white';
+    sendButtonYellow3.innerHTML = "Skicka";
 
 }
 
@@ -683,18 +701,55 @@ function redoYellowQuest4() {
 
     // Remove user input from result box
     document.getElementById('user-input-yellow-4').innerHTML = "";
+    document.getElementById('yellow-4-result-intro').innerHTML = "(Du har ångrat ditt svar)";
 
     // Make input writeable
     document.getElementById('quest-yellow-4-input').readOnly = false;
 
     // Restore send button
-    sendButtonYellow.style.backgroundColor = '#f2ba49';
-    sendButtonYellow.style.color = 'white';
-    sendButtonYellow.innerHTML = "Skicka";
-
+    sendButtonYellow4.style.backgroundColor = '#f2ba49';
+    sendButtonYellow4.style.color = 'white';
+    sendButtonYellow4.innerHTML = "Skicka";
 
     // remove År?
     document.getElementById('yellow-4-year').innerHTML = '';
+}
+
+// Blue quest functions
+function showBlackQuest1() {
+    showBlackOverlay();
+    hideAllInfoBoxes();
+    hideQuests();
+    hideQuestTips();
+    blackQuest1.style.display = 'flex';
+}
+
+function showBlackQuest2() {
+    showBlackOverlay();
+    hideAllInfoBoxes();
+    hideQuests();
+    hideQuestTips();
+    blackQuest2.style.display = 'flex';
+}
+
+function showBlackQuest3() {
+    showBlackOverlay();
+    hideAllInfoBoxes();
+    hideQuests();
+    hideQuestTips();
+    blackQuest3.style.display = 'flex';
+}
+
+function showBlackQuest1Tips() {
+    blackQuest1Tips.style.display = 'inline';
+}
+
+function showBlackQuest2Tips() {
+    blackQuest2Tips.style.display = 'inline';
+}
+
+function showBlackQuest3Tips() {
+    blackQuest3Tips.style.display = 'inline';
 }
 
 // Red quest functions
@@ -715,9 +770,9 @@ function showRedQuest1Result() {
         document.getElementById('quest-red-1-input').readOnly = true;
 
         // Change look of send button
-        sendButtonRed.style.backgroundColor = 'white';
-        sendButtonRed.style.color = '#ff4d4d';
-        sendButtonRed.innerHTML = "Skickat!";
+        sendButtonRed1.style.backgroundColor = 'white';
+        sendButtonRed1.style.color = '#ff4d4d';
+        sendButtonRed1.innerHTML = "Skickat!";
 
         // Display result box
         redQuest1ResultBox.style.display = 'flex';
@@ -743,9 +798,9 @@ function redoRedQuest1() {
     document.getElementById('quest-red-1-input').readOnly = false;
 
     // Restore send button
-    sendButtonRed.style.backgroundColor = '#ff4d4d';
-    sendButtonRed.style.color = 'white';
-    sendButtonRed.innerHTML = "Skicka";
+    sendButtonRed1.style.backgroundColor = '#ff4d4d';
+    sendButtonRed1.style.color = 'white';
+    sendButtonRed1.innerHTML = "Skicka";
 }
 
 function showRedQuest2() {
@@ -757,45 +812,24 @@ function showRedQuest2() {
 }
 
 function showRedQuest2Result() {
-    // Save user input
-    var userInput = document.getElementById('quest-red-2-input').value;
-    if (userInput.length != 0) {
+    // Change look of send button
+    sendButtonRed2.style.backgroundColor = 'white';
+    sendButtonRed2.style.color = '#ff4d4d';
+    sendButtonRed2.innerHTML = "Klart!";
 
-        // Make user input read only
-        document.getElementById('quest-red-2-input').readOnly = true;
-
-        // Change look of send button
-        sendButtonRed.style.backgroundColor = 'white';
-        sendButtonRed.style.color = '#ff4d4d';
-        sendButtonRed.innerHTML = "Skickat!";
-
-        // Display result box
-        redQuest1ResultBox.style.display = 'flex';
-
-        // Display user input in the result box
-        var displayInput = document.getElementById('user-input-red-2');
-        displayInput.innerHTML = userInput;
-
-        // Display redo button
-        var redoButton = document.getElementById('redo-button-red-2');
-        redoButton.style.display = 'flex';
-    }
+    // Display redo button
+    var redoButton = document.getElementById('redo-button-red-2');
+    redoButton.style.display = 'flex';
 }
 
 function redoRedQuest2() {
     // Hide redo button
     document.getElementById('redo-button-red-2').style.display = 'none';
 
-    // Remove user input from result box
-    document.getElementById('user-input-red-2').innerHTML = "";
-
-    // Make input writeable
-    document.getElementById('quest-red-2-input').readOnly = false;
-
     // Restore send button
-    sendButtonRed.style.backgroundColor = '#ff4d4d';
-    sendButtonRed.style.color = 'white';
-    sendButtonRed.innerHTML = "Skicka";
+    sendButtonRed2.style.backgroundColor = '#ff4d4d';
+    sendButtonRed2.style.color = 'white';
+    sendButtonRed2.innerHTML = "Klar";
 }
 
 function showRedQuest3() {
@@ -804,6 +838,48 @@ function showRedQuest3() {
     hideQuests();
     hideQuestTips();
     redQuest3.style.display = 'flex';
+}
+
+function showRedQuest3Result() {
+    // Save user input
+    var userInput = document.getElementById('quest-red-3-input').value;
+    if (userInput.length != 0) {
+
+        // Make user input read only
+        document.getElementById('quest-red-3-input').readOnly = true;
+
+        // Change look of send button
+        sendButtonRed3.style.backgroundColor = 'white';
+        sendButtonRed3.style.color = '#ff4d4d';
+        sendButtonRed3.innerHTML = "Skickat!";
+
+        // Display result box
+        redQuest3ResultBox.style.display = 'flex';
+
+        // Display user input in the result box
+        var displayInput = document.getElementById('user-input-red-3');
+        displayInput.innerHTML = userInput;
+
+        // Display redo button
+        var redoButton = document.getElementById('redo-button-red-3');
+        redoButton.style.display = 'flex';
+    }
+}
+
+function redoRedQuest3() {
+    // Hide redo button
+    document.getElementById('redo-button-red-3').style.display = 'none';
+
+    // Remove user input from result box
+    document.getElementById('user-input-red-3').innerHTML = "";
+
+    // Make input writeable
+    document.getElementById('quest-red-3-input').readOnly = false;
+
+    // Restore send button
+    sendButtonRed3.style.backgroundColor = '#ff4d4d';
+    sendButtonRed3.style.color = 'white';
+    sendButtonRed3.innerHTML = "Skicka";
 }
 
 function showRedQuest4() {
@@ -920,6 +996,9 @@ function hideQuests() {
     redQuest2.style.display = 'none';
     redQuest3.style.display = 'none';
     redQuest4.style.display = 'none';
+    blackQuest1.style.display = 'none';
+    blackQuest2.style.display = 'none';
+    blackQuest3.style.display = 'none';
 }
 
 function hideQuestTips() {
@@ -938,6 +1017,9 @@ function hideQuestTips() {
     redQuest2Tips.style.display = 'none';
     redQuest3Tips.style.display = 'none';
     redQuest4Tips.style.display = 'none';
+    blackQuest1Tips.style.display = 'none';
+    blackQuest2Tips.style.display = 'none';
+    blackQuest3Tips.style.display = 'none';
 }
 
 

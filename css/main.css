@@ -40,6 +40,10 @@ p {
   font-weight: bold;
 }
 
+.width-75 {
+  width: 75%;
+}
+
 #main-container {
   background-color: #1b1b1b;
   aspect-ratio: 20/9;
@@ -142,6 +146,40 @@ p {
 
 .quest-info-green h2 {
   color: #4cbf4c;
+}
+
+.quest-info-black-1 {
+  width: 50%;
+  top: 32%;
+  left: 2.5%;
+}
+
+.quest-info-black-1 h2 {
+  color: #9900ff;
+}
+
+.quest-info-black-2 {
+  width: 50%;
+  top: 32%;
+  left: 2.5%;
+}
+
+.quest-info-black-2 h2 {
+  color: #9900ff;
+}
+
+.quest-info-black-3 {
+  width: 45%;
+  top: 32%;
+  right: 10%;
+}
+
+.quest-info-black-3 h2 {
+  color: #9900ff;
+}
+
+.quest-info-black h2 {
+  color: #9900ff;
 }
 
 .quest-info-red {
@@ -266,6 +304,12 @@ p {
   margin-right: 0.5vw;
 }
 
+.quest-result-red {
+  width: 36%;
+  top: 22%;
+  left: 2.5%;
+}
+
 .quest-send-button-green {
   background-color: #4cbf4c;
   font-size: 1.5vw;
@@ -284,6 +328,10 @@ p {
 .quest-send-button-blue {
   background-color: #0ebde5;
   font-size: 1.5vw;
+}
+
+.quest-send-button-black {
+  background-color: #9900ff;
 }
 
 .quest-redo-button {
@@ -401,11 +449,21 @@ p {
 }
 
 #quest-tips-black-1 {
-  width: 26%;
+  width: 32%;
+  bottom: 20%;
+  left: 58%;
 }
 
 #quest-tips-black-2 {
-  width: 26%;
+  width: 32%;
+  bottom: 15%;
+  left: 58%;
+}
+
+#quest-tips-black-3 {
+  width: 32%;
+  bottom: 15%;
+  left: 10%;
 }
 
 #quest-tips-red-1 {
@@ -491,13 +549,27 @@ p {
 }
 
 #quest-triangle-black-1 {
-  bottom: -2.5%;
-  right: 34%;
+  top: -5%;
+  right: 13.5%;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  width: 5%;
 }
 
 #quest-triangle-black-2 {
-  bottom: -2.5%;
-  right: 34%;
+  top: -4%;
+  right: 2.5%;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  width: 5%;
+}
+
+#quest-triangle-black-3 {
+  top: -4%;
+  left: 20.5%;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  width: 5%;
 }
 
 #quest-triangle-red-1 {

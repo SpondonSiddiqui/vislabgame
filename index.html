@@ -26,7 +26,7 @@
         <!--Circles-->
         <img id="yellow-circle-1" class="circle" src="assets/images/circles/circle-yellow.svg"
             onclick="showYellowQuest1()">
-        <img id="yellow-circle-2" class="circle" src="assets/images/circles/circle-yellow.svg"  
+        <img id="yellow-circle-2" class="circle" src="assets/images/circles/circle-yellow.svg"
             onclick="showYellowQuest2()">
         <img id="yellow-circle-3" class="circle" src="assets/images/circles/circle-yellow.svg"
             onclick="showYellowQuest3()">
@@ -65,7 +65,7 @@
                     <input id="quest-yellow-1-input" type="text">
                     <img id="redo-button-yellow-1" class="quest-redo-button" src="assets/images/redo-button.svg"
                         onclick="redoYellowQuest1()">
-                    <button id="send-button-yellow" class="quest-send-button quest-send-button-yellow"
+                    <button id="send-button-yellow-1" class="quest-send-button quest-send-button-yellow"
                         onclick="showYellowQuest1Result()">
                         Skicka
                     </button>
@@ -93,15 +93,19 @@
         <div id="quest-yellow-2" class="quest-overlay quest">
             <div class="quest-info quest-info-yellow">
                 <h2>Digitala Göteborg</h2>
-                <p>Med 3D-modellen över Göteborg kan du bl.a. visualisera stadens sevärdheter, kollektivtrafiken i realtid, områden under vatten om 100 år, stadens energianvändning, och mer!</p>
+                <p>Med 3D-modellen över Göteborg kan du bl.a. visualisera stadens sevärdheter, kollektivtrafiken i
+                    realtid, områden under vatten om 100 år, stadens energianvändning, och mer!</p>
                 <div class="quest-text-wrapper">
-                    <p><span class="bold">Uppdrag:</span> Vilket område i Göteborg tycker du ser ut att vara mest drabbat av buller?</p>
+                    <p><span class="bold">Uppdrag:</span> Vilket område i Göteborg tycker du ser ut att vara mest
+                        drabbat av buller?</p>
                     <img src="assets/images/tips-button.svg" onclick="showYellowQuest2Tips()">
                 </div>
                 <div class="quest-text-wrapper quest-input-wrapper">
                     <input id="quest-yellow-2-input" type="text">
-                    <img id="redo-button-yellow-2" class="quest-redo-button" src="assets/images/redo-button.svg" onclick="redoYellowQuest2()">
-                    <button id="send-button-yellow" class="quest-send-button quest-send-button-yellow" onclick="showYellowQuest2Result()">
+                    <img id="redo-button-yellow-2" class="quest-redo-button" src="assets/images/redo-button.svg"
+                        onclick="redoYellowQuest2()">
+                    <button id="send-button-yellow-2" class="quest-send-button quest-send-button-yellow"
+                        onclick="showYellowQuest2Result()">
                         Skicka
                     </button>
                 </div>
@@ -112,11 +116,13 @@
                 <p>För att nå startskärmen, tryck på retursymbolen i vänstra nedre hörnet.</p>
                 <details>
                     <summary>Ledtråd 1</summary>
-                    <p>Du har väl sett att 3D-modellen har en egen skärm som påverkar vad som visas? Kan det finnas en flik på skärmen för buller?</p>
+                    <p>Du har väl sett att 3D-modellen har en egen skärm som påverkar vad som visas? Kan det finnas en
+                        flik på skärmen för buller?</p>
                 </details>
                 <details>
                     <summary>Ledtråd 2</summary>
-                    <p>Innanför 3D-modellens inglasning visas skalor. Kanske kan du hitta den rätta färgen som motsvarar det högsta bullret?</p>
+                    <p>Innanför 3D-modellens inglasning visas skalor. Kanske kan du hitta den rätta färgen som motsvarar
+                        det högsta bullret?</p>
                 </details>
             </div>
             <div id="quest-result-yellow-2" class="quest-result quest-result-yellow-2">
@@ -136,7 +142,7 @@
                     <input id="quest-yellow-3-input" type="number" placeholder="Exempel: -20.1">
                     <img id="redo-button-yellow-3" class="quest-redo-button" src="assets/images/redo-button.svg"
                         onclick="redoYellowQuest3()">
-                    <button id="send-button-yellow" class="quest-send-button quest-send-button-yellow"
+                    <button id="send-button-yellow-3" class="quest-send-button quest-send-button-yellow"
                         onclick="showYellowQuest3Result()">
                         Skicka
                     </button>
@@ -180,7 +186,7 @@
                     <input id="quest-yellow-4-input" type="number">
                     <img id="redo-button-yellow-4" class="quest-redo-button" src="assets/images/redo-button.svg"
                         onclick="redoYellowQuest4()">
-                    <button id="send-button-yellow" class="quest-send-button quest-send-button-yellow"
+                    <button id="send-button-yellow-4" class="quest-send-button quest-send-button-yellow"
                         onclick="showYellowQuest4Result()">
                         Skicka
                     </button>
@@ -197,7 +203,7 @@
                 </details>
             </div>
             <div id="quest-result-yellow-4" class="quest-result quest-result-yellow">
-                <p><span class="bold">Kan det vara så att du är...</span></p>
+                <p><span class="bold" id="yellow-4-result-intro">Kan det vara så att du är...</span></p>
                 <div id="quest-result-yellow-4" class="quest-result-yellow-4">
                     <h2 id="user-input-yellow-4" class=""></h2>
                     <h2 id="yellow-4-year"> år?</h2>
@@ -214,9 +220,12 @@
         <img id="black-beam-a" class="wall-black-beam-a" src="assets/images/beams/beam-black-a.svg">
         <img id="black-beam-b" class="wall-black-beam-b" src="assets/images/beams/beam-black-b.svg">
         <!--Circles-->
-        <img id="black-circle-1" class="circle" src="assets/images/circles/circle-black.svg">
-        <img id="black-circle-2" class="circle" src="assets/images/circles/circle-black.svg">
-        <img id="black-circle-3" class="circle" src="assets/images/circles/circle-black.svg">
+        <img id="black-circle-1" class="circle" src="assets/images/circles/circle-black.svg"
+            onclick="showBlackQuest1()">
+        <img id="black-circle-2" class="circle" src="assets/images/circles/circle-black.svg"
+            onclick="showBlackQuest2()">
+        <img id="black-circle-3" class="circle" src="assets/images/circles/circle-black.svg"
+            onclick="showBlackQuest3()">
         <!--Overlay-->
         <div id="wall-black-overlay" class="wall-black-overlay">
             <img class="wall-black" src="assets/images/wall_black.svg">
@@ -231,6 +240,91 @@
                 Tack vare visualiseringstekniken kan du svara på frågor som
                 tidigare kändes omöjliga och nå platser som förr var oåtkomliga.
                 Utforska planeter, stjärnor och se in i kärnan av meteoriter.</p>
+        </div>
+        <!--Quest 1-->
+        <div id="quest-black-1" class="quest-overlay quest">
+            <div class="quest-info quest-info-black-1">
+                <h2>Rymdresan</h2>
+                <p>Här kan du navigera runt i rymden och utforska jorden, månen och till och med hela Universum.</p>
+                <div class="quest-text-wrapper">
+                    <p><span class="bold">Uppdrag:</span> Över vilka delar av Jorden finns det minst rymdskrot?
+                        Varför tror du att det är så?</p>
+                    <img src="assets/images/tips-button.svg" onclick="showBlackQuest1Tips()">
+                </div>
+                <div class="quest-text-wrapper quest-input-wrapper">
+                    <input id="quest-black-1-input" type="text">
+                    <button id="send-button-black-1" class="quest-send-button quest-send-button-black"
+                        onclick="showBlackQuest1Result()">
+                        Skicka
+                    </button>
+                </div>
+                <img id="quest-triangle-black-1" class="quest-triangle" src="assets/images/white-triangle.svg">
+            </div>
+            <div id="quest-tips-black-1" class="quest-tips">
+                <p><span class="bold">Tips!</span></p>
+                <details>
+                    <summary>Ledtråd 1</summary>
+                    <p>På höger sida ser du ett antal flikar. Du kanske kan hitta nåt om rymdskrot där?</p>
+                </details>
+                <details>
+                    <summary>Ledtråd 2</summary>
+                    <p>Rymdskrot visualiseras som gröna strålar som färdas runt jorden. </p>
+                </details>
+            </div>
+        </div>
+        <!--Quest 2-->
+        <div id="quest-black-2" class="quest-overlay quest">
+            <div class="quest-info quest-info-black-2">
+                <h2>The size of space</h2>
+                <p>Här kan du se hur storleken av olika himlakroppar förhåller sig till varandra</p>
+                <div class="quest-text-wrapper">
+                    <p><span class="bold">Uppdrag:</span> Kika in skärmen The Size of Space. Vilka hemligheter tror du
+                        gömmer sig i den himlakropp som ligger nio steg till höger från Jorden?</p>
+                    <img src="assets/images/tips-button.svg" onclick="showBlackQuest2Tips()">
+                </div>
+                <div class="quest-text-wrapper quest-input-wrapper">
+                    <input id="quest-black-2-input" type="text">
+                    <button id="send-button-black-2" class="quest-send-button quest-send-button-black"
+                        onclick="showBlackQuest2Result()">
+                        Skicka
+                    </button>
+                </div>
+                <img id="quest-triangle-black-2" class="quest-triangle" src="assets/images/white-triangle.svg">
+            </div>
+            <div id="quest-tips-black-2" class="quest-tips">
+                <p><span class="bold">Tips!</span></p>
+                <details>
+                    <summary>Ledtråd 1</summary>
+                    <p>Himlakropparna blir större och större desto längre åt höger du scrollar</p>
+                </details>
+            </div>
+        </div>
+        <!--Quest 3-->
+        <div id="quest-black-3" class="quest-overlay quest">
+            <div class="quest-info quest-info-black-3">
+                <h2>Meteoriter</h2>
+                <p>Här kan du se olika meteoriter och vad som gömmer sig inuti dem.</p>
+                <div class="quest-text-wrapper">
+                    <p><span class="bold">Uppdrag:</span> Nämn namnet på en meteorit du känner till, eller leta upp
+                        namnet på en i rymdområdet på Vislab.</p>
+                    <img src="assets/images/tips-button.svg" onclick="showBlackQuest3Tips()">
+                </div>
+                <div class="quest-text-wrapper quest-input-wrapper">
+                    <input id="quest-black-3-input" type="text">
+                    <button id="send-button-black-3" class="quest-send-button quest-send-button-black"
+                        onclick="showBlackQuest3Result()">
+                        Skicka
+                    </button>
+                </div>
+                <img id="quest-triangle-black-3" class="quest-triangle" src="assets/images/white-triangle.svg">
+            </div>
+            <div id="quest-tips-black-3" class="quest-tips">
+                <p><span class="bold">Tips!</span></p>
+                <details>
+                    <summary>Ledtråd 1</summary>
+                    <p>Har du kikat in skärmen närmast det röda området?</p>
+                </details>
+            </div>
         </div>
 
         <!--Human section-->
@@ -277,7 +371,7 @@
                     <input id="quest-red-1-input" type="text">
                     <img id="redo-button-red-1" class="quest-redo-button" src="assets/images/redo-button.svg"
                         onclick="redoRedQuest1()">
-                    <button id="send-button-red" class="quest-send-button quest-send-button-red"
+                    <button id="send-button-red-1" class="quest-send-button quest-send-button-red"
                         onclick="showRedQuest1Result()">
                         Skicka
                     </button>
@@ -315,9 +409,10 @@
                     <img src="assets/images/tips-button.svg" onclick="showRedQuest2Tips()">
                 </div>
                 <div class="quest-text-wrapper quest-input-wrapper">
+                    <div class="width-75"></div>
                     <img id="redo-button-red-2" class="quest-redo-button" src="assets/images/redo-button.svg"
                         onclick="redoRedQuest2()">
-                    <button id="send-button-red" class="quest-send-button quest-send-button-red"
+                    <button id="send-button-red-2" class="quest-send-button quest-send-button-red"
                         onclick="showRedQuest2Result()">
                         Klar
                     </button>
@@ -350,7 +445,7 @@
                     <input id="quest-red-3-input" type="text">
                     <img id="redo-button-red-3" class="quest-redo-button" src="assets/images/redo-button.svg"
                         onclick="redoRedQuest3()">
-                    <button id="send-button-red" class="quest-send-button quest-send-button-red"
+                    <button id="send-button-red-3" class="quest-send-button quest-send-button-red"
                         onclick="showRedQuest3Result()">
                         Skicka
                     </button>
@@ -387,8 +482,8 @@
                 <div class="quest-text-wrapper quest-input-wrapper">
                     <input id="quest-red-4-input" type="text">
                     <img id="redo-button-red-4" class="quest-redo-button" src="assets/images/redo-button.svg"
-                        onclick="redoRedQuest3()">
-                    <button id="send-button-red" class="quest-send-button quest-send-button-red"
+                        onclick="redoRedQuest4()">
+                    <button id="send-button-red-4" class="quest-send-button quest-send-button-red"
                         onclick="showRedQuest4Result()">
                         Skicka
                     </button>
