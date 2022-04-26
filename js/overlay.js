@@ -181,6 +181,19 @@ const blackQuest1ResultBox = document.getElementById('quest-result-black-1');
 const blueQuest1ResultBox = document.getElementById('quest-result-blue-1');
 const greenQuest1ResultBox = document.getElementById('quest-result-green-1');
 
+// Counters
+let nrOfYellowTotalComplete = 0;
+let nrOfBlackTotalComplete = 0;
+let nrOfRedTotalComplete = 0;
+let nrOfBlueTotalComplete = 0;
+let nrOfGreenTotalComplete = 0;
+
+let nrOfYellowAComplete = 0;
+let nrOfRedAComplete = 0;
+let nrOfRedBComplete = 0;
+let nrOfBlueAComplete = 0;
+let nrOfGreenAComplete = 0;
+
 /* Get the documentElement (<html>) to display the page in fullscreen */
 var elem = document.documentElement;
 
@@ -282,6 +295,17 @@ function showRedOverlay() {
 
     //    redBeamBPartial.style.zIndex = 11;
     //    redBeamBPartial.style.filter = "opacity(0.5)";
+
+    if (nrOfRedAComplete == 2) {
+        redBeamA.style.filter = 'brightness(0) saturate(100%) invert(64%) sepia(28%) saturate(3019%) hue-rotate(314deg) brightness(99%) contrast(115%) opacity(1)';
+    } else if (nrOfRedAComplete == 1) {
+        redBeamA.style.filter = 'opacity(0.5)';
+        redBeamAPartial.style.filter = 'brightness(0) saturate(100%) invert(64%) sepia(28%) saturate(3019%) hue-rotate(314deg) brightness(99%) contrast(115%) opacity(0.5)';
+        redBeamAPartial.style.display = 'inline';
+        redBeamAPartial.style.zIndex = 11;
+    } else {
+        redBeamA.style.filter = 'opacity(0.5)';
+    }
 
     // Circles
     redCircle1.style.zIndex = 12;
@@ -451,6 +475,7 @@ function hideOverlays() {
     hideAllInfoBoxes();
     hideAllOverlayButtons();
     hideQuests();
+    setBeamColorsOnExit();
 }
 
 // Yellow quest functions
@@ -740,6 +765,19 @@ function showRedQuest2Result() {
     // Display redo button
     var redoButton = document.getElementById('redo-button-red-2');
     redoButton.style.display = 'flex';
+
+    // Increase counter
+    nrOfRedAComplete++;
+    nrOfRedTotalComplete++;
+
+    // Change beam color
+    if (nrOfRedAComplete == 1) {
+        redBeamAPartial.style.filter = 'brightness(0) saturate(100%) invert(64%) sepia(28%) saturate(3019%) hue-rotate(314deg) brightness(99%) contrast(115%) opacity(0.5)';
+        redBeamAPartial.style.display = 'inline';
+        redBeamAPartial.style.zIndex = 11;
+    } else if (nrOfRedAComplete == 2) {
+        redBeamA.style.filter = 'brightness(0) saturate(100%) invert(64%) sepia(28%) saturate(3019%) hue-rotate(314deg) brightness(99%) contrast(115%)';
+    }
 }
 
 function redoRedQuest2() {
@@ -750,6 +788,19 @@ function redoRedQuest2() {
     sendButtonRed2.style.backgroundColor = '#ff4d4d';
     sendButtonRed2.style.color = 'white';
     sendButtonRed2.innerHTML = "Klar";
+
+    // Decrease counter
+    nrOfRedAComplete--;
+    nrOfRedTotalComplete--;
+
+    // Change beam color
+    if (nrOfRedAComplete == 0) {
+        redBeamA.style.filter = 'opacity(0.5)';
+        redBeamAPartial.style.display = 'none';
+    } else if (nrOfRedAComplete == 1) {
+        redBeamA.style.filter = 'opacity(0.5)';
+        redBeamAPartial.style.filter = 'brightness(0) saturate(100%) invert(64%) sepia(28%) saturate(3019%) hue-rotate(314deg) brightness(99%) contrast(115%) opacity(0.5)';
+    }
 }
 
 function showRedQuest3() {
@@ -960,4 +1011,17 @@ function hideAllOverlayButtons() {
     blueInfoButton.style.display = 'none';
     greenExitButton.style.display = 'none';
     greenInfoButton.style.display = 'none';
+}
+
+function setBeamColorsOnExit() {
+    if (nrOfRedAComplete == 2) {
+        redBeamA.style.filter = 'brightness(0) saturate(100%) invert(64%) sepia(28%) saturate(3019%) hue-rotate(314deg) brightness(99%) contrast(115%) opacity(1)';
+    } else if (nrOfRedAComplete == 1) {
+        redBeamA.style.filter = 'opacity(1)';
+        redBeamAPartial.style.filter = 'brightness(0) saturate(100%) invert(64%) sepia(28%) saturate(3019%) hue-rotate(314deg) brightness(99%) contrast(115%) opacity(1)';
+        redBeamAPartial.style.display = 'inline';
+        redBeamAPartial.style.zIndex = null;
+    } else {
+        redBeamA.style.filter = 'opacity(1)';
+    }
 }
