@@ -925,14 +925,7 @@ function showRedQuest2Result() {
     nrOfRedTotalComplete++;
 
     // Change beam color
-    if (nrOfRedAComplete == 1) {
-        redBeamAPartial.style.filter = redFilterString + 'opacity(0.5)';
-        redBeamAPartial.style.display = 'inline';
-        redBeamAPartial.style.zIndex = 11;
-    } else if (nrOfRedAComplete == 2) {
-        redBeamA.style.filter = redFilterString + 'opacity(0.5)';
-        redBeamAPartial.style.display = 'none';
-    }
+    setRedBeamColors();
 }
 
 function redoRedQuest2() {
@@ -949,14 +942,7 @@ function redoRedQuest2() {
     nrOfRedTotalComplete--;
 
     // Change beam color
-    if (nrOfRedAComplete == 0) {
-        redBeamA.style.filter = 'opacity(0.5)';
-        redBeamAPartial.style.display = 'none';
-    } else if (nrOfRedAComplete == 1) {
-        redBeamA.style.filter = 'opacity(0.5)';
-        redBeamAPartial.style.filter = redFilterString + 'opacity(0.5)';
-        redBeamAPartial.style.display = 'inline';
-    }
+    setRedBeamColors();
 }
 
 function showRedQuest3() {
@@ -1234,5 +1220,21 @@ function setYellowBeamColors() {
         yellowBeamA.style.filter = yellowFilterString + 'opacity(0.5)';
         yellowBeamAPartial1.style.display = 'none';
         yellowBeamAPartial2.style.display = 'none';
+    }
+}
+
+function setRedBeamColors() {
+    if (nrOfRedAComplete == 0) {
+        redBeamA.style.filter = 'opacity(0.5)';
+        redBeamAPartial.style.display = 'none';
+    } else if (nrOfRedAComplete == 1) {
+        redBeamA.style.filter = 'opacity(0.5)';
+
+        redBeamAPartial.style.filter = redFilterString + 'opacity(0.5)';
+        redBeamAPartial.style.display = 'inline';
+        redBeamAPartial.style.zIndex = 11;
+    } else if (nrOfRedAComplete == 2) {
+        redBeamA.style.filter = redFilterString + 'opacity(0.5)';
+        redBeamAPartial.style.display = 'none';
     }
 }
