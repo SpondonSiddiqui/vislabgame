@@ -246,6 +246,24 @@ function showYellowOverlay() {
     //    yellowBeamBPartial.style.zIndex = 11;
     //    yellowBeamBPartial.style.filter = "opacity(0.5)";
 
+    if (nrOfYellowAComplete == 3) {
+        yellowBeamA.style.filter = yellowFilterString + 'opacity(0.5)';
+    } else if (nrOfYellowAComplete == 2) {
+        yellowBeamA.style.filter = 'opacity(0.5)';
+
+        yellowBeamAPartial2.style.filter = yellowFilterString + 'opacity(0.5)';
+        yellowBeamAPartial2.style.display = 'inline';
+        yellowBeamAPartial2.style.zIndex = 11;
+    } else if (nrOfYellowAComplete == 1) {
+        yellowBeamA.style.filter = 'opacity(0.5)';
+
+        yellowBeamAPartial1.style.filter = yellowFilterString + 'opacity(0.5)';
+        yellowBeamAPartial1.style.display = 'inline';
+        yellowBeamAPartial1.style.zIndex = 11;
+    } else {
+        yellowBeamA.style.filter = 'opacity(0.5)';
+    }
+
     // Circles
     yellowCircle1.style.zIndex = 12;
     yellowCircle2.style.zIndex = 12;
@@ -306,7 +324,7 @@ function showRedOverlay() {
     //    redBeamBPartial.style.filter = "opacity(0.5)";
 
     if (nrOfRedAComplete == 2) {
-        redBeamA.style.filter = redFilterString + 'opacity(1)';
+        redBeamA.style.filter = redFilterString + 'opacity(0.5)';
     } else if (nrOfRedAComplete == 1) {
         redBeamA.style.filter = 'opacity(0.5)';
         redBeamAPartial.style.filter = redFilterString + 'opacity(0.5)';
@@ -570,12 +588,12 @@ function showYellowQuest1Result() {
     // Change beam color
     if (nrOfYellowAComplete == 1) {
         yellowBeamAPartial1.style.filter = yellowFilterString + 'opacity(0.5)';
-        yellowBeamAPartial1.style.display = 'inline';
-        yellowBeamAPartial1.style.zIndex = 11;
+        // yellowBeamAPartial1.style.display = 'inline';
+        // yellowBeamAPartial1.style.zIndex = 11;
     } else if (nrOfYellowAComplete == 2) {
         yellowBeamAPartial2.style.filter = yellowFilterString + 'opacity(0.5)';
-        yellowBeamAPartial2.style.display = 'inline';
-        yellowBeamAPartial2.style.zIndex = 11;
+        // yellowBeamAPartial2.style.display = 'inline';
+        // yellowBeamAPartial2.style.zIndex = 11;
 
         yellowBeamAPartial1.style.display = 'none';
     } else if (nrOfYellowAComplete == 3) {
@@ -1169,6 +1187,8 @@ function setBeamColorsOnExit() {
         yellowBeamAPartial2.style.display = 'none';
     } else if (nrOfYellowAComplete == 2) {
         yellowBeamA.style.filter = 'opacity(1)';
+
+        yellowBeamAPartial1.style.zIndex = null;
 
         yellowBeamAPartial2.style.filter = yellowFilterString + 'opacity(1)';
         yellowBeamAPartial2.style.display = 'inline';
