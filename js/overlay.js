@@ -586,7 +586,7 @@ function showYellowQuest1Result() {
     nrOfYellowTotalComplete++;
 
     // Change beam color
-    setYellowBeamColors();
+    setYellowBeamAColors();
 }
 
 function showYellowQuest2Result() {
@@ -617,7 +617,7 @@ function showYellowQuest2Result() {
     nrOfYellowTotalComplete++;
 
     // Change beam color
-    setYellowBeamColors();
+    setYellowBeamAColors();
 }
 
 function showYellowQuest3Result() {
@@ -681,7 +681,7 @@ function showYellowQuest3Result() {
     nrOfYellowTotalComplete++;
 
     // Change beam color
-    setYellowBeamColors();
+    setYellowBeamAColors();
 }
 
 function showYellowQuest4Result() {
@@ -734,7 +734,7 @@ function redoYellowQuest1() {
     nrOfYellowTotalComplete--;
 
     // Change beam color
-    setYellowBeamColors();
+    setYellowBeamAColors();
 }
 
 function redoYellowQuest2() {
@@ -757,7 +757,7 @@ function redoYellowQuest2() {
     nrOfYellowTotalComplete--;
 
     // Change beam color
-    setYellowBeamColors();
+    setYellowBeamAColors();
 }
 
 function redoYellowQuest3() {
@@ -781,7 +781,7 @@ function redoYellowQuest3() {
     nrOfYellowTotalComplete--;
 
     // Change beam color
-    setYellowBeamColors();
+    setYellowBeamAColors();
 }
 
 function redoYellowQuest4() {
@@ -1216,7 +1216,7 @@ function setBeamColorsOnExit() {
     }
 }
 
-function setYellowBeamColors() {
+function setYellowBeamAColors() {
     if (nrOfYellowAComplete == 0) {
         yellowBeamA.style.filter = 'opacity(0.5)';
         yellowBeamAPartial1.style.display = 'none';
