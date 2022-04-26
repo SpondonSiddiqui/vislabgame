@@ -887,7 +887,8 @@ function showRedQuest2Result() {
         redBeamAPartial.style.display = 'inline';
         redBeamAPartial.style.zIndex = 11;
     } else if (nrOfRedAComplete == 2) {
-        redBeamA.style.filter = 'brightness(0) saturate(100%) invert(64%) sepia(28%) saturate(3019%) hue-rotate(314deg) brightness(99%) contrast(115%)';
+        redBeamA.style.filter = 'brightness(0) saturate(100%) invert(64%) sepia(28%) saturate(3019%) hue-rotate(314deg) brightness(99%) contrast(115%) opacity(0.5)';
+        redBeamAPartial.style.display = 'none';
     }
 }
 
@@ -1129,6 +1130,7 @@ function hideAllOverlayButtons() {
 function setBeamColorsOnExit() {
     if (nrOfRedAComplete == 2) {
         redBeamA.style.filter = 'brightness(0) saturate(100%) invert(64%) sepia(28%) saturate(3019%) hue-rotate(314deg) brightness(99%) contrast(115%) opacity(1)';
+        redBeamAPartial.style.display = 'none';
     } else if (nrOfRedAComplete == 1) {
         redBeamA.style.filter = 'opacity(1)';
         redBeamAPartial.style.filter = 'brightness(0) saturate(100%) invert(64%) sepia(28%) saturate(3019%) hue-rotate(314deg) brightness(99%) contrast(115%) opacity(1)';
