@@ -944,7 +944,7 @@ function showRedQuest2Result() {
     nrOfRedTotalComplete++;
 
     // Change beam color
-    setRedBeamColors();
+    setRedBeamAColors();
 }
 
 function redoRedQuest2() {
@@ -961,7 +961,7 @@ function redoRedQuest2() {
     nrOfRedTotalComplete--;
 
     // Change beam color
-    setRedBeamColors();
+    setRedBeamAColors();
 }
 
 function showRedQuest3() {
@@ -1242,7 +1242,7 @@ function setYellowBeamAColors() {
     }
 }
 
-function setRedBeamColors() {
+function setRedBeamAColors() {
     if (nrOfRedAComplete == 0) {
         redBeamA.style.filter = 'opacity(0.5)';
         redBeamAPartial.style.display = 'none';
