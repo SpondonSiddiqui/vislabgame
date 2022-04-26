@@ -586,21 +586,7 @@ function showYellowQuest1Result() {
     nrOfYellowTotalComplete++;
 
     // Change beam color
-    if (nrOfYellowAComplete == 1) {
-        yellowBeamAPartial1.style.filter = yellowFilterString + 'opacity(0.5)';
-        // yellowBeamAPartial1.style.display = 'inline';
-        // yellowBeamAPartial1.style.zIndex = 11;
-    } else if (nrOfYellowAComplete == 2) {
-        yellowBeamAPartial2.style.filter = yellowFilterString + 'opacity(0.5)';
-        // yellowBeamAPartial2.style.display = 'inline';
-        // yellowBeamAPartial2.style.zIndex = 11;
-
-        yellowBeamAPartial1.style.display = 'none';
-    } else if (nrOfYellowAComplete == 3) {
-        yellowBeamA.style.filter = yellowFilterString + 'opacity(0.5)';
-        yellowBeamAPartial1.style.display = 'none';
-        yellowBeamAPartial2.style.display = 'none';
-    }
+    setYellowBeamColors();
 }
 
 function showYellowQuest2Result() {
@@ -736,6 +722,13 @@ function redoYellowQuest1() {
     sendButtonYellow1.style.backgroundColor = '#f2ba49';
     sendButtonYellow1.style.color = 'white';
     sendButtonYellow1.innerHTML = "Skicka";
+
+    // Decrease counter
+    nrOfYellowAComplete--;
+    nrOfYellowTotalComplete--;
+
+    // Change beam color
+    setYellowBeamColors();
 }
 
 function redoYellowQuest2() {
@@ -1188,6 +1181,7 @@ function setBeamColorsOnExit() {
     } else if (nrOfYellowAComplete == 2) {
         yellowBeamA.style.filter = 'opacity(1)';
 
+        yellowBeamAPartial1.style.display = 'none';
         yellowBeamAPartial1.style.zIndex = null;
 
         yellowBeamAPartial2.style.filter = yellowFilterString + 'opacity(1)';
@@ -1214,5 +1208,31 @@ function setBeamColorsOnExit() {
         redBeamAPartial.style.zIndex = null;
     } else {
         redBeamA.style.filter = 'opacity(1)';
+    }
+}
+
+function setYellowBeamColors() {
+    if (nrOfYellowAComplete == 0) {
+        yellowBeamA.style.filter = 'opacity(0.5)';
+        yellowBeamAPartial1.style.display = 'none';
+        yellowBeamAPartial2.style.display = 'none';
+    } else if (nrOfYellowAComplete == 1) {
+        yellowBeamAPartial1.style.filter = yellowFilterString + 'opacity(0.5)';
+        yellowBeamAPartial1.style.display = 'inline';
+        yellowBeamAPartial1.style.zIndex = 11;
+
+        yellowBeamAPartial2.style.display = 'none';
+        yellowBeamAPartial2.style.zIndex = null;
+    } else if (nrOfYellowAComplete == 2) {
+        yellowBeamAPartial1.style.display = 'none';
+        yellowBeamAPartial1.style.zIndex = null;
+
+        yellowBeamAPartial2.style.filter = yellowFilterString + 'opacity(0.5)';
+        yellowBeamAPartial2.style.display = 'inline';
+        yellowBeamAPartial2.style.zIndex = 11;
+    } else if (nrOfYellowAComplete == 3) {
+        yellowBeamA.style.filter = yellowFilterString + 'opacity(0.5)';
+        yellowBeamAPartial1.style.display = 'none';
+        yellowBeamAPartial2.style.display = 'none';
     }
 }
