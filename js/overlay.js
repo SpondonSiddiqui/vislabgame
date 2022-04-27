@@ -573,6 +573,9 @@ function showYellowQuest1Result() {
 
     // Change beam color
     setYellowBeamAColors();
+
+    // Set image color
+    setYellowImageColor();
 }
 
 function showYellowQuest2Result() {
@@ -604,6 +607,9 @@ function showYellowQuest2Result() {
 
     // Change beam color
     setYellowBeamAColors();
+
+    // Set image color
+    setYellowImageColor();
 }
 
 function showYellowQuest3Result() {
@@ -668,6 +674,9 @@ function showYellowQuest3Result() {
 
     // Change beam color
     setYellowBeamAColors();
+
+    // Set image color
+    setYellowImageColor();
 }
 
 function showYellowQuest4Result() {
@@ -705,6 +714,9 @@ function showYellowQuest4Result() {
 
     // Change beam color
     setYellowBeamBColors();
+
+    // Set image color
+    setYellowImageColor();
 }
 
 function redoYellowQuest1() {
@@ -728,6 +740,9 @@ function redoYellowQuest1() {
 
     // Change beam color
     setYellowBeamAColors();
+
+    // Set image color
+    setYellowImageColor();
 }
 
 function redoYellowQuest2() {
@@ -751,6 +766,9 @@ function redoYellowQuest2() {
 
     // Change beam color
     setYellowBeamAColors();
+
+    // Set image color
+    setYellowImageColor();
 }
 
 function redoYellowQuest3() {
@@ -775,6 +793,9 @@ function redoYellowQuest3() {
 
     // Change beam color
     setYellowBeamAColors();
+
+    // Set image color
+    setYellowImageColor();
 }
 
 function redoYellowQuest4() {
@@ -802,6 +823,9 @@ function redoYellowQuest4() {
 
     // Change beam color
     setYellowBeamBColors();
+
+    // Set image color
+    setYellowImageColor();
 }
 
 // Blue quest functions
@@ -1255,6 +1279,16 @@ function setYellowBeamBColors() {
         yellowBeamB.style.filter = 'opacity(0.5)';
     } else {
         yellowBeamB.style.filter = yellowFilterString + 'opacity(0.5)';
+    }
+}
+
+function setYellowImageColor() {
+    let image = document.getElementById('society-background-partial');
+
+    if (nrOfYellowTotalComplete == 4) {
+        image.style.filter = 'saturate(100%)';
+    } else {
+        image.style.filter = 'grayscale(100%)';
     }
 }
 
