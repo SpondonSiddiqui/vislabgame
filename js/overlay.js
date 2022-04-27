@@ -202,6 +202,8 @@ let nrOfGreenTotalComplete = 0;
 
 let nrOfYellowAComplete = 0;
 let nrOfYellowBComplete = 0;
+let nrOfBlackAComplete = 0;
+let nrOfBlackBComplete = 0;
 let nrOfRedAComplete = 0;
 let nrOfRedBComplete = 0;
 let nrOfBlueAComplete = 0;
@@ -216,6 +218,7 @@ const greenColor = '#4cbf4c';
 const purpleColor = '#9900ff';
 
 const yellowFilterString = 'brightness(0) saturate(100%) invert(75%) sepia(3%) saturate(6601%) hue-rotate(345deg) brightness(117%) contrast(93%)';
+const blackFilterString = 'brightness(0) saturate(100%) invert(51%) sepia(27%) saturate(0%) hue-rotate(224deg) brightness(100%) contrast(93%)';
 const redFilterString = 'brightness(0) saturate(100%) invert(64%) sepia(28%) saturate(3019%) hue-rotate(314deg) brightness(99%) contrast(115%)';
 
 /* Get the documentElement (<html>) to display the page in fullscreen */
@@ -290,6 +293,9 @@ function showBlackOverlay() {
 
     blackBeamB.style.zIndex = 11;
     blackBeamB.style.filter = "opacity(0.5)";
+
+    setBlackBeamAColors();
+    setBlackBeamBColors();
 
     // Circles
     blackCircle1.style.zIndex = 12;
@@ -922,14 +928,27 @@ function showBlackQuest1Result() {
         blackQuest1ResultBox.style.display = 'flex';
 
         // Display user input in the result box
-        var displayInput = document.getElementById('user-input-black-1');
-        displayInput.innerHTML = userInput;
+        // var displayInput = document.getElementById('user-input-black-1');
+        // displayInput.innerHTML = userInput;
 
         // Display redo button
-        var redoButton = document.getElementById('redo-button-black-1');
-        redoButton.style.display = 'flex';
+        // var redoButton = document.getElementById('redo-button-black-1');
+        // redoButton.style.display = 'flex';
 
         hideQuestTips();
+
+        // Increase counter
+        nrOfBlackAComplete++;
+        nrOfBlackTotalComplete++;
+
+        // Change beam color
+        setBlackBeamAColors();
+
+        // Change circle border color
+        blackCircle1.style.outlineColor = grayColor;
+
+        // Set image color
+        setBlackImageColor();
     }
 }
 
@@ -958,6 +977,15 @@ function showBlackQuest2Result() {
         redoButton.style.display = 'flex';
 
         hideQuestTips();
+
+        // Increase counter
+        nrOfBlackTotalComplete++;
+
+        // Change circle border color
+        blackCircle2.style.outlineColor = grayColor;
+
+        // Set image color
+        setBlackImageColor();
     }
 }
 
@@ -979,10 +1007,23 @@ function showBlackQuest3Result() {
         blackQuest3ResultBox.style.display = 'flex';
 
         // Display redo button
-        var redoButton = document.getElementById('redo-button-black-3');
-        redoButton.style.display = 'flex';
+        // var redoButton = document.getElementById('redo-button-black-3');
+        // redoButton.style.display = 'flex';
 
         hideQuestTips();
+
+        // Increase counter
+        nrOfBlackBComplete++;
+        nrOfBlackTotalComplete++;
+
+        // Change beam color
+        setBlackBeamBColors();
+
+        // Change circle border color
+        blackCircle3.style.outlineColor = grayColor;
+
+        // Set image color
+        setBlackImageColor();
     }
 }
 
@@ -997,16 +1038,18 @@ function redoBlackQuest2() {
     document.getElementById('quest-black-2-input').readOnly = false;
 
     // Restore send button
-    sendButtonYellow1.style.backgroundColor = '#9900ff';
-    sendButtonYellow1.style.color = 'white';
-    sendButtonYellow1.innerHTML = "Skicka";
+    sendButtonBlack2.style.backgroundColor = '#9900ff';
+    sendButtonBlack2.style.color = 'white';
+    sendButtonBlack2.innerHTML = "Skicka";
 
     // Decrease counter
-    //nrOfBlackAComplete--;
-    //nrOfBlackTotalComplete--;
+    nrOfBlackTotalComplete--;
 
-    // Change beam color
-    //setBlackBeamAColors();
+    // Change circle border color
+    blackCircle2.style.outlineColor = 'white';
+
+    // Set image color
+    setBlackImageColor();
 }
 
 // Red quest functions
@@ -1317,6 +1360,7 @@ function hideAllOverlayButtons() {
     greenInfoButton.style.display = 'none';
 }
 
+// Coloring functions
 function setBeamColorsOnExit() {
 
     // Yellow beams
@@ -1347,6 +1391,18 @@ function setBeamColorsOnExit() {
         yellowBeamB.style.filter = yellowFilterString + 'opacity(1)';
     }
 
+    // Black beams
+    if (nrOfBlackAComplete == 1) {
+        blackBeamA.style.filter = blackFilterString + 'opacity(1)';
+    } else {
+        blackBeamA.style.filter = 'opacity(1)';
+    }
+
+    if (nrOfBlackBComplete == 1) {
+        blackBeamB.style.filter = blackFilterString + 'opacity(1)';
+    } else {
+        blackBeamB.style.filter = 'opacity(1)';
+    }
 
     // Red beams
     if (nrOfRedAComplete == 2) {
@@ -1403,6 +1459,32 @@ function setYellowImageColor() {
     let image = document.getElementById('society-background-partial');
 
     if (nrOfYellowTotalComplete == 4) {
+        image.style.filter = 'saturate(100%)';
+    } else {
+        image.style.filter = 'grayscale(100%)';
+    }
+}
+
+function setBlackBeamAColors() {
+    if (nrOfBlackAComplete == 0) {
+        blackBeamA.style.filter = 'opacity(0.5)';
+    } else {
+        blackBeamA.style.filter = blackFilterString + 'opacity(0.5)';
+    }
+}
+
+function setBlackBeamBColors() {
+    if (nrOfBlackBComplete == 0) {
+        blackBeamB.style.filter = 'opacity(0.5)';
+    } else {
+        blackBeamB.style.filter = blackFilterString + 'opacity(0.5)';
+    }
+}
+
+function setBlackImageColor() {
+    let image = document.getElementById('space-background-partial');
+
+    if (nrOfBlackTotalComplete == 3) {
         image.style.filter = 'saturate(100%)';
     } else {
         image.style.filter = 'grayscale(100%)';
