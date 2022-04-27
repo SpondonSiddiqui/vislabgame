@@ -335,6 +335,7 @@ function showRedOverlay() {
     //    redBeamBPartial.style.filter = "opacity(0.5)";
 
     setRedBeamAColors();
+    setRedBeamBColors();
 
     // Circles
     redCircle1.style.zIndex = 12;
@@ -1219,6 +1220,19 @@ function showRedQuest3Result() {
         // Display redo button
         var redoButton = document.getElementById('redo-button-red-3');
         redoButton.style.display = 'flex';
+
+        // Increase counter
+        nrOfRedBComplete++;
+        nrOfRedTotalComplete++;
+
+        // Change beam color
+        setRedBeamBColors();
+
+        // Change circle border color
+        redCircle3.style.outlineColor = redColor;
+
+        // Set image color
+        setRedImageColor();
     }
 }
 
@@ -1236,6 +1250,19 @@ function redoRedQuest3() {
     sendButtonRed3.style.backgroundColor = '#ff4d4d';
     sendButtonRed3.style.color = 'white';
     sendButtonRed3.innerHTML = "Skicka";
+
+    // Decrease counter
+    nrOfRedBComplete--;
+    nrOfRedTotalComplete--;
+
+    // Change beam color
+    setRedBeamBColors();
+
+    // Change circle border color
+    redCircle3.style.outlineColor = 'white';
+
+    // Set image color
+    setRedImageColor();
 }
 
 function showRedQuest4() {
@@ -1457,6 +1484,19 @@ function setBeamColorsOnExit() {
     } else {
         redBeamA.style.filter = 'opacity(1)';
     }
+
+    if (nrOfRedBComplete == 2) {
+        redBeamB.style.filter = redFilterString + 'opacity(1)';
+        redBeamBPartial.style.display = 'none';
+    } else if (nrOfRedBComplete == 1) {
+        redBeamB.style.filter = 'opacity(1)';
+
+        redBeamBPartial.style.filter = redFilterString + 'opacity(1)';
+        redBeamBPartial.style.display = 'inline';
+        redBeamBPartial.style.zIndex = null;
+    } else {
+        redBeamB.style.filter = 'opacity(1)';
+    }
 }
 
 function setYellowBeamAColors() {
@@ -1544,6 +1584,22 @@ function setRedBeamAColors() {
     } else if (nrOfRedAComplete == 2) {
         redBeamA.style.filter = redFilterString + 'opacity(0.5)';
         redBeamAPartial.style.display = 'none';
+    }
+}
+
+function setRedBeamBColors() {
+    if (nrOfRedBComplete == 0) {
+        redBeamB.style.filter = 'opacity(0.5)';
+        redBeamBPartial.style.display = 'none';
+    } else if (nrOfRedBComplete == 1) {
+        redBeamB.style.filter = 'opacity(0.5)';
+
+        redBeamBPartial.style.filter = redFilterString + 'opacity(0.5)';
+        redBeamBPartial.style.display = 'inline';
+        redBeamBPartial.style.zIndex = 11;
+    } else if (nrOfRedBComplete == 2) {
+        redBeamB.style.filter = redFilterString + 'opacity(0.5)';
+        redBeamBPartial.style.display = 'none';
     }
 }
 
