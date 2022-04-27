@@ -73,6 +73,19 @@ p {
     position: relative;
 }
 
+#globe-box {
+    display: none;
+    padding: 1vh;
+    background-color: white;
+    width: 35%;
+    left: 32%;
+    top: 30%;
+    position: absolute;
+    z-index: 100;
+    border-radius: 16px;
+    justify-content: center;
+}
+
 .overlay {
     &-info {
         background-color: #fff;
@@ -317,6 +330,10 @@ p {
             width: 32%;
             bottom: 5.56%;
             left: 58%;
+
+            &-2 {
+                top: 32%;
+            }
 
             &-3 {
                 top: 32%;

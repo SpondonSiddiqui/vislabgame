@@ -51,6 +51,21 @@ p {
   position: relative;
 }
 
+#globe-box {
+  display: none;
+  padding: 1vh;
+  background-color: white;
+  width: 35%;
+  left: 32%;
+  top: 30%;
+  position: absolute;
+  z-index: 100;
+  border-radius: 16px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 .overlay-info {
   background-color: #fff;
   margin-top: 20px;
@@ -308,6 +323,10 @@ p {
   width: 32%;
   bottom: 5.56%;
   left: 58%;
+}
+
+.quest-result-black-2 {
+  top: 32%;
 }
 
 .quest-result-black-3 {

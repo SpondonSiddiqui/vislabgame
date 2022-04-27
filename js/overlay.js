@@ -512,6 +512,16 @@ function hideOverlays() {
     setBeamColorsOnExit();
 }
 
+// Globe functions
+function showGlobeBox() {
+    document.getElementById('globe-box').style.display = 'flex';
+    setTimeout(hideGlobeBox, 5000);
+}
+
+function hideGlobeBox() {
+    document.getElementById('globe-box').style.display = 'none';
+}
+
 // Yellow quest functions
 function showYellowQuest1() {
     showYellowOverlay();
@@ -859,7 +869,7 @@ function showBlackQuest1Result() {
 
         // Change look of send button
         sendButtonBlack1.style.backgroundColor = 'white';
-        sendButtonBlack1.style.color = '#555555';
+        sendButtonBlack1.style.color = '#9900ff';
         sendButtonBlack1.innerHTML = "Skickat!";
 
         // Display result box
@@ -871,6 +881,34 @@ function showBlackQuest1Result() {
 
         // Display redo button
         var redoButton = document.getElementById('redo-button-black-1');
+        redoButton.style.display = 'flex';
+
+        hideQuestTips();
+    }
+}
+
+function showBlackQuest2Result() {
+    // Save user input
+    var userInput = document.getElementById('quest-black-2-input').value;
+    if (userInput.length != 0) {
+
+        // Make user input read only
+        document.getElementById('quest-black-2-input').readOnly = true;
+
+        // Change look of send button
+        sendButtonBlack2.style.backgroundColor = 'white';
+        sendButtonBlack2.style.color = '#9900ff';
+        sendButtonBlack2.innerHTML = "Skickat!";
+
+        // Display result box
+        blackQuest2ResultBox.style.display = 'flex';
+
+        // Display user input in the result box
+        var displayInput = document.getElementById('user-input-black-2');
+        displayInput.innerHTML = userInput;
+
+        // Display redo button
+        var redoButton = document.getElementById('redo-button-black-2');
         redoButton.style.display = 'flex';
 
         hideQuestTips();
@@ -900,6 +938,29 @@ function showBlackQuest3Result() {
 
         hideQuestTips();
     }
+}
+
+function redoBlackQuest2() {
+    // Hide redo button
+    document.getElementById('redo-button-black-2').style.display = 'none';
+
+    // Remove user input from result box
+    document.getElementById('user-input-black-2').innerHTML = "Du har ångrat ditt svar";
+
+    // Make input writeable
+    document.getElementById('quest-black-2-input').readOnly = false;
+
+    // Restore send button
+    sendButtonYellow1.style.backgroundColor = '#9900ff';
+    sendButtonYellow1.style.color = 'white';
+    sendButtonYellow1.innerHTML = "Skicka";
+
+    // Decrease counter
+    //nrOfBlackAComplete--;
+    //nrOfBlackTotalComplete--;
+
+    // Change beam color
+    //setBlackBeamAColors();
 }
 
 // Red quest functions
