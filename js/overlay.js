@@ -201,6 +201,13 @@ let nrOfBlueAComplete = 0;
 let nrOfGreenAComplete = 0;
 
 // Strings
+const yellowColor = '#f2ba49';
+const grayColor = '#555555';
+const redColor = '#ff4d4d';
+const blueColor = '#0ebde5';
+const greenColor = '#4cbf4c';
+const purpleColor = '#9900ff';
+
 const yellowFilterString = 'brightness(0) saturate(100%) invert(75%) sepia(3%) saturate(6601%) hue-rotate(345deg) brightness(117%) contrast(93%)';
 const redFilterString = 'brightness(0) saturate(100%) invert(64%) sepia(28%) saturate(3019%) hue-rotate(314deg) brightness(99%) contrast(115%)';
 
@@ -574,6 +581,9 @@ function showYellowQuest1Result() {
     // Change beam color
     setYellowBeamAColors();
 
+    // Change circle border color
+    yellowCircle1.style.outlineColor = yellowColor;
+
     // Set image color
     setYellowImageColor();
 }
@@ -608,6 +618,9 @@ function showYellowQuest2Result() {
     // Change beam color
     setYellowBeamAColors();
 
+    // Change circle border color
+    yellowCircle2.style.outlineColor = yellowColor;
+
     // Set image color
     setYellowImageColor();
 }
@@ -626,7 +639,7 @@ function showYellowQuest3Result() {
         sendButtonYellow3.innerHTML = "Skickat!";
 
         // Display result box
-        document.getElementById('yellow-3-result-intro').innerHTML = "Baserat på ditt svar tror vi att du kommer ifrån en av dessa:";
+        document.getElementById('yellow-3-result-intro').innerHTML = "Baserat på ditt svar tror vi att du kommer ifrån en av dessa län:";
         yellowQuest3ResultBox.style.display = 'flex';
 
 
@@ -675,6 +688,9 @@ function showYellowQuest3Result() {
     // Change beam color
     setYellowBeamAColors();
 
+    // Change circle border color
+    yellowCircle3.style.outlineColor = yellowColor;
+
     // Set image color
     setYellowImageColor();
 }
@@ -715,6 +731,9 @@ function showYellowQuest4Result() {
     // Change beam color
     setYellowBeamBColors();
 
+    // Change circle border color
+    yellowCircle4.style.outlineColor = yellowColor;
+
     // Set image color
     setYellowImageColor();
 }
@@ -740,6 +759,9 @@ function redoYellowQuest1() {
 
     // Change beam color
     setYellowBeamAColors();
+
+    // Change circle border color
+    yellowCircle1.style.outlineColor = 'white';
 
     // Set image color
     setYellowImageColor();
@@ -767,6 +789,9 @@ function redoYellowQuest2() {
     // Change beam color
     setYellowBeamAColors();
 
+    // Change circle border color
+    yellowCircle2.style.outlineColor = 'white';
+
     // Set image color
     setYellowImageColor();
 }
@@ -793,6 +818,9 @@ function redoYellowQuest3() {
 
     // Change beam color
     setYellowBeamAColors();
+
+    // Change circle border color
+    yellowCircle3.style.outlineColor = 'white';
 
     // Set image color
     setYellowImageColor();
@@ -823,6 +851,9 @@ function redoYellowQuest4() {
 
     // Change beam color
     setYellowBeamBColors();
+
+    // Change circle border color
+    yellowCircle4.style.outlineColor = 'white';
 
     // Set image color
     setYellowImageColor();
