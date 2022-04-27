@@ -1079,6 +1079,7 @@ function showRedQuest3Result() {
         sendButtonRed3.innerHTML = "Skickat!";
 
         // Display result box
+        document.getElementById('red-3-result-intro').innerHTML = "Vad har andra svarat?";
         redQuest3ResultBox.style.display = 'flex';
 
         // Display user input in the result box
@@ -1096,6 +1097,7 @@ function redoRedQuest3() {
     document.getElementById('redo-button-red-3').style.display = 'none';
 
     // Remove user input from result box
+    document.getElementById('red-3-result-intro').innerHTML = "(Du har ångrat ditt svar)";
     document.getElementById('user-input-red-3').innerHTML = "";
 
     // Make input writeable
