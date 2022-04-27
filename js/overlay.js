@@ -201,12 +201,20 @@ let nrOfBlueTotalComplete = 0;
 let nrOfGreenTotalComplete = 0;
 
 let nrOfYellowAComplete = 0;
+let nrOfYellowBComplete = 0;
 let nrOfRedAComplete = 0;
 let nrOfRedBComplete = 0;
 let nrOfBlueAComplete = 0;
 let nrOfGreenAComplete = 0;
 
 // Strings
+const yellowColor = '#f2ba49';
+const grayColor = '#555555';
+const redColor = '#ff4d4d';
+const blueColor = '#0ebde5';
+const greenColor = '#4cbf4c';
+const purpleColor = '#9900ff';
+
 const yellowFilterString = 'brightness(0) saturate(100%) invert(75%) sepia(3%) saturate(6601%) hue-rotate(345deg) brightness(117%) contrast(93%)';
 const redFilterString = 'brightness(0) saturate(100%) invert(64%) sepia(28%) saturate(3019%) hue-rotate(314deg) brightness(99%) contrast(115%)';
 
@@ -253,23 +261,8 @@ function showYellowOverlay() {
     //    yellowBeamBPartial.style.zIndex = 11;
     //    yellowBeamBPartial.style.filter = "opacity(0.5)";
 
-    if (nrOfYellowAComplete == 3) {
-        yellowBeamA.style.filter = yellowFilterString + 'opacity(0.5)';
-    } else if (nrOfYellowAComplete == 2) {
-        yellowBeamA.style.filter = 'opacity(0.5)';
-
-        yellowBeamAPartial2.style.filter = yellowFilterString + 'opacity(0.5)';
-        yellowBeamAPartial2.style.display = 'inline';
-        yellowBeamAPartial2.style.zIndex = 11;
-    } else if (nrOfYellowAComplete == 1) {
-        yellowBeamA.style.filter = 'opacity(0.5)';
-
-        yellowBeamAPartial1.style.filter = yellowFilterString + 'opacity(0.5)';
-        yellowBeamAPartial1.style.display = 'inline';
-        yellowBeamAPartial1.style.zIndex = 11;
-    } else {
-        yellowBeamA.style.filter = 'opacity(0.5)';
-    }
+    setYellowBeamAColors();
+    setYellowBeamBColors();
 
     // Circles
     yellowCircle1.style.zIndex = 12;
@@ -330,16 +323,7 @@ function showRedOverlay() {
     //    redBeamBPartial.style.zIndex = 11;
     //    redBeamBPartial.style.filter = "opacity(0.5)";
 
-    if (nrOfRedAComplete == 2) {
-        redBeamA.style.filter = redFilterString + 'opacity(0.5)';
-    } else if (nrOfRedAComplete == 1) {
-        redBeamA.style.filter = 'opacity(0.5)';
-        redBeamAPartial.style.filter = redFilterString + 'opacity(0.5)';
-        redBeamAPartial.style.display = 'inline';
-        redBeamAPartial.style.zIndex = 11;
-    } else {
-        redBeamA.style.filter = 'opacity(0.5)';
-    }
+    setRedBeamAColors();
 
     // Circles
     redCircle1.style.zIndex = 12;
@@ -596,14 +580,20 @@ function showYellowQuest1Result() {
         redoButton.style.display = 'flex';
 
         hideQuestTips();
+
+        // Increase counter
+        nrOfYellowAComplete++;
+        nrOfYellowTotalComplete++;
+
+        // Change beam color
+        setYellowBeamAColors();
+
+        // Change circle border color
+        yellowCircle1.style.outlineColor = yellowColor;
+
+        // Set image color
+        setYellowImageColor();
     }
-
-    // Increase counter
-    nrOfYellowAComplete++;
-    nrOfYellowTotalComplete++;
-
-    // Change beam color
-    setYellowBeamAColors();
 }
 
 function showYellowQuest2Result() {
@@ -627,14 +617,20 @@ function showYellowQuest2Result() {
         redoButton.style.display = 'flex';
 
         hideQuestTips();
+
+        // Increase counter
+        nrOfYellowAComplete++;
+        nrOfYellowTotalComplete++;
+
+        // Change beam color
+        setYellowBeamAColors();
+
+        // Change circle border color
+        yellowCircle2.style.outlineColor = yellowColor;
+
+        // Set image color
+        setYellowImageColor();
     }
-
-    // Increase counter
-    nrOfYellowAComplete++;
-    nrOfYellowTotalComplete++;
-
-    // Change beam color
-    setYellowBeamAColors();
 }
 
 function showYellowQuest3Result() {
@@ -651,7 +647,7 @@ function showYellowQuest3Result() {
         sendButtonYellow3.innerHTML = "Skickat!";
 
         // Display result box
-        document.getElementById('yellow-3-result-intro').innerHTML = "Baserat på ditt svar tror vi att du kommer ifrån en av dessa:";
+        document.getElementById('yellow-3-result-intro').innerHTML = "Baserat på ditt svar tror vi att du kommer ifrån en av dessa län:";
         yellowQuest3ResultBox.style.display = 'flex';
 
 
@@ -691,14 +687,20 @@ function showYellowQuest3Result() {
         redoButton.style.display = 'flex';
 
         hideQuestTips();
+
+        // Increase counter
+        nrOfYellowAComplete++;
+        nrOfYellowTotalComplete++;
+
+        // Change beam color
+        setYellowBeamAColors();
+
+        // Change circle border color
+        yellowCircle3.style.outlineColor = yellowColor;
+
+        // Set image color
+        setYellowImageColor();
     }
-
-    // Increase counter
-    nrOfYellowAComplete++;
-    nrOfYellowTotalComplete++;
-
-    // Change beam color
-    setYellowBeamAColors();
 }
 
 function showYellowQuest4Result() {
@@ -728,6 +730,19 @@ function showYellowQuest4Result() {
         redoButton.style.display = 'flex';
 
         hideQuestTips();
+
+        // Increase counter
+        nrOfYellowBComplete++;
+        nrOfYellowTotalComplete++;
+
+        // Change beam color
+        setYellowBeamBColors();
+
+        // Change circle border color
+        yellowCircle4.style.outlineColor = yellowColor;
+
+        // Set image color
+        setYellowImageColor();
     }
 }
 
@@ -752,6 +767,12 @@ function redoYellowQuest1() {
 
     // Change beam color
     setYellowBeamAColors();
+
+    // Change circle border color
+    yellowCircle1.style.outlineColor = 'white';
+
+    // Set image color
+    setYellowImageColor();
 }
 
 function redoYellowQuest2() {
@@ -775,6 +796,12 @@ function redoYellowQuest2() {
 
     // Change beam color
     setYellowBeamAColors();
+
+    // Change circle border color
+    yellowCircle2.style.outlineColor = 'white';
+
+    // Set image color
+    setYellowImageColor();
 }
 
 function redoYellowQuest3() {
@@ -799,6 +826,12 @@ function redoYellowQuest3() {
 
     // Change beam color
     setYellowBeamAColors();
+
+    // Change circle border color
+    yellowCircle3.style.outlineColor = 'white';
+
+    // Set image color
+    setYellowImageColor();
 }
 
 function redoYellowQuest4() {
@@ -819,6 +852,19 @@ function redoYellowQuest4() {
 
     // remove År?
     document.getElementById('yellow-4-year').innerHTML = '';
+
+    // Decrease counter
+    nrOfYellowBComplete--;
+    nrOfYellowTotalComplete--;
+
+    // Change beam color
+    setYellowBeamBColors();
+
+    // Change circle border color
+    yellowCircle4.style.outlineColor = 'white';
+
+    // Set image color
+    setYellowImageColor();
 }
 
 // Blue quest functions
@@ -1295,6 +1341,12 @@ function setBeamColorsOnExit() {
         yellowBeamA.style.filter = 'opacity(1)';
     }
 
+    if (nrOfYellowBComplete == 0) {
+        yellowBeamB.style.filter = 'opacity(1)';
+    } else {
+        yellowBeamB.style.filter = yellowFilterString + 'opacity(1)';
+    }
+
 
     // Red beams
     if (nrOfRedAComplete == 2) {
@@ -1324,6 +1376,8 @@ function setYellowBeamAColors() {
         yellowBeamAPartial2.style.display = 'none';
         yellowBeamAPartial2.style.zIndex = null;
     } else if (nrOfYellowAComplete == 2) {
+        yellowBeamA.style.filter = 'opacity(0.5)';
+
         yellowBeamAPartial1.style.display = 'none';
         yellowBeamAPartial1.style.zIndex = null;
 
@@ -1334,6 +1388,24 @@ function setYellowBeamAColors() {
         yellowBeamA.style.filter = yellowFilterString + 'opacity(0.5)';
         yellowBeamAPartial1.style.display = 'none';
         yellowBeamAPartial2.style.display = 'none';
+    }
+}
+
+function setYellowBeamBColors() {
+    if (nrOfYellowBComplete == 0) {
+        yellowBeamB.style.filter = 'opacity(0.5)';
+    } else {
+        yellowBeamB.style.filter = yellowFilterString + 'opacity(0.5)';
+    }
+}
+
+function setYellowImageColor() {
+    let image = document.getElementById('society-background-partial');
+
+    if (nrOfYellowTotalComplete == 4) {
+        image.style.filter = 'saturate(100%)';
+    } else {
+        image.style.filter = 'grayscale(100%)';
     }
 }
 
