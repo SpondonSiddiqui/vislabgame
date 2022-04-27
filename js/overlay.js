@@ -3,6 +3,7 @@
 const infoBoxes = document.getElementsByClassName('info-box');
 const quests = document.getElementsByClassName('quests');
 const scoreBoardOverlay = document.getElementById('scoreboard-overlay');
+const scoreboardButton = document.getElementById('scoreboard-button');
 
 // Walls
 const wallYellow = document.getElementById('wall-yellow');
@@ -235,6 +236,10 @@ function openFullscreen() {
 // Functions
 function showScoreBoard() {
     scoreBoardOverlay.style.display = 'grid';
+}
+
+function hideScoreBoard() {
+    scoreBoardOverlay.style.display = 'none';
 }
 
 
@@ -751,7 +756,7 @@ function redoYellowQuest1() {
     document.getElementById('redo-button-yellow-1').style.display = 'none';
 
     // Remove user input from result box
-    document.getElementById('user-input-yellow-1').innerHTML = "Du har ångrat ditt svar";
+    document.getElementById('user-input-yellow-1').innerHTML = "(Du har ångrat ditt svar)";
 
     // Make input writeable
     document.getElementById('quest-yellow-1-input').readOnly = false;
@@ -809,8 +814,7 @@ function redoYellowQuest3() {
     document.getElementById('redo-button-yellow-3').style.display = 'none';
 
     // Remove user input from result box
-    document.getElementById('yellow-3-result-intro').innerHTML = "(Du har ångrat ditt svar)"
-    document.getElementById('user-input-yellow-3').innerHTML = "";
+    document.getElementById('user-input-yellow-3').innerHTML = "(Du har ångrat ditt svar)";
 
     // Make input writeable
     document.getElementById('quest-yellow-3-input').readOnly = false;
@@ -839,8 +843,7 @@ function redoYellowQuest4() {
     document.getElementById('redo-button-yellow-4').style.display = 'none';
 
     // Remove user input from result box
-    document.getElementById('user-input-yellow-4').innerHTML = "";
-    document.getElementById('yellow-4-result-intro').innerHTML = "(Du har ångrat ditt svar)";
+    document.getElementById('user-input-yellow-4').innerHTML = "(Du har ångrat ditt svar)";
 
     // Make input writeable
     document.getElementById('quest-yellow-4-input').readOnly = false;
@@ -1143,8 +1146,7 @@ function redoRedQuest3() {
     document.getElementById('redo-button-red-3').style.display = 'none';
 
     // Remove user input from result box
-    document.getElementById('red-3-result-intro').innerHTML = "(Du har ångrat ditt svar)";
-    document.getElementById('user-input-red-3').innerHTML = "";
+    document.getElementById('user-input-red-3').innerHTML = "(Du har ångrat ditt svar)";
 
     // Make input writeable
     document.getElementById('quest-red-3-input').readOnly = false;
