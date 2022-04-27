@@ -1087,6 +1087,19 @@ function showRedQuest1Result() {
         // Display redo button
         var redoButton = document.getElementById('redo-button-red-1');
         redoButton.style.display = 'flex';
+
+        // Increase counter
+        nrOfRedAComplete++;
+        nrOfRedTotalComplete++;
+
+        // Change beam color
+        setRedBeamAColors();
+
+        // Change circle border color
+        redCircle1.style.outlineColor = redColor;
+
+        // Set image color
+        setRedImageColor();
     }
 }
 
@@ -1095,7 +1108,7 @@ function redoRedQuest1() {
     document.getElementById('redo-button-red-1').style.display = 'none';
 
     // Remove user input from result box
-    document.getElementById('user-input-red-1').innerHTML = "";
+    document.getElementById('user-input-red-1').innerHTML = '(Du har ångrat ditt svar)';
 
     // Make input writeable
     document.getElementById('quest-red-1-input').readOnly = false;
@@ -1104,6 +1117,19 @@ function redoRedQuest1() {
     sendButtonRed1.style.backgroundColor = '#ff4d4d';
     sendButtonRed1.style.color = 'white';
     sendButtonRed1.innerHTML = "Skicka";
+
+    // Decrease counter
+    nrOfRedAComplete--;
+    nrOfRedTotalComplete--;
+
+    // Change beam color
+    setRedBeamAColors();
+
+    // Change circle border color
+    redCircle1.style.outlineColor = 'white';
+
+    // Set image color
+    setRedImageColor();
 }
 
 function showRedQuest2() {
@@ -1130,6 +1156,12 @@ function showRedQuest2Result() {
 
     // Change beam color
     setRedBeamAColors();
+
+    // Change circle border color
+    redCircle2.style.outlineColor = redColor;
+
+    // Set image color
+    setRedImageColor();
 }
 
 function redoRedQuest2() {
@@ -1147,6 +1179,12 @@ function redoRedQuest2() {
 
     // Change beam color
     setRedBeamAColors();
+
+    // Change circle border color
+    redCircle2.style.outlineColor = 'white';
+
+    // Set image color
+    setRedImageColor();
 }
 
 function showRedQuest3() {
@@ -1506,5 +1544,15 @@ function setRedBeamAColors() {
     } else if (nrOfRedAComplete == 2) {
         redBeamA.style.filter = redFilterString + 'opacity(0.5)';
         redBeamAPartial.style.display = 'none';
+    }
+}
+
+function setRedImageColor() {
+    let image = document.getElementById('human-background-partial');
+
+    if (nrOfRedTotalComplete == 4) {
+        image.style.filter = 'saturate(100%)';
+    } else {
+        image.style.filter = 'grayscale(100%)';
     }
 }
