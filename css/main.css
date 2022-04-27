@@ -345,6 +345,42 @@ p {
   left: 2.5%;
 }
 
+.quest-result-blue {
+  left: 2.5%;
+  width: 35%;
+  top: 5.56%;
+}
+
+.quest-result-blue-1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  color: #0ebde5;
+}
+
+.quest-result-blue-1 h2 {
+  margin-right: 0.5vw;
+}
+
+.quest-result-blue-3 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  color: #0ebde5;
+}
+
+.quest-result-blue-3 h2 {
+  margin-right: 0.5vw;
+}
+
 .quest-send-button-green {
   background-color: #4cbf4c;
   font-size: 1.5vw;

@@ -191,8 +191,12 @@ const sendButtonRed1 = document.getElementById('send-button-red-1');
 const sendButtonRed2 = document.getElementById('send-button-red-2');
 const sendButtonRed3 = document.getElementById('send-button-red-3');
 const sendButtonRed4 = document.getElementById('send-button-red-4');
-const sendButtonBlue = document.getElementById('send-button-blue');
-const sendButtonGreen = document.getElementById('send-button-green');
+const sendButtonBlue1 = document.getElementById('send-button-blue-1');
+const sendButtonBlue2 = document.getElementById('send-button-blue-2');
+const sendButtonBlue3 = document.getElementById('send-button-blue-3');
+const sendButtonGreen1 = document.getElementById('send-button-green-1');
+const sendButtonGreen2 = document.getElementById('send-button-green-2');
+const sendButtonGreen3 = document.getElementById('send-button-green-3');
 
 // Counters
 let nrOfYellowTotalComplete = 0;
@@ -1217,6 +1221,111 @@ function showBlueQuest2Tips() {
 function showBlueQuest3Tips() {
     blueQuest3Tips.style.display = 'inline';
 }
+
+function showBlueQuest1Result() {
+     // Save user input
+     var userInput = document.getElementById('quest-blue-1-input').value;
+     if (userInput.length != 0) {
+ 
+         // Make user input read only
+         document.getElementById('quest-blue-1-input').readOnly = true;
+ 
+         // Change look of send button
+         sendButtonBlue1.style.backgroundColor = 'white';
+         sendButtonBlue1.style.color = '#0ebde5';
+         sendButtonBlue1.innerHTML = "Skickat!";
+ 
+
+         // Display user input in the result box
+         if(!((userInput === 'Rockan') || (userInput === 'rockan'))){
+            document.getElementById('blue-1-result-intro').innerHTML = 'Du svarade tyvärr fel. Rätt svar är:';
+         }
+         var displayInput = document.getElementById('user-input-blue-1');
+             displayInput.innerHTML = "Rockan!";
+         
+        // Display result box
+        blueQuest1ResultBox.style.display = 'flex';
+ 
+         hideQuestTips();
+ 
+         // Increase counter
+         //nrOfBlueAComplete++;
+         //nrOfBlueTotalComplete++;
+ 
+         // Change beam color
+         //setBlueBeamAColors();
+ 
+         // Change circle border color
+         blueCircle1.style.outlineColor = blueColor;
+ 
+         // Set image color
+         //setBlueImageColor();
+     }
+}
+
+function showBlueQuest2Result() {
+    // Save user input
+    var userInput = document.getElementById('quest-blue-2-input').value;
+    if (userInput.length != 0) {
+
+        // Make user input read only
+        document.getElementById('quest-blue-2-input').readOnly = true;
+
+        // Change look of send button
+        sendButtonBlue2.style.backgroundColor = 'white';
+        sendButtonBlue2.style.color = '#0ebde5';
+        sendButtonBlue2.innerHTML = "Skickat!";
+
+        // Display result box
+
+        blueQuest2ResultBox.style.display = 'flex';
+
+        // Display redo button
+        //var redoButton = document.getElementById('redo-button-black-3');
+        //redoButton.style.display = 'flex';
+
+        hideQuestTips();
+    }
+}
+
+function showBlueQuest3Result() {
+    // Save user input
+    var userInput = document.getElementById('quest-blue-3-input').value;
+    if (userInput.length != 0) {
+
+        // Make user input read only
+        document.getElementById('quest-blue-3-input').readOnly = true;
+
+        // Change look of send button
+        sendButtonBlue3.style.backgroundColor = 'white';
+        sendButtonBlue3.style.color = '#0ebde5';
+        sendButtonBlue3.innerHTML = "Skickat!";
+
+        // Display result box
+        blueQuest3ResultBox.style.display = 'flex';
+
+        // Display user input in the result box
+        var displayInput = document.getElementById('user-input-blue-3');
+            displayInput.innerHTML = "Hej hej hej";
+        // Display redo button
+
+        hideQuestTips();
+
+        // Increase counter
+        //nrOfBlueAComplete++;
+        //nrOfBlueTotalComplete++;
+
+        // Change beam color
+        //setBlueBeamAColors();
+
+        // Change circle border color
+        blueCircle3.style.outlineColor = blueColor;
+
+        // Set image color
+        //setBlueImageColor();
+    }
+}
+
 
 // Green quest functions
 function showGreenQuest1() {
