@@ -51,6 +51,21 @@ p {
   position: relative;
 }
 
+#globe-box {
+  display: none;
+  padding: 1vh;
+  background-color: white;
+  width: 35%;
+  left: 32%;
+  top: 30%;
+  position: absolute;
+  z-index: 100;
+  border-radius: 16px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 .overlay-info {
   background-color: #fff;
   margin-top: 20px;
@@ -310,6 +325,20 @@ p {
   left: 58%;
 }
 
+.quest-result-black-2 {
+  top: 32%;
+}
+
+.quest-result-black-3 {
+  top: 32%;
+  left: 10%;
+}
+
+.quest-result-black img {
+  padding: 1vw;
+  margin-bottom: 0;
+}
+
 .quest-result-red {
   width: 36%;
   top: 22%;
@@ -469,7 +498,7 @@ p {
 #quest-tips-black-3 {
   width: 32%;
   bottom: 15%;
-  left: 10%;
+  left: 0;
 }
 
 #quest-tips-red-1 {

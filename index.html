@@ -312,6 +312,13 @@
                     <p>Himlakropparna blir större och större desto längre åt höger du scrollar</p>
                 </details>
             </div>
+            <div id="quest-result-black-2" class="quest-result quest-result-black quest-result-black-2">
+                <p><span class="bold">Vad har andra svarat?</span></p>
+                <p id="user-input-black-2"></p>
+                <p>Kanske är aliens som bor i svarta hål och har teknik som suger in saker dit.</p>
+                <p>Antagligen ingenting</p>
+                <p>En portal till en annan del av rymden</p>
+            </div>
         </div>
         <!--Quest 3-->
         <div id="quest-black-3" class="quest-overlay quest">
@@ -338,6 +345,10 @@
                     <summary>Ledtråd 1</summary>
                     <p>Har du kikat in skärmen närmast det röda området?</p>
                 </details>
+            </div>
+            <div id="quest-result-black-3" class="quest-result quest-result-black quest-result-black-3">
+                <p><span class="bold">Vad har andra svarat?</span></p>
+                <img id="wordcloud-meteorites" src="assets/images/wordclouds/meteoriter.svg">
             </div>
         </div>
 
@@ -778,7 +789,11 @@
 
         <!--Globe-->
         <img class="globe" src="assets/images/globe.svg">
-        <img id="globe-circle" class="circle" src="assets/images/circles/circle-earth.svg">
+        <img id="globe-circle" class="circle" src="assets/images/circles/circle-earth.svg" onclick="showGlobeBox()">
+
+        <div id="globe-box">
+            <p>Detta uppdrag är inte tillgängligt än!</p>
+        </div>
 
         <!--Score board-->
         <img class="info-button" src="assets/images/info-button.svg" onclick="showScoreBoard()">

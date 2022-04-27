@@ -42,6 +42,11 @@ const yellowQuest2Tips = document.getElementById('quest-tips-yellow-2');
 const yellowQuest3Tips = document.getElementById('quest-tips-yellow-3');
 const yellowQuest4Tips = document.getElementById('quest-tips-yellow-4');
 
+const yellowQuest1ResultBox = document.getElementById('quest-result-yellow-1');
+const yellowQuest2ResultBox = document.getElementById('quest-result-yellow-2');
+const yellowQuest3ResultBox = document.getElementById('quest-result-yellow-3');
+const yellowQuest4ResultBox = document.getElementById('quest-result-yellow-4');
+
 // Black beams
 const blackBeamA = document.getElementById('black-beam-a');
 const blackBeamB = document.getElementById('black-beam-b');
@@ -66,6 +71,10 @@ const blackQuest3 = document.getElementById('quest-black-3');
 const blackQuest1Tips = document.getElementById('quest-tips-black-1');
 const blackQuest2Tips = document.getElementById('quest-tips-black-2');
 const blackQuest3Tips = document.getElementById('quest-tips-black-3');
+
+const blackQuest1ResultBox = document.getElementById('quest-result-black-1');
+const blackQuest2ResultBox = document.getElementById('quest-result-black-2');
+const blackQuest3ResultBox = document.getElementById('quest-result-black-3');
 
 // Red beams
 const redBeamA = document.getElementById('red-beam-a');
@@ -97,10 +106,10 @@ const redQuest2Tips = document.getElementById('quest-tips-red-2');
 const redQuest3Tips = document.getElementById('quest-tips-red-3');
 const redQuest4Tips = document.getElementById('quest-tips-red-4');
 
-const yellowQuest1ResultBox = document.getElementById('quest-result-yellow-1');
-const yellowQuest2ResultBox = document.getElementById('quest-result-yellow-2');
-const yellowQuest3ResultBox = document.getElementById('quest-result-yellow-3');
-const yellowQuest4ResultBox = document.getElementById('quest-result-yellow-4');
+const redQuest1ResultBox = document.getElementById('quest-result-red-1');
+const redQuest2ResultBox = document.getElementById('quest-result-red-2');
+const redQuest3ResultBox = document.getElementById('quest-result-red-3');
+const redQuest4ResultBox = document.getElementById('quest-result-red-4');
 
 // Blue beams
 const blueBeamA = document.getElementById('blue-beam-a');
@@ -128,6 +137,10 @@ const blueQuest1Tips = document.getElementById('quest-tips-blue-1');
 const blueQuest2Tips = document.getElementById('quest-tips-blue-2');
 const blueQuest3Tips = document.getElementById('quest-tips-blue-3');
 
+const blueQuest1ResultBox = document.getElementById('quest-result-blue-1');
+const blueQuest2ResultBox = document.getElementById('quest-result-blue-2');
+const blueQuest3ResultBox = document.getElementById('quest-result-blue-3');
+
 // Green beams
 const greenBeamA = document.getElementById('green-beam-a');
 const greenBeamAPartial = document.getElementById('green-beam-a-partial');
@@ -154,6 +167,10 @@ const greenQuest1Tips = document.getElementById('quest-tips-green-1');
 const greenQuest2Tips = document.getElementById('quest-tips-green-2');
 const greenQuest3Tips = document.getElementById('quest-tips-green-3');
 
+const greenQuest1ResultBox = document.getElementById('quest-result-green-1');
+const greenQuest2ResultBox = document.getElementById('quest-result-green-2');
+const greenQuest3ResultBox = document.getElementById('quest-result-green-3');
+
 // Overlays
 const yellowOverlay = document.getElementById('wall-yellow-overlay');
 const blackOverlay = document.getElementById('wall-black-overlay');
@@ -175,16 +192,6 @@ const sendButtonRed3 = document.getElementById('send-button-red-3');
 const sendButtonRed4 = document.getElementById('send-button-red-4');
 const sendButtonBlue = document.getElementById('send-button-blue');
 const sendButtonGreen = document.getElementById('send-button-green');
-
-// Result boxes
-
-const redQuest1ResultBox = document.getElementById('quest-result-red-1');
-const redQuest2ResultBox = document.getElementById('quest-result-red-2');
-const redQuest3ResultBox = document.getElementById('quest-result-red-3');
-const redQuest4ResultBox = document.getElementById('quest-result-red-4');
-const blackQuest1ResultBox = document.getElementById('quest-result-black-1');
-const blueQuest1ResultBox = document.getElementById('quest-result-blue-1');
-const greenQuest1ResultBox = document.getElementById('quest-result-green-1');
 
 // Counters
 let nrOfYellowTotalComplete = 0;
@@ -496,6 +503,16 @@ function hideOverlays() {
     hideAllOverlayButtons();
     hideQuests();
     setBeamColorsOnExit();
+}
+
+// Globe functions
+function showGlobeBox() {
+    document.getElementById('globe-box').style.display = 'flex';
+    setTimeout(hideGlobeBox, 5000);
+}
+
+function hideGlobeBox() {
+    document.getElementById('globe-box').style.display = 'none';
 }
 
 // Yellow quest functions
@@ -907,7 +924,7 @@ function showBlackQuest1Result() {
 
         // Change look of send button
         sendButtonBlack1.style.backgroundColor = 'white';
-        sendButtonBlack1.style.color = '#555555';
+        sendButtonBlack1.style.color = '#9900ff';
         sendButtonBlack1.innerHTML = "Skickat!";
 
         // Display result box
@@ -923,6 +940,82 @@ function showBlackQuest1Result() {
 
         hideQuestTips();
     }
+}
+
+function showBlackQuest2Result() {
+    // Save user input
+    var userInput = document.getElementById('quest-black-2-input').value;
+    if (userInput.length != 0) {
+
+        // Make user input read only
+        document.getElementById('quest-black-2-input').readOnly = true;
+
+        // Change look of send button
+        sendButtonBlack2.style.backgroundColor = 'white';
+        sendButtonBlack2.style.color = '#9900ff';
+        sendButtonBlack2.innerHTML = "Skickat!";
+
+        // Display result box
+        blackQuest2ResultBox.style.display = 'flex';
+
+        // Display user input in the result box
+        var displayInput = document.getElementById('user-input-black-2');
+        displayInput.innerHTML = userInput;
+
+        // Display redo button
+        var redoButton = document.getElementById('redo-button-black-2');
+        redoButton.style.display = 'flex';
+
+        hideQuestTips();
+    }
+}
+
+function showBlackQuest3Result() {
+    // Save user input
+    var userInput = document.getElementById('quest-black-3-input').value;
+    if (userInput.length != 0) {
+
+        // Make user input read only
+        document.getElementById('quest-black-3-input').readOnly = true;
+
+        // Change look of send button
+        sendButtonBlack3.style.backgroundColor = 'white';
+        sendButtonBlack3.style.color = '#9900ff';
+        sendButtonBlack3.innerHTML = "Skickat!";
+
+        // Display result box
+
+        blackQuest3ResultBox.style.display = 'flex';
+
+        // Display redo button
+        var redoButton = document.getElementById('redo-button-black-3');
+        redoButton.style.display = 'flex';
+
+        hideQuestTips();
+    }
+}
+
+function redoBlackQuest2() {
+    // Hide redo button
+    document.getElementById('redo-button-black-2').style.display = 'none';
+
+    // Remove user input from result box
+    document.getElementById('user-input-black-2').innerHTML = "Du har ångrat ditt svar";
+
+    // Make input writeable
+    document.getElementById('quest-black-2-input').readOnly = false;
+
+    // Restore send button
+    sendButtonYellow1.style.backgroundColor = '#9900ff';
+    sendButtonYellow1.style.color = 'white';
+    sendButtonYellow1.innerHTML = "Skicka";
+
+    // Decrease counter
+    //nrOfBlackAComplete--;
+    //nrOfBlackTotalComplete--;
+
+    // Change beam color
+    //setBlackBeamAColors();
 }
 
 // Red quest functions
