@@ -241,14 +241,14 @@ function openFullscreen() {
 }
 
 // Functions
-function showScoreBoard() {
-    scoreBoardOverlay.style.display = 'grid';
+function scoreBoardClick() {
+    if (scoreBoardOverlay.style.display === "none") {
+        scoreBoardOverlay.style.display = 'grid';
+        scoreboardButton.style.display = 'inline';
+    } else {
+        scoreBoardOverlay.style.display = "none";
+    }
 }
-
-function hideScoreBoard() {
-    scoreBoardOverlay.style.display = 'none';
-}
-
 
 function showYellowOverlay() {
     yellowOverlay.style.display = 'flex';

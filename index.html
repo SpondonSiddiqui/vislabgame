@@ -39,7 +39,7 @@
         </div>
         <img id="exit-overlay-button-yellow" class="exit-overlay-button" src="assets/images/exit-button.svg"
             onclick="hideOverlays()">
-        <img id="info-overlay-button-yellow" class="info-overlay-button" src="assets/images/info-button.svg">
+        <img id="info-overlay-button-yellow" class="info-overlay-button" src="assets/images/info-button.svg" onclick="showYellowOverlay()">
         <!--Overlay Info box-->
         <div id="info-box-yellow" class="info-box-yellow info-box">
             <h1>Samhälle</h1>
@@ -818,10 +818,10 @@
         </div>
 
         <!--Score board-->
-        <img class="info-button" id="scoreboard-button" src="assets/images/info-button.svg" onclick="showScoreBoard()">
         <div id="scoreboard-overlay" class="transparent-background">
             <div id="scoreboard-box" class="scoreboard-box"></div>
         </div>
+        <img class="info-button" id="scoreboard-button" src="assets/images/info-button.svg" onclick="scoreBoardClick()">
         
 
 
