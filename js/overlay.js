@@ -580,20 +580,20 @@ function showYellowQuest1Result() {
         redoButton.style.display = 'flex';
 
         hideQuestTips();
+
+        // Increase counter
+        nrOfYellowAComplete++;
+        nrOfYellowTotalComplete++;
+
+        // Change beam color
+        setYellowBeamAColors();
+
+        // Change circle border color
+        yellowCircle1.style.outlineColor = yellowColor;
+
+        // Set image color
+        setYellowImageColor();
     }
-
-    // Increase counter
-    nrOfYellowAComplete++;
-    nrOfYellowTotalComplete++;
-
-    // Change beam color
-    setYellowBeamAColors();
-
-    // Change circle border color
-    yellowCircle1.style.outlineColor = yellowColor;
-
-    // Set image color
-    setYellowImageColor();
 }
 
 function showYellowQuest2Result() {
@@ -617,20 +617,20 @@ function showYellowQuest2Result() {
         redoButton.style.display = 'flex';
 
         hideQuestTips();
+
+        // Increase counter
+        nrOfYellowAComplete++;
+        nrOfYellowTotalComplete++;
+
+        // Change beam color
+        setYellowBeamAColors();
+
+        // Change circle border color
+        yellowCircle2.style.outlineColor = yellowColor;
+
+        // Set image color
+        setYellowImageColor();
     }
-
-    // Increase counter
-    nrOfYellowAComplete++;
-    nrOfYellowTotalComplete++;
-
-    // Change beam color
-    setYellowBeamAColors();
-
-    // Change circle border color
-    yellowCircle2.style.outlineColor = yellowColor;
-
-    // Set image color
-    setYellowImageColor();
 }
 
 function showYellowQuest3Result() {
@@ -687,20 +687,20 @@ function showYellowQuest3Result() {
         redoButton.style.display = 'flex';
 
         hideQuestTips();
+
+        // Increase counter
+        nrOfYellowAComplete++;
+        nrOfYellowTotalComplete++;
+
+        // Change beam color
+        setYellowBeamAColors();
+
+        // Change circle border color
+        yellowCircle3.style.outlineColor = yellowColor;
+
+        // Set image color
+        setYellowImageColor();
     }
-
-    // Increase counter
-    nrOfYellowAComplete++;
-    nrOfYellowTotalComplete++;
-
-    // Change beam color
-    setYellowBeamAColors();
-
-    // Change circle border color
-    yellowCircle3.style.outlineColor = yellowColor;
-
-    // Set image color
-    setYellowImageColor();
 }
 
 function showYellowQuest4Result() {
@@ -730,20 +730,20 @@ function showYellowQuest4Result() {
         redoButton.style.display = 'flex';
 
         hideQuestTips();
+
+        // Increase counter
+        nrOfYellowBComplete++;
+        nrOfYellowTotalComplete++;
+
+        // Change beam color
+        setYellowBeamBColors();
+
+        // Change circle border color
+        yellowCircle4.style.outlineColor = yellowColor;
+
+        // Set image color
+        setYellowImageColor();
     }
-
-    // Increase counter
-    nrOfYellowBComplete++;
-    nrOfYellowTotalComplete++;
-
-    // Change beam color
-    setYellowBeamBColors();
-
-    // Change circle border color
-    yellowCircle4.style.outlineColor = yellowColor;
-
-    // Set image color
-    setYellowImageColor();
 }
 
 function redoYellowQuest1() {
