@@ -323,16 +323,7 @@ function showRedOverlay() {
     //    redBeamBPartial.style.zIndex = 11;
     //    redBeamBPartial.style.filter = "opacity(0.5)";
 
-    if (nrOfRedAComplete == 2) {
-        redBeamA.style.filter = redFilterString + 'opacity(0.5)';
-    } else if (nrOfRedAComplete == 1) {
-        redBeamA.style.filter = 'opacity(0.5)';
-        redBeamAPartial.style.filter = redFilterString + 'opacity(0.5)';
-        redBeamAPartial.style.display = 'inline';
-        redBeamAPartial.style.zIndex = 11;
-    } else {
-        redBeamA.style.filter = 'opacity(0.5)';
-    }
+    setRedBeamAColors();
 
     // Circles
     redCircle1.style.zIndex = 12;
