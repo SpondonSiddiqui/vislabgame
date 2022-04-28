@@ -205,6 +205,25 @@ const infoButtonRed = document.getElementById('info-overlay-button-red');
 const infoButtonBlue = document.getElementById('info-overlay-button-blue');
 const infoButtonGreen = document.getElementById('info-overlay-button-green');
 
+// Tips buttons
+const tipsButtonYellow1 = document.getElementById('quest-yellow-1-tips-button');
+const tipsButtonYellow2 = document.getElementById('quest-yellow-2-tips-button');
+const tipsButtonYellow3 = document.getElementById('quest-yellow-3-tips-button');
+const tipsButtonYellow4 = document.getElementById('quest-yellow-4-tips-button');
+const tipsButtonBlack1 = document.getElementById('quest-black-1-tips-button');
+const tipsButtonBlack2 = document.getElementById('quest-black-2-tips-button');
+const tipsButtonBlack3 = document.getElementById('quest-black-3-tips-button');
+const tipsButtonRed1 = document.getElementById('quest-red-1-tips-button');
+const tipsButtonRed2 = document.getElementById('quest-red-2-tips-button');
+const tipsButtonRed3 = document.getElementById('quest-red-3-tips-button');
+const tipsButtonRed4 = document.getElementById('quest-red-4-tips-button');
+const tipsButtonBlue1 = document.getElementById('quest-blue-1-tips-button');
+const tipsButtonBlue2 = document.getElementById('quest-blue-2-tips-button');
+const tipsButtonBlue3 = document.getElementById('quest-blue-3-tips-button');
+const tipsButtonGreen1 = document.getElementById('quest-blue-1-tips-button');
+const tipsButtonGreen2 = document.getElementById('quest-blue-2-tips-button');
+const tipsButtonGreen3 = document.getElementById('quest-blue-3-tips-button');
+
 // Counters
 let nrOfYellowTotalComplete = 0;
 let nrOfBlackTotalComplete = 0;
@@ -262,24 +281,26 @@ function scoreBoardClick() {
 
 function infoButtonClick() {
     if (yellowOverlay.style.display === "flex") {
-        setInfoButton(yellowInfoBox);
+        toggleInfoBox(yellowInfoBox);
     }
     else if (blackOverlay.style.display === "flex") {
-        setInfoButton(blackInfoBox);
+        toggleInfoBox(blackInfoBox);
     }
     else if (redOverlay.style.display === "flex") {
-        setInfoButton(redInfoBox);
+        toggleInfoBox(redInfoBox);
     }
     else if (blueOverlay.style.display === "flex") {
-        setInfoButton(blueInfoBox);
+        toggleInfoBox(blueInfoBox);
     }
     else if (greenOverlay.style.display === "flex") {
-        setInfoButton(greenInfoBox);
+        toggleInfoBox(greenInfoBox);
     }
 }
 
-function setInfoButton(infoBox) {
+function toggleInfoBox(infoBox) {
     if (infoBox.style.display === "none") {
+        hideQuestTips();
+        hideQuests();
         infoBox.style.display = 'inline';
     } else {
         infoBox.style.display = "none";
@@ -713,7 +734,9 @@ function showYellowQuest1Result() {
         var redoButton = document.getElementById('redo-button-yellow-1');
         redoButton.style.display = 'flex';
 
+        // Hide tips and tips button
         hideQuestTips();
+        hideQuestTipsButton(tipsButtonYellow1);
 
         // Increase counter
         nrOfYellowAComplete++;
@@ -728,6 +751,10 @@ function showYellowQuest1Result() {
         // Set image color
         setYellowImageColor();
     }
+}
+
+function hideQuestTipsButton(tipsbutton) {
+    tipsbutton.style.display = "none";
 }
 
 function showYellowQuest2Result() {
@@ -750,7 +777,9 @@ function showYellowQuest2Result() {
         var redoButton = document.getElementById('redo-button-yellow-2');
         redoButton.style.display = 'flex';
 
+        // Hide tips and tips button
         hideQuestTips();
+        hideQuestTipsButton(tipsButtonYellow2);
 
         // Increase counter
         nrOfYellowAComplete++;
@@ -820,7 +849,9 @@ function showYellowQuest3Result() {
         var redoButton = document.getElementById('redo-button-yellow-3');
         redoButton.style.display = 'flex';
 
+        // Hide tips and tips button
         hideQuestTips();
+        hideQuestTipsButton(tipsButtonYellow3);
 
         // Increase counter
         nrOfYellowAComplete++;
@@ -863,7 +894,9 @@ function showYellowQuest4Result() {
         var redoButton = document.getElementById('redo-button-yellow-4');
         redoButton.style.display = 'flex';
 
+        // Hide tips and tips button
         hideQuestTips();
+        hideQuestTipsButton(tipsButtonYellow4);
 
         // Increase counter
         nrOfYellowBComplete++;
@@ -907,6 +940,9 @@ function redoYellowQuest1() {
 
     // Set image color
     setYellowImageColor();
+
+    //Show tips button
+    tipsButtonYellow1.style.display = 'inline';
 }
 
 function redoYellowQuest2() {
@@ -936,6 +972,9 @@ function redoYellowQuest2() {
 
     // Set image color
     setYellowImageColor();
+
+    //Show tips button
+    tipsButtonYellow2.style.display = 'inline';
 }
 
 function redoYellowQuest3() {
@@ -965,6 +1004,9 @@ function redoYellowQuest3() {
 
     // Set image color
     setYellowImageColor();
+
+    //Show tips button
+    tipsButtonYellow3.style.display = 'inline';
 }
 
 function redoYellowQuest4() {
@@ -997,6 +1039,9 @@ function redoYellowQuest4() {
 
     // Set image color
     setYellowImageColor();
+
+    //Show tips button
+    tipsButtonYellow4.style.display = 'inline';
 }
 
 // Blue quest functions
@@ -1048,7 +1093,9 @@ function showBlackQuest1Result() {
         // var redoButton = document.getElementById('redo-button-black-1');
         // redoButton.style.display = 'flex';
 
+        // Hide tips and tips button
         hideQuestTips();
+        hideQuestTipsButton(tipsButtonBlack1);
 
         // Increase counter
         nrOfBlackAComplete++;
@@ -1089,7 +1136,9 @@ function showBlackQuest2Result() {
         var redoButton = document.getElementById('redo-button-black-2');
         redoButton.style.display = 'flex';
 
+        // Hide tips and tips button
         hideQuestTips();
+        hideQuestTipsButton(tipsButtonBlack2);
 
         // Increase counter
         nrOfBlackTotalComplete++;
@@ -1123,7 +1172,9 @@ function showBlackQuest3Result() {
         // var redoButton = document.getElementById('redo-button-black-3');
         // redoButton.style.display = 'flex';
 
+        // Hide tips and tips button
         hideQuestTips();
+        hideQuestTipsButton(tipsButtonBlack3);
 
         // Increase counter
         nrOfBlackBComplete++;
@@ -1186,6 +1237,11 @@ function showRedQuest1Result() {
         sendButtonRed1.style.backgroundColor = 'white';
         sendButtonRed1.style.color = '#ff4d4d';
         sendButtonRed1.innerHTML = "Skickat!";
+        sendButtonRed1.disabled = true;
+
+        // Hide tips and tips button
+        hideQuestTips();
+        hideQuestTipsButton(tipsButtonRed1);
 
         // Display result box
         redQuest1ResultBox.style.display = 'flex';
@@ -1227,6 +1283,7 @@ function redoRedQuest1() {
     sendButtonRed1.style.backgroundColor = '#ff4d4d';
     sendButtonRed1.style.color = 'white';
     sendButtonRed1.innerHTML = "Skicka";
+    sendButtonRed1.disabled = false;
 
     // Decrease counter
     nrOfRedAComplete--;
@@ -1240,6 +1297,9 @@ function redoRedQuest1() {
 
     // Set image color
     setRedImageColor();
+
+    //Show tips button
+    tipsButtonRed1.style.display = 'inline';
 }
 
 function showRedQuest2() {
@@ -1255,6 +1315,7 @@ function showRedQuest2Result() {
     sendButtonRed2.style.backgroundColor = 'white';
     sendButtonRed2.style.color = '#ff4d4d';
     sendButtonRed2.innerHTML = "Klart!";
+    sendButtonRed2.disabled = true;
 
     // Display redo button
     var redoButton = document.getElementById('redo-button-red-2');
@@ -1272,6 +1333,10 @@ function showRedQuest2Result() {
 
     // Set image color
     setRedImageColor();
+
+    // Hide tips and tips button
+    hideQuestTips();
+    hideQuestTipsButton(tipsButtonRed2);
 }
 
 function redoRedQuest2() {
@@ -1282,6 +1347,7 @@ function redoRedQuest2() {
     sendButtonRed2.style.backgroundColor = '#ff4d4d';
     sendButtonRed2.style.color = 'white';
     sendButtonRed2.innerHTML = "Klar";
+    sendButtonRed2.disabled = false;
 
     // Decrease counter
     nrOfRedAComplete--;
@@ -1295,6 +1361,9 @@ function redoRedQuest2() {
 
     // Set image color
     setRedImageColor();
+
+    //Show tips button
+    tipsButtonRed2.style.display = 'inline';
 }
 
 function showRedQuest3() {
@@ -1317,6 +1386,11 @@ function showRedQuest3Result() {
         sendButtonRed3.style.backgroundColor = 'white';
         sendButtonRed3.style.color = '#ff4d4d';
         sendButtonRed3.innerHTML = "Skickat!";
+        sendButtonRed3.disabled = true;
+
+        // Hide tips and tips button
+        hideQuestTips();
+        hideQuestTipsButton(tipsButtonRed3);
 
         // Display result box
         document.getElementById('red-3-result-intro').innerHTML = "Vad har andra svarat?";
@@ -1359,6 +1433,7 @@ function redoRedQuest3() {
     sendButtonRed3.style.backgroundColor = '#ff4d4d';
     sendButtonRed3.style.color = 'white';
     sendButtonRed3.innerHTML = "Skicka";
+    sendButtonRed3.disabled = false;
 
     // Decrease counter
     nrOfRedBComplete--;
@@ -1372,6 +1447,9 @@ function redoRedQuest3() {
 
     // Set image color
     setRedImageColor();
+
+    //Show tips button
+    tipsButtonRed3.style.display = 'inline';
 }
 
 function showRedQuest4() {
@@ -1394,6 +1472,11 @@ function showRedQuest4Result() {
         sendButtonRed4.style.backgroundColor = 'white';
         sendButtonRed4.style.color = '#ff4d4d';
         sendButtonRed4.innerHTML = "Skickat!";
+        sendButtonRed3.disabled = true;
+
+        // Hide tips and tips button
+        hideQuestTips();
+        hideQuestTipsButton(tipsButtonRed4);
 
         // Display result box
         // document.getElementById('red-4-result-intro').innerHTML = "Vad har andra svarat?";
@@ -1436,6 +1519,7 @@ function redoRedQuest4() {
     sendButtonRed4.style.backgroundColor = '#ff4d4d';
     sendButtonRed4.style.color = 'white';
     sendButtonRed4.innerHTML = "Skicka";
+    sendButtonRed4.disabled = false;
 
     // Decrease counter
     nrOfRedBComplete--;
@@ -1449,6 +1533,9 @@ function redoRedQuest4() {
 
     // Set image color
     setRedImageColor();
+
+    //Show tips button
+    tipsButtonRed4.style.display = 'inline';
 }
 
 // Blue quest functions
@@ -1488,19 +1575,22 @@ function showBlueQuest1Result() {
         sendButtonBlue1.style.backgroundColor = 'white';
         sendButtonBlue1.style.color = '#0ebde5';
         sendButtonBlue1.innerHTML = "Skickat!";
+        sendButtonBlue1.disabled = true;
 
 
         // Display user input in the result box
-        if (!((userInput === 'Rockan') || (userInput === 'rockan'))) {
+        if (!((userInput === 'Stingrocka') || (userInput === 'stingrocka') || (userInput === 'rocka') || (userInput === 'Rocka'))) {
             document.getElementById('blue-1-result-intro').innerHTML = 'Du svarade tyvärr fel. Rätt svar är:';
         }
         var displayInput = document.getElementById('user-input-blue-1');
-        displayInput.innerHTML = "Rockan!";
+        displayInput.innerHTML = "Stingrockan!";
 
         // Display result box
         blueQuest1ResultBox.style.display = 'flex';
 
+        // Hide tips and tips button
         hideQuestTips();
+        hideQuestTipsButton(tipsButtonBlue1);
 
         // Increase counter
         nrOfBlueBComplete++;
@@ -1529,16 +1619,18 @@ function showBlueQuest2Result() {
         sendButtonBlue2.style.backgroundColor = 'white';
         sendButtonBlue2.style.color = '#0ebde5';
         sendButtonBlue2.innerHTML = "Skickat!";
+        sendButtonBlue2.disabled = true;
+
+        // Hide tips and tips button
+        hideQuestTips();
+        hideQuestTipsButton(tipsButtonBlue2);
 
         // Display result box
-
         blueQuest2ResultBox.style.display = 'flex';
 
         // Display redo button
         //var redoButton = document.getElementById('redo-button-black-3');
         //redoButton.style.display = 'flex';
-
-        hideQuestTips();
 
         // Increase counter
         nrOfBlueAComplete++;
@@ -1567,6 +1659,11 @@ function showBlueQuest3Result() {
         sendButtonBlue3.style.backgroundColor = 'white';
         sendButtonBlue3.style.color = '#0ebde5';
         sendButtonBlue3.innerHTML = "Skickat!";
+        sendButtonBlue3.disabled = true;
+
+        // Hide tips and tips button
+        hideQuestTips();
+        hideQuestTipsButton(tipsButtonBlue3);
 
         // Display result box
         blueQuest3ResultBox.style.display = 'flex';
@@ -1575,8 +1672,6 @@ function showBlueQuest3Result() {
         var displayInput = document.getElementById('user-input-blue-3');
         displayInput.innerHTML = "Hej hej hej";
         // Display redo button
-
-        hideQuestTips();
 
         // Increase counter
         nrOfBlueAComplete++;
