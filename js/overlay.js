@@ -398,7 +398,7 @@ function showBlueOverlay() {
 function showGreenOverlay() {
     // Hide scoreboard button
     scoreboardButton.style.display = 'none';
-    
+
     greenOverlay.style.display = 'flex';
 
     // The wall
@@ -1293,6 +1293,75 @@ function showRedQuest4() {
     redQuest4.style.display = 'flex';
 }
 
+function showRedQuest4Result() {
+    // Save user input
+    var userInput = document.getElementById('quest-red-4-input').value;
+    if (userInput.length != 0) {
+
+        // Make user input read only
+        document.getElementById('quest-red-4-input').readOnly = true;
+
+        // Change look of send button
+        sendButtonRed4.style.backgroundColor = 'white';
+        sendButtonRed4.style.color = '#ff4d4d';
+        sendButtonRed4.innerHTML = "Skickat!";
+
+        // Display result box
+        // document.getElementById('red-4-result-intro').innerHTML = "Vad har andra svarat?";
+        redQuest4ResultBox.style.display = 'flex';
+
+        // Display user input in the result box
+        var displayInput = document.getElementById('user-input-red-4');
+        displayInput.innerHTML = userInput;
+
+        // Display redo button
+        var redoButton = document.getElementById('redo-button-red-4');
+        redoButton.style.display = 'flex';
+
+        // Increase counter
+        nrOfRedBComplete++;
+        nrOfRedTotalComplete++;
+
+        // Change beam color
+        setRedBeamBColors();
+
+        // Change circle border color
+        redCircle4.style.outlineColor = redColor;
+
+        // Set image color
+        setRedImageColor();
+    }
+}
+
+function redoRedQuest4() {
+    // Hide redo button
+    document.getElementById('redo-button-red-4').style.display = 'none';
+
+    // Remove user input from result box
+    document.getElementById('user-input-red-4').innerHTML = "(Du har ångrat ditt svar)";
+
+    // Make input writeable
+    document.getElementById('quest-red-4-input').readOnly = false;
+
+    // Restore send button
+    sendButtonRed4.style.backgroundColor = '#ff4d4d';
+    sendButtonRed4.style.color = 'white';
+    sendButtonRed4.innerHTML = "Skicka";
+
+    // Decrease counter
+    nrOfRedBComplete--;
+    nrOfRedTotalComplete--;
+
+    // Change beam color
+    setRedBeamBColors();
+
+    // Change circle border color
+    redCircle4.style.outlineColor = 'white';
+
+    // Set image color
+    setRedImageColor();
+}
+
 function showRedQuest1Tips() {
     redQuest1Tips.style.display = 'inline';
 }
@@ -1347,44 +1416,44 @@ function showBlueQuest3Tips() {
 }
 
 function showBlueQuest1Result() {
-     // Save user input
-     var userInput = document.getElementById('quest-blue-1-input').value;
-     if (userInput.length != 0) {
- 
-         // Make user input read only
-         document.getElementById('quest-blue-1-input').readOnly = true;
- 
-         // Change look of send button
-         sendButtonBlue1.style.backgroundColor = 'white';
-         sendButtonBlue1.style.color = '#0ebde5';
-         sendButtonBlue1.innerHTML = "Skickat!";
- 
+    // Save user input
+    var userInput = document.getElementById('quest-blue-1-input').value;
+    if (userInput.length != 0) {
 
-         // Display user input in the result box
-         if(!((userInput === 'Rockan') || (userInput === 'rockan'))){
+        // Make user input read only
+        document.getElementById('quest-blue-1-input').readOnly = true;
+
+        // Change look of send button
+        sendButtonBlue1.style.backgroundColor = 'white';
+        sendButtonBlue1.style.color = '#0ebde5';
+        sendButtonBlue1.innerHTML = "Skickat!";
+
+
+        // Display user input in the result box
+        if (!((userInput === 'Rockan') || (userInput === 'rockan'))) {
             document.getElementById('blue-1-result-intro').innerHTML = 'Du svarade tyvärr fel. Rätt svar är:';
-         }
-         var displayInput = document.getElementById('user-input-blue-1');
-             displayInput.innerHTML = "Rockan!";
-         
+        }
+        var displayInput = document.getElementById('user-input-blue-1');
+        displayInput.innerHTML = "Rockan!";
+
         // Display result box
         blueQuest1ResultBox.style.display = 'flex';
- 
-         hideQuestTips();
- 
-         // Increase counter
-         //nrOfBlueAComplete++;
-         //nrOfBlueTotalComplete++;
- 
-         // Change beam color
-         //setBlueBeamAColors();
- 
-         // Change circle border color
-         blueCircle1.style.outlineColor = blueColor;
- 
-         // Set image color
-         //setBlueImageColor();
-     }
+
+        hideQuestTips();
+
+        // Increase counter
+        //nrOfBlueAComplete++;
+        //nrOfBlueTotalComplete++;
+
+        // Change beam color
+        //setBlueBeamAColors();
+
+        // Change circle border color
+        blueCircle1.style.outlineColor = blueColor;
+
+        // Set image color
+        //setBlueImageColor();
+    }
 }
 
 function showBlueQuest2Result() {
@@ -1430,7 +1499,7 @@ function showBlueQuest3Result() {
 
         // Display user input in the result box
         var displayInput = document.getElementById('user-input-blue-3');
-            displayInput.innerHTML = "Hej hej hej";
+        displayInput.innerHTML = "Hej hej hej";
         // Display redo button
 
         hideQuestTips();
