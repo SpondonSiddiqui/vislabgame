@@ -225,6 +225,7 @@ const purpleColor = '#9900ff';
 const yellowFilterString = 'brightness(0) saturate(100%) invert(75%) sepia(3%) saturate(6601%) hue-rotate(345deg) brightness(117%) contrast(93%)';
 const blackFilterString = 'brightness(0) saturate(100%) invert(51%) sepia(27%) saturate(0%) hue-rotate(224deg) brightness(100%) contrast(93%)';
 const redFilterString = 'brightness(0) saturate(100%) invert(64%) sepia(28%) saturate(3019%) hue-rotate(314deg) brightness(99%) contrast(115%)';
+const blueFilterString = 'brightness(0) saturate(100%) invert(55%) sepia(93%) saturate(1064%) hue-rotate(146deg) brightness(93%) contrast(98%)';
 
 /* Get the documentElement (<html>) to display the page in fullscreen */
 var elem = document.documentElement;
@@ -381,6 +382,9 @@ function showBlueOverlay() {
 
     blueBeamB.style.zIndex = 11;
     blueBeamB.style.filter = "opacity(0.5)";
+
+    setBlueBeamAColors();
+    setBlueBeamBColors();
 
     // Circles
     blueCircle1.style.zIndex = 12;
@@ -1478,6 +1482,19 @@ function showBlueQuest2Result() {
         //redoButton.style.display = 'flex';
 
         hideQuestTips();
+
+        // Increase counter
+        nrOfBlueAComplete++;
+        nrOfBlueTotalComplete++;
+
+        // Change beam color
+        setBlueBeamAColors();
+
+        // Change circle border color
+        blueCircle2.style.outlineColor = blueColor;
+
+        // Set image color
+        setBlueImageColor();
     }
 }
 
@@ -1505,17 +1522,17 @@ function showBlueQuest3Result() {
         hideQuestTips();
 
         // Increase counter
-        //nrOfBlueAComplete++;
-        //nrOfBlueTotalComplete++;
+        nrOfBlueAComplete++;
+        nrOfBlueTotalComplete++;
 
         // Change beam color
-        //setBlueBeamAColors();
+        setBlueBeamAColors();
 
         // Change circle border color
         blueCircle3.style.outlineColor = blueColor;
 
         // Set image color
-        //setBlueImageColor();
+        setBlueImageColor();
     }
 }
 
@@ -1691,6 +1708,21 @@ function setBeamColorsOnExit() {
     } else {
         redBeamB.style.filter = 'opacity(1)';
     }
+
+    // Blue beams
+
+    if (nrOfBlueAComplete == 2) {
+        blueBeamA.style.filter = blueFilterString + 'opacity(1)';
+        blueBeamAPartial.style.display = 'none';
+    } else if (nrOfBlueAComplete == 1) {
+        blueBeamA.style.filter = 'opacity(1)';
+
+        blueBeamAPartial.style.filter = blueFilterString + 'opacity(1)';
+        blueBeamAPartial.style.display = 'inline';
+        blueBeamAPartial.style.zIndex = null;
+    } else {
+        blueBeamA.style.filter = 'opacity(1)';
+    }
 }
 
 function setYellowBeamAColors() {
@@ -1801,6 +1833,48 @@ function setRedImageColor() {
     let image = document.getElementById('human-background-partial');
 
     if (nrOfRedTotalComplete == 4) {
+        image.style.filter = 'saturate(100%)';
+    } else {
+        image.style.filter = 'grayscale(100%)';
+    }
+}
+
+function setBlueBeamAColors() {
+    if (nrOfBlueAComplete == 0) {
+        blueBeamA.style.filter = 'opacity(0.5)';
+        blueBeamAPartial.style.display = 'none';
+    } else if (nrOfBlueAComplete == 1) {
+        blueBeamA.style.filter = 'opacity(0.5)';
+
+        blueBeamAPartial.style.filter = blueFilterString + 'opacity(0.5)';
+        blueBeamAPartial.style.display = 'inline';
+        blueBeamAPartial.style.zIndex = 11;
+    } else if (nrOfBlueAComplete == 2) {
+        blueBeamA.style.filter = blueFilterString + 'opacity(0.5)';
+        blueBeamAPartial.style.display = 'none';
+    }
+}
+
+function setBlueBeamBColors() {
+    if (nrOfRedBComplete == 0) {
+        redBeamB.style.filter = 'opacity(0.5)';
+        redBeamBPartial.style.display = 'none';
+    } else if (nrOfRedBComplete == 1) {
+        redBeamB.style.filter = 'opacity(0.5)';
+
+        redBeamBPartial.style.filter = redFilterString + 'opacity(0.5)';
+        redBeamBPartial.style.display = 'inline';
+        redBeamBPartial.style.zIndex = 11;
+    } else if (nrOfRedBComplete == 2) {
+        redBeamB.style.filter = redFilterString + 'opacity(0.5)';
+        redBeamBPartial.style.display = 'none';
+    }
+}
+
+function setBlueImageColor() {
+    let image = document.getElementById('sea-background-partial');
+
+    if (nrOfBlueTotalComplete == 3) {
         image.style.filter = 'saturate(100%)';
     } else {
         image.style.filter = 'grayscale(100%)';
