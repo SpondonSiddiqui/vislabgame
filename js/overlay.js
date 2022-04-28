@@ -212,7 +212,9 @@ let nrOfBlackBComplete = 0;
 let nrOfRedAComplete = 0;
 let nrOfRedBComplete = 0;
 let nrOfBlueAComplete = 0;
+let nrOfBlueBComplete = 0;
 let nrOfGreenAComplete = 0;
+let nrOfGreenBComplete = 0;
 
 // Strings
 const yellowColor = '#f2ba49';
@@ -225,7 +227,7 @@ const purpleColor = '#9900ff';
 const yellowFilterString = 'brightness(0) saturate(100%) invert(75%) sepia(3%) saturate(6601%) hue-rotate(345deg) brightness(117%) contrast(93%)';
 const blackFilterString = 'brightness(0) saturate(100%) invert(51%) sepia(27%) saturate(0%) hue-rotate(224deg) brightness(100%) contrast(93%)';
 const redFilterString = 'brightness(0) saturate(100%) invert(64%) sepia(28%) saturate(3019%) hue-rotate(314deg) brightness(99%) contrast(115%)';
-const blueFilterString = 'brightness(0) saturate(100%) invert(55%) sepia(93%) saturate(1064%) hue-rotate(146deg) brightness(93%) contrast(98%)';
+const blueFilterString = 'brightness(0) saturate(100%) invert(72%) sepia(87%) saturate(1107%) hue-rotate(157deg) brightness(101%) contrast(102%)';
 
 /* Get the documentElement (<html>) to display the page in fullscreen */
 var elem = document.documentElement;
@@ -1446,17 +1448,17 @@ function showBlueQuest1Result() {
         hideQuestTips();
 
         // Increase counter
-        //nrOfBlueAComplete++;
-        //nrOfBlueTotalComplete++;
+        nrOfBlueBComplete++;
+        nrOfBlueTotalComplete++;
 
         // Change beam color
-        //setBlueBeamAColors();
+        setBlueBeamBColors();
 
         // Change circle border color
         blueCircle1.style.outlineColor = blueColor;
 
         // Set image color
-        //setBlueImageColor();
+        setBlueImageColor();
     }
 }
 
@@ -1723,6 +1725,12 @@ function setBeamColorsOnExit() {
     } else {
         blueBeamA.style.filter = 'opacity(1)';
     }
+
+    if (nrOfBlueBComplete == 1) {
+        blueBeamB.style.filter = blueFilterString + 'opacity(1)';
+    } else {
+        blueBeamB.style.filter = 'opacity(1)';
+    }
 }
 
 function setYellowBeamAColors() {
@@ -1856,18 +1864,10 @@ function setBlueBeamAColors() {
 }
 
 function setBlueBeamBColors() {
-    if (nrOfRedBComplete == 0) {
-        redBeamB.style.filter = 'opacity(0.5)';
-        redBeamBPartial.style.display = 'none';
-    } else if (nrOfRedBComplete == 1) {
-        redBeamB.style.filter = 'opacity(0.5)';
-
-        redBeamBPartial.style.filter = redFilterString + 'opacity(0.5)';
-        redBeamBPartial.style.display = 'inline';
-        redBeamBPartial.style.zIndex = 11;
-    } else if (nrOfRedBComplete == 2) {
-        redBeamB.style.filter = redFilterString + 'opacity(0.5)';
-        redBeamBPartial.style.display = 'none';
+    if (nrOfBlueBComplete == 0) {
+        blueBeamB.style.filter = 'opacity(0.5)';
+    } else {
+        blueBeamB.style.filter = blueFilterString + 'opacity(0.5)';
     }
 }
 
