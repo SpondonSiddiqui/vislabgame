@@ -251,6 +251,9 @@ function scoreBoardClick() {
 }
 
 function showYellowOverlay() {
+    // Hide scoreboard button
+    scoreboardButton.style.display = 'none';
+
     yellowOverlay.style.display = 'flex';
 
     // The wall
@@ -291,6 +294,8 @@ function showYellowOverlay() {
 }
 
 function showBlackOverlay() {
+    // Hide scoreboard button
+    scoreboardButton.style.display = 'none';
     blackOverlay.style.display = 'flex';
 
     // The wall
@@ -320,6 +325,9 @@ function showBlackOverlay() {
 }
 
 function showRedOverlay() {
+    // Hide scoreboard button
+    scoreboardButton.style.display = 'none';
+
     redOverlay.style.display = 'flex';
 
     // The wall
@@ -356,6 +364,9 @@ function showRedOverlay() {
 }
 
 function showBlueOverlay() {
+    // Hide scoreboard button
+    scoreboardButton.style.display = 'none';
+
     blueOverlay.style.display = 'flex';
 
     // The wall
@@ -385,6 +396,9 @@ function showBlueOverlay() {
 }
 
 function showGreenOverlay() {
+    // Hide scoreboard button
+    scoreboardButton.style.display = 'none';
+    
     greenOverlay.style.display = 'flex';
 
     // The wall
@@ -510,6 +524,8 @@ function hideOverlays() {
     hideAllOverlayButtons();
     hideQuests();
     setBeamColorsOnExit();
+
+    scoreboardButton.style.display = 'flex';
 }
 
 // Globe functions
