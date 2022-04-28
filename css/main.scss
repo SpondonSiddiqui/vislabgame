@@ -107,6 +107,7 @@ p {
     position: absolute;
     bottom: 2.8%;
     left: 46.8%;
+    z-index: 11;
 }
 
 .info-overlay-button {
@@ -352,6 +353,32 @@ p {
             left: 2.5%;
         }
 
+        &-blue {
+            left: 2.5%;
+            width: 35%;
+            top: 5.56%;
+
+            &-1 {
+                display: flex;
+                flex-direction: row;
+                color: color(blue);
+
+                h2 {
+                    margin-right: 0.5vw;
+                }
+            }
+
+            &-3 {
+                display: flex;
+                flex-direction: row;
+                color: color(blue);
+
+                h2 {
+                    margin-right: 0.5vw;
+                }
+            }
+        }
+
     }
 
     &-send-button {
@@ -377,6 +404,7 @@ p {
 
         &-black {
             background-color: color(purple);
+            font-size: 1.5vw;
         }
     }
 
@@ -1117,7 +1145,7 @@ p {
     height: 100%;
     position: absolute;
     background-color: rgba($color: #000000, $alpha: .5);
-    z-index: 100;
+    z-index: 10;
 }
 
 #scoreboard-overlay {

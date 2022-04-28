@@ -39,7 +39,8 @@
         </div>
         <img id="exit-overlay-button-yellow" class="exit-overlay-button" src="assets/images/exit-button.svg"
             onclick="hideOverlays()">
-        <img id="info-overlay-button-yellow" class="info-overlay-button" src="assets/images/info-button.svg">
+        <img id="info-overlay-button-yellow" class="info-overlay-button" src="assets/images/info-button.svg"
+            onclick="showYellowOverlay()">
         <!--Overlay Info box-->
         <div id="info-box-yellow" class="info-box-yellow info-box">
             <h1>Samhälle</h1>
@@ -578,7 +579,7 @@
                 </div>
                 <div class="quest-text-wrapper quest-input-wrapper">
                     <input id="quest-blue-1-input" type="text">
-                    <button id="send-button-blue" class="quest-send-button quest-send-button-blue"
+                    <button id="send-button-blue-1" class="quest-send-button quest-send-button-blue"
                         onclick="showBlueQuest1Result()">
                         Skicka
                     </button>
@@ -597,6 +598,13 @@
                     <p>Tryck på knapparna med en "i"-symbol för att få upp specifik info om djuret</p>
                 </details>
             </div>
+            <div id="quest-result-blue-1" class="quest-result quest-result-blue">
+                <p><span class="bold" id="blue-1-result-intro">Du svarade rätt:
+                    </span></p>
+                <div id="quest-result-blue-1" class="quest-result-blue-1">
+                    <h2 id="user-input-blue-1" class=""></h2>
+                </div>
+            </div>
         </div>
         <!--Quest 2-->
         <div id="quest-blue-2" class="quest-overlay quest">
@@ -611,7 +619,7 @@
                 </div>
                 <div class="quest-text-wrapper quest-input-wrapper">
                     <input id="quest-blue-2-input" type="text">
-                    <button id="send-button-blue" class="quest-send-button quest-send-button-blue"
+                    <button id="send-button-blue-2" class="quest-send-button quest-send-button-blue"
                         onclick="showBlueQuest2Result()">
                         Skicka
                     </button>
@@ -629,6 +637,10 @@
                     <p>Testa att dra ramen till nån av symbolerna på kartan</p>
                 </details>
             </div>
+            <div id="quest-result-blue-2" class="quest-result quest-result-blue quest-result-blue-2">
+                <p><span class="bold">Vad har andra svarat?</span></p>
+                <img id="wordcloud-meteorites" src="assets/images/wordclouds/meteoriter.svg">
+            </div>
         </div>
         <!--Quest 3-->
         <div id="quest-blue-3" class="quest-overlay quest">
@@ -641,7 +653,7 @@
                 </div>
                 <div class="quest-text-wrapper quest-input-wrapper">
                     <input id="quest-blue-3-input" type="text">
-                    <button id="send-button-blue" class="quest-send-button quest-send-button-blue"
+                    <button id="send-button-blue-3" class="quest-send-button quest-send-button-blue"
                         onclick="showBlueQuest3Result()">
                         Skicka
                     </button>
@@ -807,10 +819,10 @@
         </div>
 
         <!--Score board-->
-        <img class="info-button" id="scoreboard-button" src="assets/images/info-button.svg" onclick="showScoreBoard()">
         <div id="scoreboard-overlay" class="transparent-background">
             <div id="scoreboard-box" class="scoreboard-box"></div>
         </div>
+        <img class="info-button" id="scoreboard-button" src="assets/images/info-button.svg" onclick="scoreBoardClick()">
 
 
 
