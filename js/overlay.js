@@ -689,22 +689,6 @@ function showYellowQuest4() {
     yellowQuest4.style.display = 'flex';
 }
 
-//function showYellowQuest1Tips() {
-//    yellowQuest1Tips.style.display = 'inline';
-//}
-
-function showYellowQuest2Tips() {
-    yellowQuest2Tips.style.display = 'inline';
-}
-
-function showYellowQuest3Tips() {
-    yellowQuest3Tips.style.display = 'inline';
-}
-
-function showYellowQuest4Tips() {
-    yellowQuest4Tips.style.display = 'inline';
-}
-
 function showYellowQuest1Result() {
     // Save user input
     var userInput = document.getElementById('quest-yellow-1-input').value;
@@ -1039,19 +1023,6 @@ function showBlackQuest3() {
     hideQuestTips();
     blackQuest3.style.display = 'flex';
 }
-
-function showBlackQuest1Tips() {
-    blackQuest1Tips.style.display = 'inline';
-}
-
-function showBlackQuest2Tips() {
-    blackQuest2Tips.style.display = 'inline';
-}
-
-function showBlackQuest3Tips() {
-    blackQuest3Tips.style.display = 'inline';
-}
-
 
 function showBlackQuest1Result() {
     // Save user input
@@ -1480,22 +1451,6 @@ function redoRedQuest4() {
     setRedImageColor();
 }
 
-function showRedQuest1Tips() {
-    redQuest1Tips.style.display = 'inline';
-}
-
-function showRedQuest2Tips() {
-    redQuest2Tips.style.display = 'inline';
-}
-
-function showRedQuest3Tips() {
-    redQuest3Tips.style.display = 'inline';
-}
-
-function showRedQuest4Tips() {
-    redQuest4Tips.style.display = 'inline';
-}
-
 // Blue quest functions
 function showBlueQuest1() {
     showBlueOverlay();
@@ -1519,18 +1474,6 @@ function showBlueQuest3() {
     hideQuests();
     hideQuestTips();
     blueQuest3.style.display = 'flex';
-}
-
-function showBlueQuest1Tips() {
-    blueQuest1Tips.style.display = 'inline';
-}
-
-function showBlueQuest2Tips() {
-    blueQuest2Tips.style.display = 'inline';
-}
-
-function showBlueQuest3Tips() {
-    blueQuest3Tips.style.display = 'inline';
 }
 
 function showBlueQuest1Result() {
@@ -1674,18 +1617,6 @@ function showGreenQuest3() {
     hideQuests();
     hideQuestTips();
     greenQuest3.style.display = 'flex';
-}
-
-function showGreenQuest1Tips() {
-    greenQuest1Tips.style.display = 'inline';
-}
-
-function showGreenQuest2Tips() {
-    greenQuest2Tips.style.display = 'inline';
-}
-
-function showGreenQuest3Tips() {
-    greenQuest3Tips.style.display = 'inline';
 }
 
 function hideQuests() {
