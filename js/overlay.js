@@ -258,6 +258,106 @@ function scoreBoardClick() {
     } else {
         scoreBoardOverlay.style.display = "none";
     }
+
+    setScoreBoardData();
+}
+
+function setScoreBoardData() {
+    let yellowPartialBar = document.getElementById('scoreboard-yellow-partial');
+    let blackPartialBar = document.getElementById('scoreboard-black-partial');
+    let redPartialBar = document.getElementById('scoreboard-red-partial');
+    let bluePartialBar = document.getElementById('scoreboard-blue-partial');
+    let greenPartialBar = document.getElementById('scoreboard-green-partial');
+
+    let nrOfYellowCompleteText = document.getElementById('scoreboard-yellow-completed');
+    let nrOfBlackCompleteText = document.getElementById('scoreboard-black-completed');
+    let nrOfRedCompleteText = document.getElementById('scoreboard-red-completed');
+    let nrOfBlueCompleteText = document.getElementById('scoreboard-blue-completed');
+    let nrOfGreenCompleteText = document.getElementById('scoreboard-green-completed');
+
+    let nrOfCompletedText = document.getElementById('scoreboard-score-completed');
+    let flavortext = document.getElementById('scoreboard-score-flavortext');
+
+    let nrOfCompletedTotal = nrOfYellowTotalComplete + nrOfBlackTotalComplete + nrOfRedTotalComplete + nrOfBlueTotalComplete + nrOfGreenTotalComplete;
+
+    nrOfCompletedText.innerHTML = nrOfCompletedTotal;
+
+    nrOfYellowCompleteText.innerHTML = nrOfYellowTotalComplete + '/4';
+    nrOfBlackCompleteText.innerHTML = nrOfBlackTotalComplete + '/3';
+    nrOfRedCompleteText.innerHTML = nrOfRedTotalComplete + '/4';
+    nrOfBlueCompleteText.innerHTML = nrOfBlueTotalComplete + '/3';
+    nrOfGreenCompleteText.innerHTML = nrOfGreenTotalComplete + '/3';
+
+    if (nrOfCompletedTotal == 17) {
+        flavortext.innerHTML = 'Du är fantastisk!';
+    } else if (nrOfCompletedTotal > 12) {
+        flavortext.innerHTML = 'Snart helt klar!';
+    } else if (nrOfCompletedTotal > 6) {
+        flavortext.innerHTML = 'Fortsätt så!';
+    } else if (nrOfCompletedTotal > 0) {
+        flavortext.innerHTML = 'Kämpa på!';
+    } else {
+        flavortext.innerHTML = 'Prova att klicka på cirklarna för att börja!';
+    }
+
+    // Yellow
+    if (nrOfYellowTotalComplete >= 4) {
+        yellowPartialBar.style.height = '100%';
+    } else if (nrOfYellowTotalComplete == 3) {
+        yellowPartialBar.style.height = '75%';
+    } else if (nrOfYellowTotalComplete == 2) {
+        yellowPartialBar.style.height = '50%';
+    } else if (nrOfYellowTotalComplete == 1) {
+        yellowPartialBar.style.height = '25%';
+    } else {
+        yellowPartialBar.style.height = '0';
+    }
+
+    // Black
+    if (nrOfBlackTotalComplete == 3) {
+        blackPartialBar.style.height = '100%';
+    } else if (nrOfBlackTotalComplete == 2) {
+        blackPartialBar.style.height = '66%';
+    } else if (nrOfBlackTotalComplete == 1) {
+        blackPartialBar.style.height = '33%';
+    } else {
+        blackPartialBar.style.height = '0';
+    }
+
+    // Red
+    if (nrOfRedTotalComplete >= 4) {
+        redPartialBar.style.height = '100%';
+    } else if (nrOfRedTotalComplete == 3) {
+        redPartialBar.style.height = '75%';
+    } else if (nrOfRedTotalComplete == 2) {
+        redPartialBar.style.height = '50%';
+    } else if (nrOfRedTotalComplete == 1) {
+        redPartialBar.style.height = '25%';
+    } else {
+        redPartialBar.style.height = '0';
+    }
+
+    // Blue
+    if (nrOfBlueTotalComplete == 3) {
+        bluePartialBar.style.height = '100%';
+    } else if (nrOfBlueTotalComplete == 2) {
+        bluePartialBar.style.height = '66%';
+    } else if (nrOfBlueTotalComplete == 1) {
+        bluePartialBar.style.height = '33%';
+    } else {
+        bluePartialBar.style.height = '0';
+    }
+
+    // Green
+    if (nrOfGreenTotalComplete == 3) {
+        greenPartialBar.style.height = '100%';
+    } else if (nrOfGreenTotalComplete == 2) {
+        greenPartialBar.style.height = '66%';
+    } else if (nrOfGreenTotalComplete == 1) {
+        greenPartialBar.style.height = '33%';
+    } else {
+        greenPartialBar.style.height = '0';
+    }
 }
 
 function infoButtonClick() {
@@ -291,7 +391,7 @@ function tipsButtonClick() {
     if (yellowQuest1.style.display === "flex") {
         toggleTips(yellowQuest1Tips);
     }
-    
+
     else if (yellowQuest2.style.display === "flex") {
         toggleTips(yellowQuest2Tips);
     }
@@ -299,7 +399,7 @@ function tipsButtonClick() {
     else if (yellowQuest3.style.display === "flex") {
         toggleTips(yellowQuest3Tips);
     }
-    
+
     else if (yellowQuest4.style.display === "flex") {
         toggleTips(yellowQuest4Tips);
     }

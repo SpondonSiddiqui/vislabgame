@@ -1149,8 +1149,188 @@ p {
   background-color: #fff;
   margin-bottom: 5%;
   padding: 20px;
-  width: 64%;
+  width: 74%;
   height: 71.4%;
   border-radius: 8px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.scoreboard-intro {
+  width: 45%;
+}
+
+.scoreboard-intro p {
+  margin-top: .8em;
+}
+
+.scoreboard-intro :first-child {
+  font-weight: bold;
+  margin-top: 0;
+}
+
+.scoreboard-divider {
+  background-color: #e3e5e9;
+  width: 2px;
+  height: 100%;
+}
+
+.scoreboard-score {
+  width: 45%;
+}
+
+.scoreboard-score p {
+  padding-bottom: .8em;
+}
+
+.scoreboard-score :first-child {
+  font-weight: bold;
+  margin-top: 0;
+}
+
+.scoreboard-score-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.scoreboard-score-text p {
+  margin: 0;
+  margin-right: .4em;
+  padding: 0;
+}
+
+.scoreboard-score-text :first-child {
+  font-weight: normal;
+  margin-top: 0;
+}
+
+.scoreboard-score-sections {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-weight: normal;
+}
+
+.scoreboard-score-sections :first-child {
+  font-weight: normal;
+  margin-top: 1em;
+}
+
+.scoreboard-score-section {
+  margin-top: 1em;
+  width: 8vw;
+  height: 22vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.scoreboard-score-section p {
+  font-size: 1.2vw;
+  margin: 0;
+  padding: 0;
+}
+
+.scoreboard-score-section :first-child {
+  font-weight: normal;
+  margin-top: 0;
+}
+
+.scoreboard-score-bar-yellow {
+  position: relative;
+  width: 1.2vw;
+  height: 70%;
+  background-color: #fcf1db;
+  border-radius: 8em 8em 0 0;
+}
+
+.scoreboard-score-bar-yellow-partial {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: #f2ba49;
+  border-radius: 8em 8em 0 0;
+}
+
+.scoreboard-score-bar-black {
+  position: relative;
+  width: 1.2vw;
+  height: 70%;
+  background-color: #dddddd;
+  border-radius: 8em 8em 0 0;
+}
+
+.scoreboard-score-bar-black-partial {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: #555555;
+  border-radius: 8em 8em 0 0;
+}
+
+.scoreboard-score-bar-red {
+  position: relative;
+  width: 1.2vw;
+  height: 70%;
+  background-color: #ffdbdb;
+  border-radius: 8em 8em 0 0;
+}
+
+.scoreboard-score-bar-red-partial {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: #ff4d4d;
+  border-radius: 8em 8em 0 0;
+}
+
+.scoreboard-score-bar-blue {
+  position: relative;
+  width: 1.2vw;
+  height: 70%;
+  background-color: #cdf2fA;
+  border-radius: 8em 8em 0 0;
+}
+
+.scoreboard-score-bar-blue-partial {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: #0ebde5;
+  border-radius: 8em 8em 0 0;
+}
+
+.scoreboard-score-bar-green {
+  position: relative;
+  width: 1.2vw;
+  height: 70%;
+  background-color: #dbf2db;
+  border-radius: 8em 8em 0 0;
+}
+
+.scoreboard-score-bar-green-partial {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: #4cbf4c;
+  border-radius: 8em 8em 0 0;
 }
 /*# sourceMappingURL=main.css.map */

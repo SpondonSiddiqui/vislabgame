@@ -577,7 +577,7 @@ p {
     }
 
     &-triangle {
-        
+
         &-green-1 {
             bottom: -4.5%;
             left: 33.5%;
@@ -1150,11 +1150,178 @@ p {
     place-items: center;
 }
 
-.scoreboard-box {
-    background-color: #fff;
-    margin-bottom: 5%;
-    padding: 20px;
-    width: 64%;
-    height: 71.4%;
-    border-radius: 8px;
+.scoreboard {
+    &-box {
+        background-color: #fff;
+        margin-bottom: 5%;
+        padding: 20px;
+        width: 74%;
+        height: 71.4%;
+        border-radius: 8px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &-intro {
+        width: 45%;
+
+        p {
+            margin-top: .8em;
+        }
+
+        :first-child {
+            font-weight: bold;
+            margin-top: 0;
+        }
+    }
+
+    &-divider {
+        background-color: color(text-tertiary);
+        width: 2px;
+        height: 100%;
+    }
+
+    &-score {
+        width: 45%;
+
+        p {
+            padding-bottom: .8em;
+        }
+
+        :first-child {
+            font-weight: bold;
+            margin-top: 0;
+        }
+
+        &-text {
+            display: flex;
+            flex-wrap: wrap;
+
+            p {
+                margin: 0;
+                margin-right: .4em;
+                padding: 0;
+            }
+
+            :first-child {
+                font-weight: normal;
+                margin-top: 0;
+            }
+        }
+
+        &-sections {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            font-weight: normal;
+
+            :first-child {
+                font-weight: normal;
+                margin-top: 1em;
+            }
+        }
+
+        &-section {
+            margin-top: 1em;
+            width: 8vw;
+            height: 22vw;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            p {
+                font-size: 1.2vw;
+                margin: 0;
+                padding: 0;
+            }
+
+            :first-child {
+                font-weight: normal;
+                margin-top: 0;
+            }
+
+        }
+
+        &-bar {
+            &-yellow {
+                position: relative;
+                width: 1.2vw;
+                height: 70%;
+                background-color: #fcf1db;
+                border-radius: 8em 8em 0 0;
+
+                &-partial {
+                    position: absolute;
+                    bottom: 0;
+                    width: 100%;
+                    background-color: color(yellow);
+                    border-radius: 8em 8em 0 0;
+                }
+            }
+
+            &-black {
+                position: relative;
+                width: 1.2vw;
+                height: 70%;
+                background-color: #dddddd;
+                border-radius: 8em 8em 0 0;
+
+                &-partial {
+                    position: absolute;
+                    bottom: 0;
+                    width: 100%;
+                    background-color: color(gray);
+                    border-radius: 8em 8em 0 0;
+                }
+            }
+
+            &-red {
+                position: relative;
+                width: 1.2vw;
+                height: 70%;
+                background-color: #ffdbdb;
+                border-radius: 8em 8em 0 0;
+
+                &-partial {
+                    position: absolute;
+                    bottom: 0;
+                    width: 100%;
+                    background-color: color(red);
+                    border-radius: 8em 8em 0 0;
+                }
+            }
+
+            &-blue {
+                position: relative;
+                width: 1.2vw;
+                height: 70%;
+                background-color: #cdf2fA;
+                border-radius: 8em 8em 0 0;
+
+                &-partial {
+                    position: absolute;
+                    bottom: 0;
+                    width: 100%;
+                    background-color: color(blue);
+                    border-radius: 8em 8em 0 0;
+                }
+            }
+
+            &-green {
+                position: relative;
+                width: 1.2vw;
+                height: 70%;
+                background-color: #dbf2db;
+                border-radius: 8em 8em 0 0;
+
+                &-partial {
+                    position: absolute;
+                    bottom: 0;
+                    width: 100%;
+                    background-color: color(green);
+                    border-radius: 8em 8em 0 0;
+                }
+            }
+        }
+    }
 }
