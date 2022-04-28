@@ -287,20 +287,81 @@ function setInfoButton(infoBox) {
 }
 
 function tipsButtonClick() {
-    if (yellowOverlay.style.display === "flex") {
-        setInfoButton(yellowInfoBox);
+    // Check yellow Quests
+    if (yellowQuest1.style.display === "flex") {
+        toggleTips(yellowQuest1Tips);
     }
-    else if (blackOverlay.style.display === "flex") {
-        setInfoButton(blackInfoBox);
+    
+    else if (yellowQuest2.style.display === "flex") {
+        toggleTips(yellowQuest2Tips);
     }
-    else if (redOverlay.style.display === "flex") {
-        setInfoButton(redInfoBox);
+
+    else if (yellowQuest3.style.display === "flex") {
+        toggleTips(yellowQuest3Tips);
     }
-    else if (blueOverlay.style.display === "flex") {
-        setInfoButton(blueInfoBox);
+    
+    else if (yellowQuest4.style.display === "flex") {
+        toggleTips(yellowQuest4Tips);
     }
-    else if (greenOverlay.style.display === "flex") {
-        setInfoButton(greenInfoBox);
+
+    else if (blackQuest1.style.display === "flex") {
+        toggleTips(blackQuest1Tips);
+    }
+
+    else if (blackQuest2.style.display === "flex") {
+        toggleTips(blackQuest2Tips);
+    }
+
+    else if (blackQuest2.style.display === "flex") {
+        toggleTips(blackQuest2Tips);
+    }
+
+    else if (redQuest1.style.display === "flex") {
+        toggleTips(redQuest1Tips);
+    }
+
+    else if (redQuest2.style.display === "flex") {
+        toggleTips(redQuest2Tips);
+    }
+
+    else if (redQuest3.style.display === "flex") {
+        toggleTips(redQuest3Tips);
+    }
+
+    else if (redQuest4.style.display === "flex") {
+        toggleTips(redQuest4Tips);
+    }
+
+    else if (blueQuest1.style.display === "flex") {
+        toggleTips(blueQuest1Tips);
+    }
+
+    else if (blueQuest2.style.display === "flex") {
+        toggleTips(blueQuest2Tips);
+    }
+
+    else if (blueQuest3.style.display === "flex") {
+        toggleTips(blueQuest3Tips);
+    }
+
+    else if (greenQuest1.style.display === "flex") {
+        toggleTips(greenQuest1Tips);
+    }
+
+    else if (greenQuest2.style.display === "flex") {
+        toggleTips(greenQuest2Tips);
+    }
+
+    else if (greenQuest3.style.display === "flex") {
+        toggleTips(greenQuest3Tips);
+    }
+}
+
+function toggleTips(questTipsBox) {
+    if (questTipsBox.style.display === "none") {
+        questTipsBox.style.display = 'inline';
+    } else {
+        questTipsBox.style.display = "none";
     }
 }
 
@@ -628,9 +689,9 @@ function showYellowQuest4() {
     yellowQuest4.style.display = 'flex';
 }
 
-function showYellowQuest1Tips() {
-    yellowQuest1Tips.style.display = 'inline';
-}
+//function showYellowQuest1Tips() {
+//    yellowQuest1Tips.style.display = 'inline';
+//}
 
 function showYellowQuest2Tips() {
     yellowQuest2Tips.style.display = 'inline';
