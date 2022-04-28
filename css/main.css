@@ -319,7 +319,7 @@ p {
 .quest-result-black {
   width: 32%;
   bottom: 5.56%;
-  left: 58%;
+  left: 5%;
 }
 
 .quest-result-black-2 {
@@ -328,7 +328,6 @@ p {
 
 .quest-result-black-3 {
   top: 32%;
-  left: 10%;
 }
 
 .quest-result-black img {
@@ -375,6 +374,27 @@ p {
 }
 
 .quest-result-blue-3 h2 {
+  margin-right: 0.5vw;
+}
+
+.quest-result-green {
+  left: 50%;
+  width: 35%;
+  top: 5.56%;
+}
+
+.quest-result-green-3 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  color: #4cbf4c;
+}
+
+.quest-result-green-3 h2 {
   margin-right: 0.5vw;
 }
 
