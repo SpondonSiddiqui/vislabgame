@@ -1081,6 +1081,7 @@ function showBlackQuest1Result() {
         sendButtonBlack1.style.backgroundColor = 'white';
         sendButtonBlack1.style.color = '#9900ff';
         sendButtonBlack1.innerHTML = "Skickat!";
+        sendButtonBlack1.disabled = true;
 
         // Display result box
         blackQuest1ResultBox.style.display = 'flex';
@@ -1124,6 +1125,7 @@ function showBlackQuest2Result() {
         sendButtonBlack2.style.backgroundColor = 'white';
         sendButtonBlack2.style.color = '#9900ff';
         sendButtonBlack2.innerHTML = "Skickat!";
+        sendButtonBlack2.disabled = true;
 
         // Display result box
         blackQuest2ResultBox.style.display = 'flex';
@@ -1163,6 +1165,7 @@ function showBlackQuest3Result() {
         sendButtonBlack3.style.backgroundColor = 'white';
         sendButtonBlack3.style.color = '#9900ff';
         sendButtonBlack3.innerHTML = "Skickat!";
+        sendButtonBlack3.disabled = true;
 
         // Display result box
 
@@ -1205,6 +1208,7 @@ function redoBlackQuest2() {
     sendButtonBlack2.style.backgroundColor = '#9900ff';
     sendButtonBlack2.style.color = 'white';
     sendButtonBlack2.innerHTML = "Skicka";
+    sendButtonBlack2.disabled = false;
 
     // Decrease counter
     nrOfBlackTotalComplete--;
