@@ -785,7 +785,9 @@
                     <img id="quest-green-3-tips-button" src="assets/images/tips-button.svg" onclick="tipsButtonClick()">
                 </div>
                 <div class="quest-text-wrapper quest-input-wrapper">
-                    <input id="quest-green-3-input" type="text">
+                    <input id="quest-green-3-input" type="number">
+                    <img id="redo-button-green-3" class="quest-redo-button" src="assets/images/redo-button.svg"
+                        onclick="redoGreenQuest3()">
                     <button id="send-button-green-3" class="quest-send-button quest-send-button-green"
                         onclick="showGreenQuest3Result()">
                         Skicka
@@ -806,6 +808,13 @@
                     <p>Till vänster om diagrammet ser du ett antal tidsintervall. Prova att följa ditt favoritdjurs
                         evolutionära grupp från diagrammet till intervallen. </p>
                 </details>
+            </div>
+            <div id="quest-result-green-3" class="quest-result quest-result-green">
+                <p><span class="bold" id="green-3-result-intro">Kan ditt favoritdjur tillhöra...</span></p>
+                <div id="quest-result-green-3" class="quest-result-green-3">
+                    <h2 id="user-input-green-3" class=""></h2>
+                    <h2 id="green-3-year"></h2>
+                </div>
             </div>
         </div>
 

@@ -220,9 +220,9 @@ const tipsButtonRed4 = document.getElementById('quest-red-4-tips-button');
 const tipsButtonBlue1 = document.getElementById('quest-blue-1-tips-button');
 const tipsButtonBlue2 = document.getElementById('quest-blue-2-tips-button');
 const tipsButtonBlue3 = document.getElementById('quest-blue-3-tips-button');
-const tipsButtonGreen1 = document.getElementById('quest-blue-1-tips-button');
-const tipsButtonGreen2 = document.getElementById('quest-blue-2-tips-button');
-const tipsButtonGreen3 = document.getElementById('quest-blue-3-tips-button');
+const tipsButtonGreen1 = document.getElementById('quest-green-1-tips-button');
+const tipsButtonGreen2 = document.getElementById('quest-green-2-tips-button');
+const tipsButtonGreen3 = document.getElementById('quest-green-3-tips-button');
 
 // Counters
 let nrOfYellowTotalComplete = 0;
@@ -1712,6 +1712,127 @@ function showGreenQuest3() {
     hideQuests();
     hideQuestTips();
     greenQuest3.style.display = 'flex';
+}
+
+function showGreenQuest3Result() {
+    // Save user input
+    var userInput = document.getElementById('quest-green-3-input').value;
+    if (userInput.length != 0) {
+
+        // Make user input read only
+        document.getElementById('quest-green-3-input').readOnly = true;
+
+        // Change look of send button
+        sendButtonGreen3.style.backgroundColor = 'white';
+        sendButtonGreen3.style.color = greenColor;
+        sendButtonGreen3.innerHTML = "Skickat!";
+
+        document.getElementById('green-3-result-intro').innerHTML = "Kan ditt favoritdjur tillhöra...";
+
+        // Display result box
+        greenQuest3ResultBox.style.display = 'flex';
+
+        // Display user input in the result box
+        var displayInput = document.getElementById('user-input-green-3');
+
+        if (userInput > 630000000) {
+            displayInput.innerHTML = "Kammaneter";
+        }
+
+        else if (userInput > 590000000) {
+            displayInput.innerHTML = 'Svampdjur';
+        }
+
+        else if (userInput > 495000000) {
+            displayInput.innerHTML = 'Koralldjur Lansettfisk Blötdjur Ringmaskar Mossdjur Rundmaskar Björndjur Slemmaskar Armfotingar';
+        }
+
+        else if (userInput > 470000000) {
+            displayInput.innerHTML = 'Sjöpungar Plattmaskar Hjuldjur Klomaskar';
+        }
+
+        else if (userInput > 445000000) {
+            displayInput.innerHTML = 'Pirålar Spindeldjur Mångfotingar Nejonögon';
+        }
+
+        else if (userInput > 420000000) {
+            displayInput.innerHTML = 'Broskfiskar Strålfeniga fiskar Kräftdjur Insekter';
+        }
+
+        else if (userInput > 250000000) {
+        displayInput.innerHTML = 'Lobeniga fiskar Lunfiskar Amfibier';
+        }
+
+        else if (userInput > 180000000) {
+        displayInput.innerHTML = 'Däggdjur';
+        }
+
+        else if (userInput > 155000000) {
+        displayInput.innerHTML = 'Sköldpadda';
+        }
+
+        else if (userInput > 139000000) {
+        displayInput.innerHTML = 'Reptiler';
+        }
+
+        else {
+            displayInput.innerHTML = 'Fåglar';
+        }
+
+        // Display redo button
+        var redoButton = document.getElementById('redo-button-green-3');
+        redoButton.style.display = 'flex';
+
+        // Hide tips and tips button
+        hideQuestTips();
+        tipsButtonGreen3.style.display = "none";
+
+        // Increase counter
+        nrOfGreenBComplete++;
+        nrOfGreenTotalComplete++;
+
+        // Change beam color
+        //setGreenBeamAColors();
+
+        // Change circle border color
+        greenCircle3.style.outlineColor = greenColor;
+
+        // Set image color
+        //setGreenImageColor();
+    }
+}
+
+function redoGreenQuest3() {
+    // Hide redo button
+    document.getElementById('redo-button-green-3').style.display = 'none';
+
+    // Remove user input from result box
+    document.getElementById('green-3-result-intro').innerHTML = "(Du har ångrat ditt svar)";
+    document.getElementById('user-input-green-3').innerHTML = "";
+
+    // Make input writeable
+    document.getElementById('quest-green-3-input').readOnly = false;
+
+    // Restore send button
+    sendButtonGreen3.style.backgroundColor = greenColor;
+    sendButtonGreen3.style.color = 'white';
+    sendButtonGreen3.innerHTML = "Skicka";
+
+    // Decrease counter
+    //nrOfGreenBComplete--;
+    //nrOfGreenTotalComplete--;
+
+    // Change beam color
+    //setGreenBeamBColors();
+
+    // Change circle border color
+    greenCircle3.style.outlineColor = 'white';
+
+    // Set image color
+    //setGreenImageColor();
+
+    //Show tips button
+    tipsButtonGreen3.style.display = 'inline';
 }
 
 function hideQuests() {
