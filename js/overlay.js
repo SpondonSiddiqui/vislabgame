@@ -433,8 +433,8 @@ function tipsButtonClick() {
         toggleTips(blackQuest2Tips);
     }
 
-    else if (blackQuest2.style.display === "flex") {
-        toggleTips(blackQuest2Tips);
+    else if (blackQuest3.style.display === "flex") {
+        toggleTips(blackQuest3Tips);
     }
 
     else if (redQuest1.style.display === "flex") {
