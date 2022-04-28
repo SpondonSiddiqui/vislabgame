@@ -198,6 +198,13 @@ const sendButtonGreen1 = document.getElementById('send-button-green-1');
 const sendButtonGreen2 = document.getElementById('send-button-green-2');
 const sendButtonGreen3 = document.getElementById('send-button-green-3');
 
+// Info buttons
+const infoButtonYellow = document.getElementById('info-overlay-button-yellow');
+const infoButtonBlack = document.getElementById('info-overlay-button-black');
+const infoButtonRed = document.getElementById('info-overlay-button-red');
+const infoButtonBlue = document.getElementById('info-overlay-button-blue');
+const infoButtonGreen = document.getElementById('info-overlay-button-green');
+
 // Counters
 let nrOfYellowTotalComplete = 0;
 let nrOfBlackTotalComplete = 0;
@@ -247,6 +254,50 @@ function scoreBoardClick() {
         scoreboardButton.style.display = 'inline';
     } else {
         scoreBoardOverlay.style.display = "none";
+    }
+}
+
+function infoButtonClick() {
+    if (yellowOverlay.style.display === "flex") {
+        setInfoButton(yellowInfoBox);
+    }
+    else if (blackOverlay.style.display === "flex") {
+        setInfoButton(blackInfoBox);
+    }
+    else if (redOverlay.style.display === "flex") {
+        setInfoButton(redInfoBox);
+    }
+    else if (blueOverlay.style.display === "flex") {
+        setInfoButton(blueInfoBox);
+    }
+    else if (greenOverlay.style.display === "flex") {
+        setInfoButton(greenInfoBox);
+    }
+}
+
+function setInfoButton(infoBox) {
+    if (infoBox.style.display === "none") {
+        infoBox.style.display = 'inline';
+    } else {
+        infoBox.style.display = "none";
+    }
+}
+
+function tipsButtonClick() {
+    if (yellowOverlay.style.display === "flex") {
+        setInfoButton(yellowInfoBox);
+    }
+    else if (blackOverlay.style.display === "flex") {
+        setInfoButton(blackInfoBox);
+    }
+    else if (redOverlay.style.display === "flex") {
+        setInfoButton(redInfoBox);
+    }
+    else if (blueOverlay.style.display === "flex") {
+        setInfoButton(blueInfoBox);
+    }
+    else if (greenOverlay.style.display === "flex") {
+        setInfoButton(greenInfoBox);
     }
 }
 
@@ -689,23 +740,23 @@ function showYellowQuest3Result() {
             displayInputA.innerHTML = "Halland Stockholm";
         }
 
-        else if (userInput < 7) {
+        else if (userInput > -7) {
             displayInputA.innerHTML = 'Västra Götaland Uppsala Gotland';
         }
 
-        else if (userInput < 18) {
+        else if (userInput > -18) {
             displayInputA.innerHTML = 'Östergötland Västmanland Skåne Jönköping';
         }
 
-        else if (userInput < 24.9) {
+        else if (userInput > -24.9) {
             displayInputA.innerHTML = 'Norrbotten Kronoberg Södermanland';
         }
 
-        else if (userInput < 29.3) {
+        else if (userInput > -29.3) {
             displayInputA.innerHTML = 'Västernorrland Kalmar Örebro Västerbotten';
         }
 
-        else if (userInput < 32) {
+        else if (userInput > -32) {
             displayInputA.innerHTML = 'Gävleborg Dalarna Jämtland';
         }
 

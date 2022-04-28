@@ -135,9 +135,6 @@ p {
     border-radius: 50%;
     box-shadow: 0 0 1.5vw rgba($color: #000000, $alpha: 0.1);
 
-    &-red {
-        left: 2.5%;
-    }
 }
 
 // Quests
@@ -187,7 +184,7 @@ p {
             &-1 {
                 width: 50%;
                 top: 32%;
-                left: 2.5%;
+                right: 10%;
 
                 h2 {
                     color: color(purple);
@@ -197,7 +194,7 @@ p {
             &-2 {
                 width: 50%;
                 top: 32%;
-                left: 2.5%;
+                right: 10%;
 
                 h2 {
                     color: color(purple);
@@ -521,19 +518,19 @@ p {
         &-black-1 {
             width: 32%;
             bottom: 20%;
-            left: 58%;
+            left: 5%;
         }
 
         &-black-2 {
             width: 32%;
             bottom: 15%;
-            left: 58%;
+            left: 5%;
         }
 
         &-black-3 {
             width: 32%;
             bottom: 15%;
-            left: 0;
+            left: 10%;
         }
 
         &-red-1 {
@@ -629,14 +626,14 @@ p {
 
         &-black-1 {
             top: -5%;
-            right: 13.5%;
+            left: 6.5%;
             transform: rotate(180deg);
             width: 5%;
         }
 
         &-black-2 {
             top: -4%;
-            right: 2.5%;
+            left: 17.5%;
             transform: rotate(180deg);
             width: 5%;
         }
@@ -720,16 +717,16 @@ p {
 
     &-black {
         left: 2.5%;
-        bottom: 5.5%;
+        top: 32%;
 
         h1 {
-            color: color(black);
+            color: color(purple);
         }
     }
 
     &-red {
-        left: 11.5%;
-        bottom: 7%;
+        left: 3%;
+        bottom: 5%;
 
         h1 {
             color: color(red);
