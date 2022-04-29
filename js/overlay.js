@@ -400,10 +400,80 @@ function infoButtonClick() {
 function toggleInfoBox(infoBox) {
     if (infoBox.style.display === "none") {
         hideQuestTips();
-        hideQuests();
+        hideFinishedQuest();
         infoBox.style.display = 'inline';
     } else {
         infoBox.style.display = "none";
+    }
+}
+
+function hideFinishedQuest() {
+    // Check yellow quest
+    if (yellowQuest1ResultBox.style.display === "flex") {
+        yellowQuest1ResultBox.style.display = "none";
+    }
+
+    if (yellowQuest2ResultBox.style.display === "flex") {
+        yellowQuest2.style.display = 'none';
+    }
+
+    if (yellowQuest3ResultBox.style.display === "flex") {
+        yellowQuest3.style.display = "none";
+    }
+
+    if (yellowQuest4ResultBox.style.display === "flex") {
+        yellowQuest4ResultBox.style.display === "none";
+    }
+    // Check black quests
+    if (blackQuest1ResultBox.style.display === "flex") {
+        blackQuest1ResultBox.style.display === "none";
+    }
+
+    if (blackQuest2ResultBox.style.display === "flex") {
+        blackQuest2ResultBox.style.display === "none";
+    }
+
+    if (blackQuest3ResultBox.style.display === "flex") {
+        blackQuest3ResultBox.style.display === "none";
+    }
+
+    // Check red quests
+    if (redQuest1ResultBox.style.display === "flex") {
+        redQuest1ResultBox.style.display === "none";
+    }
+
+    if (redQuest3ResultBox.style.display === "flex") {
+        redQuest3ResultBox.style.display === "none";
+    }
+
+    if (redQuest4ResultBox.style.display === "flex") {
+        redQuest4ResultBox.style.display === "none";
+    }
+
+    // Check blue quests
+    if (blueQuest1ResultBox.style.display === "flex") {
+        blueQuest1ResultBox.style.display === "none";
+    }
+
+    if (blueQuest2ResultBox.style.display === "flex") {
+        blueQuest2ResultBox.style.display === "none";
+    }
+
+    if (blueQuest3ResultBox.style.display === "flex") {
+        blueQuest3ResultBox.style.display === "none";
+    }
+
+    // Check green quests
+    if (greenQuest1ResultBox.style.display === "flex") {
+        greenQuest1ResultBox.style.display === "none";
+    }
+
+    if (greenQuest2ResultBox.style.display === "flex") {
+        greenQuest2ResultBox.style.display === "none";
+    }
+
+    if (greenQuest3ResultBox.style.display === "flex") {
+        greenQuest3ResultBox.style.display === "none";
     }
 }
 
@@ -834,6 +904,7 @@ function showYellowQuest1Result() {
         sendButtonYellow1.style.backgroundColor = 'white';
         sendButtonYellow1.style.color = '#f2ba49';
         sendButtonYellow1.innerHTML = "Skickat!";
+        sendButtonYellow1.disabled = true;
 
         // Display result box
         yellowQuest1ResultBox.style.display = 'flex';
@@ -881,6 +952,7 @@ function showYellowQuest2Result() {
         sendButtonYellow2.style.backgroundColor = 'white';
         sendButtonYellow2.style.color = '#f2ba49';
         sendButtonYellow2.innerHTML = "Skickat!";
+        sendButtonYellow2.disabled = true;
 
         // Display result box
         yellowQuest2ResultBox.style.display = 'flex';
@@ -920,6 +992,7 @@ function showYellowQuest3Result() {
         sendButtonYellow3.style.backgroundColor = 'white';
         sendButtonYellow3.style.color = '#f2ba49';
         sendButtonYellow3.innerHTML = "Skickat!";
+        sendButtonYellow3.disabled = true;
 
         // Display result box
         document.getElementById('yellow-3-result-intro').innerHTML = "Baserat på ditt svar tror vi att du kommer ifrån en av dessa län:";
@@ -993,6 +1066,7 @@ function showYellowQuest4Result() {
         sendButtonYellow4.style.backgroundColor = 'white';
         sendButtonYellow4.style.color = '#f2ba49';
         sendButtonYellow4.innerHTML = "Skickat!";
+        sendButtonYellow4.disabled = true;
 
         // Display result box
         document.getElementById('yellow-4-result-intro').innerHTML = "Kan det vara så att du är...";
@@ -1039,6 +1113,7 @@ function redoYellowQuest1() {
     sendButtonYellow1.style.backgroundColor = '#f2ba49';
     sendButtonYellow1.style.color = 'white';
     sendButtonYellow1.innerHTML = "Skicka";
+    sendButtonYellow1.disabled = false;
 
     // Decrease counter
     nrOfYellowAComplete--;
@@ -1068,6 +1143,7 @@ function redoYellowQuest2() {
     sendButtonYellow2.style.backgroundColor = '#f2ba49';
     sendButtonYellow2.style.color = 'white';
     sendButtonYellow2.innerHTML = "Skicka";
+    sendButtonYellow2.disabled = false;
 
     // Hide result window
     yellowQuest2ResultBox.style.display = 'none';
@@ -1103,6 +1179,7 @@ function redoYellowQuest3() {
     sendButtonYellow3.style.backgroundColor = '#f2ba49';
     sendButtonYellow3.style.color = 'white';
     sendButtonYellow3.innerHTML = "Skicka";
+    sendButtonYellow3.disabled = false;
 
     // Decrease counter
     nrOfYellowAComplete--;
@@ -1135,6 +1212,7 @@ function redoYellowQuest4() {
     sendButtonYellow4.style.backgroundColor = '#f2ba49';
     sendButtonYellow4.style.color = 'white';
     sendButtonYellow4.innerHTML = "Skicka";
+    sendButtonYellow4.disabled = false;
 
     // remove År?
     document.getElementById('yellow-4-year').innerHTML = '';
@@ -1588,7 +1666,7 @@ function showRedQuest4Result() {
         sendButtonRed4.style.backgroundColor = 'white';
         sendButtonRed4.style.color = '#ff4d4d';
         sendButtonRed4.innerHTML = "Skickat!";
-        sendButtonRed3.disabled = true;
+        sendButtonRed4.disabled = true;
 
         // Hide tips and tips button
         hideQuestTips();
@@ -1868,6 +1946,47 @@ function showGreenQuest1Result() {
     }
 }
 
+function showGreenQuest2Result() {
+    // Save user input
+    var userInput = document.getElementById('quest-green-2-input').value;
+    if (userInput.length != 0) {
+
+        // Make user input read only
+        document.getElementById('quest-green-2-input').readOnly = true;
+
+        // Change look of send button
+        sendButtonGreen2.style.backgroundColor = 'white';
+        sendButtonGreen2.style.color = greenColor;
+        sendButtonGreen2.innerHTML = "Skickat!";
+        sendButtonGreen2.disabled = true;
+
+        // Display result box
+
+        greenQuest2ResultBox.style.display = 'flex';
+
+        // Display redo button
+        // var redoButton = document.getElementById('redo-button-black-3');
+        // redoButton.style.display = 'flex';
+
+        // Hide tips and tips button
+        hideQuestTips();
+        hideQuestTipsButton(tipsButtonGreen2);
+
+        // Increase counter
+        //nrOfGreenAComplete++;
+        //nrOfBlackTotalComplete++;
+
+        // Change beam color
+        //setGreenBeamAColors();
+
+        // Change circle border color
+        greenCircle2.style.outlineColor = greenColor;
+
+        // Set image color
+        //setGreenImageColor();
+    }
+}
+
 
 function showGreenQuest3Result() {
     // Save user input
@@ -1881,6 +2000,7 @@ function showGreenQuest3Result() {
         sendButtonGreen3.style.backgroundColor = 'white';
         sendButtonGreen3.style.color = greenColor;
         sendButtonGreen3.innerHTML = "Skickat!";
+        sendButtonGreen3.disabled = true;
 
         document.getElementById('green-3-result-intro').innerHTML = "Kan ditt favoritdjur tillhöra...";
 
@@ -1972,6 +2092,7 @@ function redoGreenQuest3() {
     sendButtonGreen3.style.backgroundColor = greenColor;
     sendButtonGreen3.style.color = 'white';
     sendButtonGreen3.innerHTML = "Skicka";
+    sendButtonGreen3.disabled = false;
 
     // Decrease counter
     //nrOfGreenBComplete--;
