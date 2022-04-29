@@ -254,6 +254,7 @@ const yellowFilterString = 'brightness(0) saturate(100%) invert(75%) sepia(3%) s
 const blackFilterString = 'brightness(0) saturate(100%) invert(51%) sepia(27%) saturate(0%) hue-rotate(224deg) brightness(100%) contrast(93%)';
 const redFilterString = 'brightness(0) saturate(100%) invert(64%) sepia(28%) saturate(3019%) hue-rotate(314deg) brightness(99%) contrast(115%)';
 const blueFilterString = 'brightness(0) saturate(100%) invert(72%) sepia(87%) saturate(1107%) hue-rotate(157deg) brightness(101%) contrast(102%)';
+const greenFilterString = 'brightness(0) saturate(100%) invert(73%) sepia(66%) saturate(264%) hue-rotate(70deg) brightness(92%) contrast(88%)';
 
 /* Get the documentElement (<html>) to display the page in fullscreen */
 var elem = document.documentElement;
@@ -736,6 +737,9 @@ function showGreenOverlay() {
 
     greenBeamB.style.zIndex = 11;
     greenBeamB.style.filter = "opacity(0.5)";
+
+    setGreenBeamAColors();
+    setGreenBeamBColors();
 
     // Circles
     greenCircle1.style.zIndex = 12;
@@ -1951,17 +1955,17 @@ function showGreenQuest1Result() {
         hideAllInfoBoxes();
 
         // Increase counter
-        //nrOfGreenAComplete++;
-        //nrOfBlackTotalComplete++;
+        nrOfGreenAComplete++;
+        nrOfGreenTotalComplete++;
 
         // Change beam color
-        //setGreenBeamAColors();
+        setGreenBeamAColors();
 
         // Change circle border color
         greenCircle1.style.outlineColor = greenColor;
 
         // Set image color
-        //setGreenImageColor();
+        setGreenImageColor();
     }
 }
 
@@ -1993,17 +1997,17 @@ function showGreenQuest2Result() {
         hideAllInfoBoxes();
 
         // Increase counter
-        //nrOfGreenAComplete++;
-        //nrOfBlackTotalComplete++;
+        nrOfGreenAComplete++;
+        nrOfGreenTotalComplete++;
 
         // Change beam color
-        //setGreenBeamAColors();
+        setGreenBeamAColors();
 
         // Change circle border color
         greenCircle2.style.outlineColor = greenColor;
 
         // Set image color
-        //setGreenImageColor();
+        setGreenImageColor();
     }
 }
 
@@ -2088,13 +2092,13 @@ function showGreenQuest3Result() {
         nrOfGreenTotalComplete++;
 
         // Change beam color
-        //setGreenBeamAColors();
+        setGreenBeamBColors();
 
         // Change circle border color
         greenCircle3.style.outlineColor = greenColor;
 
         // Set image color
-        //setGreenImageColor();
+        setGreenImageColor();
     }
 }
 
@@ -2272,7 +2276,6 @@ function setBeamColorsOnExit() {
     }
 
     // Blue beams
-
     if (nrOfBlueAComplete == 2) {
         blueBeamA.style.filter = blueFilterString + 'opacity(1)';
         blueBeamAPartial.style.display = 'none';
@@ -2290,6 +2293,26 @@ function setBeamColorsOnExit() {
         blueBeamB.style.filter = blueFilterString + 'opacity(1)';
     } else {
         blueBeamB.style.filter = 'opacity(1)';
+    }
+
+    // Green beams
+    if (nrOfGreenAComplete == 2) {
+        greenBeamA.style.filter = greenFilterString + 'opacity(1)';
+        greenBeamAPartial.style.display = 'none';
+    } else if (nrOfGreenAComplete == 1) {
+        greenBeamA.style.filter = 'opacity(1)';
+
+        greenBeamAPartial.style.filter = greenFilterString + 'opacity(1)';
+        greenBeamAPartial.style.display = 'inline';
+        greenBeamAPartial.style.zIndex = null;
+    } else {
+        greenBeamA.style.filter = 'opacity(1)';
+    }
+
+    if (nrOfGreenBComplete == 1) {
+        greenBeamB.style.filter = greenFilterString + 'opacity(1)';
+    } else {
+        greenBeamB.style.filter = 'opacity(1)';
     }
 }
 
@@ -2435,6 +2458,40 @@ function setBlueImageColor() {
     let image = document.getElementById('sea-background-partial');
 
     if (nrOfBlueTotalComplete == 3) {
+        image.style.filter = 'saturate(100%)';
+    } else {
+        image.style.filter = 'grayscale(100%)';
+    }
+}
+
+function setGreenBeamAColors() {
+    if (nrOfGreenAComplete == 0) {
+        greenBeamA.style.filter = 'opacity(0.5)';
+        greenBeamAPartial.style.display = 'none';
+    } else if (nrOfGreenAComplete == 1) {
+        greenBeamA.style.filter = 'opacity(0.5)';
+
+        greenBeamAPartial.style.filter = greenFilterString + 'opacity(0.5)';
+        greenBeamAPartial.style.display = 'inline';
+        greenBeamAPartial.style.zIndex = 11;
+    } else if (nrOfGreenAComplete == 2) {
+        greenBeamA.style.filter = greenFilterString + 'opacity(0.5)';
+        greenBeamAPartial.style.display = 'none';
+    }
+}
+
+function setGreenBeamBColors() {
+    if (nrOfGreenBComplete == 0) {
+        greenBeamB.style.filter = 'opacity(0.5)';
+    } else {
+        greenBeamB.style.filter = greenFilterString + 'opacity(0.5)';
+    }
+}
+
+function setGreenImageColor() {
+    let image = document.getElementById('land-background-partial');
+
+    if (nrOfGreenTotalComplete == 3) {
         image.style.filter = 'saturate(100%)';
     } else {
         image.style.filter = 'grayscale(100%)';
