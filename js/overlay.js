@@ -1864,19 +1864,19 @@ function showGreenQuest3Result() {
         }
 
         else if (userInput > 250000000) {
-        displayInput.innerHTML = 'Lobeniga fiskar Lunfiskar Amfibier';
+            displayInput.innerHTML = 'Lobeniga fiskar Lunfiskar Amfibier';
         }
 
         else if (userInput > 180000000) {
-        displayInput.innerHTML = 'Däggdjur';
+            displayInput.innerHTML = 'Däggdjur';
         }
 
         else if (userInput > 155000000) {
-        displayInput.innerHTML = 'Sköldpadda';
+            displayInput.innerHTML = 'Sköldpadda';
         }
 
         else if (userInput > 139000000) {
-        displayInput.innerHTML = 'Reptiler';
+            displayInput.innerHTML = 'Reptiler';
         }
 
         else {
