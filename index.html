@@ -39,8 +39,7 @@
         </div>
         <img id="exit-overlay-button-yellow" class="exit-overlay-button" src="assets/images/exit-button.svg"
             onclick="hideOverlays()">
-        <img id="info-overlay-button-yellow" class="info-overlay-button" src="assets/images/info-button.svg"
-            onclick="infoButtonClick()">
+        <img id="info-overlay-button-yellow" class="info-overlay-button" src="assets/images/info-button.svg" onclick="infoButtonClick()">
         <!--Overlay Info box-->
         <div id="info-box-yellow" class="info-box-yellow info-box">
             <h1>Samhälle</h1>
@@ -239,8 +238,7 @@
         </div>
         <img id="exit-overlay-button-black" class="exit-overlay-button" src="assets/images/exit-button.svg"
             onclick="hideOverlays()">
-        <img id="info-overlay-button-black" class="info-overlay-button" src="assets/images/info-button.svg"
-            onclick="infoButtonClick()">
+        <img id="info-overlay-button-black" class="info-overlay-button" src="assets/images/info-button.svg" onclick="infoButtonClick()">
         <!--Overlay Info box-->
         <div id="info-box-black" class="info-box-black info-box">
             <h1>Rymden</h1>
@@ -376,8 +374,7 @@
         </div>
         <img id="exit-overlay-button-red" class="exit-overlay-button exit-overlay-button-red"
             src="assets/images/exit-button.svg" onclick="hideOverlays()">
-        <img id="info-overlay-button-red" class="info-overlay-button" src="assets/images/info-button.svg"
-            onclick="infoButtonClick()">
+        <img id="info-overlay-button-red" class="info-overlay-button" src="assets/images/info-button.svg" onclick="infoButtonClick()">
         <!--Overlay Info box-->
         <div id="info-box-red" class="info-box-red info-box">
             <h1>Människan</h1>
@@ -678,8 +675,11 @@
             <div id="quest-result-blue-3" class="quest-result quest-result-blue">
                 <p><span class="bold" id="blue-3-result-intro">Här är några av de rätta svaren. Har du prickat rätt?
                     </span></p>
-                <div id="quest-result-blue-3" class="quest-result-blue-3">
-                    <h2 id="user-input-blue-3" class=""></h2>
+                <div class="quest-result-blue-3">
+                    <p>Blåval (Blue whale) 150 000 kg</p>
+                    <p>Knölval (Megaptera novaeangliae) 40 000 kg</p>
+                    <p>Sillval (Balaenoptera physalus) 60 000 kg</p>
+                    <p>Kaskelot (Physeter macrocephalus) 30 000 kg</p>
                 </div>
             </div>
         </div>
@@ -711,8 +711,7 @@
         </div>
         <img id="exit-overlay-button-green" class="exit-overlay-button" src="assets/images/exit-button.svg"
             onclick="hideOverlays()">
-        <img id="info-overlay-button-green" class="info-overlay-button" src="assets/images/info-button.svg"
-            onclick="infoButtonClick()">
+        <img id="info-overlay-button-green" class="info-overlay-button" src="assets/images/info-button.svg" onclick="infoButtonClick()">
         <!--Quest 1-->
         <div id="quest-green-1" class="quest-overlay quest">
             <div class="quest-info quest-info-green">
@@ -832,62 +831,7 @@
 
         <!--Score board-->
         <div id="scoreboard-overlay" class="transparent-background">
-            <div id="scoreboard-box" class="scoreboard-box">
-                <div class="scoreboard-intro">
-                    <p>Välkommen till Vislab-uppdragen!</p>
-                    <p>Här kan du själv eller tillsammans med familj och vänner ta er an uppdrag inom Vislab!</p>
-                    <p>Du får även mer bakgrund till de olika områdena på utställningen, och en genväg till vad de olika
-                        visualiseringarna innehåller.</p>
-                    <p>Trevlig utforskning!</p>
-                </div>
-                <div class="scoreboard-divider"></div>
-                <div class="scoreboard-score">
-                    <p>Poängtavla</p>
-                    <div class="scoreboard-score-text">
-                        <p>Du har klarat</p>
-                        <p id="scoreboard-score-completed">X</p>
-                        <p>av 17 uppdrag.</p>
-                        <p id="scoreboard-score-flavortext">X</p>
-                    </div>
-                    <div class="scoreboard-score-sections">
-                        <div class="scoreboard-score-section">
-                            <p id="scoreboard-yellow-completed">X</p>
-                            <div class="scoreboard-score-bar-yellow">
-                                <div id="scoreboard-yellow-partial" class="scoreboard-score-bar-yellow-partial"></div>
-                            </div>
-                            <p>Samhälle</p>
-                        </div>
-                        <div class="scoreboard-score-section">
-                            <p id="scoreboard-black-completed">X</p>
-                            <div class="scoreboard-score-bar-black">
-                                <div id="scoreboard-black-partial" class="scoreboard-score-bar-black-partial"></div>
-                            </div>
-                            <p>Rymd</p>
-                        </div>
-                        <div class="scoreboard-score-section">
-                            <p id="scoreboard-red-completed">X</p>
-                            <div class="scoreboard-score-bar-red">
-                                <div id="scoreboard-red-partial" class="scoreboard-score-bar-red-partial"></div>
-                            </div>
-                            <p>Människa</p>
-                        </div>
-                        <div class="scoreboard-score-section">
-                            <p id="scoreboard-blue-completed">X</p>
-                            <div class="scoreboard-score-bar-blue">
-                                <div id="scoreboard-blue-partial" class="scoreboard-score-bar-blue-partial"></div>
-                            </div>
-                            <p>Hav</p>
-                        </div>
-                        <div class="scoreboard-score-section">
-                            <p id="scoreboard-green-completed">X</p>
-                            <div class="scoreboard-score-bar-green">
-                                <div id="scoreboard-green-partial" class="scoreboard-score-bar-green-partial"></div>
-                            </div>
-                            <p>Land</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <div id="scoreboard-box" class="scoreboard-box"></div>
         </div>
         <img class="info-button" id="scoreboard-button" src="assets/images/info-button.svg" onclick="scoreBoardClick()">
 

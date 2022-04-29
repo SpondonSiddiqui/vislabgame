@@ -1772,9 +1772,6 @@ function showBlueQuest3Result() {
         // Display result box
         blueQuest3ResultBox.style.display = 'flex';
 
-        // Display user input in the result box
-        var displayInput = document.getElementById('user-input-blue-3');
-        displayInput.innerHTML = "Hej hej hej";
         // Display redo button
 
         // Increase counter

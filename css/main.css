@@ -363,9 +363,7 @@ p {
 }
 
 .quest-result-blue-3 {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: inline;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
@@ -373,7 +371,8 @@ p {
   color: #0ebde5;
 }
 
-.quest-result-blue-3 h2 {
+.quest-result-blue-3 p {
+  color: #0ebde5;
   margin-right: 0.5vw;
 }
 
