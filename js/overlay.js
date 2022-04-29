@@ -415,7 +415,7 @@ function toggleInfoBox(infoBox) {
 function hideFinishedQuest() {
     // Check yellow quest
     if (yellowQuest1ResultBox.style.display === "flex") {
-        yellowQuest1ResultBox.style.display = "none";
+        yellowQuest1.style.display = "none";
     }
 
     if (yellowQuest2ResultBox.style.display === "flex") {
@@ -427,58 +427,58 @@ function hideFinishedQuest() {
     }
 
     if (yellowQuest4ResultBox.style.display === "flex") {
-        yellowQuest4ResultBox.style.display === "none";
+        yellowQuest4.style.display = "none";
     }
     // Check black quests
     if (blackQuest1ResultBox.style.display === "flex") {
-        blackQuest1ResultBox.style.display === "none";
+        blackQuest1.style.display = "none";
     }
 
     if (blackQuest2ResultBox.style.display === "flex") {
-        blackQuest2ResultBox.style.display === "none";
+        blackQuest2.style.display = "none";
     }
 
     if (blackQuest3ResultBox.style.display === "flex") {
-        blackQuest3ResultBox.style.display === "none";
+        blackQuest3.style.display = "none";
     }
 
     // Check red quests
     if (redQuest1ResultBox.style.display === "flex") {
-        redQuest1ResultBox.style.display === "none";
+        redQuest1.style.display = "none";
     }
 
     if (redQuest3ResultBox.style.display === "flex") {
-        redQuest3ResultBox.style.display === "none";
+        redQuest3.style.display = "none";
     }
 
     if (redQuest4ResultBox.style.display === "flex") {
-        redQuest4ResultBox.style.display === "none";
+        redQuest4.style.display = "none";
     }
 
     // Check blue quests
     if (blueQuest1ResultBox.style.display === "flex") {
-        blueQuest1ResultBox.style.display === "none";
+        blueQuest1.style.display = "none";
     }
 
     if (blueQuest2ResultBox.style.display === "flex") {
-        blueQuest2ResultBox.style.display === "none";
+        blueQuest2.style.display = "none";
     }
 
     if (blueQuest3ResultBox.style.display === "flex") {
-        blueQuest3ResultBox.style.display === "none";
+        blueQuest3.style.display = "none";
     }
 
     // Check green quests
     if (greenQuest1ResultBox.style.display === "flex") {
-        greenQuest1ResultBox.style.display === "none";
+        greenQuest1.style.display = "none";
     }
 
     if (greenQuest2ResultBox.style.display === "flex") {
-        greenQuest2ResultBox.style.display === "none";
+        greenQuest2.style.display = "none";
     }
 
     if (greenQuest3ResultBox.style.display === "flex") {
-        greenQuest3ResultBox.style.display === "none";
+        greenQuest3.style.display = "none";
     }
 }
 
@@ -925,6 +925,7 @@ function showYellowQuest1Result() {
         // Hide tips and tips button
         hideQuestTips();
         hideQuestTipsButton(tipsButtonYellow1);
+        hideAllInfoBoxes();
 
         // Increase counter
         nrOfYellowAComplete++;
@@ -969,6 +970,7 @@ function showYellowQuest2Result() {
         // Hide tips and tips button
         hideQuestTips();
         hideQuestTipsButton(tipsButtonYellow2);
+        hideAllInfoBoxes();
 
         // Increase counter
         nrOfYellowAComplete++;
@@ -1042,6 +1044,7 @@ function showYellowQuest3Result() {
         // Hide tips and tips button
         hideQuestTips();
         hideQuestTipsButton(tipsButtonYellow3);
+        hideAllInfoBoxes();
 
         // Increase counter
         nrOfYellowAComplete++;
@@ -1088,6 +1091,7 @@ function showYellowQuest4Result() {
         // Hide tips and tips button
         hideQuestTips();
         hideQuestTipsButton(tipsButtonYellow4);
+        hideAllInfoBoxes();
 
         // Increase counter
         nrOfYellowBComplete++;
@@ -1292,6 +1296,7 @@ function showBlackQuest1Result() {
         // Hide tips and tips button
         hideQuestTips();
         hideQuestTipsButton(tipsButtonBlack1);
+        hideAllInfoBoxes();
 
         // Increase counter
         nrOfBlackAComplete++;
@@ -1336,6 +1341,7 @@ function showBlackQuest2Result() {
         // Hide tips and tips button
         hideQuestTips();
         hideQuestTipsButton(tipsButtonBlack2);
+        hideAllInfoBoxes();
 
         // Increase counter
         nrOfBlackTotalComplete++;
@@ -1373,6 +1379,7 @@ function showBlackQuest3Result() {
         // Hide tips and tips button
         hideQuestTips();
         hideQuestTipsButton(tipsButtonBlack3);
+        hideAllInfoBoxes();
 
         // Increase counter
         nrOfBlackBComplete++;
@@ -1441,6 +1448,7 @@ function showRedQuest1Result() {
         // Hide tips and tips button
         hideQuestTips();
         hideQuestTipsButton(tipsButtonRed1);
+        hideAllInfoBoxes();
 
         // Display result box
         redQuest1ResultBox.style.display = 'flex';
@@ -1536,6 +1544,7 @@ function showRedQuest2Result() {
     // Hide tips and tips button
     hideQuestTips();
     hideQuestTipsButton(tipsButtonRed2);
+    hideAllInfoBoxes();
 }
 
 function redoRedQuest2() {
@@ -1590,6 +1599,7 @@ function showRedQuest3Result() {
         // Hide tips and tips button
         hideQuestTips();
         hideQuestTipsButton(tipsButtonRed3);
+        hideAllInfoBoxes();
 
         // Display result box
         document.getElementById('red-3-result-intro').innerHTML = "Vad har andra svarat?";
@@ -1787,9 +1797,10 @@ function showBlueQuest1Result() {
         // Display result box
         blueQuest1ResultBox.style.display = 'flex';
 
-        // Hide tips and tips button
+        // Hide tips, tips button and info box
         hideQuestTips();
         hideQuestTipsButton(tipsButtonBlue1);
+        hideAllInfoBoxes();
 
         // Increase counter
         nrOfBlueBComplete++;
@@ -1823,6 +1834,7 @@ function showBlueQuest2Result() {
         // Hide tips and tips button
         hideQuestTips();
         hideQuestTipsButton(tipsButtonBlue2);
+        hideAllInfoBoxes();
 
         // Display result box
         blueQuest2ResultBox.style.display = 'flex';
@@ -1863,6 +1875,7 @@ function showBlueQuest3Result() {
         // Hide tips and tips button
         hideQuestTips();
         hideQuestTipsButton(tipsButtonBlue3);
+        hideAllInfoBoxes();
 
         // Display result box
         blueQuest3ResultBox.style.display = 'flex';
@@ -1935,6 +1948,7 @@ function showGreenQuest1Result() {
         // Hide tips and tips button
         hideQuestTips();
         hideQuestTipsButton(tipsButtonGreen1);
+        hideAllInfoBoxes();
 
         // Increase counter
         //nrOfGreenAComplete++;
@@ -1976,6 +1990,7 @@ function showGreenQuest2Result() {
         // Hide tips and tips button
         hideQuestTips();
         hideQuestTipsButton(tipsButtonGreen2);
+        hideAllInfoBoxes();
 
         // Increase counter
         //nrOfGreenAComplete++;
@@ -2066,6 +2081,7 @@ function showGreenQuest3Result() {
         // Hide tips and tips button
         hideQuestTips();
         tipsButtonGreen3.style.display = "none";
+        hideAllInfoBoxes();
 
         // Increase counter
         nrOfGreenBComplete++;
