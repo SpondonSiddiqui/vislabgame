@@ -519,6 +519,7 @@
                 <p id="user-input-red-3"></p>
                 <p>Vänster för då kör man på en person istället för flera</p>
                 <p>Körde rakt fram för jag glömde trycka :/</p>
+                <p>Vill inte dö så att köra rakt kändes mest safe för mig själv</p>
             </div>
         </div>
         <!--Quest 4-->
@@ -807,6 +808,10 @@
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, ipsam.</p>
                 </details>
             </div>
+            <div id="quest-result-green-2" class="quest-result quest-result-green quest-result-green-2">
+                <p><span class="bold">Vad har andra svarat?</span></p>
+                <img id="wordcloud-naringsvav" src="assets/images/wordclouds/naringsvav.svg">
+            </div>
         </div>
         <!--Quest 3-->
         <div id="quest-green-3" class="quest-overlay quest">
@@ -863,7 +868,62 @@
 
         <!--Score board-->
         <div id="scoreboard-overlay" class="transparent-background">
-            <div id="scoreboard-box" class="scoreboard-box"></div>
+            <div id="scoreboard-box" class="scoreboard-box">
+                <div class="scoreboard-intro">
+                    <p>Välkommen till Vislab-uppdragen!</p>
+                    <p>Här kan du själv eller tillsammans med familj och vänner ta er an uppdrag inom Vislab!</p>
+                    <p>Du får även mer bakgrund till de olika områdena på utställningen, och en genväg till vad de olika
+                        visualiseringarna innehåller.</p>
+                    <p>Trevlig utforskning!</p>
+                </div>
+                <div class="scoreboard-divider"></div>
+                <div class="scoreboard-score">
+                    <p>Poängtavla</p>
+                    <div class="scoreboard-score-text">
+                        <p>Du har klarat</p>
+                        <p id="scoreboard-score-completed">X</p>
+                        <p>av 17 uppdrag.</p>
+                        <p id="scoreboard-score-flavortext">X</p>
+                    </div>
+                    <div class="scoreboard-score-sections">
+                        <div class="scoreboard-score-section">
+                            <p id="scoreboard-yellow-completed">X</p>
+                            <div class="scoreboard-score-bar-yellow">
+                                <div id="scoreboard-yellow-partial" class="scoreboard-score-bar-yellow-partial"></div>
+                            </div>
+                            <p>Samhälle</p>
+                        </div>
+                        <div class="scoreboard-score-section">
+                            <p id="scoreboard-black-completed">X</p>
+                            <div class="scoreboard-score-bar-black">
+                                <div id="scoreboard-black-partial" class="scoreboard-score-bar-black-partial"></div>
+                            </div>
+                            <p>Rymd</p>
+                        </div>
+                        <div class="scoreboard-score-section">
+                            <p id="scoreboard-red-completed">X</p>
+                            <div class="scoreboard-score-bar-red">
+                                <div id="scoreboard-red-partial" class="scoreboard-score-bar-red-partial"></div>
+                            </div>
+                            <p>Människa</p>
+                        </div>
+                        <div class="scoreboard-score-section">
+                            <p id="scoreboard-blue-completed">X</p>
+                            <div class="scoreboard-score-bar-blue">
+                                <div id="scoreboard-blue-partial" class="scoreboard-score-bar-blue-partial"></div>
+                            </div>
+                            <p>Hav</p>
+                        </div>
+                        <div class="scoreboard-score-section">
+                            <p id="scoreboard-green-completed">X</p>
+                            <div class="scoreboard-score-bar-green">
+                                <div id="scoreboard-green-partial" class="scoreboard-score-bar-green-partial"></div>
+                            </div>
+                            <p>Land</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
         <img class="info-button" id="scoreboard-button" src="assets/images/info-button.svg" onclick="scoreBoardClick()">
 
