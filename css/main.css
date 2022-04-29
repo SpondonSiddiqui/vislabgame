@@ -397,6 +397,10 @@ p {
   margin-right: 0.5vw;
 }
 
+.quest-result-green img {
+  padding: 1vw;
+}
+
 .quest-send-button-green {
   background-color: #4cbf4c;
   font-size: 1.5vw;

@@ -370,7 +370,7 @@ p {
                 color: color(blue);
 
                 p {
-                color: color(blue);
+                    color: color(blue);
 
                     margin-right: 0.5vw;
                 }
@@ -390,6 +390,10 @@ p {
                 h2 {
                     margin-right: 0.5vw;
                 }
+            }
+
+            img {
+                padding: 1vw;
             }
         }
 
