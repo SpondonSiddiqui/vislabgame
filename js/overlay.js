@@ -397,6 +397,11 @@ function infoButtonClick() {
     }
 }
 
+function helpButtonClick() {
+    document.getElementById('scoreboard-overlay').style.display = 'none';
+    document.getElementById('starting-screen').style.display = 'inline';
+}
+
 function toggleInfoBox(infoBox) {
     if (infoBox.style.display === "none") {
         hideQuestTips();

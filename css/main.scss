@@ -1216,6 +1216,21 @@ p {
             font-weight: bold;
             margin-top: 0;
         }
+
+        &-final-row {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        &-help {
+            display: flex;
+            margin-top: 2em;
+
+            p {
+                margin-top: 0;
+                margin-left: .4em;
+            }
+        }
     }
 
     &-divider {

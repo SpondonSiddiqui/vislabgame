@@ -1210,6 +1210,27 @@ p {
   margin-top: 0;
 }
 
+.scoreboard-intro-final-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.scoreboard-intro-help {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 2em;
+}
+
+.scoreboard-intro-help p {
+  margin-top: 0;
+  margin-left: .4em;
+}
+
 .scoreboard-divider {
   background-color: #e3e5e9;
   width: 2px;
