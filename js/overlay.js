@@ -2202,6 +2202,7 @@ function hideAllOverlayButtons() {
 
 function hideStartingScreen() {
     document.getElementById('starting-screen').style.display = 'none';
+    openFullscreen();
 }
 
 // Coloring functions
