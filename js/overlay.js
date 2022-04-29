@@ -433,8 +433,8 @@ function tipsButtonClick() {
         toggleTips(blackQuest2Tips);
     }
 
-    else if (blackQuest2.style.display === "flex") {
-        toggleTips(blackQuest2Tips);
+    else if (blackQuest3.style.display === "flex") {
+        toggleTips(blackQuest3Tips);
     }
 
     else if (redQuest1.style.display === "flex") {
@@ -527,7 +527,10 @@ function showYellowOverlay() {
     // Display buttons
     yellowExitButton.style.display = 'inline';
     yellowInfoButton.style.display = 'inline';
+
+    document.getElementById('society-background-partial').style.zIndex = 11;
 }
+
 
 function showBlackOverlay() {
     // Hide scoreboard button
@@ -558,6 +561,8 @@ function showBlackOverlay() {
     // Display buttons
     blackExitButton.style.display = 'inline';
     blackInfoButton.style.display = 'inline';
+
+    document.getElementById('space-background-partial').style.zIndex = 11;
 }
 
 function showRedOverlay() {
@@ -597,6 +602,8 @@ function showRedOverlay() {
     // Display buttons
     redExitButton.style.display = 'inline';
     redInfoButton.style.display = 'inline';
+
+    document.getElementById('human-background-partial').style.zIndex = 11;
 }
 
 function showBlueOverlay() {
@@ -632,6 +639,8 @@ function showBlueOverlay() {
     // Display buttons
     blueExitButton.style.display = 'inline';
     blueInfoButton.style.display = 'inline';
+
+    document.getElementById('sea-background-partial').style.zIndex = 11;
 }
 
 function showGreenOverlay() {
@@ -664,6 +673,8 @@ function showGreenOverlay() {
     // Display buttons
     greenExitButton.style.display = 'inline';
     greenInfoButton.style.display = 'inline';
+
+    document.getElementById('land-background-partial').style.zIndex = 11;
 }
 
 function hideOverlays() {
@@ -763,6 +774,7 @@ function hideOverlays() {
     hideAllOverlayButtons();
     hideQuests();
     setBeamColorsOnExit();
+    hidePartialImages();
 
     scoreboardButton.style.display = 'flex';
 }
@@ -1772,9 +1784,6 @@ function showBlueQuest3Result() {
         // Display result box
         blueQuest3ResultBox.style.display = 'flex';
 
-        // Display user input in the result box
-        var displayInput = document.getElementById('user-input-blue-3');
-        displayInput.innerHTML = "Hej hej hej";
         // Display redo button
 
         // Increase counter
@@ -2242,4 +2251,12 @@ function setBlueImageColor() {
     } else {
         image.style.filter = 'grayscale(100%)';
     }
+}
+
+function hidePartialImages() {
+    document.getElementById('society-background-partial').style.zIndex = 0;
+    document.getElementById('land-background-partial').style.zIndex = 0;
+    document.getElementById('space-background-partial').style.zIndex = 0;
+    document.getElementById('human-background-partial').style.zIndex = 0;
+    document.getElementById('sea-background-partial').style.zIndex = 0;
 }

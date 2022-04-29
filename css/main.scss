@@ -365,11 +365,13 @@ p {
             }
 
             &-3 {
-                display: flex;
+                display: inline;
                 flex-direction: row;
                 color: color(blue);
 
-                h2 {
+                p {
+                color: color(blue);
+
                     margin-right: 0.5vw;
                 }
             }
