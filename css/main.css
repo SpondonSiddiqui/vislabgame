@@ -720,6 +720,11 @@ p {
   width: 5%;
 }
 
+#quest-input-p-green-3 {
+  width: 50%;
+  margin-left: 1em;
+}
+
 .info-box {
   display: none;
   width: 36.2%;

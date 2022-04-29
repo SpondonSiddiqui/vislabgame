@@ -370,7 +370,7 @@ p {
                 color: color(blue);
 
                 p {
-                color: color(blue);
+                    color: color(blue);
 
                     margin-right: 0.5vw;
                 }
@@ -708,6 +708,17 @@ p {
             width: 5%;
         }
 
+    }
+
+    &-input {
+        &-p {
+            &-green {
+                &-3 {
+                    width: 50%;
+                    margin-left: 1em;
+                }
+            }
+        }
     }
 }
 

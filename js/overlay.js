@@ -1848,43 +1848,43 @@ function showGreenQuest3Result() {
         // Display user input in the result box
         var displayInput = document.getElementById('user-input-green-3');
 
-        if (userInput > 630000000) {
+        if (userInput > 630) {
             displayInput.innerHTML = "Kammaneter";
         }
 
-        else if (userInput > 590000000) {
+        else if (userInput > 590) {
             displayInput.innerHTML = 'Svampdjur';
         }
 
-        else if (userInput > 495000000) {
+        else if (userInput > 495) {
             displayInput.innerHTML = 'Koralldjur Lansettfisk Blötdjur Ringmaskar Mossdjur Rundmaskar Björndjur Slemmaskar Armfotingar';
         }
 
-        else if (userInput > 470000000) {
+        else if (userInput > 470) {
             displayInput.innerHTML = 'Sjöpungar Plattmaskar Hjuldjur Klomaskar';
         }
 
-        else if (userInput > 445000000) {
+        else if (userInput > 445) {
             displayInput.innerHTML = 'Pirålar Spindeldjur Mångfotingar Nejonögon';
         }
 
-        else if (userInput > 420000000) {
+        else if (userInput > 420) {
             displayInput.innerHTML = 'Broskfiskar Strålfeniga fiskar Kräftdjur Insekter';
         }
 
-        else if (userInput > 250000000) {
+        else if (userInput > 250) {
             displayInput.innerHTML = 'Lobeniga fiskar Lunfiskar Amfibier';
         }
 
-        else if (userInput > 180000000) {
+        else if (userInput > 180) {
             displayInput.innerHTML = 'Däggdjur';
         }
 
-        else if (userInput > 155000000) {
+        else if (userInput > 155) {
             displayInput.innerHTML = 'Sköldpadda';
         }
 
-        else if (userInput > 139000000) {
+        else if (userInput > 139) {
             displayInput.innerHTML = 'Reptiler';
         }
 
