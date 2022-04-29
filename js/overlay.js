@@ -1827,6 +1827,48 @@ function showGreenQuest3() {
     greenQuest3.style.display = 'flex';
 }
 
+function showGreenQuest1Result() {
+    // Save user input
+    var userInput = document.getElementById('quest-green-1-input').value;
+    if (userInput.length != 0) {
+
+        // Make user input read only
+        document.getElementById('quest-green-1-input').readOnly = true;
+
+        // Change look of send button
+        sendButtonGreen1.style.backgroundColor = 'white';
+        sendButtonGreen1.style.color = greenColor;
+        sendButtonGreen1.innerHTML = "Skickat!";
+        sendButtonGreen1.disabled = true;
+
+        // Display result box
+
+        greenQuest1ResultBox.style.display = 'flex';
+
+        // Display redo button
+        // var redoButton = document.getElementById('redo-button-black-3');
+        // redoButton.style.display = 'flex';
+
+        // Hide tips and tips button
+        hideQuestTips();
+        hideQuestTipsButton(tipsButtonGreen1);
+
+        // Increase counter
+        //nrOfGreenAComplete++;
+        //nrOfBlackTotalComplete++;
+
+        // Change beam color
+        //setGreenBeamAColors();
+
+        // Change circle border color
+        greenCircle1.style.outlineColor = greenColor;
+
+        // Set image color
+        //setGreenImageColor();
+    }
+}
+
+
 function showGreenQuest3Result() {
     // Save user input
     var userInput = document.getElementById('quest-green-3-input').value;
