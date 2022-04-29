@@ -2054,6 +2054,10 @@ function hideAllOverlayButtons() {
     greenInfoButton.style.display = 'none';
 }
 
+function hideStartingScreen() {
+    document.getElementById('starting-screen').style.display = 'none';
+}
+
 // Coloring functions
 function setBeamColorsOnExit() {
 

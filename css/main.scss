@@ -1368,3 +1368,54 @@ p {
         }
     }
 }
+
+.starting-screen {
+    &-box {
+        position: absolute;
+        width: 30%;
+        background-color: white;
+        border-radius: 8px;
+        padding: 20px;
+    }
+}
+
+#starting-screen {
+    z-index: 100;
+
+    p {
+        margin: 0;
+    }
+
+    &-1 {
+        top: 35%;
+        left: 2.5%;
+
+        :first-child {
+            margin-bottom: .4em;
+        }
+
+        &-triangle {
+            position: absolute;
+            bottom: -5%;
+            left: 51.4%;
+            width: 5%;
+        }
+    }
+
+    &-2 {
+        top: 30%;
+        right: 2.5%;
+
+        :first-child {
+            margin-bottom: 0;
+        }
+
+        &-triangle {
+            position: absolute;
+            bottom: -5%;
+            right: -2%;
+            width: 5%;
+            transform: rotate(-45deg);
+        }
+    }
+}

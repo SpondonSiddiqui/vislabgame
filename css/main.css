@@ -1370,4 +1370,54 @@ p {
   background-color: #4cbf4c;
   border-radius: 8em 8em 0 0;
 }
+
+.starting-screen-box {
+  position: absolute;
+  width: 30%;
+  background-color: white;
+  border-radius: 8px;
+  padding: 20px;
+}
+
+#starting-screen {
+  z-index: 100;
+}
+
+#starting-screen p {
+  margin: 0;
+}
+
+#starting-screen-1 {
+  top: 35%;
+  left: 2.5%;
+}
+
+#starting-screen-1 :first-child {
+  margin-bottom: .4em;
+}
+
+#starting-screen-1-triangle {
+  position: absolute;
+  bottom: -5%;
+  left: 51.4%;
+  width: 5%;
+}
+
+#starting-screen-2 {
+  top: 30%;
+  right: 2.5%;
+}
+
+#starting-screen-2 :first-child {
+  margin-bottom: 0;
+}
+
+#starting-screen-2-triangle {
+  position: absolute;
+  bottom: -5%;
+  right: -2%;
+  width: 5%;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
 /*# sourceMappingURL=main.css.map */
