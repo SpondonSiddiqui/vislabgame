@@ -301,6 +301,10 @@ p {
   left: 53%;
 }
 
+.quest-result-yellow-2 img {
+  padding: 1vw;
+}
+
 .quest-result-yellow-3 {
   display: -webkit-box;
   display: -ms-flexbox;
